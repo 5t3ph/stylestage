@@ -1,0 +1,116 @@
+$tdbc-typography-variants: h1, h2, h3, h4;
+
+@each $type in $tdbc-typography-variants {
+  #{$type},
+  .tdbc-#{$type} {
+    font-weight: $tdbc-strong-font-weight;
+    line-height: 1.15;
+    margin-bottom: 0.65em;
+  }
+}
+
+h1,
+.tdbc-h1 {
+  font-size: $tdbc-h1-font-size;
+  font-size: unquote("min(max(3rem, 5vw), #{$tdbc-h1-font-size})");
+}
+
+h2,
+.tdbc-h2 {
+  font-size: $tdbc-h2-font-size;
+  font-size: unquote("min(max(2.5rem, 5vw), #{$tdbc-h2-font-size})");
+}
+
+h3,
+.tdbc-h3 {
+  font-size: $tdbc-h3-font-size;
+}
+
+h4,
+.tdbc-h4 {
+  font-size: $tdbc-h4-font-size;
+  color: tdbc-color(gray);
+}
+
+p,
+li {
+  font-size: $tdbc-text-font-size;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+article {
+  > ul,
+  > ol {
+    > li + li {
+      margin-top: 1rem;
+    }
+  }
+
+  * {
+    + h2 {
+      margin-top: 4rem;
+    }
+
+    + h3 {
+      margin-top: 2rem;
+    }
+  }
+}
+
+strong {
+  font-weight: $tdbc-strong-font-weight;
+}
+
+a:not(.tdbc-button) {
+  color: $tdbc-link-color;
+}
+
+code:not([class*="language"]) {
+  display: inline-flex;
+  padding: 0.15em;
+  background-color: tdbc-color(light);
+  color: tdbc-color(gray);
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  border: 1px solid scale-color(tdbc-color(gray), $lightness: 50%);
+  border-radius: 2px;
+  font-size: 0.75em;
+  line-height: 1.1;
+}
+
+pre code:not([class*="language"]) {
+  width: 100%;
+  max-width: calc(100vw - 2rem);
+  overflow-x: auto;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid tdbc-color(secondary);
+  color: tdbc-color(gray);
+
+  &,
+  p {
+    font-size: $tdbc-h4-font-size;
+  }
+
+  + * {
+    margin-top: 3rem;
+  }
+}
+
+.tdbc-lead {
+  font-size: $tdbc-lead-font-size;
+  letter-spacing: 0.01em;
+  margin-bottom: 1em;
+  line-height: 1.3;
+}
+
+.tdbc-list-unstyled {
+  list-style: none;
+  padding: 0;
+}

@@ -1,0 +1,83 @@
+.tdbc-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  border-radius: $tdbc-border-radius;
+  background-color: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: $tdbc-h4-font-size;
+    line-height: 1.15;
+    text-decoration: none;
+  }
+
+  /* stylelint-disable selector-max-type, selector-no-qualifying-type */
+  a.tdbc-card__title {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: 180ms box-shadow ease-in;
+      border-radius: 8px;
+      content: "";
+    }
+
+    &:focus {
+      outline: none;
+
+      &::before {
+        box-shadow: 0 0 0 3px tdbc-color(primary);
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 24px;
+
+    a:last-child {
+      align-self: start;
+      margin-top: auto;
+    }
+
+    p {
+      position: relative;
+      margin: 0 0 1rem;
+      z-index: 1;
+    }
+
+    > ul {
+      list-style-type: disc;
+      padding-left: 1rem;
+
+      li + li {
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &:hover a.tdbc-card__title::before {
+    box-shadow: 0 0 0 3px tdbc-color(primary);
+  }
+
+  img:first-child {
+    object-fit: cover;
+    max-height: 10em;
+    border-radius: $tdbc-border-radius $tdbc-border-radius 0 0;
+  }
+  // stylelint-enable
+
+  &--outlined {
+    border: 1px solid scale-color($tdbc-color-gray, $lightness: 50%);
+    background-color: transparent;
+    box-shadow: none;
+  }
+}

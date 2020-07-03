@@ -1,0 +1,67 @@
+.tdbc-content-maxlength {
+  max-width: 80ch;
+}
+
+.tdbc-anchor {
+  display: inline-block;
+  margin-left: 0.25em;
+  transition: 180ms opacity ease-in-out;
+  opacity: 0.6;
+  font-size: 0.65em;
+  vertical-align: top;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+$tdbc-alignments: left, center, right !default;
+
+@each $alignment in $tdbc-alignments {
+  .tdbc-text-align--#{$alignment} {
+    text-align: #{$alignment};
+
+    @if ($alignment == "center") {
+      > a {
+        align-self: center !important;
+      }
+    }
+  }
+}
+
+@each $key in $tdbc-background-colors {
+  .tdbc-background--#{$key} {
+    background-color: tdbc-color($key);
+  }
+}
+
+@each $key in $tdbc-ink-colors {
+  .tdbc-ink--#{$key},
+  a.tdbc-ink--#{$key} {
+    color: tdbc-color(#{$key});
+  }
+
+  .tdbc-ink--#{$key} > a:not(.tdbc-button) {
+    color: inherit;
+  }
+}
+
+.tdbc-mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $key, $unit in $tdbc-spacing {
+  .tdbc-my-#{$key} {
+    margin-top: $unit;
+    margin-bottom: $unit;
+  }
+
+  .tdbc-mt-#{$key} {
+    margin-top: $unit;
+  }
+}
+
+.tdbc-mb-none {
+  margin-bottom: 0;
+}

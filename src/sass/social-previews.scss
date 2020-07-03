@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Baloo 2 Regular"), local("Baloo-2-Regular"),
+    url("../fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Baloo 2 Medium"), local("Baloo-2-Medium"),
+    url("../fonts/baloo-2-v1-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@import "theme";
+@import "reset";
+@import "typography";
+@import "utilities";
+
+// stylelint-disable
+
+body {
+  border: 3px solid tdbc-color(secondary);
+  display: grid;
+  place-content: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+}

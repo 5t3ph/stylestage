@@ -1,0 +1,53 @@
+$tdbc-color-primary: #171392 !default;
+$tdbc-color-secondary: #d92d7a !default;
+$tdbc-color-background: #f9f9f9;
+
+$tdbc-brand-colors: (
+  primary: $tdbc-color-primary,
+  secondary: $tdbc-color-secondary,
+) !default;
+
+$tdbc-color-body: scale-color($tdbc-color-primary, $lightness: -30%, $saturation: -50%) !default;
+$tdbc-color-gray: mix(#767676, $tdbc-color-body, 70%) !default;
+
+$tdbc-colors: map-merge(
+  $tdbc-brand-colors,
+  (
+    text: $tdbc-color-body,
+    background: $tdbc-color-background,
+    light: #fff,
+    dark: rgba(black, 0.87),
+    gray: $tdbc-color-gray,
+  )
+);
+
+@function tdbc-color($key) {
+  @return map-get($tdbc-colors, $key);
+}
+
+// Add/remove to selectively generate `ink` (text color) classes
+$tdbc-ink-colors: primary, secondary, text, gray, light, dark !default;
+
+// Add/remove to selectively generate `background` (text color) classes
+$tdbc-background-colors: primary, secondary, background, gray, light !default;
+
+$tdbc-button-variants: primary, secondary, light, gray !default;
+$tdbc-link-color: tdbc-color(primary) !default;
+$tdbc-border-radius: 8px !default;
+
+$tdbc-font-family: "Baloo 2", sans-serif;
+$tdbc-strong-font-weight: 500 !default;
+$tdbc-h1-font-size: 4.2rem !default;
+$tdbc-h2-font-size: 3.15rem !default;
+$tdbc-h3-font-size: 2rem !default;
+$tdbc-h4-font-size: 1.35rem !default;
+$tdbc-text-font-size: 1.15rem !default;
+$tdbc-lead-font-size: 1.35rem !default;
+
+$tdbc-spacing: (
+  sm: 1rem,
+  md: 3rem,
+  lg: 6rem,
+  xl: 10rem,
+  auto: "auto",
+) !default;

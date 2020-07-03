@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% if title %}{{ title }} | {% endif %}{{ meta.siteName }}</title>
+    <meta
+      name="description"
+      content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
+    />
+    <link rel="icon" href="{{ '/favicon.png' | url }}" />
+    <link href="{{ '/css/style.css' | url }}" rel="stylesheet" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% if meta.twitterUsername %}
+    <meta name="twitter:creator" content="@{{ meta.twitterUsername }}" />
+    {% endif %}
+    <meta
+      name="twitter:title"
+      content="{% if title %}{{ title }}{% else %}{{ meta.siteName }}{% endif %}"
+    />
+    <meta
+      name="twitter:description"
+      content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
+    />
+
+    <meta
+      name="og:title"
+      content="{% if title %}{{ title }}{% else %}{{ meta.siteName }}{% endif %}"
+    />
+    <meta
+      name="og:description"
+      content="{% if description %}{{ description }}{% else %}{{ meta.siteDescription }}{% endif %}"
+    />
+    <meta property="og:image" content="{{ meta.url }}/previews/{{ title | slug }}.png" />
+    <meta name="twitter:image" content="{{ meta.url }}/previews/{{ title | slug }}.png" />
+
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for {{ meta.siteName }}"
+      href="/feed/"
+    />
+  </head>
+  <body>
+    {{ content | safe }}
+
+    <footer class="tdbc-background--secondary">
+      <div class="tdbc-container tdbc-text-align-center">
+        <div class="tdbc-row tdbc-ink--light tdbc-mx-auto">
+          <p class="tdbc-mb-none">&copy; {% year %} {{ meta.siteName }}</p>
+          <span class="tdbc-row tdbc-row--center-content">
+            <a
+              href="https://twitter.com/{{ meta.twitterUsername }}/"
+              class="tdbc-icon-button tdbc-ink--light"
+              aria-label="Twitter"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 28" aria-hidden="true" focusable="false">
+                <path
+                  d="M25.312 6.375c-0.688 1-1.547 1.891-2.531 2.609 0.016 0.219 0.016 0.438 0.016 0.656 0 6.672-5.078 14.359-14.359 14.359-2.859 0-5.516-0.828-7.75-2.266 0.406 0.047 0.797 0.063 1.219 0.063 2.359 0 4.531-0.797 6.266-2.156-2.219-0.047-4.078-1.5-4.719-3.5 0.313 0.047 0.625 0.078 0.953 0.078 0.453 0 0.906-0.063 1.328-0.172-2.312-0.469-4.047-2.5-4.047-4.953v-0.063c0.672 0.375 1.453 0.609 2.281 0.641-1.359-0.906-2.25-2.453-2.25-4.203 0-0.938 0.25-1.797 0.688-2.547 2.484 3.062 6.219 5.063 10.406 5.281-0.078-0.375-0.125-0.766-0.125-1.156 0-2.781 2.25-5.047 5.047-5.047 1.453 0 2.766 0.609 3.687 1.594 1.141-0.219 2.234-0.641 3.203-1.219-0.375 1.172-1.172 2.156-2.219 2.781 1.016-0.109 2-0.391 2.906-0.781z"
+                ></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

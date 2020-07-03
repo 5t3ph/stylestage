@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Baloo 2 Regular"), local("Baloo-2-Regular"),
+    url("../fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Baloo 2 Medium"), local("Baloo-2-Medium"),
+    url("../fonts/baloo-2-v1-latin-500.woff2") format("woff2");
+  font-display: swap;
+}
+
+@import "theme";
+@import "reset";
+@import "layout";
+@import "sitenav";
+@import "typography";
+@import "buttons";
+@import "card";
+@import "prism";
+@import "utilities";

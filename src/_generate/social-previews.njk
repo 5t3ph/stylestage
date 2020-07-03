@@ -1,0 +1,31 @@
+---
+permalink: functions/template.html
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    {% set css %} {% include "src/css/social-previews.css" %} {% endset %}
+    <style>
+      {{ css | safe }}
+    </style>
+  </head>
+  <body>
+    <header class="tdbc-hero tdbc-text-align-center">
+      <div class="tdbc-container tdbc-content-maxlength">
+        <h1 class="tdbc-ink--primary tdbc-mb-none tdbc-mlg"></h1>
+        <p class="tdbc-lead tdbc-ink--gray tdbc-mt-md tdbc-mb-none">
+          <span><em>Published on</em> <strong class="tdbc-ink--secondary">{{ meta.siteName }}</strong></span>
+        </p>
+      </div>
+    </header>
+  </body>
+</html>

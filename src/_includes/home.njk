@@ -1,0 +1,106 @@
+---
+description:
+layout: base.njk
+templateEngineOverride: md, njk
+---
+
+<style>
+  .logo {
+    width: 12vmax;
+    height: 12vmax;
+    margin: 0 auto 2rem;
+  }
+
+  .logo svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tdbc-hero {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+</style>
+<header class="tdbc-hero">
+  <div class="tdbc-container">
+    <span class="logo">
+      <svg
+        viewBox="0 0 800 800"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <path fill="none" d="M-1-1h582v402H-1z" />
+        <g>
+          <path
+            fill="#171392"
+            d="M580.562 219.439c-12.721-12.723-29.637-19.728-47.623-19.728-17.987 0-34.903 7.005-47.625 19.728-12.72 12.72-19.725 29.634-19.725 47.621 0 17.99 7.005 34.904 19.725 47.625 12.722 12.721 29.633 19.723 47.618 19.726h.007c17.986 0 34.902-7.005 47.623-19.726 12.721-12.723 19.726-29.636 19.726-47.625-.002-17.987-7.007-34.9-19.726-47.621zm-26.791 68.456c-5.566 5.568-12.96 8.636-20.834 8.636-7.872-.002-15.271-3.068-20.834-8.636-5.566-5.562-8.633-12.96-8.633-20.834 0-7.868 3.065-15.269 8.633-20.834 5.563-5.565 12.967-8.63 20.834-8.63 7.868 0 15.268 3.063 20.834 8.63 11.492 11.488 11.492 30.18 0 41.668z"
+          />
+          <path
+            fill="#df2b7c"
+            d="M62.282 627.218a18.876 18.876 0 01-13.392-5.546c-7.398-7.397-7.398-19.395 0-26.79L158.42 485.35c7.398-7.397 19.392-7.397 26.79 0s7.398 19.395 0 26.792L75.676 621.672a18.876 18.876 0 01-13.394 5.546zM86.774 732.172c-4.85 0-9.696-1.85-13.395-5.549-7.398-7.397-7.398-19.389 0-26.786L187.545 585.67c7.398-7.398 19.392-7.398 26.787 0 7.398 7.398 7.398 19.393 0 26.79L100.168 726.623a18.884 18.884 0 01-13.394 5.549zM191.725 756.661a18.88 18.88 0 01-13.395-5.546c-7.398-7.397-7.398-19.393 0-26.789L287.863 614.79c7.396-7.394 19.392-7.396 26.787 0 7.398 7.397 7.398 19.395 0 26.793L205.12 751.115a18.884 18.884 0 01-13.395 5.546z"
+          />
+          <path
+            fill="#171392"
+            d="M751.113 48.891a18.949 18.949 0 00-16.403-5.311c-2.202.357-54.705 8.98-126.25 36.316-41.974 16.034-81.85 35.237-118.529 57.076-45.039 26.814-85.356 57.721-119.899 91.871l-143.055 27.85a18.967 18.967 0 00-9.753 5.177L87.618 391.06a18.944 18.944 0 0013.365 32.36c1.202 0 2.415-.114 3.628-.347l146.185-28.463c-9.516 18.672-18.419 38.055-26.683 58.144a18.958 18.958 0 004.125 20.603l35.811 35.811-33.27 33.27c-7.398 7.398-7.398 19.39 0 26.787a18.882 18.882 0 0013.397 5.549c4.847 0 9.693-1.85 13.392-5.546l33.27-33.271 35.811 35.813a18.962 18.962 0 0013.4 5.548c2.423 0 4.871-.467 7.199-1.426 20.091-8.262 39.475-17.165 58.141-26.678L376.934 695.4a18.946 18.946 0 0018.588 22.565c4.917 0 9.778-1.918 13.417-5.573l129.188-129.604a18.969 18.969 0 005.181-9.753l27.845-143.055c34.148-34.547 65.06-74.859 91.876-119.901 21.834-36.683 41.04-76.558 57.077-118.529 27.33-71.551 35.958-124.048 36.313-126.25a18.957 18.957 0 00-5.306-16.409zm-592.72 325.11l81.489-81.224 87.674-17.069c-19.015 23.391-36.655 48.634-52.847 75.648l-116.316 22.645zm348.826 186.12l-81.222 81.489 22.643-116.316c27.021-16.192 52.259-33.83 75.648-52.848l-17.069 87.675zm177.14-381.185c-23.915 62.371-68.01 152.302-142.237 226.531-34.171 34.168-73.96 64.54-118.89 90.838-.804.401-1.585.854-2.322 1.366-24.049 13.943-49.566 26.728-76.476 38.302l-26.806-26.809 54.11-54.106c7.395-7.397 7.395-19.392 0-26.79-7.398-7.397-19.392-7.396-26.79 0l-54.109 54.106-26.806-26.809c11.578-26.913 24.361-52.433 38.308-76.488.508-.732.951-1.5 1.35-2.295 26.298-44.938 56.672-84.732 90.849-118.909 74.225-74.225 164.156-118.319 226.527-142.235 37.897-14.537 70.522-23.601 92.09-28.797-5.198 21.571-14.263 54.197-28.798 92.095z"
+          />
+        </g>
+      </svg>
+    </span>
+    <h1 class="tdbc-ink--primary tdbc-mb-none">{{ meta.siteName }}</h1>
+    <h2 class="tdbc-lead tdbc-content-maxlength tdbc-ink--gray tdbc-mt-md tdbc-mx-auto">
+      {{ meta.siteDescription }}
+    </h2>
+  </div>
+</header>
+<main class="tdbc-container">
+  <div class="tdbc-section">
+    <ul class="tdbc-column-container">
+      {%- for page in collections.pages -%}
+      <li class="tdbc-card">
+        <div class="tdbc-card__content">
+          <a href="{{ page.url }}" class="tdbc-card__title">{{ page.data.title }}</a>
+          <p>{{ page.data.description }}</p>
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+  <style>
+    #quickstart + ol li:first-child,
+    #quickstart + ol li:first-child p {
+      font-size: 1.5rem;
+    }
+  </style>
+
+<h2 id="quickstart" class="tdbc-h3 tdbc-mt-lg">Quick Start</h2>
+
+1. [Generate a repo from this template](https://github.com/5t3ph/11ty-netlify-jumpstart/generate)
+   which will copy this project into your own new repo.
+
+1. Once cloned, run `npm install` to install 11ty and other dependencies. Then run `npm run develop` to run both 11ty and node-sass in watch
+   mode. Use `npm run build` to run a production version, which will also generate social share
+   preview images.
+
+1. Open `src/_data/meta.js` and adjust the values to your details. 
+
+1. Review the
+   [styling documentation](https://5t3ph.github.io/html-sass-jumpstart/) for the included minimal
+   Sass framework, particularly the theme variables, to quickly customize the starter.
+
+1. Edit `_includes/home.njk` to change the home page - including changing the template type if desired -
+   and then create content within `_pages` using any templating format you prefer to add content.
+
+1. Check out the [About page](/about/) for expanded details on included features of this starter.
+
+1. Review the [11ty documentation](https://11ty.dev) to more deeply apply customizations, including
+   adding custom data sources and reviewing what template languages are available.
+
+<h3 class="tdbc-h4">Is Netlify hosting required?</h3>
+
+It's not required, but highly recommended, and is also how the build process is setup to run
+against.
+
+{{ content | safe }}
+
+</main>

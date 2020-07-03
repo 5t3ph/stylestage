@@ -1,0 +1,11 @@
+---
+permalink: functions/pages.json
+permalinkBypassOutputDir: true
+eleventyExcludeFromCollections: true
+---
+[{% for pages in collections.all %}
+	{
+   "title":"{% if pages.data.title %}{{ pages.data.title | jsonTitle}}{% else %}{{ meta.siteName }}{% endif %}",
+   "slug":"{% if pages.data.title %}{{ pages.data.title | slug}}{% else %}home{% endif %}"
+	}{% if loop.last == false %},{% endif %}
+{% endfor %}]

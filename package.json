@@ -1,0 +1,56 @@
+{
+  "name": "11ty-netlify-jumpstart",
+  "version": "0.1.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass src/sass -o src/css",
+    "css": "postcss src/css/*.css -u autoprefixer cssnano -r -m",
+    "watch:eleventy": "eleventy --serve",
+    "watch:sass": "node-sass --watch src/sass -o src/css",
+    "develop": "ELEVENTY_ENV=dev npm run scss ; npm run watch:sass & npm run watch:eleventy",
+    "build": "ELEVENTY_ENV=prod npm run scss ; eleventy ; npm run css ; npm run screenshot",
+    "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
+    "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
+    "screenshot": "node functions/images.js",
+    "bump": "npm --no-git-tag-version version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5t3ph/11ty-netlify-jumpstart.git"
+  },
+  "keywords": [],
+  "author": "5t3ph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5t3ph/11ty-netlify-jumpstart/issues"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.7",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "autoprefixer": "^9.5.0",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "emoji-regex": "^9.0.0",
+    "markdown-it": "^11.0.0",
+    "markdown-it-anchor": "^5.2.7",
+    "node-sass": "^4.11.0",
+    "luxon": "^1.23.0",
+    "postcss-cli": "^7.1.0",
+    "puppeteer": "^3.0.2",
+    "stylelint": "^13.3.3",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.9.3",
+    "stylelint-selector-bem-pattern": "^2.1.0"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "dependencies": {
+    "chrome-aws-lambda": "^3.1.1",
+    "puppeteer-core": "^3.0.2"
+  }
+}
