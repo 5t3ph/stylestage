@@ -6,7 +6,7 @@ public
 src/css
 functions/*.json
 functions/*.html
-src/previews/*
+functions/*.css
 
 # secrets and errors
 .env

@@ -1,10 +1,10 @@
 const emojiRegex = require("emoji-regex");
-const { DateTime } = require("luxon");
 const slugify = require("slugify");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
+const meta = require("./src/_data/meta");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addWatchTarget("./src/sass/");
 
+  if (meta.environment !== "production") {
+    eleventyConfig.addPassthroughCopy("./src/styles");
+  }
   eleventyConfig.addPassthroughCopy("./src/css");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy("./src/img");
@@ -44,12 +47,19 @@ module.exports = function (eleventyConfig) {
     return title;
   });
 
+  eleventyConfig.addFilter("linkMC", (str) => {
+    if (!str) {
+      return;
+    }
+    return str.replace(/(ModernCSS\.dev)/i, '<a href="https://moderncss.dev">$1</a>');
+  });
+
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
     html: true,
   }).use(markdownItAnchor, {
     permalink: true,
-    permalinkClass: "tdbc-anchor",
+    permalinkClass: "anchor",
     permalinkSymbol: "#",
     permalinkSpace: false,
     level: [1, 2, 3],

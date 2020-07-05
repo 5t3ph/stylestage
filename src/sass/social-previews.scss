@@ -19,12 +19,11 @@
 @import "theme";
 @import "reset";
 @import "typography";
-@import "utilities";
 
 // stylelint-disable
 
 body {
-  border: 3px solid tdbc-color(secondary);
+  border: 3px solid color(secondary);
   display: grid;
   place-content: center;
   text-align: center;

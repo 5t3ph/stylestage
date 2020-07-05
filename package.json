@@ -1,18 +1,24 @@
 {
-  "name": "11ty-netlify-jumpstart",
-  "version": "0.1.1",
-  "description": "",
+  "name": "moderncss-styles",
+  "version": "0.1.0",
+  "description": "A modern CSS showcase styled by community contributions.",
   "main": "index.js",
   "scripts": {
-    "scss": "node-sass src/sass -o src/css",
-    "css": "postcss src/css/*.css -u autoprefixer cssnano -r -m",
+    "scss:main": "node-sass src/sass/main-stage.scss -o src/styles/css",
+    "scss:social": "node-sass src/sass/social-previews.scss -o functions",
+    "scss": "npm run scss:main ; npm run scss:social",
+    "css": "postcss src/styles/css/*.css -d public/styles/css -u autoprefixer cssnano -m",
+    "css:public": "postcss src/styles/css/*.css -d public/styles/css -u autoprefixer",
     "watch:eleventy": "eleventy --serve",
-    "watch:sass": "node-sass --watch src/sass -o src/css",
-    "develop": "ELEVENTY_ENV=dev npm run scss ; npm run watch:sass & npm run watch:eleventy",
-    "build": "ELEVENTY_ENV=prod npm run scss ; eleventy ; npm run css ; npm run screenshot",
+    "watch:main": "node-sass --watch src/sass/main-stage.scss -o src/styles/css",
+    "watch:social": "node-sass --watch src/sass/social-previews.scss -o functions",
+    "watch": "npm run watch:main & npm run watch:social & ELEVENTY_ENV=development npm run watch:eleventy",
+    "develop": "npm run scss ; npm run stylesheets ; npm run watch ",
+    "build": "npm run scss ; npm run stylesheets ; npm run css ; ELEVENTY_ENV=production eleventy ; npm run screenshot ; npm run css:public",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "screenshot": "node functions/images.js",
+    "stylesheets": "node functions/stylesheets.js",
     "bump": "npm --no-git-tag-version version"
   },
   "repository": {
@@ -29,28 +35,28 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "autoprefixer": "^9.5.0",
+    "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "emoji-regex": "^9.0.0",
+    "luxon": "^1.23.0",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
     "node-sass": "^4.11.0",
-    "luxon": "^1.23.0",
     "postcss-cli": "^7.1.0",
-    "puppeteer": "^3.0.2",
-    "stylelint": "^13.3.3",
-    "stylelint-config-prettier": "^8.0.1",
+    "puppeteer": "3.1.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
-    "stylelint-order": "^4.0.0",
-    "stylelint-scss": "^3.9.3",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "stylelint-selector-bem-pattern": "^2.1.0"
   },
   "browserslist": [
     "last 2 versions"
   ],
   "dependencies": {
-    "chrome-aws-lambda": "^3.1.1",
-    "puppeteer-core": "^3.0.2"
+    "chrome-aws-lambda": "3.1.1",
+    "puppeteer-core": "3.1.0"
   }
 }

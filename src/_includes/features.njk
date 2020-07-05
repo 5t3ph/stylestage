@@ -1,0 +1,13 @@
+<aside id="styles">
+  <div class="container">
+    <h2>Featured Styles</h2>
+    <ul class="features">
+      <li><a href="#">[placeholder title]</a> by [maybe you?]</li>
+      <li><a href="#">[placeholder title]</a> by [c'mon, you can do it!]</li>
+      <li><a href="#">[placeholder title]</a> by [future you]</li>
+    </ul>
+		{% if page.url !== '/styles/' %}
+    <a href="{{ '/styles/' | url }}" class="link-allstyles">View Style Index</a>
+		{% endif %}
+  </div>
+</aside>

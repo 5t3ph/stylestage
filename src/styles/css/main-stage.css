@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Baloo 2 Regular"), local("Baloo-2-Regular"), url("../../fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
+  font-display: swap; }
+
+@font-face {
+  font-family: "Baloo 2";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Baloo 2 Medium"), local("Baloo-2-Medium"), url("../../fonts/baloo-2-v1-latin-500.woff2") format("woff2");
+  font-display: swap; }
+
+:root {
+  --color-primary: #3a00ff;
+  --color-secondary: #d42257;
+  --color-background: #d2fbf7;
+  --color-text: #412d86;
+  --color-light: #fff;
+  --color-dark: #0c0033;
+  --color-gray: #66607b;
+  --color-anchor: #3a00ff;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 4.2rem;
+  --font-size-h2: 3.15rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+  --space-sm: 1rem;
+  --space-md: 3rem;
+  --space-lg: 6rem;
+  --space-xl: 10rem; }
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0; }
+
+html {
+  overflow-x: hidden; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden; }
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family); }
+
+header {
+  display: grid;
+  min-height: 40vh;
+  place-items: center;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  color: var(--color-primary);
+  text-align: center; }
+  header .container {
+    max-width: 120ch; }
+  header h1 {
+    display: inline-grid;
+    place-content: center;
+    font-size: 6rem;
+    height: 3em;
+    padding: 0 1.5em;
+    border: 0.16em solid var(--color-primary);
+    box-shadow: 0.12em 0.12em var(--color-secondary); }
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  nav ul a {
+    display: inline-grid;
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    text-decoration: none; }
+    nav ul a:before {
+      height: 0.33em;
+      width: 100%;
+      background-color: var(--color-secondary);
+      opacity: 0.15;
+      content: ""; }
+    nav ul a:hover:before, nav ul a:focus:before {
+      opacity: 1; }
+  nav ul li {
+    margin: 0.25rem; }
+
+main {
+  padding-top: 5vh;
+  padding-bottom: 5vh; }
+
+article {
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto; }
+
+.profile {
+  position: fixed;
+  bottom: 2vmin;
+  right: 2vmin;
+  background-color: var(--color-light);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(58, 0, 255, 0.15);
+  max-width: 30ch;
+  overflow: hidden; }
+  .profile h4 {
+    text-align: center;
+    color: var(--color-gray);
+    padding: 1.25rem 1.25rem 0; }
+  .profile ul {
+    list-style: none;
+    padding: 0 1.25rem 1.25rem;
+    margin: 0; }
+    .profile ul li {
+      display: flex; }
+      .profile ul li span:nth-child(1) {
+        font-weight: var(--font-weight-strong);
+        color: var(--color-dark);
+        width: 8ch; }
+      .profile ul li span:nth-child(2) {
+        word-break: break-word;
+        flex-grow: 1; }
+        .profile ul li span:nth-child(2) a {
+          color: inherit; }
+  .profile .container > a {
+    font-size: 1.125rem;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    display: block;
+    text-align: center; }
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden; }
+  .skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5em; }
+
+.link-github {
+  display: inline-flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em;
+  border-radius: var(--border-radius);
+  background-color: var(--color-primary);
+  color: #fff;
+  min-height: 34px;
+  line-height: 1; }
+  .link-github svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+    margin-right: 0.25em; }
+
+h1 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h2 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h3 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h4 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1.15;
+  margin-bottom: 0.65em; }
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-size: min(max(3rem, 5vw), var(--font-size-h1)); }
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-size: min(max(2.5rem, 5vw), var(--font-size-h1)); }
+
+h3 {
+  font-size: var(--font-size-h3); }
+
+h4 {
+  font-size: var(--font-size-h4); }
+
+p,
+li {
+  font-size: var(--font-size-text); }
+
+p {
+  margin: 0 0 1rem; }
+
+article > ul > li + li,
+article > ol > li + li {
+  margin-top: 1rem; }
+
+article * + h2 {
+  margin-top: 4rem; }
+
+article * + h3 {
+  margin-top: 2rem; }
+
+strong {
+  font-weight: var(--font-weight-strong); }
+
+a {
+  color: var(--color-anchor); }
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--color-secondary);
+  color: var(--color-gray); }
+  blockquote,
+  blockquote p {
+    font-size: var(--font-size-h4); }
+  blockquote + * {
+    margin-top: 3rem; }
