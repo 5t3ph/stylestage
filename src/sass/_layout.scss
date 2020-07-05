@@ -1,4 +1,3 @@
-// stylelint-disable selector-max-type
 body {
   background-color: var(--color-background);
   color: var(--color-text);
@@ -15,23 +14,26 @@ header {
   text-align: center;
 
   .container {
+    width: 100%;
     max-width: 120ch;
   }
 
   h1 {
     display: inline-grid;
-    place-content: center;
-    font-size: 6rem;
     height: 3em;
     padding: 0 1.5em;
     border: 0.16em solid var(--color-primary);
+    font-size: 6rem;
+    font-size: clamp(2rem, 7vw, 6rem);
     box-shadow: 0.12em 0.12em var(--color-secondary);
+    place-content: center;
   }
 }
 
 nav {
   ul {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 0;
     padding: 0;
@@ -39,21 +41,21 @@ nav {
 
     a {
       display: inline-grid;
+      padding: 0.5rem;
       color: var(--color-secondary);
       font-size: 1.25rem;
-      padding: 0.5rem;
       text-decoration: none;
 
-      &:before {
-        height: 0.33em;
+      &::before {
         width: 100%;
+        height: 0.33em;
         background-color: var(--color-secondary);
         opacity: 0.15;
         content: "";
       }
 
-      &:hover:before,
-      &:focus:before {
+      &:hover::before,
+      &:focus::before {
         opacity: 1;
       }
     }
@@ -69,45 +71,84 @@ main {
   padding-bottom: 5vh;
 }
 
-article {
-  max-width: 80ch;
-  margin-right: auto;
-  margin-left: auto;
+article,
+.page-footer,
+#styles {
+  padding: 1rem;
+
+  .container {
+    width: 100%;
+    max-width: 80ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+#files {
+  display: grid;
+  place-content: center;
+  margin: 5vh auto;
+  text-align: center;
+
+  .container {
+    display: inline-block;
+    padding: 5vmin;
+    outline: 2px dashed var(--color-secondary);
+    text-align: center;
+
+    a {
+      margin: 0.5rem;
+      font-size: clamp(1.5rem, 4vw, 2rem);
+    }
+  }
 }
 
 .profile {
-  position: fixed;
-  bottom: 2vmin;
-  right: 2vmin;
-  background-color: var(--color-light);
+  width: 95vw;
+  max-width: 80ch;
+  margin: 1rem auto;
   border-radius: var(--border-radius);
+  background-color: var(--color-light);
   box-shadow: 0 2px 5px rgba(color(primary), 0.15);
-  max-width: 30ch;
   overflow: hidden;
 
   h4 {
-    text-align: center;
-    color: var(--color-gray);
     padding: 1.25rem 1.25rem 0;
+    color: var(--color-gray);
+    text-align: center;
+  }
+
+  // stylelint-disable no-descending-specificity
+  .container > a {
+    display: block;
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    font-size: 1.125rem;
+    text-align: center;
   }
 
   ul {
-    list-style: none;
-    padding: 0 1.25rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
+    padding: 0 1.25rem 1.25rem;
+    list-style: none;
 
     li {
       display: flex;
+      padding: 0.45em;
 
       span:nth-child(1) {
-        font-weight: var(--font-weight-strong);
+        width: auto;
+        margin-right: 0.25em;
         color: var(--color-dark);
-        width: 8ch;
+        font-weight: var(--font-weight-strong);
       }
 
       span:nth-child(2) {
-        word-break: break-word;
         flex-grow: 1;
+        word-break: break-word;
 
         a {
           color: inherit;
@@ -116,12 +157,37 @@ article {
     }
   }
 
-  .container > a {
-    font-size: 1.125rem;
-    background-color: var(--color-secondary);
-    color: var(--color-light);
-    display: block;
-    text-align: center;
+  @media (min-width: 180ch) {
+    position: fixed;
+    right: 2vmin;
+    bottom: 2vmin;
+    max-width: 30ch;
+
+    ul {
+      justify-content: unset;
+
+      li {
+        padding: 0;
+
+        span:nth-child(1) {
+          width: 8ch;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.page-footer {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+
+  a {
+    color: inherit;
+  }
+
+  :last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -146,23 +212,39 @@ article {
   }
 }
 
-.link-github {
+[class^="link"] {
   display: inline-flex;
-  text-decoration: none;
-  justify-content: center;
   align-items: center;
-  padding: 0 0.5em;
-  border-radius: var(--border-radius);
+  justify-content: center;
+  min-height: 3em;
+  padding: 0 0.75em;
+  transform: translate(0, 0);
+  transition: 180ms all ease-in-out;
   background-color: var(--color-primary);
   color: #fff;
-  min-height: 34px;
+  font-size: 1.125rem;
   line-height: 1;
+  text-decoration: none;
+  box-shadow: 0.18em 0.18em var(--color-secondary);
 
+  &:hover,
+  &:focus {
+    transform: translate(-0.15em, -0.15em);
+    box-shadow: 0.3em 0.3em var(--color-secondary);
+  }
+
+  &:focus {
+    outline-color: transparent;
+    outline-style: solid;
+  }
+}
+
+.link-github {
   svg {
     width: 1em;
     height: 1em;
-    fill: currentColor;
     margin-right: 0.25em;
+    fill: currentColor;
   }
 }
 

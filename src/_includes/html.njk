@@ -14,7 +14,7 @@
 <main id="main">
   <div class="container">
     <article id="about">
-      <div class="container">
+      <section class="container">
         <h2>Setting the Stage</h2>
         <p>
           In 2003, <a href="http://daveshea.com/projects/zen/">Dave Shea</a> began a legendary project called
@@ -24,12 +24,13 @@
         <p>
           <strong>Style Stage</strong> seeks to rekindle that spirit by providing this page as the base HTML for contributors - like you! - to re-style by submitting an alternate stylesheet.
         </p>
+        <blockquote><p><strong>How it works:</strong> Visit the <a href="{{ '/styles/' | url }}">"All Styles"</a> directory page and select a style to view. A page with identical content to this one will be presented with a new design provided from a contributed stylesheet. CSS practitioners of any skill level are invited to <a href="#contribute">submit a stylesheet</a>!</p></blockquote>
         <p>
           The HTML for this page was created to be semantic, accessible, and free of nearly all
-          other opinions. While typically extra divs are to be avoided, each sectioning element
-          also includes a `.container` div as the first child for use as a style aid since you do
-          not have access to alter the base HTML. IDs are included where needed for nav anchors or accessibility, and a small number of additional classes are provided for key elements without IDs.
+          other opinions. Nested sectioning elements with the class `.container` serve as additional style aids since you do not have access to alter the base HTML. IDs are included where needed for nav anchors or accessibility, and a small number of additional classes are provided for key elements without IDs.
         </p>
+        </section>
+        <section class="container">
         <h2>Modern CSS Under the Spotlight</h2>
         <p>
           Modern CSS has increased and improved the available CSS properties and layout behaviors, and browser support is nearly in sync for most high-touch features.
@@ -61,28 +62,29 @@
           <a href="#contribute">Join Style Stage as a contributor</a> to refresh your CSS skills,
           and learn from others!
         </p>
-      </div>
+      </section>
     </article>
     <article id="guidelines">
-      <div class="container">
+      <section class="container">
         <h2>Guidelines</h2>
         <p class="lead">Contributing a stylesheet to Style Stage means you agree to abide by <a href="{{ '/guidelines/' | url }}">our full guidelines</a>.</p>
         <h3>TL;DR</h3>
-        <p>All submissions will be minfied, autoprefixed, and prepended with the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA license</a> as well as attribution using the metadata you provide. You retain the copyright to original graphics, and must ensure all graphics used are appropriately licensed. All asset links must be absolute to external resources.Stylesheets will be saved into the Github repo, and detected changes that violate the guidelines are cause for removal.</p>
-        <p>Ensure it's responsive, and that it passes accessible contrast (we'll be using aXe to verify). Animations should be removed via `prefers-reduced-motion`. Cutting-edge techniques should come with a fallback if needed to not severely impact the user experience. No content may be permanently hidden, and hidden items must come with an accessible viewing technique. Page load time should not exceed 3 seconds.</p>
+        <p>All submissions will be minfied, autoprefixed, and prepended with the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA license</a> as well as attribution using the metadata you provide. You retain the copyright to original graphics, and must ensure all graphics used are appropriately licensed. All asset links must be absolute to external resources. Stylesheets will be saved into the Github repo, and detected changes that violate the guidelines are cause for removal.</p>
+        <p>Ensure your design is responsive, and that it passes accessible contrast (we'll be using aXe to verify). Animations should be removed via `prefers-reduced-motion`. Cutting-edge techniques should come with a fallback if needed to not severely impact the user experience. No content may be permanently hidden, and hidden items must come with an accessible viewing technique. Page load time should not exceed 3 seconds.</p>
         <p>Most importantly - have fun and learn something new! Check out the <a href="{{ '/resources/' | url }}">resources</a> for tips and inspiration.</p>
         <a href="{{ '/guidelines/' | url }}" class="link-guidelines">Review full guidelines</a>
-      </div>
+      </section>
     </article>
     <article id="contribute">
-      <div class="container">
+      <section class="container">
         <h2>Contribute</h2>
         <p>We welcome all who enjoy the craft of writing CSS to contribute!</p>
         <p>
           By participating as a contributor, your work will be shared with your provided attribution
           as long as Style Stage is online, your stylesheet link and any asset links remain valid, and all <a href="{{ '/guidelines/' | url }}">contributor guidelines</a> are adhered to.
         </p>
-        
+      </section>
+      <section class="container">
         <h3>Steps to Contribute</h3>
         <ol>
           <li>
@@ -98,7 +100,7 @@
             added!
           </li>
         </ol>
-      </div>
+      </section>
       <footer id="files">
         <div class="container">
           <h3>Source Files</h3>
@@ -113,7 +115,7 @@
   <div class="container">
     <h4 id="profile-title">Currently Staged Style</h4>
     <ul>
-      {% set styleUrl %}{% if style.title %}/styles/css/{{ style.title | slug }}.css{% else %}/css/style.css{% endif %}{% endset %}
+      {% set styleUrl %}{% if style.title %}/styles/css/{{ style.title | slug }}.css{% else %}/styles/css/main-stage.css{% endif %}{% endset %}
       {% if page.url == '/' %}
       <li class="profile-title"><span>Title:</span> <span>Main Stage</span></li>
       <li class="profile-author"><span>Author:</span> <span>Stephanie Eckles</span></li>
