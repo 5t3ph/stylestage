@@ -1,21 +1,14 @@
-$typography-variants: h1, h2, h3, h4;
-
-@each $type in $typography-variants {
-  #{$type} {
-    font-weight: var(--font-weight-strong);
-    line-height: 1;
-    margin-bottom: 0.65em;
-  }
-}
-
-h1 {
-  font-size: var(--font-size-h1);
-  font-size: unquote("min(max(3rem, 5vw), var(--font-size-h1))");
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1;
+  margin-bottom: 0.65em;
 }
 
 h2 {
   font-size: var(--font-size-h2);
-  font-size: unquote("min(max(2.5rem, 5vw), var(--font-size-h1))");
 }
 
 h3 {
@@ -35,7 +28,7 @@ p {
   margin: 0 0 1rem;
 }
 
-article {
+article .container {
   > ul,
   > ol {
     > li + li {
