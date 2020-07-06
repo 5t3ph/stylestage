@@ -1,0 +1,156 @@
+{# Indent twice for best source file formatting #}
+<a href="#main" class="skip-link">Skip to main content</a>
+<header>
+  <div class="container">
+    <h1>{{ meta.siteName }}</h1>
+    <h2>A modern CSS showcase styled by community contributions</h2>
+    <p>Maintained by Stephanie Eckles of <a href="https://moderncss.dev">ModernCSS.dev</a></p>
+    <a href="{{ meta.repo }}" class="link-github"><span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+      <path d="M32 12.408l-11.056-1.607-4.944-10.018-4.944 10.018-11.056 1.607 8 7.798-1.889 11.011 9.889-5.199 9.889 5.199-1.889-11.011 8-7.798z"></path>
+    </svg> </span> Star on Github</a>
+  </div>
+</header>
+{% include "nav.njk" %}
+<main id="main">
+  <div class="container">
+    <article id="about">
+      <section class="container">
+        <h2>Setting the Stage</h2>
+        <p>
+          In 2003, <a href="http://daveshea.com/projects/zen/">Dave Shea</a> began a legendary project called
+          <a href="http://www.csszengarden.com/">CSS Zen Garden</a> that provided a demonstration of
+          "what can be accomplished through CSS-based design" until submissions stopped in 2013.
+        </p>
+        <p>
+          <strong>Style Stage</strong> seeks to rekindle that spirit by providing this page as the base HTML for contributors - like you! - to re-style by submitting an alternate stylesheet.
+        </p>
+        <blockquote><p><strong>How it works:</strong> Visit the <a href="{{ '/styles/' | url }}">"All Styles"</a> directory page and select a style to view. A page with identical content to this one will be presented with a new design provided from a contributed stylesheet. CSS practitioners of any skill level are invited to <a href="#contribute">submit a stylesheet</a>!</p></blockquote>
+        <p>
+          The HTML for this page was created to be semantic, accessible, and free of nearly all
+          other opinions. Nested sectioning elements with the class `.container` serve as additional style aids since you do not have access to alter the base HTML. IDs are included where needed for nav anchors or accessibility, and a small number of additional classes are provided for key elements without IDs.
+        </p>
+        </section>
+        <section class="container">
+        <h2>Modern CSS Under the Spotlight</h2>
+        <p>
+          Modern CSS has increased and improved the available CSS properties and layout behaviors, and browser support is nearly in sync for most high-touch features.
+        </p>
+        <p>Some examples of modern CSS include:</p>
+        <ul>
+          <li>Flexbox</li>
+          <li>Grid</li>
+          <li>custom variables</li>
+          <li>gradients</li>
+          <li>animation</li>
+          <li>3D transforms</li>
+          <li>object-fit</li>
+          <li>:focus-within</li>
+          <li>calc()</li>
+          <li>min() / max() / clamp()</li>
+          <li>viewport units</li>
+          <li>scroll-(margin/padding/snap)</li>
+          <li>position: sticky</li>
+          <li>two-value display</li>
+          <li>expanded media query values</li>
+          <li>variable fonts</li>
+        </ul>
+        <p>
+          We also collectively have an improved understanding of what it takes to make
+          accessible experiences.
+        </p>
+        <p>
+          <a href="#contribute">Join Style Stage as a contributor</a> to refresh your CSS skills,
+          and learn from others!
+        </p>
+      </section>
+    </article>
+    <article id="guidelines">
+      <section class="container">
+        <h2>Guidelines</h2>
+        <p>Contributing a stylesheet to Style Stage means you agree to abide by <a href="{{ '/guidelines/' | url }}">our full guidelines</a>.</p>
+        <h3>TL;DR</h3>
+        <p>All submissions will be minfied, autoprefixed, and prepended with the <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA license</a> as well as attribution using the metadata you provide. You may use any build setup you prefer, but the final submission should be the compiled, unminified CSS. You retain the copyright to original graphics, and must ensure all graphics used are appropriately licensed. All asset links must be absolute to external resources. Stylesheets will be saved into the Github repo, and detected changes that violate the guidelines are cause for removal.</p>
+        <p>Ensure your design is responsive, and that it passes accessible contrast (we'll be using aXe to verify). Animations should be removed via `prefers-reduced-motion`. Cutting-edge techniques should come with a fallback if needed to not severely impact the user experience. No content may be permanently hidden, and hidden items must come with an accessible viewing technique. Page load time should not exceed 3 seconds.</p>
+        <p>Most importantly - have fun and learn something new! Check out the <a href="{{ '/resources/' | url }}">resources</a> for tips and inspiration.</p>
+        <a href="{{ '/guidelines/' | url }}" class="link-guidelines">Review full guidelines</a>
+      </section>
+    </article>
+    <article id="contribute">
+      <section class="container">
+        <h2>Contribute</h2>
+        <p>We welcome all who enjoy the craft of writing CSS to contribute!</p>
+        <p>
+          By participating as a contributor, your work will be shared with your provided attribution
+          as long as Style Stage is online, your stylesheet link and any asset links remain valid, and all <a href="{{ '/guidelines/' | url }}">contributor guidelines</a> are adhered to.
+        </p>
+      </section>
+      <section class="container">
+        <h3>Steps to Contribute</h3>
+        <ol>
+          <li>
+            Download the source files listed below to use as reference to build your stylesheet.
+          </li>
+          <li>Host your completed stylesheet at a public URL, and ensure all asset links are absolute URLs to external resources.</li>
+          <li>
+            <a href="{{ meta.repo }}">Create a pull request</a> to add
+            your information to: src/_data/styles.json. The schema is detailed in the repo README.
+          </li>
+          <li>
+            If your contribution abides by the previously listed guidelines, your submission will be
+            added!
+          </li>
+        </ol>
+      </section>
+      <footer id="files">
+        <div class="container">
+          <h3>Source Files</h3>
+          <a href="{{ '/source-files/style.css' | url }}" class="link-downloadcss" download>Download CSS</a>
+          <a href="{{ '/source-files/stylestage.html' | url }}" class="link-downloadhtml" download>Download HTML</a>
+        </div>
+      </footer>
+    </article>
+  </div>
+</main>
+<aside class="profile" aria-labelledby="profile-title">
+  <div class="container">
+    <h4 id="profile-title">Currently Staged Style</h4>
+    <ul>
+      {% set styleUrl %}{% if style.title %}/styles/css/{{ style.title | slug }}.css{% else %}/styles/css/main-stage.css{% endif %}{% endset %}
+      {% if page.url == '/' %}
+      <li class="profile-title"><span>Title:</span> <span>Main Stage</span></li>
+      <li class="profile-author"><span>Author:</span> <span>Stephanie Eckles</span></li>
+      <li class="profile-twitter">
+        <span>Twitter:</span> <span><a href="https://twitter.com/5t3ph">5t3ph</a></span>
+      </li>
+      <li class="profile-website">
+        <span>Website:</span> <span><a href="https://moderncss.dev">ModernCSS.dev</a></span>
+      </li>
+      {% else %}
+      <!-- Twitter and Website links are optional and will not be rendered if not included with submission -->
+      <li class="profile-title">
+        <span>Title:</span> <span>{{ style.title }}</span>
+      </li>
+      <li class="profile-author">
+        <span>Author:</span> <span>{{ style.author }}</span>
+      </li>
+      {% if style.twitter %}
+      <li class="profile-twitter">
+        <span>Twitter:</span>
+        <span
+          ><a href="https://twitter.com/{{ style.twitter }}">{{ style.twitter }}</a></span
+        >
+      </li>
+      {% endif %} {% if style.websiteUrl %}
+      <li class="profile-website">
+        <span>Website:</span>
+        <span
+          ><a href="{{ style.websiteUrl }}">{{ style.websiteTitle }}</a></span
+        >
+      </li>
+      {% endif %} {% endif %}
+    </ul>
+    <a href="{{ styleUrl | url }}">View Stylesheet</a>
+  </div>
+</aside>
+{% include "features.njk" %}
+{% include "footer.njk" %}

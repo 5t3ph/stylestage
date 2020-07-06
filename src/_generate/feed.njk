@@ -9,12 +9,12 @@ eleventyExcludeFromCollections: true
 	{% set absoluteUrl %}{{ '/feed/' | url | absoluteUrl(meta.url) }}{% endset %}
 	<link href="{{ absoluteUrl }}" rel="self"/>
 	<link href="{{ meta.url }}"/>
-	<updated>{{ collections.pages | rssLastUpdatedDate }}</updated>
+	<updated>{{ collections.all | rssLastUpdatedDate }}</updated>
 	<id>{{ meta.url }}</id>
 	<author>
 		<name>{{ meta.authorName }}</name>
 	</author>
-	{%- for page in collections.pages %}
+	{%- for page in collections.all %}
 	{% set absolutePostUrl %}{{ page.url | url | absoluteUrl(meta.url) }}{% endset %}
 	<entry>
 		<title>{{ page.data.title  }}</title>

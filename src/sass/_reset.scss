@@ -21,23 +21,17 @@ h6 {
   margin: 0;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 html {
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
-  font-family: sans-serif;
   font-size: 100%;
   line-height: 1.5;
   text-rendering: optimizeSpeed;
+  overflow-x: hidden;
 }
 
 /* Make images easier to work with */
@@ -61,9 +55,5 @@ select {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  html {
-    scroll-behavior: initial;
   }
 }

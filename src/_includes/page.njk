@@ -1,18 +1,43 @@
----
-layout: base.njk
----
-{% include 'sitenav.njk' %}
-
-<header class="tdbc-hero">
-  <div class="tdbc-container">
-    <h1 class="tdbc-ink--primary tdbc-mb-none">{{ title }}</h1>
-    <h2 class="tdbc-lead tdbc-content-maxlength tdbc-ink--gray tdbc-mt-md tdbc-mx-auto">
-      {{ description }}
-    </h2>
-  </div>
-</header>
-<main class="tdbc-container">
-  <article class="tdbc-mx-auto">
-    {{ content | safe }}
-  </article>
-</main>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} | {{ meta.siteName }}</title>
+    <meta name="description" content="{{ description }}" />
+    <link href="{{ '/styles/css/main-stage.css' | url }}" rel="stylesheet" />
+    <link rel="icon" href="{{ '/favicon.png' | url }}" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for {{ meta.siteName }}"
+      href="/feed/"
+    />
+  </head>
+  <body class="page">
+    <a href="#main" class="skip-link">Skip to main content</a>
+    {% include "nav.njk" %}
+    <header>
+      <div class="container">
+        <h1>{{ title }}</h1>
+      </div>
+    </header>
+    {% if page.url == '/styles/' %}
+    {% include "features.njk" %}
+    {% endif %}
+    <main id="main">
+      <div class="container">
+        <article id="about">
+          <div class="container">
+            {{ content | safe }}
+          </div>
+        </article>
+      </div>
+    </main>
+    {% if page.url !== '/styles/' %}
+    {% include "features.njk" %}
+    {% endif %}
+    {% include "footer.njk" %}
+  </body>
+</html>
