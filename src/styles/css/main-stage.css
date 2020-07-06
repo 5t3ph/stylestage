@@ -192,7 +192,7 @@ main {
 article section {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding-top: 5vh;
   padding-bottom: 5vh; }
 
