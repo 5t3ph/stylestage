@@ -8,5 +8,5 @@ module.exports = {
     "A modern CSS showcase styled by community contributions. Maintained by Stephanie Eckles of ModernCSS.dev.",
   authorName: "Stephanie Eckles",
   twitterUsername: "5t3ph",
-  repo: "#",
+  repo: "https://github.com/5t3ph/stylestage",
 };

@@ -1,49 +1,39 @@
-# 11ty Netlify Jumpstart
+# Style Stage
 
-> Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
+## A modern CSS showcase styled by community contributions
 
-Visit [11ty-netlify-jumpstart.netlify.app](https://11ty-netlify-jumpstart.netlify.app/) for all the feature details - or go ahead and [generate a new repo from the template](https://github.com/5t3ph/11ty-netlify-jumpstart/generate) to view the information locally.
+Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
-## Quick Start
+> Visit [Style Stage](https://stylestage.moderncss.dev) to view the available styles, and learn more about this project!
 
-1. [Generate a repo from this template](https://github.com/5t3ph/11ty-netlify-jumpstart/generate)
-   which will copy this project into your own new repo.
+## Contribute a Stylesheet
 
-1. Once cloned, run `npm install` to install 11ty and other dependencies. Then run `npm run develop` to run both 11ty and node-sass in watch
-   mode. Use `npm run build` to run a production version, which will also generate social share
-   preview images.
+Download the source files:
 
-1. Open `src/_data/meta.js` and adjust the values to your details. 1. Review the
-   [styling documentation](https://5t3ph.github.io/html-sass-jumpstart/) for the included minimal
-   Sass framework, particularly the theme variables, to quickly customize the starter.
+- [Source HTML](https://stylestage.moderncss.dev/source-files/stylestage.html)
+- [Source CSS](https://stylestage.moderncss.dev/source-files/style.css)
 
-1. Edit `_includes/home.njk` to change the home page - including changing the template type if desired -
-   and then create content within `_pages` using any templating format you prefer to add content.
+Then, create your own version of the stylesheet, being sure to adhere to [the guidelines](https://stylestage.moderncss.dev/guidelines/). Use it as a starting point, or begin from a blank file! Keep in mind you may not modify the HTML, including adding classes.
 
-1. Check out the [About page](https://11ty-netlify-jumpstart.netlify.app/about/) for expanded details on included features of this starter.
+You may use any build setup you prefer, but the final submission should be the compiled CSS _unminified_. Style Stage processing will minify, autoprefix, and prepend the stylesheet with the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/) as well as attribution using the metadata you provide.
 
-1. Review the [11ty documentation](https://11ty.dev) to more deeply apply customizations, including
-   adding custom data sources and reviewing what template languages are available.
+To submit your stylesheet, create pull request with an update to [\_src/\_data/styles.json](https://github.com/5t3ph/stylestage/blob/main/src/_data/styles.json) following the schema below. **Please add your entry at the bottom of the file**.
 
-### Is Netlify hosting required?
-
-It's not required, but highly recommended, and is also how the build process is setup to run
-against.
-
-## Development Scripts
-
-**`npm run develop`**
-
-> Run 11ty with hot reload at localhost:8080
-
-**`npm run build`**
-
-> Production build includes minified, autoprefixed CSS and social preview image generation
-
-Use this as the "Publish command" if needed by hosting such as Netlify.
+```json
+{
+  // Required
+  "title": "Main Stage Test",
+  "author": "Stephanie Eckles",
+  "stylesheet": "https://moderncss.dev/css/style.css",
+  // Optional
+  "twitter": "5t3ph",
+  "websiteTitle": "ModernCSS.dev",
+  "websiteUrl": "https://moderncss.dev"
+}
+```
 
 ## Feedback welcome!
 
-You can [file it as an issue](https://github.com/5t3ph/11ty-netlify-jumpstart/issues).
+You can [file it as an issue](https://github.com/5t3ph/stylestage/issues).
 
 [![Buy me a coffee](https://cdn.buymeacoffee.com/buttons/default-violet.png)](https://www.buymeacoffee.com/moderncss)

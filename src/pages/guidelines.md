@@ -10,6 +10,7 @@ not have access to alter the base HTML. IDs are included where needed for nav an
 **As a contributor, you agree to abide by the following guidelines and restrictions:**
 
 - The HTML is not available to modify, except for attribution values that will be added from your submission metadata.
+- You may use any build setup you prefer to create your stylesheet, but the final submission should be the compiled, unminified CSS.
 - Stylesheets will become hosted local to the project as well as be run through autoprefixer and minified to ensure optimal performance.
 - Submissions will have licensing and attribution added upon processing of the provided metadata.
 - Any changes made past initial submission will be revealed in version history, and reviewed to ensure guidelines are still met. Removal of the public stylesheet will result in removal from Style Stage.
