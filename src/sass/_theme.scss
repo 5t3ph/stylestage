@@ -1,9 +1,11 @@
 $color-primary: #3a00ff !default;
+$color-primary-alt: #6f6ffd !default;
 $color-secondary: #d42257 !default;
 $color-background: #d2fbf7 !default;
 
 $brand-colors: (
   primary: $color-primary,
+  primary-alt: $color-primary-alt,
   secondary: $color-secondary,
 ) !default;
 
@@ -23,12 +25,16 @@ $colors: map-merge(
   @return map-get($colors, $key);
 }
 
+@function svgColor($color) {
+  @return "%23" + str-slice("#{color($color)}", 2, -1);
+}
+
 $link-color: color(primary) !default;
 $border-radius: 8px !default;
 
 $font-weight-strong: 500 !default;
-$font-size-h1: 4.2rem !default;
-$font-size-h2: 3.15rem !default;
+$font-size-h1: 6rem !default;
+$font-size-h2: 3rem !default;
 $font-size-h3: 2rem !default;
 $font-size-h4: 1.35rem !default;
 $font-size-text: 1.15rem !default;

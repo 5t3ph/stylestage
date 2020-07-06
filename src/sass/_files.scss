@@ -1,0 +1,27 @@
+#files {
+  display: grid;
+  place-content: center;
+  margin: 5vh auto;
+  text-align: center;
+
+  h3 {
+    height: 0;
+    opacity: 0;
+  }
+
+  .container {
+    display: inline-block;
+    padding: 5vmin;
+    outline: 4px dashed var(--color-secondary);
+    background-color: var(--color-background);
+    text-align: center;
+
+    a:not(:last-child) {
+      margin: 0.5rem;
+
+      &:not(.link-codepen) {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+      }
+    }
+  }
+}

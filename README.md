@@ -1,3 +1,5 @@
+![Style Stage](https://repository-images.githubusercontent.com/276970401/fb04d000-bf10-11ea-9e96-3788ae2b16f7)
+
 # Style Stage
 
 ## A modern CSS showcase styled by community contributions

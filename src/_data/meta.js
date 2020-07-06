@@ -1,5 +1,3 @@
-// require("dotenv").config();
-
 module.exports = {
   url: process.env.URL,
   environment: process.env.ELEVENTY_ENV,

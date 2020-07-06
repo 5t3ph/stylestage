@@ -4,18 +4,18 @@ title: "Guidelines"
 
 The HTML for this page was created to be semantic, accessible, and free of nearly all
 other opinions. While typically extra divs are to be avoided, each sectioning element
-also includes a `.container` div as the first child for use as a style aid since you do
+also includes a `.container` div as the first child for use as a styling aid since you do
 not have access to alter the base HTML. IDs are included where needed for nav anchors or accessibility, and a small number of additional classes are provided for key elements without IDs.
 
 **As a contributor, you agree to abide by the following guidelines and restrictions:**
 
 - The HTML is not available to modify, except for attribution values that will be added from your submission metadata.
 - You may use any build setup you prefer to create your stylesheet, but the final submission should be the compiled, unminified CSS.
-- Stylesheets will become hosted local to the project as well as be run through autoprefixer and minified to ensure optimal performance.
-- Submissions will have licensing and attribution added upon processing of the provided metadata.
-- Any changes made past initial submission will be revealed in version history, and reviewed to ensure guidelines are still met. Removal of the public stylesheet will result in removal from Style Stage.
-- You retain copyright over original graphics, and your stylsheet will recieve the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/).
-- All asset links must be absolute to external resources. Broken asset links will lead to removal.
+- Stylesheets will become hosted locally to the project as well as be run through autoprefixer and minified to ensure optimal performance.
+- Submissions will have licensing and attribution added upon the processing of the provided metadata.
+- Any changes made past initial submission will be revealed in the version history and reviewed to ensure guidelines are still met. Removal of the public stylesheet will result in removal from Style Stage.
+- You retain copyright over original graphics, and your stylesheet will receive the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/).
+- All asset links, including fonts, must be absolute to external resources. Broken asset links will lead to removal.
 - Page load time should not exceed 3 seconds. _Note: This site is built with Eleventy and hosted on Netlify, so your local load time will likely be very close to production load time._
 - There should be no contrast errors dedicated when validated against tools like WAVE or
   aXe. Include any notes about false errors in your pull request.
@@ -23,7 +23,7 @@ not have access to alter the base HTML. IDs are included where needed for nav an
 - Designs should be responsive and usable across the most widely supported browsers (check
   [caniuse data](https://caniuse.com) as needed)
 - When cutting-edge properties are used, appropriate fallbacks should be provided if there
-  is a significant impact to the user experience, particularly as it relates to
+  is a significant impact on the user experience, particularly as it relates to
   accessibility.
 - Animations should be removed via `prefers-reduced-motion`. The reset included with the source CSS demonstrates how to do this.
 - No content may be permanently hidden, and hidden items must come with an accessible viewing technique.
