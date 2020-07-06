@@ -16,8 +16,6 @@ $colors: map-merge(
     background: $color-background,
     text: $color-body,
     light: #fff,
-    dark: mix(black, $color-primary, 80%),
-    gray: $color-gray,
   )
 );
 
@@ -25,13 +23,6 @@ $colors: map-merge(
   @return map-get($colors, $key);
 }
 
-// Add/remove to selectively generate `ink` (text color) classes
-// $ink-colors: primary, secondary, text, gray, light, dark !default;
-
-// Add/remove to selectively generate `background` (text color) classes
-// $background-colors: primary, secondary, background, gray, light !default;
-
-// $button-variants: primary, secondary, light, gray !default;
 $link-color: color(primary) !default;
 $border-radius: 8px !default;
 
@@ -50,13 +41,6 @@ $font-sizes: (
   text: $font-size-text,
 );
 
-$spacing: (
-  sm: 1rem,
-  md: 3rem,
-  lg: 6rem,
-  xl: 10rem,
-) !default;
-
 // stylelint-disable
 :root {
   @each $key, $color in $colors {
@@ -72,8 +56,4 @@ $spacing: (
   }
 
   --border-radius: #{$border-radius};
-
-  @each $key, $size in $spacing {
-    --space-#{$key}: #{$size};
-  }
 }
