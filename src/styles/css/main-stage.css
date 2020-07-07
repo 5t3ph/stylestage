@@ -430,7 +430,8 @@ nav ul {
   width: 95vw;
   max-width: 80ch;
   margin: 1rem auto 10vh;
-  padding: 1.25rem; }
+  padding: 1.25rem;
+  z-index: 1; }
   .profile h4 {
     margin: 0;
     color: var(--color-secondary);

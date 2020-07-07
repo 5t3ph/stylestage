@@ -1,0 +1,42 @@
+<style>
+#sponsor-footer {
+	background-color: #fff;
+	padding: .5rem;
+}
+#sponsor-footer p {
+	width: 100%;
+  max-width: 70ch;
+  margin-right: auto;
+  margin-left: auto;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+	color: rgba(0,0,0,0.87);
+	font-size: 1rem;
+}
+#sponsor-footer p span {
+	margin: .5rem;
+}
+#sponsor-footer .sponsor-button {
+	display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  transition: 180ms all ease-in-out;
+  font-size: .9em;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+	color: #3a00ff;
+	border: 2px solid currentColor;
+	border-radius: 4px;
+}
+@media (max-width: 60ch) {
+	#sponsor-footer p {
+		flex-wrap: wrap;
+	}
+}
+</style>
+<div id="sponsor-footer">
+<p><span><strong>Support Style Stage</strong> as a monthly or weekly sponsor and qualify for a branded Style Stage page with links on every page.</span><a href="{{ '/support/' | url }}" class="sponsor-button">View Sponsor&nbsp;Options</a></p>
+</div>
