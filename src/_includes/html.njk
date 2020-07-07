@@ -119,7 +119,7 @@
     <h4 id="profile-title">Currently Staged Style</h4>
     <ul>
       {% set styleUrl %}{% if style.title %}/styles/css/{{ style.title | slug }}.css{% else %}/styles/css/main-stage.css{% endif %}{% endset %}
-      {% if page.url == '/' %}
+      {% if (page.url == '/') or (style.title == null) %}
       <li class="profile-title"><span>Title:</span> <span>Main Stage</span></li>
       <li class="profile-author"><span>Author:</span> <span>Stephanie Eckles</span></li>
       <li class="profile-twitter">
