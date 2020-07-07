@@ -55,6 +55,13 @@
       color: var(--color-text);
     }
     {% endif %}
+    {% if page.url == '/guidelines/' %}
+    article p:first-child {
+      font-size: var(--font-size-h3);
+      text-align: center;
+      align-self: stretch;
+    }
+    {% endif %}
     </style>
   </head>
   <body class="page">

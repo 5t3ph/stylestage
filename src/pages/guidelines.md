@@ -2,6 +2,8 @@
 title: "Guidelines"
 ---
 
+**[Subscribe to updates](/subscribe/)** to recieve notice of new features, like dark mode!
+
 The HTML for this page was created to be semantic, accessible, and free of nearly all
 other opinions. While typically extra divs are to be avoided, each sectioning element
 also includes a `.container` div as the first child for use as a styling aid since you do
@@ -33,3 +35,17 @@ not have access to alter the base HTML. IDs are included where needed for nav an
   of the maintainer. You may be asked to make revisions for minor violations.
 - Submissions may be removed if future changes are made that violate the guidelines, or if
   notice is received of copyright violations.
+
+## FAQs
+
+### What pages will be restyled?
+
+A dedicated page will be generated for your stylesheet that will restyle a copy of the home page only. Review the [files](/#files) section to get the up-to-date source content.
+
+### Can I host my stylesheet on Github?
+
+Yes, you'll just need to submit the link to the "raw" version instead of the Github page for it to work properly.
+
+### What about dark mode?
+
+A near-future update will allow you to optionally display a toggle to flip to dark mode. [Subscribe to updates](/subscribe/) to make sure you get a notification and update your stylesheets!

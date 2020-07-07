@@ -1,9 +1,9 @@
 <nav>
   <ul>
-    <li><a href="{{ '/#about' | url }}">About</a></li>
-    <li><a href="{{ '/#guidelines' | url }}">Guidelines</a></li>
-    <li><a href="{{ '/#contribute' | url }}">Contribute</a></li>
-    <li><a href="{{ '/#files' | url }}">Files</a></li>
+    <li><a href="{% if layout === 'page' %}{{ '/#about' | url }}{% else %}{{ '#about' | url }}{% endif %}">About</a></li>
+    <li><a href="{% if layout === 'page' %}{{ '/#guidelines' | url }}{% else %}{{ '#guidelines' | url }}{% endif %}">Guidelines</a></li>
+    <li><a href="{% if layout === 'page' %}{{ '/#contribute' | url }}{% else %}{{ '#contribute' | url }}{% endif %}">Contribute</a></li>
+    <li><a href="{% if layout === 'page' %}{{ '/#files' | url }}{% else %}{{ '#files' | url }}{% endif %}">Files</a></li>
     <li><a href="{{ '/styles/' | url }}">All Styles</a></li>
     <li><a href="{{ '/resources/' | url }}">Resources</a></li>
   </ul>
