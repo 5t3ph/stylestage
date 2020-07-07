@@ -38,39 +38,27 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  eleventyConfig.addCollection("allPages", function (collection) {
+    return collection.getAll().filter((page) => {
+      return !page.data.style || page.data.style.title !== "Example";
+    });
+  });
+
+  eleventyConfig.addCollection("allStyles", function (collection) {
+    return collection.getFilteredByTag("styles").filter((style) => {
+      return style.data.style.title !== "Example";
+    });
+  });
+
   eleventyConfig.addFilter("jsonTitle", (str) => {
     if (!str) {
       return;
     }
+
     let title = str.replace(/((.*)\s(.*)\s(.*))$/g, "$2&nbsp;$3&nbsp;$4");
     title = title.replace(/"(.*)"/g, '\\"$1\\"');
     return title;
   });
-
-  eleventyConfig.addFilter("linkMC", (str) => {
-    if (!str) {
-      return;
-    }
-    return str.replace(/(ModernCSS\.dev)/i, '<a href="https://moderncss.dev">$1</a>');
-  });
-
-  /* Markdown Overrides */
-  let markdownLibrary = markdownIt({
-    html: true,
-  }).use(markdownItAnchor, {
-    permalink: true,
-    permalinkClass: "anchor",
-    permalinkSymbol: "#",
-    permalinkSpace: false,
-    level: [1, 2, 3],
-    slugify: (s) =>
-      s
-        .trim()
-        .toLowerCase()
-        .replace(/[\s+~\/]/g, "-")
-        .replace(/[().`,%·'"!?¿:@*]/g, ""),
-  });
-  eleventyConfig.setLibrary("md", markdownLibrary);
 
   return {
     passthroughFileCopy: true,

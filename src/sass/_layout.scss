@@ -40,13 +40,11 @@ article,
   padding: 1rem;
 }
 
-.page-footer,
-#styles {
-  ul {
-    display: grid;
-    margin: 0 0 2rem;
-    padding: 0;
-    grid-gap: 1em;
-    list-style: none;
-  }
+.page-footer ul,
+.features {
+  display: grid;
+  margin: 0 0 2rem;
+  padding: 0;
+  grid-gap: 1em;
+  list-style: none;
 }

@@ -44,6 +44,12 @@ const path = require("path");
     await page.evaluate((post) => {
       const title = document.querySelector("h1");
       title.innerHTML = post.title;
+
+      if (post.author) {
+        var author = document.createElement("SMALL");
+        author.innerHTML = `By ${post.author}`;
+        title.appendChild(author);
+      }
     }, post);
 
     console.log(`Image: ${post.slug}.png`);

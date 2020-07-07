@@ -3,32 +3,70 @@
   font-style: normal;
   font-weight: normal;
   src: local("Baloo 2 Regular"), local("Baloo-2-Regular"),
-    url("../fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
+    url("../src/fonts/baloo-2-v1-latin-regular.woff2") format("woff2");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Baloo 2";
   font-style: normal;
-  font-weight: 800;
+  font-weight: 500;
   src: local("Baloo 2 Medium"), local("Baloo-2-Medium"),
-    url("../fonts/baloo-2-v1-latin-500.woff2") format("woff2");
+    url("../src/fonts/baloo-2-v1-latin-500.woff2") format("woff2");
   font-display: swap;
 }
 
 @import "theme";
 @import "reset";
-@import "typography";
-
-// stylelint-disable
+@import "logomark";
 
 body {
-  border: 3px solid color(secondary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-family);
+}
+
+header {
+  --logomark-height: 3em;
+  --logomark-padding: 0.5em 1em;
+
   display: grid;
-  place-content: center;
+  height: 100vh;
+  place-items: center;
+  padding: 10vh 2rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%233a00ff' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d42257' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: 0 -38px, 17px -40px;
+  color: var(--color-primary);
   text-align: center;
 
+  h1,
+  h2 {
+    line-height: 1;
+  }
+
   h1 {
-    font-size: 2.5rem;
+    @include logomark;
+
+    font-size: var(--font-size-h1);
+    font-size: clamp(2rem, 7vw, var(--font-size-h1));
+
+    small {
+      margin-top: 0.5em;
+      opacity: 0.65;
+      font-size: 0.7em;
+    }
+  }
+
+  h2 {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    color: var(--color-secondary);
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text);
   }
 }

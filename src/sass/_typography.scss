@@ -43,7 +43,7 @@ p {
 }
 
 article .container {
-  > ul,
+  > ul:not(.features),
   > ol {
     > li + li {
       margin-top: 1rem;

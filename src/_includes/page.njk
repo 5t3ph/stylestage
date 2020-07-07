@@ -19,6 +19,42 @@
       padding-bottom: 0;
       min-height: unset;
     }
+    main {
+      padding-bottom: 10vh;
+    }
+    {% if page.url == '/styles/' %}
+    main {
+      padding-top: 0;
+    }
+    #styles {
+      margin: 0;
+    }
+    #main h2 {
+      background-color: unset;
+      color: var(--color-primary);
+    }
+    article .features li {
+      background-color:rgba(213, 34, 87, 0.3);
+    }
+    article .features li span {
+      border: none;
+    }
+    article .features li:nth-child(even) {
+      background-color: rgba(58, 3, 255, 0.1);
+    }
+    article .features li:nth-child(even) span {
+      background-color: var(--color-primary);
+    }
+    article .features a:visited + span::after {
+      content: "✅ Viewed!";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 200%);
+      width: 100%;
+      color: var(--color-text);
+    }
+    {% endif %}
     </style>
   </head>
   <body class="page">
@@ -35,13 +71,13 @@
     <main id="main">
       <div class="container">
         <article id="about">
-          <div class="container">
+          <section class="container">
             {{ content | safe }}
-          </div>
+          </section>
         </article>
       </div>
     </main>
-    {% if page.url !== '/styles/' %}
+    {% if page.url !== '/styles/' and page.url !== '/support/' %}
     {% include "features.njk" %}
     {% endif %}
     {% include "footer.njk" %}
