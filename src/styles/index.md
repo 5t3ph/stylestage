@@ -5,7 +5,7 @@ layout: page
 
 ## All Styles
 
-<ul class="features">
+<ul class="features features__flexible">
 {%- for style in collections.allStyles -%}
 	<li>
 		<span>

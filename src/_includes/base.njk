@@ -47,8 +47,8 @@
         meta.siteDescription
       }}{% endif %}"
     />
-    <meta property="og:image" content="{{ meta.url }}/previews/{{ title | slug }}.png" />
-    <meta name="twitter:image" content="{{ meta.url }}/previews/{{ title | slug }}.png" />
+    <meta property="og:image" content="{{ meta.url }}/previews/{% if style.title %}{{ style.title  | slug}}{% else %}home{% endif %}.png" />
+    <meta name="twitter:image" content="{{ meta.url }}/previews/{% if style.title %}{{ style.title | slug }}{% else %}home{% endif %}.png" />
     <link
       rel="alternate"
       type="application/rss+xml"

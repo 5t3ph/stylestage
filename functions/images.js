@@ -45,6 +45,12 @@ const path = require("path");
       const title = document.querySelector("h1");
       title.innerHTML = post.title;
 
+      const subtitle = document.querySelector("h2");
+      subtitle.innerHTML =
+        post.slug === "home"
+          ? "A modern CSS showcase styled by community&nbsp;contributions"
+          : "Style Stage";
+
       if (post.author) {
         var author = document.createElement("SMALL");
         author.innerHTML = `By ${post.author}`;

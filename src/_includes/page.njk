@@ -33,25 +33,47 @@
       background-color: unset;
       color: var(--color-primary);
     }
-    article .features li {
-      background-color:rgba(213, 34, 87, 0.3);
+    .features__flexible {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -.5rem;
+      margin-right: -.5rem;
+      width: calc(100% + 1rem);
     }
-    article .features li span {
+    .features__flexible li {
+      background-color:rgba(213, 34, 87, 0.3);
+      flex: 1 1 20ch;
+      margin: .5rem;
+    }
+    /* Gap for flex is currently only available in Firefox, so we have to extra scope it */
+    @supports (gap: 1rem) and (-moz-appearance: none) {
+      .features__flexible {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 100%;
+        gap: 1rem;
+      }
+      .features__flexible li {
+        margin: 0;
+      }
+    }
+    .features__flexible li span {
       border: none;
     }
-    article .features li:nth-child(even) {
+    .features__flexible li:nth-child(even) {
       background-color: rgba(58, 3, 255, 0.1);
     }
-    article .features li:nth-child(even) span {
+    .features__flexible li:nth-child(even) span {
       background-color: var(--color-primary);
     }
-    article .features a {
+    .features__flexible a {
       position: relative;
     }
-    article .features a span {
+    .features__flexible a span {
       width: 100%;
     }
-    article .features a span::after {
+    .features__flexible a span::after {
       content: "✓ Viewed!";
       position: absolute;
       bottom: 0;
@@ -60,13 +82,13 @@
       width: 100%;
       color: #D7BEC7;
     }
-    article .features li:nth-child(even) a span::after {
+    .features__flexible li:nth-child(even) a span::after {
       color: #C3E3F9;
     }
-    article .features a:visited span::after {
+    .features__flexible a:visited span::after {
       color: var(--color-secondary);
     }
-    article .features li:nth-child(even) a:visited span::after {
+    .features__flexible li:nth-child(even) a:visited span::after {
       color: var(--color-primary);
     }
     {% endif %}
