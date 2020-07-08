@@ -45,14 +45,29 @@
     article .features li:nth-child(even) span {
       background-color: var(--color-primary);
     }
-    article .features a:visited + span::after {
-      content: "✅ Viewed!";
+    article .features a {
+      position: relative;
+    }
+    article .features a span {
+      width: 100%;
+    }
+    article .features a span::after {
+      content: "✓ Viewed!";
       position: absolute;
       bottom: 0;
       left: 50%;
-      transform: translate(-50%, 200%);
+      transform: translate(-50%, -150%);
       width: 100%;
-      color: var(--color-text);
+      color: #D7BEC7;
+    }
+    article .features li:nth-child(even) a span::after {
+      color: #C3E3F9;
+    }
+    article .features a:visited span::after {
+      color: var(--color-secondary);
+    }
+    article .features li:nth-child(even) a:visited span::after {
+      color: var(--color-primary);
     }
     {% endif %}
     {% if page.url == '/guidelines/' %}

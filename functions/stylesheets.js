@@ -17,14 +17,6 @@ const slugify = require("slugify");
   // Get styles data
   const styles = require("../src/_data/styles.json");
 
-  // Create a `styles` directory in the public folder
-  // const publicDir = path.resolve(__dirname, "../public");
-  // if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir);
-  // const stylesDir = path.resolve(__dirname, "../public/styles");
-  // if (!fs.existsSync(stylesDir)) fs.mkdirSync(stylesDir);
-  // const stylesCssDir = path.resolve(__dirname, "../public/styles/css");
-  // if (!fs.existsSync(stylesCssDir)) fs.mkdirSync(stylesCssDir);
-
   // Go over all the styles
   for (const style of styles) {
     const slug = slugify(style.title, {
@@ -53,7 +45,7 @@ const slugify = require("slugify");
 * Twitter: @${style.twitter || "N/A"}
 *
 * View on Style Stage:
-* @link https://styles.moderncss.dev/styles/${slug}/
+* @link https://stylestage.moderncss.dev/styles/${slug}/
 */`;
 
       const stylesheet = await page.evaluate(() => document.querySelector("pre").innerText);
