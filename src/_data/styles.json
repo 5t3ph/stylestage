@@ -30,5 +30,13 @@
     "websiteTitle": "Dominic Duffin's Personal Site",
     "websiteURL": "https://dominicduffin.uk",
     "stylesheet": "https://dominicduffin.uk/dominicduffin_stylestage.css"
+  },
+    {
+    "title": "Vaporwave",
+    "author": "Shannon Crabill",
+    "stylesheet": "https://raw.githubusercontent.com/scrabill/stylestage/main/src/styles/css/vaporwave.css",
+    "twitter": "shannon_crabill",
+    "websiteTitle": "shannoncrabill.com",
+    "websiteUrl": "http://shannoncrabill.com/"
   }
 ]
