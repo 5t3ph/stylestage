@@ -42,9 +42,22 @@ not have access to alter the base HTML. IDs are included where needed for nav an
 
 A dedicated page will be generated for your stylesheet that will restyle a copy of the home page only. Review the [files](/#files) section to get the up-to-date source content.
 
-### Can I host my stylesheet on Github?
+### How do I create a public stylesheet URL?
 
-Yes, you'll just need to submit the link to the "raw" version instead of the Github page for it to work properly.
+You can host on your own domain, but if you don't have one, the following will also work:
+
+- **Github**: You'll need to submit the link to the "raw" version instead of the Github page for it to work properly. This can be a gist or a file within a repo.
+- **CodePen**: If you [fork the Style Stage CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291) you can add `.css` to your pen URL and use that.
+
+### How do I create a pull request (PR)?
+
+Currently, you must have a [GitHub](https://github.com/) account to participate.
+
+1. Visit the [stylestage repo](https://github.com/5t3ph/stylestage)
+1. Select "Fork" (top right on a desktop view)
+1. Add your information as noted in [Contribute a Stylesheet](https://github.com/5t3ph/stylestage#contribute-a-stylesheet). You can navigate to the file and edit it via the web interface or clone it to make changes locally.
+1. Once edits are made and committed to your fork, visit the [compare page](https://github.com/5t3ph/stylestage/compare) and ensure it lists "base: main" and "compare: [your fork]" and then select "Create pull request"
+1. We will receive notice of the PR and review. A preview link will be created on Netlify as part of the PR. We may ask you to make some changes to meet the guidelines, and then if all goes well it will be published!
 
 ### What about dark mode?
 

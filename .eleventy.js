@@ -60,6 +60,21 @@ module.exports = function (eleventyConfig) {
     return title;
   });
 
+  /* Markdown Overrides */
+  let markdownLibrary = markdownIt({
+    html: true,
+  }).use(markdownItAnchor, {
+    permalink: false,
+    level: [1, 2, 3],
+    slugify: (s) =>
+      s
+        .trim()
+        .toLowerCase()
+        .replace(/[\s+~\/]/g, "-")
+        .replace(/[().`,%·'"!?¿:@*]/g, ""),
+  });
+  eleventyConfig.setLibrary("md", markdownLibrary);
+
   return {
     passthroughFileCopy: true,
     dir: {
