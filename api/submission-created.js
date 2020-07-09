@@ -1,6 +1,8 @@
 require("dotenv").config();
 const fetch = require("node-fetch");
+
 const { BUTTONDOWN_API_KEY } = process.env;
+
 exports.handler = async (event) => {
   const { email } = JSON.parse(event.body).payload;
   console.log(`Recieved a submission: ${email}`);

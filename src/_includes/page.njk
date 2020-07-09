@@ -94,9 +94,18 @@
     {% endif %}
     {% if page.url == '/guidelines/' or page.url == '/thanks/' %}
     article p:first-of-type {
-      font-size: var(--font-size-h3);
+      font-size: var(--font-size-h4);
       text-align: center;
       align-self: stretch;
+    }
+    {% endif %}
+    {% if page.url == '/thanks/' %}
+    article p, article h3 {
+      text-align: center; 
+      width: 100%;
+    }
+    article h3 { 
+      width: 100%;
     }
     {% endif %}
     {% if page.url === '/subscribe/' %}
