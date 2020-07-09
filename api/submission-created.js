@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 exports.handler = async (event, context, callback) => {
-  const { email } = JSON.parse(event.body);
+  const { email } = JSON.parse(event.body).payload;
 
   if (!email) {
     return {
