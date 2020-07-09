@@ -42,6 +42,7 @@
     "luxon": "^1.23.0",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.11.0",
     "postcss-cli": "^7.1.0",
     "prettier": "^2.0.5",
