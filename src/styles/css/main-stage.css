@@ -189,6 +189,8 @@ body {
 main {
   padding-top: 5vh;
   padding-bottom: 5vh; }
+  main :focus {
+    outline: none; }
   main h3 {
     color: var(--color-primary); }
 
