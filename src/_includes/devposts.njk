@@ -1,0 +1,16 @@
+<ul class="features patterned">
+{%- for post in devposts | limit(3) -%}
+	<li>
+		<span>
+			<a href="{{ post.url }}">{{ post.title }}<span aria-hidden="true"></span></a>
+			<span><small>{{ post.description }}</small></span>
+		</span>
+	</li>
+{%- else -%}
+	<li class="empty">
+		<span>
+			Awaiting your contribution!
+		</span>
+	</li>
+{%- endfor -%}
+</ul>

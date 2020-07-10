@@ -45,9 +45,18 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("allStyles", function (collection) {
-    return collection.getFilteredByTag("styles").filter((style) => {
-      return style.data.style.title !== "Example";
-    });
+    return collection.getFilteredByTag("styles");
+  });
+
+  eleventyConfig.addCollection("featureStyles", function (collection) {
+    return collection
+      .getFilteredByTag("styles")
+      .filter((style) => {
+        return style.data.style.featureSlot;
+      })
+      .sort(function (a, b) {
+        return a.data.style.featureSlot - b.data.style.featureSlot;
+      });
   });
 
   eleventyConfig.addFilter("jsonTitle", (str) => {
@@ -58,6 +67,10 @@ module.exports = function (eleventyConfig) {
     let title = str.replace(/((.*)\s(.*)\s(.*))$/g, "$2&nbsp;$3&nbsp;$4");
     title = title.replace(/"(.*)"/g, '\\"$1\\"');
     return title;
+  });
+
+  eleventyConfig.addFilter("limit", function (arr, limit) {
+    return arr.slice(0, limit);
   });
 
   /* Markdown Overrides */

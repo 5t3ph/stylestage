@@ -143,6 +143,16 @@
       margin-top: 1rem;
     }
     {% endif %}
+    {% if page.url === '/resources/' %}
+    #main h2 {
+      background-color: unset;
+      color: var(--color-primary);
+    }
+    a.link {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    {% endif %}
     </style>
   </head>
   <body class="page">
@@ -168,7 +178,7 @@
         </article>
       </div>
     </main>
-    {% if page.url !== '/styles/' and page.url !== '/support/' %}
+    {% if page.url !== '/styles/' and page.url !== '/support/' and page.url !== '/resources/' %}
     {% include "features.njk" %}
     {% endif %}
     {% include "footer.njk" %}

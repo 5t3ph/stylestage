@@ -9,7 +9,7 @@ main {
   padding-top: 5vh;
   padding-bottom: 5vh;
 
-  :focus {
+  &:focus {
     outline: none;
   }
 
