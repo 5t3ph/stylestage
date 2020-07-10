@@ -1,13 +1,5 @@
 [
   {
-    "title": "Example",
-    "author": "Stephanie Eckles",
-    "twitter": "5t3ph",
-    "websiteTitle": "ModernCSS.dev",
-    "websiteUrl": "https://moderncss.dev",
-    "stylesheet": "https://moderncss.dev/css/style.css"
-  },
-  {
     "title": "Retroish",
     "author": "Jean Louise Tiston",
     "twitter": "jeanlouisedev",
@@ -21,7 +13,8 @@
     "twitter": "donniedamato",
     "websiteTitle": "Donnie D'Amato",
     "websiteUrl": "https://donniedamato.info",
-    "stylesheet": "https://codepen.io/fauxserious/pen/JjGLMVY.css"
+    "stylesheet": "https://codepen.io/fauxserious/pen/JjGLMVY.css",
+    "featureSlot": 3
   },
   {
     "title": "Purplify & Pastel",
@@ -31,7 +24,7 @@
     "websiteURL": "https://dominicduffin.uk",
     "stylesheet": "https://dominicduffin.uk/dominicduffin_stylestage.css"
   },
-    {
+  {
     "title": "Vaporwave",
     "author": "Shannon Crabill",
     "stylesheet": "https://raw.githubusercontent.com/scrabill/stylestage-vaporwave/master/style.css",
@@ -39,20 +32,22 @@
     "websiteTitle": "shannoncrabill.com",
     "websiteUrl": "http://shannoncrabill.com/"
   },
-    {
+  {
     "title": "Center Stage",
     "author": "Katie Langerman",
     "stylesheet": "https://raw.githubusercontent.com/langermank/Style-Stage-Submission/master/style.css",
     "twitter": "Katielangerman",
     "websiteTitle": "langermank.com",
-    "websiteUrl": "https://www.langermank.com/"
+    "websiteUrl": "https://www.langermank.com/",
+    "featureSlot": 2
   },
-   {
+  {
     "title": "Queer Modes",
     "author": "Miriam Suzanne",
     "stylesheet": "https://raw.githubusercontent.com/mirisuzanne/queer-stage/main/assets/css/mia.css",
     "twitter": "MiriSuzanne",
     "websiteTitle": "miriamsuzanne.com",
-    "websiteUrl": "https://www.miriamsuzanne.com/"
+    "websiteUrl": "https://www.miriamsuzanne.com/",
+    "featureSlot": 1
   }
 ]

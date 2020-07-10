@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /source-files
+Disallow: /thanks

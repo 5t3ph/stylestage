@@ -9,6 +9,10 @@ main {
   padding-top: 5vh;
   padding-bottom: 5vh;
 
+  &:focus {
+    outline: none;
+  }
+
   h3 {
     color: var(--color-primary);
   }

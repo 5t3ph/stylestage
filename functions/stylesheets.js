@@ -45,7 +45,7 @@ const slugify = require("slugify");
 * Twitter: @${style.twitter || "N/A"}
 *
 * View on Style Stage:
-* @link https://stylestage.moderncss.dev/styles/${slug}/
+* @link https://stylestage.dev/styles/${slug}/
 */`;
 
       const stylesheet = await page.evaluate(() => document.querySelector("pre").innerText);

@@ -1,0 +1,14 @@
+<form name="subscribe" action="/thanks/" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+  <p hidden>
+    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+  </p>
+  <div>
+    <label for="name">Name</label>
+    <input id="name" name="name" type="text" required />
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" type="text" required />
+  </div>
+  <button class="link-subscribe" type="submit">Subscribe</button>
+</form>

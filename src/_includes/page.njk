@@ -92,11 +92,65 @@
       color: var(--color-primary);
     }
     {% endif %}
-    {% if page.url == '/guidelines/' %}
-    article p:first-child {
-      font-size: var(--font-size-h3);
+    {% if page.url == '/guidelines/' or page.url == '/thanks/' %}
+    article p:first-of-type {
+      font-size: var(--font-size-h4);
       text-align: center;
       align-self: stretch;
+    }
+    {% endif %}
+    {% if page.url == '/thanks/' %}
+    article p, article h3 {
+      text-align: center; 
+      width: 100%;
+    }
+    article h3 { 
+      width: 100%;
+    }
+    {% endif %}
+    {% if page.url === '/subscribe/' %}
+    form {
+      display: grid;
+      grid-gap: 1rem;
+      align-self: center;
+      margin-top: 2rem;
+    }
+    form div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    form label {
+      width: 6ch;
+      font-family: inherit;
+      font-size: var(--font-size-h4);
+      font-weight: var(--font-weight-strong);
+    }
+    form input {
+      border: 2px solid var(--color-primary);
+      padding: .5rem 1rem;
+      font-size: 1.125rem;
+      color: inherit;
+      min-width: 300px;
+      width: 100%;
+      transition: 180ms box-shadow ease-in;
+    }
+    form input:focus {
+      box-shadow: 0.3em 0.3em var(--color-secondary);
+    }
+    form button {
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    {% endif %}
+    {% if page.url === '/resources/' %}
+    #main h2 {
+      background-color: unset;
+      color: var(--color-primary);
+    }
+    a.link {
+      margin-left: auto;
+      margin-right: auto;
     }
     {% endif %}
     </style>
@@ -117,11 +171,14 @@
         <article id="about">
           <section class="container">
             {{ content | safe }}
+            {% if page.url === '/subscribe/' %}
+            {% include "subscribe.njk" %}
+            {% endif %}
           </section>
         </article>
       </div>
     </main>
-    {% if page.url !== '/styles/' and page.url !== '/support/' %}
+    {% if page.url !== '/styles/' and page.url !== '/support/' and page.url !== '/resources/' %}
     {% include "features.njk" %}
     {% endif %}
     {% include "footer.njk" %}

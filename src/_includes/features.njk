@@ -2,9 +2,20 @@
   <div class="container">
     <h2>Featured Styles</h2>
     <ul class="features">
-      <li><span><a href="#">[placeholder title this is kinda long]</a> <span>by [maybe you?]</span></span></li>
-      <li><span><a href="#">[placeholder title]</a> <span>by [c'mon, you can do it!]</span></span></li>
-      <li><span><a href="#">[placeholder title]</a> <span>by [future you]</span></span></li>
+    {%- for style in collections.featureStyles -%}
+      <li>
+        <span>
+          <a href="/styles/{{ style.data.style.title | slug }}">{{ style.data.style.title }}<span aria-hidden="true"></span></a>
+          <span>by {{ style.data.style.author}}</span>
+        </span>
+      </li>
+    {%- else -%}
+      <li class="empty">
+        <span>
+          Awaiting your contribution!
+        </span>
+      </li>
+    {%- endfor -%}
     </ul>
 		{% if page.url !== '/styles/' %}
     <a href="{{ '/styles/' | url }}" class="link-allstyles">View All Styles</a>
