@@ -1,0 +1,1182 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Miriam Suzanne
+* 
+* Title: Queer Modes
+* Author: Miriam Suzanne
+* Website: https://www.miriamsuzanne.com/
+* Twitter: @MiriSuzanne
+*
+* View on Style Stage:
+* @link https://stylestage.moderncss.dev/styles/queer-modes/
+*/
+
+@charset "UTF-8";
+/* @docs
+label: Core Remedies
+version: 0.1.0-beta.2
+
+note: |
+  These remedies are recommended
+  as a starter for any project.
+
+category: file
+*/
+/* @docs
+label: Box Sizing
+
+note: |
+  Use border-box by default, globally.
+
+category: global
+*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/* @docs
+label: Line Sizing
+
+note: |
+  Consistent line-spacing,
+  even when inline elements have different line-heights.
+
+links:
+  - https://drafts.csswg.org/css-inline-3/#line-sizing-property
+
+category: global
+*/
+html {
+  line-sizing: normal;
+}
+
+/* @docs
+label: Body Margins
+
+note: |
+  Remove the tiny space around the edge of the page.
+
+category: global
+*/
+body {
+  margin: 0;
+}
+
+/* @docs
+label: Heading Sizes
+
+note: |
+  Switch to rem units for headings
+
+category: typography
+*/
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.17rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.83rem;
+}
+
+h6 {
+  font-size: 0.67rem;
+}
+
+/* @docs
+label: H1 Margins
+
+note: |
+  Keep h1 margins consistent, even when nested.
+
+category: typography
+*/
+h1 {
+  margin: 0.67em 0;
+}
+
+/* @docs
+label: Pre Wrapping
+
+note: |
+  Overflow by default is bad...
+
+category: typography
+*/
+pre {
+  white-space: pre-wrap;
+}
+
+/* @docs
+label: Horizontal Rule
+
+note: |
+  1. Solid, thin horizontal rules
+  2. Remove Firefox `color: gray`
+  3. Remove default `1px` height, and common `overflow: hidden`
+
+category: typography
+*/
+hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: inherit;
+  height: 0;
+  overflow: visible;
+}
+
+/* @docs
+label: Responsive Embeds
+
+note: |
+  1. Block display is usually what we want
+  2. Remove strange space-below when inline
+  3. Responsive by default
+
+category: embedded elements
+*/
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+/* @docs
+label: Aspect Ratios
+
+note: |
+  Maintain intrinsic aspect ratios when `max-width` is applied.
+  `iframe`, `embed`, and `object` are also embedded,
+  but have no intrinsic ratio,
+  so their `height` needs to be set explicitly.
+
+category: embedded elements
+*/
+img, svg, video, canvas {
+  height: auto;
+}
+
+/* @docs
+label: Audio Width
+
+note: |
+  There is no good reason elements default to 300px,
+  and audio files are unlikely to come with a width attribute.
+
+category: embedded elements
+*/
+audio {
+  width: 100%;
+}
+
+/* @docs
+label: Image Borders
+
+note: |
+  Remove the border on images inside links in IE 10 and earlier.
+
+category: legacy browsers
+*/
+img {
+  border-style: none;
+}
+
+/* @docs
+label: SVG Overflow
+
+note: |
+  Hide the overflow in IE 10 and earlier.
+
+category: legacy browsers
+*/
+svg {
+  overflow: hidden;
+}
+
+/* @docs
+label: HTML5 Elements
+
+note: |
+  Default block display on HTML5 elements
+
+category: legacy browsers
+*/
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+/* @docs
+label: Checkbox & Radio Inputs
+
+note: |
+  1. Add the correct box sizing in IE 10
+  2. Remove the padding in IE 10
+
+category: legacy browsers
+*/
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* The bare minimum English subset, plus copyright & arrows (← ↑ → ↓) & quotes (“ ” ‘ ’) & bullet (•) */
+@font-face {
+  font-family: "Recursive";
+  font-style: oblique -15deg 0deg;
+  font-weight: 300 1000;
+  font-display: fallback;
+  src: url("https://assets.codepen.io/15542/Recursive_VF_1.52--subset_range_english_basic.woff2") format("woff2 supports variations"), url("https://assets.codepen.io/15542/Recursive_VF_1.52--subset_range_english_basic.woff2") format("woff2-variations");
+  unicode-range: U+0020-007F, U+00A9, U+2190-2193, U+2018, U+2019, U+201C, U+201D, U+2022;
+}
+* {
+  --depths: var(--depth, var(--half-shim)) var(--depth, var(--half-shim));
+  --shadow-fg: var(--depths) 0 var(--action);
+  --shadow-bg: var(--depths) 0 var(--bg);
+  --fancy: linear-gradient(
+    to bottom right,
+    var(--fancy-1-focus, var(--fancy-1)),
+    var(--fancy-2-focus, var(--fancy-2))
+  );
+}
+
+html {
+  --pink: #c64493;
+  --blue: #00839f;
+  --pink-shade-6: #230016;
+  --pink-shade-5: #41002b;
+  --pink-shade-4: #5e0040;
+  --pink-shade-3: #7c0056;
+  --pink-shade-2: #990e6c;
+  --pink-shade-1: #b02d7f;
+  --pink-tint-1: #dd5aa7;
+  --pink-tint-2: #f46fbc;
+  --pink-tint-3: #ff8ecd;
+  --pink-tint-4: #ffb1da;
+  --pink-tint-5: #ffd1e8;
+  --pink-tint-6: #fff0f7;
+  --blue-shade-6: #001015;
+  --blue-shade-5: #00232c;
+  --blue-shade-4: #003441;
+  --blue-shade-3: #004757;
+  --blue-shade-2: #005a6e;
+  --blue-shade-1: #006e86;
+  --blue-tint-1: #2e97b4;
+  --blue-tint-2: #48acc9;
+  --blue-tint-3: #60c1df;
+  --blue-tint-4: #77d6f4;
+  --blue-tint-5: #a8e9ff;
+  --blue-tint-6: #e4f8ff;
+  --red: #a66553;
+  --orange: #946f41;
+  --yellow: #7b793d;
+  --green: #57814c;
+  --indigo: #6077b0;
+  --violet: #996598;
+  --red-shade-6: #1b0800;
+  --red-shade-5: #3b1000;
+  --red-shade-4: #531c10;
+  --red-shade-3: #672e1f;
+  --red-shade-2: #7c4030;
+  --red-shade-1: #915241;
+  --red-tint-1: #bc7966;
+  --red-tint-2: #d28d79;
+  --red-tint-3: #e8a18d;
+  --red-tint-4: #ffb6a1;
+  --red-tint-5: #ffd4c8;
+  --red-tint-6: #fff1ed;
+  --orange-shade-6: #150c00;
+  --orange-shade-5: #2b1b00;
+  --orange-shade-4: #422900;
+  --orange-shade-3: #57390c;
+  --orange-shade-2: #6b4a1e;
+  --orange-shade-1: #7f5c2f;
+  --orange-tint-1: #a98353;
+  --orange-tint-2: #bf9766;
+  --orange-tint-3: #d5ab7a;
+  --orange-tint-4: #ebc08e;
+  --orange-tint-5: #ffd6a8;
+  --orange-tint-6: #fff2e4;
+  --yellow-shade-6: #0f0e00;
+  --yellow-shade-5: #211f00;
+  --yellow-shade-4: #303000;
+  --yellow-shade-3: #414206;
+  --yellow-shade-2: #545319;
+  --yellow-shade-1: #67662b;
+  --yellow-tint-1: #8f8d50;
+  --yellow-tint-2: #a4a163;
+  --yellow-tint-3: #b9b676;
+  --yellow-tint-4: #cfcb8a;
+  --yellow-tint-5: #e4e09f;
+  --yellow-tint-6: #fbf6b3;
+  --green-shade-6: #051100;
+  --green-shade-5: #0c2400;
+  --green-shade-4: #0c3705;
+  --green-shade-3: #1f4818;
+  --green-shade-2: #325b29;
+  --green-shade-1: #446e3a;
+  --green-tint-1: #6a955f;
+  --green-tint-2: #7eaa72;
+  --green-tint-3: #93bf86;
+  --green-tint-4: #a8d49a;
+  --green-tint-5: #bdeaaf;
+  --green-tint-6: #d7ffca;
+  --indigo-shade-6: #000e27;
+  --indigo-shade-5: #001f45;
+  --indigo-shade-4: #092f60;
+  --indigo-shade-3: #234073;
+  --indigo-shade-2: #385287;
+  --indigo-shade-1: #4c649b;
+  --indigo-tint-1: #748bc5;
+  --indigo-tint-2: #899fdb;
+  --indigo-tint-3: #9eb3f1;
+  --indigo-tint-4: #b7c8ff;
+  --indigo-tint-5: #d4deff;
+  --indigo-tint-6: #f1f4ff;
+  --violet-shade-6: #210020;
+  --violet-shade-5: #380939;
+  --violet-shade-4: #4a1c4b;
+  --violet-shade-3: #5d2e5d;
+  --violet-shade-2: #714070;
+  --violet-shade-1: #855284;
+  --violet-tint-1: #ae79ad;
+  --violet-tint-2: #c38dc2;
+  --violet-tint-3: #d9a1d7;
+  --violet-tint-4: #efb6ed;
+  --violet-tint-5: #ffcffd;
+  --violet-tint-6: #ffeffe;
+  --gray: #72787a;
+  --white:var(--gray-tint-6, #eef5f8);
+  --black:var(--gray-shade-6, #070f11);
+  --gray-shade-6: #070f11;
+  --gray-shade-5: #1b1f21;
+  --gray-shade-4: #2a3031;
+  --gray-shade-3: #3b4142;
+  --gray-shade-2: #4d5254;
+  --gray-shade-1: #5f6567;
+  --gray-tint-1: #868c8e;
+  --gray-tint-2: #9aa0a2;
+  --gray-tint-3: #aeb5b7;
+  --gray-tint-4: #c3cacc;
+  --gray-tint-5: #d9dfe2;
+  --gray-tint-6: #eef5f8;
+  --bg:var(--gray-tint-5);
+  --text:var(--gray-shade-5);
+  --action:var(--pink-shade-5);
+  --focus:var(--blue-shade-6);
+  --line-default:var(--blue-shade-1);
+  --line-focus:var(--pink-shade-1);
+  --fancy-1:var(--blue-shade-3);
+  --fancy-2:var(--pink-shade-3);
+  --trans-flag: linear-gradient(to bottom left, var(--blue-tint-4) 0%, var(--blue-tint-4) 20%, var(--pink-tint-4) 20%, var(--pink-tint-4) 40%, var(--gray-tint-5) 40%, var(--gray-tint-5) 60%, var(--pink-tint-4) 60%, var(--pink-tint-4) 80%, var(--blue-tint-4) 80%, var(--blue-tint-4) 100%);
+  --gay-flag: linear-gradient(to bottom left, var(--black) 0%, var(--black) 11.1111111111%, var(--orange-shade-4) 11.1111111111%, var(--orange-shade-4) 22.2222222222%, var(--red-shade-2) 22.2222222222%, var(--red-shade-2) 33.3333333333%, var(--orange) 33.3333333333%, var(--orange) 44.4444444444%, var(--yellow-tint-1) 44.4444444444%, var(--yellow-tint-1) 55.5555555556%, var(--green-shade-1) 55.5555555556%, var(--green-shade-1) 66.6666666667%, var(--blue-shade-1) 66.6666666667%, var(--blue-shade-1) 77.7777777778%, var(--indigo-shade-1) 77.7777777778%, var(--indigo-shade-1) 88.8888888889%, var(--violet-shade-1) 88.8888888889%, var(--violet-shade-1) 100%);
+  --bg:var(--gray-tint-5);
+  --text:var(--gray-shade-5);
+  --action:var(--pink-shade-5);
+  --focus:var(--blue-shade-6);
+  --line-default:var(--blue-shade-1);
+  --line-focus:var(--pink-shade-1);
+  --fancy-1:var(--blue-shade-3);
+  --fancy-2:var(--pink-shade-3);
+  --bg-1:var(--red-tint-5);
+  --bg-2:var(--orange-tint-5);
+  --bg-3:var(--green-tint-5);
+  --bg-4:var(--blue-tint-5);
+  --bg-5:var(--violet-tint-5);
+  --flag: var(--trans-flag);
+  --alt-flag: var(--gay-flag);
+  --mode-label: "Trans Mode";
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --bg:var(--blue-shade-5);
+    --text:var(--gray-tint-5);
+    --action:var(--pink-tint-5);
+    --focus:var(--blue-tint-6);
+    --line-default:var(--blue-tint-1);
+    --line-focus:var(--pink-tint-1);
+    --fancy-1:var(--pink-tint-4);
+    --fancy-2:var(--blue-tint-4);
+    --bg-1:var(--red-shade-5);
+    --bg-2:var(--orange-shade-5);
+    --bg-3:var(--green-shade-5);
+    --bg-4:var(--blue-shade-5);
+    --bg-5:var(--violet-shade-5);
+    --flag: var(--gay-flag);
+    --alt-flag: var(--trans-flag);
+    --mode-label: "Gay Mode";
+  }
+}
+@media (min-width: 38em) {
+  html {
+    --depth: var(--shim);
+  }
+}
+
+::selection {
+  background: var(--bg);
+  color: var(--text);
+}
+
+html {
+  --root: 16px;
+  --small: 0.8rem;
+  --xsmall: 0.7rem;
+  --rem:calc(1.25em + 0.5vw);
+  --medium: 1.25rem;
+  --large:calc(1.25rem + 0.5vw);
+  --xlarge:calc(var(--xbase, 2rem) + var(--xscale, 2vmin));
+  --h1:var(--xlarge, calc(var(--xbase, 2rem) + var(--xscale, 2vmin)));
+  --h2:var(--large, calc(1.25rem + 0.5vw));
+  --h3:var(--medium, 1.25rem);
+  --code: 0.9em;
+  --gutter: 0.75rem;
+  --newline--default:var(--gutter, 0.75rem);
+  --newline:var(--newline--default, 0.75rem);
+  --gutter-plus: 1.125rem;
+  --double-gutter: 1.5rem;
+  --triple-gutter: 2.25rem;
+  --shim: 0.375rem;
+  --shim-plus: 0.5625rem;
+  --half-shim: 0.1875rem;
+  --quarter-shim: 0.09375rem;
+  --spacer:calc(var(--double-gutter) + 3vw);
+  --page-margin:calc(var(--quarter-shim) + 4vw);
+  --border-width:medium;
+  --radius:var(--half-shim);
+  --grid-item: 16rem;
+  --min-page: 22rem;
+  --page: 30rem;
+  --wide-page: 38rem;
+  --wide-break: 58em;
+  font-family: Verdana, Geneva, sans-serif;
+  --grid: grid;
+  background: var(--flag) var(--bg) no-repeat fixed;
+  color: var(--text);
+  font-feature-settings: "dlig" 1, "liga" 1;
+  font-size: calc(1.25em + 0.5vw);
+  font-synthesis: none;
+  line-height: 1.4;
+  overflow-x: hidden;
+  scroll-snap-type: block;
+  scroll-padding: var(--gutter);
+}
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: Recursive, Verdana, Geneva, sans-serif;
+    font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+    --mono:0;
+    --casl:0;
+    --wght:400;
+    --slnt:0;
+    --ital:0.5;
+  }
+}
+@media (min-width: 38em) {
+  html {
+    --xbase: 2.5rem;
+    --xscale: 3vw;
+    --rotate: -6deg;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    --xbase: 4rem;
+    --rotate: -12deg;
+  }
+}
+
+h2 {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-weight: bold;
+  --wght:600;
+  --casl:1;
+  font-size: var(--h2);
+}
+
+h3 {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-weight: 200;
+  --wght:200;
+  --casl:1;
+  font-size: var(--h3);
+}
+
+h4 {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-weight: bold;
+  --wght:600;
+  --casl:1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+  }
+}
+:focus {
+  outline: thick dotted currentColor;
+  outline: thick dotted var(--outline, currentColor);
+  outline-offset: var(--shim);
+}
+
+a:link, a:visited {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  --mono:1;
+  color: var(--link-state, var(--link, var(--action)));
+  text-decoration-color: var(--line, var(--line-default, currentColor));
+  text-decoration-thickness: var(--line-weight, 0.12em);
+  text-underline-offset: var(--line-offset, 0.12em);
+  transition: font-variation-settings 200ms ease-out, text-decoration 200ms ease-out, text-underline-offset 200ms ease-out;
+}
+a:hover, a:focus, a:active {
+  --casl:1;
+  --link-state: var(--link-focus, var(--focus));
+  --line-default: var(--line-focus);
+  --line-weight: 0.25em;
+}
+
+body {
+  display: var(--grid);
+  grid-row-gap: var(--spacer);
+  grid-template-areas: "l1 head r" "nav nav r" "l2 main main" "l2 now r2" "l2 next r2" "l2 foot r2";
+  grid-template-columns: var(--page-margin) auto var(--page-margin);
+  justify-content: center;
+  margin: 1em;
+}
+@supports (display: grid) and (--css: vars) {
+  body {
+    margin: 0;
+  }
+}
+@media (min-width: 58em) {
+  body {
+    grid-template: "l1  head head head r" auto "nav nav  main main main" 1fr "l2  now  main main main" auto "l2  next next next r2" auto "l2  foot foot foot r2" auto/var(--page-margin) minmax(calc(var(--newline) * 17), 10fr) minmax(min-content, var(--page)) 1fr var(--page-margin);
+  }
+}
+
+header {
+  grid-area: head;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+.profile {
+  grid-area: now;
+}
+
+[id=styles] {
+  grid-area: next;
+}
+
+.page-footer {
+  grid-area: foot;
+}
+
+header {
+  padding: var(--page-margin);
+  text-align: center;
+}
+header .container {
+  display: flex;
+  display: var(--grid);
+  flex-direction: column;
+  grid-column-gap: var(--gutter);
+  grid-template: "h1" 1fr "h2" 1fr "se" auto "gh" auto/auto;
+  justify-content: center;
+  min-height: 90vh;
+}
+@media (min-width: 58em) {
+  header .container {
+    grid-template: "h1 h1" 1fr "h2 h2" 1fr "gh se" auto/auto auto;
+  }
+}
+header h1,
+header h2 {
+  margin: 0;
+}
+header h2,
+header p {
+  --depth: 1px;
+  text-shadow: var(--shadow-bg);
+}
+header h2 {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  --casl:1;
+  font-style: italic;
+  --slnt:-15;
+  font-size: inherit;
+  grid-area: h2;
+  justify-self: center;
+  transform: rotate(var(--rotate, -3deg));
+}
+@supports (display: grid) {
+  header h2 {
+    align-self: start;
+  }
+}
+header p {
+  align-self: center;
+  grid-area: se;
+  margin: var(--spacer) 0 var(--shim);
+}
+@supports (display: grid) {
+  header p {
+    margin: var(--shim) 0;
+    text-align: left;
+  }
+}
+header .link-github {
+  align-self: center;
+  grid-area: gh;
+}
+
+[id=styles] h2,
+h1 {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-weight: bold;
+  --wght:1000;
+  filter: drop-shadow(var(--shadow-bg));
+  font-size: calc(var(--xbase, 2rem) + var(--xscale, 2vmin));
+  grid-area: h1;
+  justify-self: center;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(var(--rotate, -3deg));
+  transition: font-variation-settings 400ms ease-in-out;
+}
+[id=styles] h2:hover,
+h1:hover {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  --casl:1;
+}
+@supports (display: grid) {
+  [id=styles] h2,
+h1 {
+    align-self: end;
+  }
+}
+@supports (background-clip: text) {
+  [id=styles] h2,
+h1 {
+    background: var(--fancy);
+    color: transparent;
+    background-clip: text;
+    box-decoration-break: clone;
+  }
+}
+
+nav {
+  --line: transparent;
+  font-size: var(--small);
+  margin: 2em 0;
+}
+@supports (display: grid) and (--css: vars) {
+  nav {
+    margin: 0;
+  }
+}
+nav ul {
+  display: var(--grid);
+  grid-gap: var(--shim);
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  top: var(--gutter);
+}
+nav li {
+  display: flex;
+}
+nav li:nth-child(1) {
+  --nav-bg: var(--fancy-3);
+  --nav-flex: 0.5999962402;
+  --rand-a: 11;
+  --rand-b: 1;
+}
+nav li:nth-child(2) {
+  --nav-bg: var(--fancy-3);
+  --nav-flex: 0.5879718197;
+  --rand-a: 5;
+  --rand-b: 7;
+}
+nav li:nth-child(3) {
+  --nav-bg: var(--fancy-2);
+  --nav-flex: 0.4575132007;
+  --rand-a: 11;
+  --rand-b: 5;
+}
+nav li:nth-child(4) {
+  --nav-bg: var(--fancy-3);
+  --nav-flex: 0.2122580827;
+  --rand-a: 1;
+  --rand-b: 10;
+}
+nav li:nth-child(5) {
+  --nav-bg: var(--fancy-3);
+  --nav-flex: 0.4014205606;
+  --rand-a: 12;
+  --rand-b: 5;
+}
+nav li:nth-child(6) {
+  --nav-bg: var(--fancy-2);
+  --nav-flex: 0.4217824065;
+  --rand-a: 2;
+  --rand-b: 3;
+}
+nav a:link, nav a:visited {
+  --depth: var(--quarter-shim);
+  --static-a: var(--shim);
+  --static-b: var(--half-shim);
+  --clip-a: calc(var(--rand-a) * var(--quarter-shim));
+  --clip-b: calc(var(--rand-b) * var(--quarter-shim));
+  --path: polygon(
+    0 0,
+    calc(100% - var(--clip-a)) var(--static-a),
+    calc(100% - var(--clip-b)) calc(100% - var(--static-b)),
+    0 100%
+  );
+  background: var(--nav-bg, var(--fancy-1));
+  color: var(--bg);
+  filter: drop-shadow(var(--shadow-bg));
+  flex: var(--nav-flex, 0.2) 0 auto;
+  padding: var(--shim) var(--double-gutter);
+  position: relative;
+  text-align: right;
+  transition: filter 300ms ease-in-out;
+}
+@supports (clip-path: inset(0)) {
+  nav a:link, nav a:visited {
+    background: transparent;
+  }
+  nav a:link::before, nav a:visited::before {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--nav-bg, var(--fancy-1));
+    content: "";
+    clip-path: var(--path);
+    transition: clip-path 300ms ease-in-out;
+    z-index: -1;
+  }
+}
+nav a:hover, nav a:focus, nav a:active {
+  --static-a: var(--half-shim);
+  --static-b: var(--quarter-shim);
+  --rand-a: 5;
+  --rand-b: 3;
+  --depth: inherit;
+  --nav-bg: var(--fancy);
+  z-index: 1;
+}
+
+main article,
+main .container {
+  display: var(--grid);
+  grid-gap: var(--gap, var(--spacer));
+}
+main section {
+  --gap: var(--newline);
+  filter: drop-shadow(var(--shadow-bg));
+  grid-template-columns: [main-start wide-start full-start] minmax(min-content, var(--page)) [main-end] 1fr [wide-end] var(--page-margin) [full-end];
+}
+main section > * {
+  background: var(--block-bg, var(--bg));
+  clip-path: polygon(calc(var(--c1x) * var(--quarter-shim)) calc(var(--c1y) * var(--quarter-shim)), calc(100% - var(--c2x) * var(--quarter-shim)) calc(var(--c2y) * var(--quarter-shim)), calc(100% - var(--c3x) * var(--quarter-shim)) calc(100% - var(--c3y) * var(--quarter-shim)), calc(var(--c4x) * var(--quarter-shim)) calc(100% - var(--c4y) * var(--quarter-shim)));
+  grid-column: var(--column, main);
+  padding: var(--gutter);
+  transform: rotate(var(--rotate));
+}
+main section > *:nth-child(1n) {
+  --rotate: 4deg;
+  --block-bg: var(--bg-2);
+  --c1x: 5;
+  --c1y: 1;
+  --c2x: 6;
+  --c2y: 4;
+  --c3x: 3;
+  --c3y: 6;
+  --c4x: 4;
+  --c4y: 4;
+}
+main section > *:nth-child(2n) {
+  --rotate: 4deg;
+  --block-bg: var(--bg-3);
+  --c1x: 3;
+  --c1y: 2;
+  --c2x: 6;
+  --c2y: 4;
+  --c3x: 5;
+  --c3y: 3;
+  --c4x: 3;
+  --c4y: 5;
+}
+main section > *:nth-child(3n) {
+  --rotate: -1deg;
+  --block-bg: var(--bg-4);
+  --c1x: 1;
+  --c1y: 4;
+  --c2x: 2;
+  --c2y: 2;
+  --c3x: 2;
+  --c3y: 2;
+  --c4x: 1;
+  --c4y: 6;
+}
+main section > *:nth-child(4n) {
+  --rotate: -3deg;
+  --block-bg: var(--bg-5);
+  --c1x: 6;
+  --c1y: 6;
+  --c2x: 2;
+  --c2y: 5;
+  --c3x: 6;
+  --c3y: 2;
+  --c4x: 5;
+  --c4y: 1;
+}
+main section > *:nth-child(5n) {
+  --rotate: 4deg;
+  --block-bg: var(--bg-1);
+  --c1x: 6;
+  --c1y: 1;
+  --c2x: 2;
+  --c2y: 7;
+  --c3x: 3;
+  --c3y: 7;
+  --c4x: 7;
+  --c4y: 1;
+}
+main section > *:nth-child(6n) {
+  --rotate: -3deg;
+  --block-bg: var(--bg-2);
+  --c1x: 1;
+  --c1y: 5;
+  --c2x: 7;
+  --c2y: 6;
+  --c3x: 3;
+  --c3y: 1;
+  --c4x: 4;
+  --c4y: 4;
+}
+main section > *:nth-child(7n) {
+  --rotate: 0deg;
+  --block-bg: var(--bg-3);
+  --c1x: 3;
+  --c1y: 4;
+  --c2x: 4;
+  --c2y: 5;
+  --c3x: 2;
+  --c3y: 6;
+  --c4x: 4;
+  --c4y: 4;
+}
+main section > *:nth-child(8n) {
+  --rotate: -3deg;
+  --block-bg: var(--bg-4);
+  --c1x: 4;
+  --c1y: 4;
+  --c2x: 3;
+  --c2y: 3;
+  --c3x: 5;
+  --c3y: 2;
+  --c4x: 3;
+  --c4y: 5;
+}
+main section > *:nth-child(9n) {
+  --rotate: 2deg;
+  --block-bg: var(--bg-5);
+  --c1x: 2;
+  --c1y: 5;
+  --c2x: 2;
+  --c2y: 6;
+  --c3x: 1;
+  --c3y: 3;
+  --c4x: 7;
+  --c4y: 1;
+}
+main section > *:nth-child(10n) {
+  --rotate: -1deg;
+  --block-bg: var(--bg-1);
+  --c1x: 2;
+  --c1y: 7;
+  --c2x: 7;
+  --c2y: 7;
+  --c3x: 5;
+  --c3y: 3;
+  --c4x: 7;
+  --c4y: 5;
+}
+@supports (display: grid) and (--css: vars) {
+  main section > * {
+    margin: 0;
+  }
+}
+main h2 {
+  --column: full;
+}
+main h3 {
+  --column: wide;
+}
+
+[id=about] ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+[id=about] li {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  --mono:1;
+  font-size: var(--code);
+  list-style: none;
+  margin: var(--half-shim) var(--shim);
+}
+
+[id=contribute] ol {
+  padding-left: var(--spacer);
+}
+[id=contribute] li {
+  margin-bottom: var(--newline);
+}
+
+[id=files],
+.profile {
+  background: var(--bg-1);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-bg);
+  padding: var(--gutter);
+}
+
+[id=files] {
+  align-self: start;
+  margin-right: var(--page-margin);
+}
+[id=files] .container {
+  --gap: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+[id=files] h3 {
+  flex-basis: 100%;
+  margin-top: 0;
+}
+[id=files] a {
+  flex: auto;
+  margin: var(--shim);
+}
+
+@media (min-width: 58em) {
+  .profile {
+    margin-right: var(--gutter);
+  }
+}
+.profile h4 {
+  margin: 0;
+}
+
+[id=styles] {
+  display: var(--grid);
+  min-height: 100vh;
+  align-content: safe center;
+}
+[id=styles] .container {
+  text-align: center;
+}
+[id=styles] ul {
+  display: var(--grid);
+  grid-gap: var(--gutter);
+  grid-template-columns: repeat(auto-fit, minmax(15ch, 25ch));
+  justify-content: safe center;
+  padding: 0;
+}
+[id=styles] li {
+  list-style: none;
+  background: var(--bg);
+  box-shadow: var(--shadow-fg);
+  padding: var(--gutter);
+  text-align: left;
+}
+[id=styles] li a {
+  display: block;
+  margin-bottom: var(--newline);
+}
+[id=styles] a + span {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-style: italic;
+  --slnt:-15;
+  --casl:1;
+  font-size: var(--small);
+}
+
+.link-allstyles {
+  margin: var(--spacer) auto;
+}
+
+.page-footer {
+  background: var(--alt-flag) fixed;
+  display: var(--grid);
+  font-size: var(--xsmall);
+  margin: var(--gutter) 0 var(--spacer);
+  place-content: safe center;
+}
+.page-footer,
+.page-footer .container {
+  border-radius: var(--radius);
+}
+.page-footer .container {
+  background: var(--flag) fixed;
+  margin: var(--gutter);
+  padding: var(--gutter);
+}
+.page-footer::after {
+  font-variation-settings: "MONO" var(--mono), "CASL" var(--casl), "wght" var(--wght), "slnt" var(--slnt), "ital" var(--ital);
+  font-weight: bold;
+  --wght:1000;
+  content: var(--mode-label);
+  display: block;
+  font-size: var(--h2);
+  padding: 0 var(--gutter) var(--gutter);
+}
+@supports (background-clip: text) {
+  .page-footer::after {
+    background: var(--flag) fixed;
+    background-clip: text;
+    color: transparent;
+  }
+}
+.page-footer ul {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+}
+.page-footer li {
+  list-style: none;
+  margin: var(--shim) var(--gutter);
+}
+
+svg {
+  display: inline-block;
+  fill: currentColor;
+  height: 1em;
+  margin-right: var(--icon-space);
+  width: 1em;
+}
+
+[id=files] a:link, [id=files] a:visited,
+[href="/styles/css/main-stage.css"]:link,
+[href="/styles/css/main-stage.css"]:visited,
+.page-footer li a:link,
+.page-footer li a:visited,
+.link-allstyles:link,
+.link-allstyles:visited,
+.link-github:link,
+.link-github:visited {
+  --link: var(--bg);
+  --link-focus: var(--link);
+  --icon-space: 0.4em;
+  --depth: var(--quarter-shim);
+  align-items: center;
+  background: var(--fancy);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-bg);
+  display: inline-flex;
+  font-size: var(--code);
+  justify-content: center;
+  padding: var(--shim) var(--gutter);
+  text-decoration: none;
+  transition: box-shadow 150ms ease-out;
+  white-space: nowrap;
+}
+[id=files] a:hover, [id=files] a:focus, [id=files] a:active,
+[href="/styles/css/main-stage.css"]:hover,
+[href="/styles/css/main-stage.css"]:focus,
+[href="/styles/css/main-stage.css"]:active,
+.page-footer li a:hover,
+.page-footer li a:focus,
+.page-footer li a:active,
+.link-allstyles:hover,
+.link-allstyles:focus,
+.link-allstyles:active,
+.link-github:hover,
+.link-github:focus,
+.link-github:active {
+  --fancy-1-focus: var(--fancy-2);
+  --fancy-2-focus: var(--fancy-1);
+  --depth: inherit;
+}
+[id=files] a:active,
+[href="/styles/css/main-stage.css"]:active,
+.page-footer li a:active,
+.link-allstyles:active,
+.link-github:active {
+  --depth: 0;
+}
+[id=files] a span,
+[href="/styles/css/main-stage.css"] span,
+.page-footer li a span,
+.link-allstyles span,
+.link-github span {
+  display: contents;
+}
+
+.skip-link:link, .skip-link:visited {
+  --link: var(--bg);
+  --link-focus: var(--link);
+  background: var(--outer-bg, var(--line-focus));
+  display: block;
+  box-shadow: var(--outer-shadow, --shadow);
+  left: 0;
+  padding: var(--shim-plus) var(--gutter);
+  position: fixed;
+  text-decoration: none;
+  top: var(--double-gutter);
+  transform: translateX(-110%);
+  transition: transform 150ms ease-in-out;
+  z-index: 10;
+}
+.skip-link:hover, .skip-link:focus, .skip-link:active {
+  transform: translateX(0);
+}
+@supports (clip-path: inset(0)) {
+  .skip-link {
+    --outer-shadow: none;
+    --outer-bg: transparent;
+    filter: drop-shadow(var(--shadow-bg));
+  }
+  .skip-link::before {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: var(--line-focus);
+    clip-path: polygon(0 0, 30% var(--quarter-shim), calc(100% - var(--shim)) 0, 100% 100%, 60% calc(100% - var(--half-shim)), 0 100%);
+    content: "";
+    z-index: -1;
+  }
+}
+
+/*# sourceMappingURL=mia.css.map */
