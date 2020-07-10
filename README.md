@@ -8,6 +8,8 @@ Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
 > Visit [Style Stage](https://stylestage.moderncss.dev) to view the available styles, and learn more about this project!
 
+> [View the index of stylesheets](https://github.com/5t3ph/stylestage/blob/main/StylesIndex.md) available in this repo.
+
 ## Contribute a Stylesheet
 
 Visit the [files section](https://stylestage.moderncss.dev/) to download the source files.
