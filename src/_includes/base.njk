@@ -29,7 +29,7 @@
     {% endif %}
     <meta
       name="twitter:title"
-      content="{% if style.title %}{{ style.title }}{% else %}{{ meta.siteName }}{% endif %}"
+      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
     />
     <meta
       name="twitter:description"
@@ -39,7 +39,7 @@
     />
     <meta
       name="og:title"
-      content="{% if style.title %}{{ style.title }}{% else %}{{ meta.siteName }}{% endif %}"
+      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
     />
     <meta
       name="og:description"

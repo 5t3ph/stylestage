@@ -13,3 +13,5 @@
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
 [Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
+
+[Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert

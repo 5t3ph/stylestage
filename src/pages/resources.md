@@ -22,7 +22,7 @@ Trust me - it feels good to say: "I can do that in CSS!"
 - **Don't forget the skip link!** - The `.skip-link` is the first item in the HTML source's body. On the Main Stage, it appears when in `:focus`, which is expected to be the first "tab" event into the browser window. This is useful for users of assitive technology "skip" the navigation and header fluff to get to the main content. Be sure to give it a style! You can certainly choose to have it always visible.
 - **Create inclusive, accessible styles** - At minimum, Style Stage guidelines require meeting accessible contrast as well as removing animations via `prefers-reduced-motion` (demonstrated in the source CSS). Both of these things help create a more inclusive web by ensuring users can enjoy interactive experiences with less barriers. Additionally, ensure you retain accessible `:focus` states for interactive elements. To test, tab over your layout and if you loose track of where you've tabbed, fix the `:focus`! If you're newer to web accessibility, my intro article covers contrast, keyboard interaction, and more including additional resource links.
 - **Review all stylesheets** - Don't just look - scroll! Hover! Resize! Most importantly - inspect!
-- **Get Style Stage updates** - [Subscribe to the newsletter](/subscribe/) for periodic updates related to new styles and release of new features. You can also pick up the [RSS feed](/feed/).
+- **Get Style Stage updates** - [Subscribe to the newsletter](/subscribe/) for weekly(ish) updates related to new styles and release of new features. You can also pick up the [RSS feed](/feed/).
 
 ## Latest from ModernCSS.dev
 
