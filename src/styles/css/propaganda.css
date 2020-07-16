@@ -1544,7 +1544,7 @@ body:after {
 }
 
 body {
-  background-color: #d71a21;
+  background-color: #bb0000;
   border-style: solid;
   border-color: #fceecb;
   border-left-width: 2rem;
@@ -1603,7 +1603,7 @@ article .container h2, article .container h3, article .container h4 {
 article .container ul > li, article .container blockquote {
   background-color: #b1ddc4;
   border: 2px solid #649ba0;
-  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #d71a21;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
 }
 article .container .link-guidelines {
   display: block;
@@ -1624,7 +1624,7 @@ article .container ul li {
 }
 
 a {
-  color: #d71a21;
+  color: #bb0000;
   text-decoration: none;
   font-weight: 600;
 }
@@ -1658,7 +1658,7 @@ header p {
 header p a {
   color: #fceecb;
 }
-header p:hover {
+header p a:hover {
   background-color: #b1ddc4;
   transition: background 0.5s linear;
   color: #00324d;
@@ -1730,7 +1730,7 @@ h2, h3, h4 {
 .link-github svg {
   width: 1rem;
   height: 1rem;
-  fill: #d71a21;
+  fill: #bb0000;
 }
 .link-github svg:hover {
   fill: #00324d;
@@ -1769,7 +1769,7 @@ ul li {
   height: 100%;
 }
 ul li a:hover {
-  color: #649ba0;
+  color: #00324d;
   transition: color 0.5s linear;
 }
 
@@ -1780,7 +1780,7 @@ ul li a:hover {
   font-weight: 300;
   background-color: #b1ddc4;
   border: 2px solid #649ba0;
-  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #d71a21;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
 }
 
 #contribute > .container > h3 {
@@ -1820,7 +1820,7 @@ ol > li {
   margin: auto 0;
   background-color: #b1ddc4;
   border: 2px solid #649ba0;
-  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #d71a21;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
 }
 #files .container a:hover {
   background-color: #fceecb;
@@ -1903,7 +1903,7 @@ aside a {
   }
 }
 #styles ul li {
-  border-bottom: 2px solid #d71a21;
+  border-bottom: 2px solid #bb0000;
 }
 
 .page-footer {
@@ -1925,6 +1925,9 @@ aside a {
   margin: 0 1rem;
   padding: 1rem 0.5rem;
 }
+.page-footer svg {
+  fill: #649ba0;
+}
 .page-footer .container {
   display: flex;
   margin: auto 5px;
@@ -1935,13 +1938,14 @@ aside a {
     margin: 2rem auto;
   }
 }
+.page-footer .container a {
+  color: #b1ddc4;
+}
 .page-footer .container a:hover {
+  color: #bb0000;
   background-color: #b1ddc4;
   transition: color 0.5s linear;
 }
-.page-footer .container ul li a {
-  color: #b1ddc4;
-}
 .page-footer .container ul li a:hover {
-  color: #d71a21;
+  color: #bb0000;
 }
