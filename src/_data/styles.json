@@ -57,5 +57,13 @@
     "twitter": "j9t",
     "websiteTitle": "meiert.com",
     "websiteUrl": "https://meiert.com/en/"
+  },
+  {
+    "title": "Propaganda",
+    "author": "Maryam Hanafiah",
+    "stylesheet": "https://raw.githubusercontent.com/Meowyam/stylestage/main/src/styles/css/propaganda.css",
+    "twitter": "h3110p4nd4",
+    "websiteTitle": "pandashop",
+    "websiteUrl": "https://pandashop.co.uk/"
   }
 ]
