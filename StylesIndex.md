@@ -21,3 +21,5 @@
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
 [Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
+
+[Barebones](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/barebones.css) By Vinícius Philot

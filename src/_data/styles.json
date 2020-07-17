@@ -13,8 +13,7 @@
     "twitter": "donniedamato",
     "websiteTitle": "Donnie D'Amato",
     "websiteUrl": "https://donniedamato.info",
-    "stylesheet": "https://codepen.io/fauxserious/pen/JjGLMVY.css",
-    "featureSlot": 3
+    "stylesheet": "https://codepen.io/fauxserious/pen/JjGLMVY.css"
   },
   {
     "title": "Purplify & Pastel",
@@ -38,8 +37,7 @@
     "stylesheet": "https://raw.githubusercontent.com/langermank/Style-Stage-Submission/master/style.css",
     "twitter": "Katielangerman",
     "websiteTitle": "langermank.com",
-    "websiteUrl": "https://www.langermank.com/",
-    "featureSlot": 2
+    "websiteUrl": "https://www.langermank.com/"
   },
   {
     "title": "Queer Modes",
@@ -47,8 +45,7 @@
     "stylesheet": "https://raw.githubusercontent.com/mirisuzanne/queer-stage/main/assets/css/mia.css",
     "twitter": "MiriSuzanne",
     "websiteTitle": "miriamsuzanne.com",
-    "websiteUrl": "https://www.miriamsuzanne.com/",
-    "featureSlot": 1
+    "websiteUrl": "https://www.miriamsuzanne.com/"
   },
   {
     "title": "Transparency",
@@ -72,7 +69,8 @@
     "stylesheet": "https://raw.githubusercontent.com/Meowyam/stylestage/main/src/styles/css/propaganda.css",
     "twitter": "h3110p4nd4",
     "websiteTitle": "pandashop",
-    "websiteUrl": "https://pandashop.co.uk/"
+    "websiteUrl": "https://pandashop.co.uk/",
+    "featureSlot": 3
   },
   {
     "title": "Web 2.0 Lobster Party",
@@ -80,7 +78,8 @@
     "stylesheet": "https://codepen.io/andybelldesign/pen/bGEKRQG.css",
     "twitter": "hankchizljaw",
     "websiteTitle": "Piccalilli",
-    "websiteUrl": "https://piccalil.li/"
+    "websiteUrl": "https://piccalil.li/",
+    "featureSlot": 1
   },
   {
     "title": "Barebones",
@@ -88,6 +87,7 @@
     "stylesheet": "https://raw.githubusercontent.com/vphilot/stylestage/master/style.css",
     "twitter": "vphilot",
     "websiteTitle": "philot.ca",
-    "websiteUrl": "https://philot.ca/"
+    "websiteUrl": "https://philot.ca/",
+    "featureSlot": 2
   }
 ]
