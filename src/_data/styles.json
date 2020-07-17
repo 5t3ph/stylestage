@@ -65,5 +65,13 @@
     "twitter": "smolcodes",
     "websiteTitle": "Smol Codes",
     "websiteURL": "https://raw.githubusercontent.com/capybar/capybar.github.io/master/stylestage.css"
+  },
+  {
+    "title": "Propaganda",
+    "author": "Maryam Hanafiah",
+    "stylesheet": "https://raw.githubusercontent.com/Meowyam/stylestage/main/src/styles/css/propaganda.css",
+    "twitter": "h3110p4nd4",
+    "websiteTitle": "pandashop",
+    "websiteUrl": "https://pandashop.co.uk/"
   }
 ]

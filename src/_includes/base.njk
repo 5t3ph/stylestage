@@ -4,7 +4,6 @@
     <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% set styleDir %}{% if meta.environment == "production" %}public{% else %}src{% endif %}{% endset %}
     {% if page.url == '/' %}
     <title>{{ meta.siteName }} from Modern CSS Solutions</title>
     <meta name="description" content="{{ meta.siteDescription }}" />
@@ -14,11 +13,9 @@
     {% if style.description %}
     <meta name="description" content="{{ style.description }}" />
     {% endif %}
-    {% set cssFile %}{{styleDir}}/styles/css/{{ style.title | slug }}.css{% endset %}
-    {% set css %} {% include cssFile %} {% endset %}
-    <style>
-      {{ css | safe }}
-    </style>
+    {% set cssFile %}/styles/css/{{ style.title | slug }}.css{% endset %}
+    <link rel="stylesheet" href="{{ cssFile }}" />
+
     <link rel="canonical" href="{{ meta.url }}" />
     {% endif %}
     <link rel="icon" href="{{ '/favicon.png' | url }}" />
