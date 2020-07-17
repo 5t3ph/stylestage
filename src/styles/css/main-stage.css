@@ -375,7 +375,8 @@ nav ul {
     display: grid;
     position: relative;
     place-content: center;
-    min-height: 20vh;
+    height: 20vh;
+    min-height: 10rem;
     padding: 1rem;
     color: var(--color-light);
     text-align: center; }

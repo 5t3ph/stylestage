@@ -67,18 +67,15 @@
     .features__flexible li:nth-child(even) span {
       background-color: var(--color-primary);
     }
-    .features__flexible a {
-      position: relative;
-    }
     .features__flexible a span {
       width: 100%;
     }
     .features__flexible a span::after {
       content: "✓ Viewed!";
       position: absolute;
-      bottom: 0;
+      bottom: 0.5em;
       left: 50%;
-      transform: translate(-50%, -150%);
+      transform: translateX(-50%);
       width: 100%;
       color: #D7BEC7;
     }
