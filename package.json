@@ -18,7 +18,7 @@
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "screenshot": "node functions/images.js",
-    "stylesheets": "node functions/stylesheets.js",
+    "stylesheets": "node functions/stylesdata.js ; node functions/stylesheets.js",
     "bump": "npm --no-git-tag-version version"
   },
   "repository": {
@@ -35,10 +35,11 @@
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "autoprefixer": "^9.8.4",
+    "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
     "dotenv": "^8.2.0",
     "emoji-regex": "^9.0.0",
+    "fast-glob": "^3.2.4",
     "luxon": "^1.23.0",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
