@@ -5,6 +5,6 @@ eleventyExcludeFromCollections: true
 
 ## Styles Index
 
-{% for  style in styles %}
+{% for style in styles %}
 [{{ style.title }}](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/{{ style.title | slug }}.css) By {{ style.author}}
 {% endfor %}
