@@ -14,6 +14,15 @@ eleventyExcludeFromCollections: true
 	<author>
 		<name>{{ meta.authorName }}</name>
 	</author>
+	{%- for page in collections.allStyles | reverse -%}
+	{% set absolutePostUrl %}{{ page.url | url | absoluteUrl(meta.url) }}{% endset %}
+	<entry>
+		<title>{{ page.data.style.title }} by {{ page.data.style.author }}</title>
+		<link href="{{ absolutePostUrl }}"/>
+		<updated>{{ page.data.date }}</updated>
+		<id>{{ absolutePostUrl }}</id>
+	</entry>
+	{%- endfor -%}
 	{%- for page in collections.allPages -%}
 	{% set absolutePostUrl %}{{ page.url | url | absoluteUrl(meta.url) }}{% endset %}
 	<entry>

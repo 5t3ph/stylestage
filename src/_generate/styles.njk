@@ -5,6 +5,8 @@ pagination:
   alias: style 
   addAllPagesToCollections: true
 permalink: "/styles/{{ style.title | slug }}/"
+eleventyComputed:
+  date: "{{ style.date }}"
 tags: styles 
 layout: base
 ---
