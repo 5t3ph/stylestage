@@ -73,6 +73,10 @@ module.exports = function (eleventyConfig) {
     return arr.slice(0, limit);
   });
 
+  eleventyConfig.addFilter("createList", function (arr, selections) {
+    return arr.filter((item) => selections.includes(item.title));
+  });
+
   /* Markdown Overrides */
   let markdownLibrary = markdownIt({
     html: true,
