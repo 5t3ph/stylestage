@@ -40,23 +40,23 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("allPages", function (collection) {
     return collection.getAll().filter((page) => {
-      return !page.data.style || page.data.style.title !== "Example";
+      return !page.data.style;
     });
   });
 
   eleventyConfig.addCollection("allStyles", function (collection) {
-    return collection.getFilteredByTag("styles");
+    return collection.getFilteredByTag("styles").sort((a, b) => {
+      return a.data.date < b.data.date ? -1 : a.data.date > b.data.date ? 1 : 0;
+    });
   });
 
   eleventyConfig.addCollection("featureStyles", function (collection) {
     return collection
       .getFilteredByTag("styles")
-      .filter((style) => {
-        return style.data.style.featureSlot;
+      .sort(() => {
+        return 0.5 - Math.random();
       })
-      .sort(function (a, b) {
-        return a.data.style.featureSlot - b.data.style.featureSlot;
-      });
+      .slice(0, 3);
   });
 
   eleventyConfig.addFilter("jsonTitle", (str) => {

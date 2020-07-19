@@ -3,7 +3,7 @@ permalink: functions/pages.json
 permalinkBypassOutputDir: true
 eleventyExcludeFromCollections: true
 ---
-[{%- for pages in collections.allPages -%}
+[{%- for pages in collections.all -%}
 	{
    "title":"{% if pages.data.title %}{{ pages.data.title | jsonTitle | safe }}{% elif pages.data.style.title %}{{ pages.data.style.title | jsonTitle | safe }}{% else %}{{ meta.siteName }}{% endif %}",
    "slug":"{% if pages.data.title %}{{ pages.data.title | slug}}{% elif pages.data.style.title %}{{ pages.data.style.title | slug }}{% else %}home{% endif %}"{% if pages.data.style.author %},
