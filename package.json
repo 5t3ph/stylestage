@@ -1,6 +1,6 @@
 {
   "name": "moderncss-styles",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A modern CSS showcase styled by community contributions.",
   "main": "index.js",
   "scripts": {
