@@ -18,9 +18,9 @@ Or jump right in by [forking the CodePen](https://codepen.io/5t3ph/pen/b493845ae
 
 Then, create your own version of the stylesheet, being sure to adhere to [the guidelines](https://stylestage.dev/guidelines/). Use it as a starting point, or begin from a blank file! Keep in mind you may not modify the HTML, including adding classes.
 
-You may use any build setup you prefer, but the final submission should be the compiled CSS _unminified_. Style Stage processing will minify, autoprefix, and prepend the stylesheet with the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/) as well as attribution using the metadata you provide.
+You may use any build setup you prefer, but the final submission should be the compiled CSS _unminified_. Style Stage processing will autoprefix your styles and prepend the stylesheet with the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/) as well as attribution using the metadata you provide.
 
-To submit your stylesheet, create pull request with an update to [\_src/\_data/styles.json](https://github.com/5t3ph/stylestage/blob/main/src/_data/styles.json) following the schema below. **Please add your entry at the bottom of the file**.
+To submit your stylesheet, create pull request containing a _unique_ `.json` file added to [\_src/\_data/styles/](https://github.com/5t3ph/stylestage/blob/main/src/_data/styles) following the schema below.
 
 ```json
 {
