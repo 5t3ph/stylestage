@@ -12,6 +12,7 @@ const fs = require("fs");
   for (let style of styleFiles) {
     // Get file created date
     const { birthtime } = fs.statSync(style);
+
     const styleData = JSON.parse(fs.readFileSync(style));
     // Add file created date
     styleData.date = birthtime;

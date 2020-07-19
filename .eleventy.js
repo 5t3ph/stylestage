@@ -53,12 +53,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("featureStyles", function (collection) {
     return collection
       .getFilteredByTag("styles")
-      .filter((style) => {
-        return style.data.style.featureSlot;
+      .sort(() => {
+        return 0.5 - Math.random();
       })
-      .sort(function (a, b) {
-        return a.data.style.featureSlot - b.data.style.featureSlot;
-      });
+      .slice(0, 3);
   });
 
   eleventyConfig.addFilter("jsonTitle", (str) => {
