@@ -4,6 +4,7 @@ node_modules
 # build artefacts
 public
 src/css
+src/newsletter/*.md
 src/_data/styles.json
 functions/*.json
 functions/*.html

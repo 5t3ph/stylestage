@@ -1,0 +1,32 @@
+---
+permalink: ../src/newsletter/2020-07-29.md
+eleventyExcludeFromCollections: true
+--- 
+{%- set ssUrl %}https://stylestage.dev/{% endset -%}
+{%- set imgUrl %}https://stylestage.dev/img/newsletter/{% endset -%}
+
+
+
+> There are now 11 styles available - [go check them out!]({{ssUrl}}/styles/)
+
+## 🚨 Updates
+
+---
+
+## Recently Added Styles
+{%- set styleList %}
+[]
+{%- endset -%}
+
+{%- for style in styles | createList(styleList) %}
+- [{{ style.title }}]({{ssUrl}}styles/{{ style.title | slug }}/) By {{ style.author}}
+{%- endfor %}
+
+---
+
+## CSS Tip: 
+
+---
+
+Keep it .class-y,  
+Steph • [@5t3ph](https://twitter.com/5t3ph)
