@@ -12,20 +12,6 @@
 * @link https://stylestage.dev/styles/headquarters/
 */
 
-/*!
-* LICENSE - style only: CC BY-NC-SA
-* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
-* Graphics copyright of Stephanie Eckles
-* 
-* Title: Headquarters
-* Author: Stephanie Eckles
-* Website: https://moderncss.dev/
-* Twitter: @5t3ph
-*
-* View on Style Stage:
-* @link https://stylestage.dev/styles/headquarters/
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Red+Rose:wght@700&family=Roboto+Slab:wght@400;600&display=swap");
 
 :root {
@@ -340,6 +326,7 @@ header p {
 nav {
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 nav ul {
   display: flex;
@@ -376,6 +363,7 @@ nav ul a:focus {
 
 .profile {
   position: sticky;
+  z-index: 2;
   bottom: -1px;
   background-color: var(--color-background);
   margin: 10vh auto;
