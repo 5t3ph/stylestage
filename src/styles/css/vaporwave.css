@@ -88,6 +88,7 @@ a.link-downloadcss,
 a.link-downloadhtml,
 a.link-codepen {
   font-family: monospace;
+  text-align: center;
   background-color: silver;
   color: black;
   padding: 10px;
@@ -167,6 +168,11 @@ blockquote a:active {
 svg {
   height: 1.2em;
   fill: black;
+  vertical-align: middle;
+}
+
+footer.page-footer svg {
+    display: none;
 }
 
 @media screen AND (max-width: 500px) {
@@ -186,7 +192,5 @@ svg {
   a.skip-link, header div.container a.link-github, a.link-downloadcss, a.link-downloadhtml, a.link-codepen {
     display: block;
   }
-  svg {
-    display: none;
-  }
+  
 }

@@ -1,0 +1,91 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of d-cs
+* 
+* Title: Emphasis
+* Author: d-cs
+* Website: N/A
+* Twitter: @_dcsutton
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/emphasis/
+*/
+
+@charset "UTF-8";
+/** Sans Forgetica - Designed to assist memory recall* https://sansforgetica.rmit/*/
+@import url('https://fonts.cdnfonts.com/css/sans-forgetica');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+/** [Modified] Modern CSS Reset* @link https://github.com/hankchizljaw/modern-css-reset*/
+/* Box sizing rules */
+*,*::before,*::after {
+	box-sizing: border-box;
+}
+/* Remove default margin */
+body,h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+html {
+	overflow-x: hidden;
+}
+/** Set core body defaults* Colors chosen to maximise readability: https://www.viget.com/articles/color-contrast/*/
+body {
+	min-height: 100vh;
+	font-size: 100%;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	overflow-x: hidden;
+	padding: 8px;
+	font-family: 'Inter', sans-serif;
+	background-color: #093145;
+  color: #F2F3F4;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+	color: #EFD469;
+}
+a:visited {
+	color: #F58B4C;
+}
+svg{
+  display: none;
+}
+input,button,textarea,select {
+	font: inherit;
+}
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+#about section:nth-child(1) p:nth-child(2) {
+	font-family: 'Sans Forgetica', sans-serif;
+	font-size: 2.5rem;
+	padding-top: 16px;
+}
+aside {
+	padding-top: 16px;
+}
+nav ul {
+  list-style: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+	padding-left: 0;
+}
+nav li {
+	display: inline-block;
+	width: calc(100% / 6);
+	min-width: 100px;
+	text-align: center;
+}
+#profile-title {
+	font-size: 1.5rem;
+}
