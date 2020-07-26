@@ -10,11 +10,11 @@
 
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
+[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
+
 [Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
-
-[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
 
@@ -29,3 +29,5 @@
 [Emphasis](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/emphasis.css) By d-cs
 
 [Stageflix](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/stageflix.css) By Suckcoder
+
+[Manual](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/manual.css) By Lynn Fisher
