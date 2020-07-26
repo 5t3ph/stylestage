@@ -1,13 +1,11 @@
 ---
-permalink: ../src/newsletter/2020-07-29.md
+permalink: ../src/newsletter/2020-07-26.md
 eleventyExcludeFromCollections: true
 --- 
 {%- set ssUrl %}https://stylestage.dev/{% endset -%}
 {%- set imgUrl %}https://stylestage.dev/img/newsletter/{% endset -%}
 
-
-
-> There are now 11 styles available - [go check them out!]({{ssUrl}}/styles/)
+> There are now {{styles.length}} styles available - [go check them out!]({{ssUrl}}/styles/)
 
 ## 🚨 Updates
 
@@ -15,7 +13,7 @@ eleventyExcludeFromCollections: true
 
 ## Recently Added Styles
 {%- set styleList %}
-[]
+[""]
 {%- endset -%}
 
 {%- for style in styles | createList(styleList) %}
@@ -25,6 +23,14 @@ eleventyExcludeFromCollections: true
 ---
 
 ## CSS Tip: 
+
+<img src="{{imgSrc}}.png" alt="snippet for " />
+
+---
+
+## Weekly Link Roundup
+
+Here’s some links you may have missed:
 
 ---
 
