@@ -1,9 +1,12 @@
 <style>
 #sponsor-footer {
+  box-sizing: border-box;
 	background-color: #fff;
 	padding: .5rem;
 	grid-column-start: 1;
-	grid-column-end: last;
+	grid-column-end: -1;
+  width: 100%;
+	max-width: 100%;
 }
 #sponsor-footer::before, #sponsor-footer::after, 
 #sponsor-footer *::before, #sponsor-footer *::after {
@@ -36,6 +39,7 @@
 	color: #3a00ff;
 	border: 2px solid currentColor;
 	border-radius: 4px;
+  background-color: #fff;
 }
 @media (max-width: 60ch) {
 	#sponsor-footer p {

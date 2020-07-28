@@ -14,7 +14,7 @@ not have access to alter the base HTML. IDs are included where needed for nav an
 - Branding is prohibited with the exception of [Monthly and Weekly sponsors](/support/).
 - The HTML is not available to modify, except for attribution values that will be added from your submission metadata.
 - You may use any build setup you prefer to create your stylesheet, but the final submission should be the compiled, unminified CSS.
-- Stylesheets will become hosted locally to the project as well as be run through autoprefixer and minified to ensure optimal performance.
+- Stylesheets will become hosted locally to the project as well as be run through autoprefixer to ensure optimal performance.
 - Submissions will have licensing and attribution added upon the processing of the provided metadata.
 - Any changes made past initial submission will be revealed in the version history and reviewed to ensure guidelines are still met. Removal of the public stylesheet will result in removal from Style Stage.
 - You retain copyright over original graphics, and your stylesheet will receive the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/).
