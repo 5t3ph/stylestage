@@ -323,7 +323,7 @@ aside {
 @media (max-width: 800px) {
   aside {
     width: calc(100% - 4rem);
-    margin: auto 2rem;
+    margin: auto;
   }
 }
 @media (max-width: 1024px) {
