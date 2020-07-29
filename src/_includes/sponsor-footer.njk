@@ -1,12 +1,18 @@
 <style>
 #sponsor-footer {
   box-sizing: border-box;
-	background-color: #fff;
-	padding: .5rem;
-	grid-column-start: 1;
-	grid-column-end: -1;
-  width: 100%;
-	max-width: 100%;
+    background-color: #fff;
+    margin: 0;
+    padding: .5rem .5rem 1.5rem;
+		border: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: -1;
 }
 #sponsor-footer::before, #sponsor-footer::after, 
 #sponsor-footer *::before, #sponsor-footer *::after {
@@ -44,6 +50,7 @@
 @media (max-width: 60ch) {
 	#sponsor-footer p {
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 </style>

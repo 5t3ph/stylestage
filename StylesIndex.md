@@ -10,13 +10,13 @@
 
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
-[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
-
 [Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
 
-[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
+[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
+
+[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
 [Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
@@ -31,3 +31,9 @@
 [Stageflix](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/stageflix.css) By Suckcoder
 
 [Manual](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/manual.css) By Lynn Fisher
+
+[Color Stages](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/color-stages.css) By Claire Lipskey
+
+[Pilgrim](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pilgrim.css) By Gonçalo Morais
+
+[StageOS](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/stageos.css) By Håvard Brynjulfsen
