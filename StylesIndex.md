@@ -18,11 +18,11 @@
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
-[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
+[Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
 
-[Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
+[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
 
@@ -37,3 +37,7 @@
 [Pilgrim](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pilgrim.css) By Gonçalo Morais
 
 [StageOS](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/stageos.css) By Håvard Brynjulfsen
+
+[Mburucuya](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/mburucuya.css) By Lide O.
+
+[Shadows](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/shadows.css) By Nadia Laasri
