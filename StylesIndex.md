@@ -12,11 +12,11 @@
 
 [Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
 
+[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
+
 [Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
-
-[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
@@ -41,3 +41,7 @@
 [Mburucuya](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/mburucuya.css) By Lide O.
 
 [Shadows](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/shadows.css) By Nadia Laasri
+
+[Nightshade](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/nightshade.css) By Peter Byfield
+
+[MonoMinimal](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/monominimal.css) By Amit Sheen
