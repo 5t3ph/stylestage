@@ -1,0 +1,342 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Peter Byfield
+* 
+* Title: Nightshade
+* Author: Peter Byfield
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/nightshade/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  margin: 0;
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  font-size: 17px;
+  font-family: "Space Mono", monospace;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+a {
+  color: #fff;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1.5rem;
+  border-left: 0.5rem solid #ddd;
+  background-color: #00000022;
+}
+blockquote > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+blockquote > * + * {
+  margin-top: 1.5rem;
+}
+
+.skip-link {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+  display: block;
+  padding: 0.5rem 1.5rem;
+  font-size: 13px;
+  text-align: right;
+}
+
+header h1 {
+  font-size: 34px;
+  text-decoration: underline;
+}
+
+header .container {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+  padding-top: 0;
+}
+header .container > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+header .container > * + * {
+  margin-top: 1.5rem;
+}
+
+header .link-github {
+  display: inline-flex;
+  background-color: #ddd;
+  padding: 0.5rem 0.75rem;
+  color: #111;
+  box-shadow: 0.125rem 0.125rem #00000055;
+  transition: transform 0.1s;
+}
+header .link-github:hover,
+header .link-github:focus {
+  transform: scale(0.95);
+}
+@media (prefers-reduced-motion: reduce) {
+  header .link-github {
+    transition: none;
+  }
+}
+header .link-github svg {
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  fill: #111;
+}
+
+nav {
+  background-color: #444;
+}
+nav ul {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.5rem;
+}
+nav a {
+  display: inline-flex;
+  background-color: #333;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  box-shadow: 0.125rem 0.125rem #00000055;
+  transition: transform 0.1s;
+}
+nav a:hover,
+nav a:focus {
+  transform: scale(0.95);
+}
+@media (prefers-reduced-motion: reduce) {
+  nav a {
+    transition: none;
+  }
+}
+
+main {
+  background-color: #333;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 1.5rem,
+    #444 1.5rem,
+    #444 4rem
+  );
+}
+main > .container {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+main > .container > * {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 0.5rem solid #ddd;
+}
+main > .container > :first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+main > .container > :last-child {
+  padding-bottom: 0;
+}
+main article {
+  background-color: #333;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  box-shadow: 0.25rem 0.25rem #00000055;
+}
+main article > * {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-top: 0.25rem dashed #ddd;
+}
+main article > :first-child {
+  padding-top: 1.5rem;
+  border-top: 0;
+}
+main article > :last-child {
+  padding-bottom: 1.5rem;
+}
+main section > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+main section > * + * {
+  margin-top: 1.5rem;
+}
+
+#about ul {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 1.5rem;
+  background-color: #00000022;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.25rem;
+}
+
+#files .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.25rem;
+}
+
+#files h3 {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+#files a {
+  display: inline-flex;
+  background-color: #ddd;
+  padding: 0.5rem 0.75rem;
+  color: #111;
+  box-shadow: 0.125rem 0.125rem #00000055;
+  transition: transform 0.1s;
+}
+#files a:hover,
+#files a:focus {
+  transform: scale(0.95);
+}
+@media (prefers-reduced-motion: reduce) {
+  #files a {
+    transition: none;
+  }
+}
+
+aside .container > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+aside .container > * + * {
+  margin-top: 1.5rem;
+}
+
+aside .container > a {
+  display: inline-flex;
+  background-color: #ddd;
+  padding: 0.5rem 0.75rem;
+  color: #111;
+  box-shadow: 0.125rem 0.125rem #00000055;
+  transition: transform 0.1s;
+}
+aside .container > a:hover,
+aside .container > a:focus {
+  transform: scale(0.95);
+}
+@media (prefers-reduced-motion: reduce) {
+  aside .container > a {
+    transition: none;
+  }
+}
+
+.profile {
+  background-color: #444;
+}
+.profile .container {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+}
+
+@media (max-width: 1500px) {
+  #styles {
+    background-color: #444;
+  }
+  #styles .container {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 1.5rem 0.75rem;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  #styles {
+    position: fixed;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    width: 300px;
+    background-color: #333;
+    border: 0.25rem solid #ddd;
+    padding: 0.75rem;
+    box-shadow: 0.25rem 0.25rem #00000055;
+  }
+}
+
+.page-footer {
+  padding-bottom: 1.5rem;
+}
+.page-footer .container {
+  width: 800px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem 0.75rem;
+}
+.page-footer .container > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.page-footer .container > * + * {
+  margin-top: 1.5rem;
+}
+.page-footer .link-github {
+  display: inline-flex;
+  align-items: center;
+}
+.page-footer .link-github svg {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+  fill: white;
+}
+
+.link-codepen:after {
+  content: "!";
+}

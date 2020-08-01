@@ -1,36 +1,43 @@
 ---
 permalink: ../src/newsletter/newsletter.md
 eleventyExcludeFromCollections: true
---- 
+---
+
 {%- set ssUrl %}https://stylestage.dev/{% endset -%}
 {%- set imgUrl %}https://stylestage.dev/img/newsletter/{% endset -%}
 
-> There are now {{styles.length}} styles available - [go check them out!]({{ssUrl}}/styles/)
+> There are now {{styles.length}} styles available - [go check them out!]({{ssUrl}}styles/)
 
-## 🚨 Updates
+<!-- ## 🚨 Updates -->
 
 ---
 
 ## Recently Added Styles
+
 {%- set styleList %}
 [""]
 {%- endset -%}
-
 {%- for style in styles | createList(styleList) %}
+
 - [{{ style.title }}]({{ssUrl}}styles/{{ style.title | slug }}/) By {{ style.author}}
-{%- endfor %}
+  {%- endfor %}
 
 ---
 
-## CSS Tip: 
+## CSS Tip:
 
-<img src="{{imgUrl}}.png" alt="snippet for " />
+<img src="{{imgUrl}}.png" alt="" />
 
 ---
 
 ## Weekly Link Roundup
 
 Here’s some links you may have missed:
+
+- []()
+- []()
+- []()
+- []()
 
 ---
 
