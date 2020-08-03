@@ -8,6 +8,9 @@
     <title>{{ meta.siteName }} from Modern CSS Solutions</title>
     <meta name="description" content="{{ meta.siteDescription }}" />
     <link href="{{ '/styles/css/main-stage.css' | url }}" rel="stylesheet" />
+    {% if meta.url !== 'https://stylestage.dev' %}
+    <link rel="canonical" href="https://stylestage.dev" />
+    {% endif %}
     {% else %}
     <title>{{ style.title }} by {{ style.author }} | Style Stage</title>
     {% if style.description %}
@@ -16,7 +19,7 @@
     {% set cssFile %}/styles/css/{{ style.title | slug }}.css{% endset %}
     <link rel="stylesheet" href="{{ cssFile }}" />
 
-    <link rel="canonical" href="{{ meta.url }}" />
+    <link rel="canonical" href="https://stylestage.dev" />
     {% endif %}
     <link rel="icon" href="{{ '/favicon.png' | url }}" />
 
