@@ -2,7 +2,7 @@
 * LICENSE - style only: CC BY-NC-SA
 * @link https://creativecommons.org/licenses/by-nc-sa/3.0/
 * Graphics copyright of Jens Oliver Meiert
-* 
+*
 * Title: Transparency
 * Author: Jens Oliver Meiert
 * Website: https://meiert.com/en/
@@ -33,7 +33,6 @@ head * { /* Address head styling inconsistencies */
 }
 
 html {
-  background: #fff; /* Only needed because dark mode would end up with hiccup */
   color: #222;
 }
 
@@ -213,14 +212,6 @@ span:before {
 
   head {
     order: 1;
-  }
-
-}
-
-@media (prefers-color-scheme: dark) {
-
-  html {
-    filter: invert(100%) hue-rotate(180deg);
   }
 
 }
