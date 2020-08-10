@@ -14,6 +14,7 @@
       title="RSS Feed for {{ meta.siteName }}"
       href="/feed/"
     />
+
     <style>
     header {
       padding-bottom: 0;
@@ -26,12 +27,15 @@
     main {
       padding-top: 0;
     }
-    #styles {
-      margin: 0;
-    }
-    #main h2 {
+    main h2 {
       background-color: unset;
       color: var(--color-primary);
+    }
+    main section.container {
+      max-width: 140ch;
+    }
+    #styles {
+      margin: 0;
     }
     .features__flexible {
       display: flex;
@@ -67,18 +71,15 @@
     .features__flexible li:nth-child(even) span {
       background-color: var(--color-primary);
     }
-    .features__flexible a {
-      position: relative;
-    }
     .features__flexible a span {
       width: 100%;
     }
     .features__flexible a span::after {
       content: "✓ Viewed!";
       position: absolute;
-      bottom: 0;
+      bottom: 0.5em;
       left: 50%;
-      transform: translate(-50%, -150%);
+      transform: translateX(-50%);
       width: 100%;
       color: #D7BEC7;
     }
@@ -92,7 +93,7 @@
       color: var(--color-primary);
     }
     {% endif %}
-    {% if page.url == '/guidelines/' or page.url == '/thanks/' %}
+    {% if page.url == '/guidelines/' or page.url == '/thanks/' or page.url == '/subscribe/' %}
     article p:first-of-type {
       font-size: var(--font-size-h4);
       text-align: center;
@@ -168,7 +169,7 @@
     {% endif %}
     <main id="main">
       <div class="container">
-        <article id="about">
+        <article>
           <section class="container">
             {{ content | safe }}
             {% if page.url === '/subscribe/' %}

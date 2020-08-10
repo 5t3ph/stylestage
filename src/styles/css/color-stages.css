@@ -1,0 +1,409 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Claire Lipskey
+* 
+* Title: Color Stages
+* Author: Claire Lipskey
+* Website: https://lipskey.me/
+* Twitter: @tackjhompson
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/color-stages/
+*/
+
+:root {
+  --olivine: hsla(92, 33%, 56%, 1);
+  --buff: hsla(50, 83%, 74%, 1);
+  --sandy-brown: hsla(28, 88%, 65%, 1);
+  --independence: hsla(234, 20%, 30%, 1);
+  --bittersweet-shimmer: hsla(357, 46%, 52%, 1);
+  --star-command-blue: hsla(206, 46%, 44%, 1);
+  --plump-purple: hsla(243, 46%, 52%, 1);
+  --ming: hsla(190, 69%, 28%, 1);
+  --pacific-blue: hsla(192, 43%, 50%, 1);
+  --white: #f0eff6;
+  --black: #101010;
+  --font-family: "Baloo 2", sans-serif;
+  --border-radius: 8px;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+    transform: none !important; /* modified since this uses transform */
+  }
+}
+
+/* Let's do some magic, yo. */
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--black);
+  border-top: 10px dotted var(--black);
+  position: relative;
+  animation: border-showcase steps(1, start) 20s infinite;
+}
+
+@keyframes border-showcase {
+  0% {
+    border-color: var(--black);
+  }
+  10% {
+    border-color: var(--ming);
+  }
+  20% {
+    border-color: var(--sandy-brown);
+  }
+  30% {
+    border-color: var(--olivine);
+  }
+  40% {
+    border-color: var(--bittersweet-shimmer);
+  }
+  50% {
+    border-color: var(--star-command-blue);
+  }
+  60% {
+    border-color: var(--buff);
+  }
+  70% {
+    border-color: var(--plump-purple);
+  }
+}
+
+article section,
+aside,
+header,
+footer {
+  width: 100%;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+@media (min-height: 960px) {
+  margin-top: 0;
+}
+
+header {
+  background-color: var(--ming);
+  border: 4px dashed var(--black);
+  color: var(--white);
+  z-index: 2;
+  position: relative;
+  transform: rotate(10deg) scale(0.75) translateY(5%);
+}
+
+blockquote {
+  border-left: 4px solid currentColor;
+  padding-left: 1em;
+}
+
+@media (min-width: 960px) {
+  header {
+    padding: 1em 50% 1em 2em;
+    transform: rotate(10deg) scale(0.75) translateX(40%) translateY(15%);
+  }
+}
+
+header h1 {
+  text-shadow: 0px 0px 5px #000;
+  font-size: 3em;
+  text-decoration: underline;
+}
+
+@media (min-width: 960px) {
+  header h1 {
+    font-size: 4em;
+  }
+  header h2 {
+    font-size: 2em;
+  }
+}
+
+header p {
+  font-size: 1.25em;
+}
+
+nav {
+  border: 2px solid var(--white);
+  background-color: var(--sandy-brown);
+  width: 60%;
+  position: relative;
+  padding: 1em 0;
+  z-index: 1;
+  transform: rotate(-5deg) scale(1.1) translateY(-10%);
+}
+
+@media (min-width: 960px) {
+  nav {
+    transform: rotate(-10deg) scale(1.25) translateX(20%) translateY(-20%);
+  }
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav a {
+  font-size: 1.25em;
+}
+
+a,
+a:visited {
+  display: inline-block;
+  color: currentColor;
+  text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+.skip-link:focus {
+  text-decoration: none;
+  outline: 1px solid currentColor;
+  outline-offset: 2px;
+}
+
+.skip-link:focus {
+  position: relative;
+  top: 1em;
+  left: 1em;
+  color: var(--olivine);
+}
+
+#main .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.skip-link:not(:focus):not(:active) {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+article {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+@media (min-width: 960px) {
+  article section {
+    width: 75%;
+    position: relative;
+    margin: 1em;
+  }
+}
+
+#about section:first-of-type {
+  align-self: flex-end;
+  background-color: var(--olivine);
+}
+
+#about section:last-of-type {
+  align-self: center;
+  background-color: var(--bittersweet-shimmer);
+  color: #fff;
+  z-index: 2;
+}
+
+#guidelines section {
+  background-color: var(--star-command-blue);
+  color: var(--white);
+}
+
+#contribute section:first-of-type {
+  background-color: var(--buff);
+  position: relative;
+}
+
+@media (min-width: 960px) {
+  #guidelines section {
+    padding-top: 4em;
+    z-index: 1;
+    outline: 4px double var(--white);
+    outline-offset: 12px;
+    transform: rotate(5deg) translateX(5%) translateY(-3em);
+  }
+
+  #contribute section:first-of-type {
+    transform: rotate(-6deg) translateX(-20%);
+    padding-left: 50%;
+  }
+}
+
+#contribute section:first-of-type:before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNMTYgMTV2NGw4LTguMDM1LTgtNy45NjV2NHMtMTMuMjc3IDIuMTQ0LTE2IDE0YzUuNzk2LTYuMjA2IDE2LTYgMTYtNnoiLz48L3N2Zz4=");
+  position: absolute;
+  top: 85%;
+  right: -4em;
+  transform: scale(2) rotate(90deg);
+}
+
+#contribute section:last-of-type {
+  background-color: var(--plump-purple);
+  color: var(--white);
+  align-self: center;
+  margin-top: 2em;
+  border: 4px dotted var(--white);
+  position: relative;
+}
+
+#contribute section:last-of-type:before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNOC4xMjIgMjRsLTQuMTIyLTQgOC04LTgtOCA0LjEyMi00IDExLjg3OCAxMnoiLz48L3N2Zz4=");
+  position: absolute;
+  top: calc(50% - 32px);
+  left: -2em;
+}
+
+#contribute section:last-of-type:after {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjZmZmIj48cGF0aCBkPSJNOC4xMjIgMjRsLTQuMTIyLTQgOC04LTgtOCA0LjEyMi00IDExLjg3OCAxMnoiLz48L3N2Zz4=");
+  position: absolute;
+  top: calc(50% - 32px);
+  right: -2em;
+  transform: rotate(180deg);
+}
+
+#files {
+  background-color: #fff;
+  position: relative;
+  z-index: 2;
+  align-self: center;
+}
+
+@media (min-width: 960px) {
+  #files {
+    width: 50%;
+    margin-top: -2.5em;
+  }
+  #files .container {
+    color: #000;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    gap: 1em;
+  }
+
+  #files .container h3 {
+    display: inline;
+  }
+}
+
+.link-github {
+  display: inline-block;
+  max-width: 12em;
+  margin: 0 auto;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  text-decoration: none !important;
+  padding: 0 1em 0.25em 1em;
+}
+
+.link-github svg {
+  height: 24px;
+  position: relative;
+  top: 4px;
+  fill: currentColor;
+}
+
+.profile {
+  background-color: var(--black);
+  color: var(--white);
+  border: 4px solid var(--pacific-blue);
+}
+
+aside#styles {
+  background-color: var(--white);
+  color: var(--black);
+  border: 4px solid var(--bittersweet-shimmer);
+}
+
+@media (min-width: 960px) {
+  .profile {
+    max-width: 300px;
+    transform: rotate(-8deg) translateX(10%) translateY(60%);
+  }
+
+  aside#styles {
+    width: 80%;
+    transform: rotate(-8deg) translateX(40%) translateY(-60%);
+  }
+}
+
+.page-footer {
+  border-top: 26px dashed var(--black);
+  background-color: var(--independence);
+  color: var(--white);
+  padding: 1em;
+}
+
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

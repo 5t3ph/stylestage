@@ -1,0 +1,568 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Lide O.
+* 
+* Title: Mburucuya
+* Author: Lide O.
+* Website: https://lideo.dev
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/mburucuya/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Roboto+Condensed:wght@700&display=swap");
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* === Custom Properties === */
+:root {
+  --font-base: "Cabin", sans-serif;
+  --font-display: "Roboto Condensed", sans-serif;
+  --color-dark: #0b0809;
+  --color-light: #e1e5ea;
+  --color-primary: #323e49;
+  --color-secondary: #fd8372;
+  --color-tertiary: #feeb2d;
+  --color-quaternary: #90b8d0;
+  --size-base: 1rem;
+  --size-300: calc(var(--size-base) * 0.75);
+  --size-400: calc(var(--size-base) * 1);
+  --size-500: calc(var(--size-base) * 1.33);
+  --size-600: calc(var(--size-base) * 1.77);
+  --size-700: calc(var(--size-base) * 2.36);
+  --size-800: calc(var(--size-base) * 3.15);
+  --size-900: calc(var(--size-base) * 4.2);
+  --size-major: calc(var(--size-base) * 5.6);
+  --flow-space: var(--size-600);
+  --vertical-padding: var(--size-900);
+  --border-width-1: var(--size-400);
+  --border-width-2: 3px;
+  --underline-thin: 2px;
+  --underline-thick: 5px;
+}
+@media screen and (max-width: 440px) {
+  :root {
+    --border-width-1: var(--size-300);
+  }
+}
+
+/* === General === */
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  line-height: 1.5;
+  font-size: var(--size-400);
+  font-family: var(--font-base);
+}
+
+:focus {
+  outline: var(--border-width-2) dashed var(--color-secondary);
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+::selection {
+  color: var(--color-light);
+  background: var(--color-dark);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+h1::after,
+h2::after,
+h3::after,
+h4::after {
+  content: ".";
+  color: currentColor;
+  font-size: 1em;
+  line-height: 1;
+}
+
+h1 {
+  font-size: clamp(var(--size-800), calc(1rem + 16vw), var(--size-major));
+}
+
+h2 {
+  font-size: clamp(var(--size-600), calc(1rem + 4vw), var(--size-700));
+}
+
+h3 {
+  font-size: clamp(var(--size-500), calc(1rem + 2vw), var(--size-600));
+}
+
+h4 {
+  font-size: clamp(var(--size-400), calc(1rem + 1.5vw), var(--size-500));
+}
+
+p,
+li {
+  font-size: clamp(var(--size-300), calc(1rem + 0.5vw), var(--size-500));
+}
+
+ul,
+ol {
+  padding-left: 0;
+  list-style-position: inside;
+}
+
+/* === Some shared styles === */
+.skip-link:not(:focus) {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.page-footer .container,
+#styles .container,
+.profile .container,
+article .container,
+nav ul,
+header .container {
+  width: 100%;
+  max-width: 70ch;
+  padding: 0 var(--size-500);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.page-footer ul a,
+a:not([class]) {
+  color: currentColor;
+  text-decoration: none;
+  border-bottom: var(--underline-thin) solid var(--color-tertiary);
+}
+@supports (text-decoration-thickness: var(--underline-thin)) {
+  .page-footer ul a,
+  a:not([class]) {
+    text-decoration: underline;
+    text-decoration-color: var(--color-tertiary);
+    text-decoration-thickness: var(--underline-thin);
+    border: none;
+  }
+}
+.page-footer ul a:hover,
+a:hover:not([class]) {
+  border-bottom-width: var(--underline-thick);
+}
+@supports (text-decoration-thickness: var(--underline-thick)) {
+  .page-footer ul a:hover,
+  a:hover:not([class]) {
+    text-decoration: underline;
+    text-decoration-color: var(--color-tertiary);
+    text-decoration-thickness: var(--underline-thick);
+    border: none;
+  }
+}
+
+.skip-link,
+.profile > .container > a,
+.link-allstyles,
+.link-codepen,
+.link-downloadhtml,
+.link-downloadcss,
+.link-guidelines,
+header .link-github {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: currentColor;
+  border: var(--border-width-2) solid var(--color-tertiary);
+  padding: 0.25rem 0.75rem;
+  font-size: var(--size-400);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 600ms;
+}
+.skip-link:hover,
+.profile > .container > a:hover,
+.link-allstyles:hover,
+.link-codepen:hover,
+.link-downloadhtml:hover,
+.link-downloadcss:hover,
+.link-guidelines:hover,
+header .link-github:hover {
+  background-color: var(--color-tertiary);
+  color: var(--color-dark);
+}
+
+header .link-github span {
+  line-height: 1;
+}
+header .link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-inline-end: 0.5em;
+  fill: var(--color-tertiary);
+}
+header .link-github:hover svg {
+  fill: currentColor;
+}
+
+#styles,
+.profile,
+article,
+main {
+  /* This is to avoid the overlap that happens if 
+      the menu is "stuck" (position: sticky) when the 
+      page scrolls to the target section. On some 
+      browsers/devices the behavior is a bit weird. */
+  scroll-margin-top: calc(var(--vertical-padding) + var(--border-width-1) * 2);
+}
+
+header .link-github {
+  padding: 0.25rem 1rem 0.25rem 0.75rem;
+}
+
+.page-footer .link-github svg {
+  display: none;
+}
+
+/* === Skip Link === */
+.skip-link {
+  position: absolute;
+  top: var(--size-400);
+  left: var(--size-400);
+  z-index: 99;
+  color: var(--color-dark);
+  background-color: var(--color-tertiary);
+}
+/* === Header === */
+header {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border: var(--border-width-1) solid var(--color-light);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+header h1,
+header h2,
+header h3,
+header h4 {
+  color: var(--color-secondary);
+}
+header h1::after,
+header h2::after,
+header h3::after,
+header h4::after {
+  color: var(--color-quaternary);
+}
+header li::marker {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+header .container {
+  padding-top: var(--size-500);
+  padding-bottom: var(--size-500);
+}
+header .container > * + * {
+  --flow-space: var(--size-500);
+  margin-top: var(--flow-space);
+}
+header h2 {
+  color: var(--color-light);
+}
+
+/* === Nav === */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  color: var(--color-dark);
+  background-color: var(--color-tertiary);
+  border: var(--border-width-1) solid var(--color-light);
+  border-top: none;
+  padding-bottom: var(--border-width-1);
+  /* For the fake border. */
+  margin-top: calc(-1 * var(--border-width-1));
+}
+nav::before {
+  /* Creates a fake border between the nav element and 
+        the header when the nav element is "stuck". */
+  content: "";
+  height: var(--border-width-1);
+  display: block;
+  background-color: var(--color-light);
+}
+nav ul {
+  list-style: none;
+  margin-top: var(--border-width-1);
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0.35rem;
+}
+nav a {
+  text-transform: uppercase;
+  font-size: var(--size-400);
+  white-space: nowrap;
+  border-color: var(--color-quaternary) !important;
+}
+@supports (text-decoration-thickness: var(--underline-thin)) {
+  nav a {
+    text-decoration-color: var(--color-quaternary) !important;
+    text-underline-position: under;
+  }
+}
+@supports (text-decoration-thickness: var(--underline-thick)) {
+  nav a:hover {
+    text-decoration-color: var(--color-quaternary) !important;
+  }
+}
+
+/* === Main === */
+article {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border: var(--border-width-1) solid var(--color-light);
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
+  border-top: none;
+}
+article h1,
+article h2,
+article h3,
+article h4 {
+  color: var(--color-secondary);
+}
+article h1::after,
+article h2::after,
+article h3::after,
+article h4::after {
+  color: var(--color-quaternary);
+}
+article li::marker {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+article blockquote {
+  border-left: var(--border-width-2) solid var(--color-secondary);
+  padding-inline-start: var(--size-400);
+}
+article > * + * {
+  margin-top: var(--flow-space);
+}
+article > .container > * + * {
+  margin-top: var(--flow-space);
+}
+
+#about ul {
+  column-count: 2;
+  column-fill: balance;
+  column-width: 20ch;
+}
+
+#files {
+  padding-top: var(--vertical-padding);
+}
+#files .container > * + * {
+  margin-block-start: var(--flow-space);
+}
+@media screen and (min-width: 768px) {
+  #files .container a + a {
+    margin-inline-start: var(--size-300);
+  }
+}
+
+/* === Profile (Current Style) === */
+.profile {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border: var(--border-width-1) solid var(--color-light);
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
+  border-top: none;
+}
+.profile h1,
+.profile h2,
+.profile h3,
+.profile h4 {
+  color: var(--color-secondary);
+}
+.profile h1::after,
+.profile h2::after,
+.profile h3::after,
+.profile h4::after {
+  color: var(--color-quaternary);
+}
+.profile li::marker {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+/* === Styles (features) === */
+#styles {
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border: var(--border-width-1) solid var(--color-light);
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
+  border-top: none;
+}
+#styles h1,
+#styles h2,
+#styles h3,
+#styles h4 {
+  color: var(--color-secondary);
+}
+#styles h1::after,
+#styles h2::after,
+#styles h3::after,
+#styles h4::after {
+  color: var(--color-quaternary);
+}
+#styles li::marker {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+
+#styles .container * + * {
+  margin-top: var(--flow-space);
+}
+
+/* === Footer === */
+.page-footer {
+  --vertical-padding: var(--size-500);
+  color: var(--color-light);
+  background-color: var(--color-primary);
+  border: var(--border-width-1) solid var(--color-light);
+  padding-top: var(--vertical-padding);
+  padding-bottom: var(--vertical-padding);
+  border-top: none;
+}
+.page-footer h1,
+.page-footer h2,
+.page-footer h3,
+.page-footer h4 {
+  color: var(--color-secondary);
+}
+.page-footer h1::after,
+.page-footer h2::after,
+.page-footer h3::after,
+.page-footer h4::after {
+  color: var(--color-quaternary);
+}
+.page-footer li::marker {
+  color: var(--color-secondary);
+  font-weight: bold;
+}
+.page-footer .container {
+  column-count: 2;
+  column-gap: 2em;
+  column-fill: balance;
+  column-width: 20ch;
+}
+.page-footer .container > * + * {
+  margin-top: var(--size-500);
+}
+.page-footer p,
+.page-footer li {
+  font-size: var(--size-400);
+}
+.page-footer ul {
+  break-inside: avoid;
+}
+.page-footer ul li {
+  font-size: var(--size-400);
+}
+.page-footer ul li + li {
+  margin-top: var(--size-300) / 2;
+}

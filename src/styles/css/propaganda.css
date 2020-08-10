@@ -1,0 +1,440 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Maryam Hanafiah
+* 
+* Title: Propaganda
+* Author: Maryam Hanafiah
+* Website: https://pandashop.co.uk/
+* Twitter: @h3110p4nd4
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/propaganda/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Russo+One&display=swap");
+body:before, body:after {
+  content: "";
+  position: fixed;
+  background: #fceecb;
+  left: 0;
+  right: 0;
+  height: 1rem;
+}
+
+body:before {
+  top: 0;
+}
+
+body:after {
+  bottom: 0;
+}
+
+body {
+  background-color: #bb0000;
+  border-style: solid;
+  border-color: #fceecb;
+  padding: 0;
+  margin: 0;
+  border-left-width: 2rem;
+  border-right-width: 2rem;
+  font-family: "Open Sans", sans-serif;
+}
+@media (max-width: 800px) {
+  body {
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: #b1ddc4;
+  color: #00324d;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+}
+
+article .container {
+  background-color: #fceecb;
+  margin: 2rem;
+}
+@media (max-width: 800px) {
+  article .container {
+    margin-bottom: 0.8rem;
+  }
+  article .container > * {
+    margin: 0.4rem;
+    padding: 0.4rem 0.2rem;
+  }
+}
+article .container > * {
+  margin: 0 1rem;
+  padding: 1rem 0.5rem;
+}
+article .container h2, article .container h3, article .container h4 {
+  margin-left: 0;
+  margin-right: 0;
+}
+article .container ul > li, article .container blockquote {
+  background-color: #b1ddc4;
+  border: 2px solid #649ba0;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
+}
+article .container .link-guidelines {
+  display: block;
+}
+article .container ul {
+  width: 80%;
+  justify-content: center;
+  margin: auto;
+}
+article .container ul li {
+  margin: 0.5rem;
+  padding: 10px;
+}
+@media (max-width: 800px) {
+  article .container ul li {
+    padding: 5px;
+  }
+}
+
+a {
+  color: #bb0000;
+  text-decoration: none;
+  font-weight: 600;
+}
+a:hover {
+  color: #00324d;
+  transition: color 0.5s linear;
+}
+
+header {
+  text-align: center;
+}
+header h2 {
+  margin-top: -5rem;
+}
+@media (max-width: 800px) {
+  header h2 {
+    margin-top: -2rem;
+  }
+}
+header p, header .link-github {
+  display: inline-block;
+  margin: 0;
+  line-height: 2rem;
+  padding: 1rem;
+  background-color: #00324d;
+  color: #b1ddc4;
+}
+header p {
+  text-align: left;
+}
+header p a {
+  color: #fceecb;
+}
+header p a:hover {
+  background-color: #b1ddc4;
+  transition: background 0.5s linear;
+  color: #00324d;
+}
+header .link-github {
+  text-align: right;
+}
+header .link-github:hover {
+  color: #00324d;
+}
+@media (max-width: 640px) {
+  header .link-github {
+    width: 90%;
+    margin-top: -10px;
+    text-align: left;
+  }
+}
+@media (min-width: 640px) {
+  header .link-github {
+    margin-left: -5px;
+  }
+}
+
+h1 {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  font-size: 8rem;
+  color: #fceecb;
+  text-transform: uppercase;
+  text-shadow: 0.5rem 0.5rem 0 #00324d;
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+h1::after, h1::before {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color: #fceecb;
+  content: "";
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+@media (max-width: 1024px) {
+  h1::after, h1::before {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+h2, h3, h4 {
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  text-transform: uppercase;
+  background-color: #00324d;
+  color: #b1ddc4;
+  padding: 0.2rem;
+}
+
+.link-github:hover {
+  background-color: #b1ddc4;
+  transition: background 0.5s linear;
+}
+.link-github svg {
+  width: 1rem;
+  height: 1rem;
+  fill: #bb0000;
+}
+.link-github svg:hover {
+  fill: #00324d;
+}
+
+nav {
+  background-color: #fceecb;
+  box-shadow: 0.2rem 0.2rem #649ba0, 0.4rem 0.4rem #b1ddc4;
+  width: 75%;
+  margin: 1rem auto;
+  padding: 0.6rem;
+}
+@media (max-width: 800px) {
+  nav {
+    width: 90%;
+    margin: 0.5rem auto;
+    padding: 0.2rem;
+    line-height: 2rem;
+  }
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  align-items: flex-start;
+  padding-left: 0px;
+  flex-wrap: wrap;
+  height: 100%;
+}
+ul li {
+  flex: 0 0 auto;
+  margin: auto;
+  padding-right: 10px;
+  padding-left: 0;
+  height: 100%;
+}
+ul li a:hover {
+  color: #00324d;
+  transition: color 0.5s linear;
+}
+
+#guidelines > h3 {
+  width: fit-content;
+  margin: 10px auto;
+  font-family: "Russo One", sans-serif;
+  font-weight: 300;
+  background-color: #b1ddc4;
+  border: 2px solid #649ba0;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
+}
+
+#contribute > .container > h3 {
+  font-size: 1.5rem;
+}
+
+ol > li {
+  line-height: 1.5rem;
+}
+
+#files > * {
+  min-height: 5rem;
+}
+#files .container {
+  background-color: #00324d;
+  display: flex;
+  justify-content: space-around;
+}
+#files .container h3 {
+  line-height: 5rem;
+  padding: 0 2rem;
+}
+@media (max-width: 800px) {
+  #files .container h3 {
+    padding: 0 1rem;
+    flex: 1 1;
+  }
+}
+@media (max-width: 800px) {
+  #files .container {
+    flex-direction: column;
+  }
+}
+#files .container a {
+  flex: 0 1;
+  text-align: center;
+  margin: auto 0;
+  background-color: #b1ddc4;
+  border: 2px solid #649ba0;
+  box-shadow: 0.1rem 0.1rem #649ba0, 0.4rem 0.4rem #bb0000;
+}
+#files .container a:hover {
+  background-color: #fceecb;
+  transition: background-color 1s linear;
+}
+
+aside {
+  width: calc(50% - 2rem);
+  text-align: center;
+}
+@media (max-width: 800px) {
+  aside {
+    width: calc(100% - 4rem);
+    margin: auto 2rem;
+  }
+}
+@media (max-width: 1024px) {
+  aside {
+    min-height: 18rem;
+  }
+}
+@media (min-width: 1025px) {
+  aside {
+    min-height: 14rem;
+  }
+}
+aside .container > *:first-child {
+  margin-top: 0;
+}
+aside .container > h4 {
+  font-size: 1.5rem;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+}
+aside .container > a {
+  display: block;
+}
+aside a {
+  line-height: 3rem;
+  padding-bottom: 1rem;
+}
+@media (max-width: 800px) {
+  aside a {
+    line-height: 1.5rem;
+  }
+}
+@media (max-width: 800px) {
+  aside ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
+  aside ul li {
+    line-height: 2rem;
+  }
+}
+
+.profile {
+  float: left;
+  background-color: #b1ddc4;
+  margin-left: 2rem;
+}
+@media (max-width: 800px) {
+  .profile {
+    margin: auto;
+    float: none;
+  }
+}
+
+#styles {
+  float: right;
+  background-color: #fceecb;
+  margin-right: 2rem;
+}
+@media (max-width: 800px) {
+  #styles {
+    margin: auto;
+    float: none;
+  }
+}
+#styles ul li {
+  border-bottom: 2px solid #bb0000;
+}
+
+.page-footer {
+  clear: both;
+  background-color: #00324d;
+  color: #fceecb;
+  margin: 2rem;
+}
+@media (max-width: 800px) {
+  .page-footer {
+    margin-bottom: 0.8rem;
+  }
+  .page-footer > * {
+    margin: 0.4rem;
+    padding: 0.4rem 0.2rem;
+  }
+}
+.page-footer > * {
+  margin: 0 1rem;
+  padding: 1rem 0.5rem;
+}
+.page-footer svg {
+  fill: #649ba0;
+}
+.page-footer .container {
+  display: flex;
+  margin: auto 5px;
+}
+@media (max-width: 800px) {
+  .page-footer .container {
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+}
+.page-footer .container a {
+  color: #b1ddc4;
+}
+.page-footer .container a:hover {
+  color: #bb0000;
+  background-color: #b1ddc4;
+  transition: color 0.5s linear;
+}
+.page-footer .container ul li a:hover {
+  color: #bb0000;
+}
