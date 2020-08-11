@@ -1,0 +1,282 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Nadia Laasri
+* 
+* Title: Shadows
+* Author: Nadia Laasri
+* Website: https://nadialaasri.me/
+* Twitter: @laasrinadiaa
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/shadows/
+*/
+
+@charset "UTF-8";
+
+:root {
+  --color-primary: #3a00ff;
+  --color-section-header-tag: #6f6ffd;
+  --color-aside-background: #d2fbf7;
+  --color-green-light: #abff88;
+  --color-text: #412d86;
+  --color-light: #fff;
+  --color-anchor: #0048ea;
+  --color-section-background: #f3eeee;
+  --font-size-h1: 6rem;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* adding some margin to all header tags  */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0.2rem;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* take off all the padding and margin from all elements */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-anchor);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  font-weight: 700;
+}
+a:hover {
+  color: #000;
+}
+p {
+  margin: 0.3rem;
+}
+ul {
+  list-style: none;
+}
+ol {
+  text-align: start;
+}
+ul li {
+}
+nav {
+  background: #412d86;
+}
+nav ul {
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: var(--color-light);
+  padding-right: 1rem;
+}
+nav ul li a:hover {
+  color: var(--color-green-light);
+}
+
+.skip-link {
+  margin: 0.5rem;
+}
+/* header-styles */
+
+header h1 {
+  text-transform: capitalize;
+  text-shadow: -5px 3px #100e0e;
+  color: var(--color-primary);
+}
+
+header h2 {
+  color: var(--color-text);
+}
+
+.link-github svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--color-primary);
+}
+
+/* main styles */
+
+#main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  text-align: center;
+}
+.container a {
+  text-decoration: underline;
+}
+section {
+  background: var(--color-section-background);
+  margin: 2rem;
+  padding: 2rem;
+  color: black;
+  box-shadow: 0px 12px 17px -4px rgba(0, 0, 0, 0.75);
+}
+section p {
+  text-align: start;
+  font-size: 1.2rem;
+}
+section h2,
+h3 {
+  color: var(--color-section-header-tag);
+  text-transform: uppercase;
+  text-shadow: 0px 1px #100e0e;
+}
+
+/* about section styles */
+
+#about ul {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+#about ul li {
+  border: 1px solid #000;
+  padding: 0.2rem;
+  width: 50%;
+}
+
+/* files section */
+
+#files .container {
+  display: -webkit-box;
+  display: flex;
+  background: var(--color-section-background);
+  margin: 1rem;
+  padding: 2rem;
+  color: black;
+  box-shadow: 0px 12px 17px -4px rgba(0, 0, 0, 0.75);
+}
+
+#files .container a {
+  border: 1px solid #000;
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+/* aside styles  */
+
+aside {
+  background: var(--color-aside-background);
+}
+
+aside .container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+          align-items: center;
+  border: 1px solid #000;
+}
+
+/* page footer styles */
+
+.page-footer {
+  background: var(--color-section-background);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.page-footer li {
+  border: 1px solid #000;
+  width: 100%;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.page-footer p {
+  width: 80%;
+}
+/* media queries */
+
+@media (max-width: 650px) {
+  section {
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  #main {
+    width: 95%;
+  }
+  aside .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+  }
+  ol {
+    overflow: hidden;
+  }
+}

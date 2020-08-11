@@ -1,0 +1,973 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Adrian Bece
+* 
+* Title: Crawling Chaos
+* Author: Adrian Bece
+* Website: https://codeadrian.github.io/
+* Twitter: @AdrianBeceDev
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/crawling-chaos/
+*/
+
+@font-face {
+  font-family: Creepster;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Creepster"), local("Creepster-Regular"),
+    url(https://fonts.gstatic.com/s/creepster/v9/AlZy_zVUqJz4yMrniH4hdQ.ttf)
+      format("truetype");
+}
+@font-face {
+  font-family: Taviraj;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: local("Taviraj ExtraLight"), local("Taviraj-ExtraLight"),
+    url(https://fonts.gstatic.com/s/taviraj/v5/ahccv8Cj3ylylTXzRCYKd-k.ttf)
+      format("truetype");
+}
+@font-face {
+  font-family: Taviraj;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local("Taviraj Light"), local("Taviraj-Light"),
+    url(https://fonts.gstatic.com/s/taviraj/v5/ahccv8Cj3ylylTXzREIJd-k.ttf)
+      format("truetype");
+}
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+main {
+  display: block;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+a {
+  background-color: transparent;
+}
+strong {
+  font-weight: bolder;
+}
+:root {
+  --color__primary: #cc2427;
+  --color__cta: #ac1f22;
+  --color__cta--shadow: #931b1d;
+  --color__secondary: #fdffd8;
+  --color__background: #191c29;
+  --color__tertiary: #e98025;
+  --color__muted: #383b41;
+  --color__muted--hue: #50545c;
+  --typography__fontSize--mobile: 18px;
+  --typography__fontSize: 20px;
+  --typography__lineHeight: 1.7;
+  --typography__scale: 1.333;
+  --typography__fontFamily: "Taviraj", Arial, serif;
+  --typography__fontFamily--secondary: "Creepster", cursive;
+  --typography__weight--normal: 400;
+  --typography__weight--semiBold: 600;
+  --typography__weight--bold: 700;
+  --rhythmUnit: calc(var(--typography__lineHeight) * 1rem);
+  --spacing__vertical--n6: calc(var(--rhythmUnit) / 7);
+  --spacing__vertical--n5: calc(var(--rhythmUnit) / 6);
+  --spacing__vertical--n4: calc(var(--rhythmUnit) / 5);
+  --spacing__vertical--n3: calc(var(--rhythmUnit) / 4);
+  --spacing__vertical--n2: calc(var(--rhythmUnit) / 3);
+  --spacing__vertical--n1: calc(var(--rhythmUnit) / 2);
+  --spacing__vertical--1: var(--rhythmUnit);
+  --spacing__vertical--2: calc(2 * var(--rhythmUnit));
+  --spacing__vertical--3: calc(3 * var(--rhythmUnit));
+  --spacing__horizontal--n6: var(--spacing__vertical--n6);
+  --spacing__horizontal--n5: var(--spacing__vertical--n5);
+  --spacing__horizontal--n3: var(--spacing__vertical--n3);
+  --spacing__horizontal--n2: var(--spacing__vertical--n2);
+  --spacing__horizontal--n1: var(--spacing__vertical--n1);
+  --spacing__horizontal--1: var(--spacing__vertical--1);
+  --spacing__horizontal--2: var(--spacing__vertical--2);
+  --spacing__horizontal--4: var(--spacing__vertical--4);
+  --typography__scale--1: var(--typography__scale);
+  --typography__scale--2: calc(
+    var(--typography__scale--1) * var(--typography__scale)
+  );
+  --typography__scale--3: calc(
+    var(--typography__scale--2) * var(--typography__scale)
+  );
+  --typography__scale--4: calc(
+    var(--typography__scale--3) * var(--typography__scale)
+  );
+  --typography__scale--5: calc(
+    var(--typography__scale--4) * var(--typography__scale)
+  );
+  --typography__scale--6: calc(
+    var(--typography__scale--5) * var(--typography__scale)
+  );
+  --typography__scale--7: calc(
+    var(--typography__scale--6) * var(--typography__scale)
+  );
+  --typography__small: calc(1 / var(--typography__scale--1) * 1rem);
+  --typography__base: 1rem;
+  --typography__medium: calc(var(--typography__scale--1) * 1rem);
+  --typography__larger: calc(var(--typography__scale--2) * 1rem);
+  --typography__large: calc(var(--typography__scale--3) * 1rem);
+  --typography__xlarge: calc(var(--typography__scale--4) * 1rem);
+  --typography__largest: calc(var(--typography__scale--5) * 1rem);
+  --typography__xlargest: calc(var(--typography__scale--6) * 1rem);
+  --typography__xxlargest: calc(var(--typography__scale--7) * 1rem);
+}
+html {
+  font-size: var(--typography__fontSize--mobile);
+  line-height: var(--typography__lineHeight);
+  font-weight: 300;
+}
+body {
+  color: var(--color__secondary);
+  font-family: var(--typography__fontFamily);
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--typography__fontFamily--secondary);
+  font-weight: var(--typography__weight--normal);
+  margin: 0;
+}
+h2 {
+  font-size: var(--typography__largest);
+}
+h1 {
+  font-size: var(--typography__xlargest);
+}
+h4 {
+  font-size: var(--typography__large);
+}
+header h1 {
+  color: var(--color__primary);
+  text-shadow: 0 0.02em 0 var(--color__secondary), 0 0.07em 0 #000;
+  letter-spacing: var(--spacing__horizontal--n5);
+  line-height: 1;
+  padding-bottom: var(--spacing__vertical--1);
+}
+header h2 {
+  font-size: var(--typography__medium);
+  font-family: var(--typography__fontFamily--primary);
+}
+body > aside h2:first-child,
+body > aside h3:first-child,
+body > aside h4:first-child,
+main section.container h2:first-child,
+main section.container h3:first-child {
+  color: var(--color__primary);
+  font-size: var(--typography__xlarge);
+  letter-spacing: 0.02em;
+  padding-bottom: 0;
+  text-shadow: 0 0.03em 0 transparent, 0 0.08em 0 #000;
+}
+main .container h2 + p {
+  padding-bottom: var(--spacing__vertical--n2);
+  font-size: var(--typography__medium);
+  line-height: calc(var(--spacing__vertical--1) + var(--spacing__vertical--n5));
+}
+main .container h2 + p:first-letter {
+  color: var(--color__primary);
+  line-height: 0.8;
+  padding-right: 0.15em;
+  padding-top: 0.1em;
+  float: left;
+  display: block;
+  font-size: calc(var(--typography__xlarge) + var(--typography__base));
+}
+@media (min-width: 920px) {
+  html {
+    font-size: var(--typography__fontSize);
+  }
+}
+@media (min-width: 1336px) {
+  h1 {
+    font-size: var(--typography__xxlargest);
+  }
+  header h2 {
+    font-size: var(--typography__larger);
+  }
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  padding: var(--spacing__vertical--1) var(--spacing__horizontal--n1) 0;
+  background-color: var(--color__background);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+* {
+  box-sizing: inherit;
+}
+body > aside,
+main {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+body > aside:focus,
+main:focus {
+  outline: 0;
+}
+body > aside ol,
+body > aside ul,
+main ol,
+main ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: var(--spacing__vertical--1);
+}
+body > aside ol li,
+body > aside ul li,
+main ol li,
+main ul li {
+  padding-bottom: var(--spacing__vertical--n4);
+  padding-left: var(--spacing__horizontal--n2);
+}
+body > aside ol li:before,
+body > aside ul li:before,
+main ol li:before,
+main ul li:before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border: 6px double var(--color__primary);
+  transform: rotate(45deg);
+  margin-right: var(--spacing__vertical--n1);
+}
+body > aside ul li,
+main ul li {
+  flex-basis: 50%;
+}
+body > aside ol,
+main ol {
+  position: relative;
+  left: -20px;
+}
+body > aside ol li,
+main ol li {
+  text-indent: calc(var(--spacing__horizontal--1) * -1);
+  padding-left: var(--spacing__horizontal--2);
+}
+body > aside ol li:not(:last-child),
+main ol li:not(:last-child) {
+  padding-bottom: var(--spacing__vertical--1);
+  position: relative;
+}
+body > aside ol li:not(:last-child):after,
+main ol li:not(:last-child):after {
+  content: "";
+  position: absolute;
+  left: calc(var(--spacing__horizontal--1) + var(--spacing__horizontal--n6));
+  height: calc(100% - var(--spacing__horizontal--1));
+  top: var(--spacing__horizontal--1);
+  bottom: 0;
+  width: 0;
+  border: 1px dashed var(--color__muted);
+}
+body > aside p,
+main p {
+  margin-top: 0;
+  margin-bottom: var(--spacing__vertical--n1);
+}
+body > aside section.container,
+main section.container {
+  grid-gap: 0;
+  grid-template-rows: auto auto auto auto auto 1fr;
+  border-bottom: 8px double var(--color__muted);
+  padding-bottom: var(--spacing__vertical--1);
+  margin-bottom: var(--spacing__vertical--1);
+}
+body > aside section.container > *,
+main section.container > * {
+  align-self: start;
+}
+body > aside section.container > :not(.link-guidelines),
+main section.container > :not(.link-guidelines) {
+  max-width: 820px;
+}
+body > aside section.container > :last-child,
+main section.container > :last-child {
+  margin-bottom: 0;
+}
+body > aside section.container > h3:not(:first-child),
+main section.container > h3:not(:first-child) {
+  font-family: var(--typography__fontFamily--primary);
+  font-size: var(--typography__larger);
+  padding-top: var(--spacing__vertical--n1);
+  padding-bottom: var(--spacing__vertical--n1);
+}
+body > aside section.container > h2:first-child,
+body > aside section.container > h3:first-child,
+main section.container > h2:first-child,
+main section.container > h3:first-child {
+  margin: 0;
+  line-height: calc(var(--spacing__vertical--2) + var(--spacing__vertical--n3));
+  padding-left: 0;
+  grid-column: span 1;
+  grid-row: span 3;
+  grid-row-start: 1;
+  grid-row-end: 10;
+  padding-bottom: var(--spacing__vertical--1);
+}
+blockquote {
+  padding: 0;
+  margin: 0;
+}
+blockquote p {
+  padding: var(--spacing__vertical--n1) var(--spacing__horizontal--n1);
+  border: 4px solid var(--color__muted);
+}
+#files {
+  text-align: center;
+  margin-bottom: var(--spacing__vertical--1);
+}
+#files h3 {
+  font-size: var(--typography__largest);
+  color: var(--color__primary);
+  text-shadow: 0 0.02em 0 var(--color__secondary), 0 0.1em 0 #0f0f0f;
+  letter-spacing: var(--spacing__horizontal--n6);
+  line-height: 1;
+  padding-bottom: var(--spacing__vertical--2);
+}
+#files a {
+  box-sizing: content-box;
+  background-clip: padding-box;
+  border-radius: 12px;
+  border: 8px double var(--color__cta);
+  box-shadow: 0 0.1em 0 transparent, 0 0.1em 0.2em 0 #0f0f0f;
+  background-color: var(--color__cta);
+  padding: var(--spacing__vertical--n2) var(--spacing__horizontal--n1);
+  color: var(--color__secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+#files a:active,
+#files a:hover {
+  background-color: var(--color__cta--shadow);
+  border-color: var(--color__cta--shadow);
+}
+#files a:not(:last-child) {
+  margin-bottom: var(--spacing__vertical--1);
+}
+#contribute .container:nth-child(2) {
+  border-bottom-width: 0;
+  padding-bottom: 0;
+}
+@media (min-width: 1024px) {
+  body {
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--2) 0;
+  }
+  body > aside article,
+  main article {
+    margin-bottom: var(--spacing__vertical--2);
+  }
+  body > aside section.container,
+  main section.container {
+    display: grid;
+    padding-bottom: var(--spacing__vertical--2);
+    margin-bottom: var(--spacing__vertical--2);
+    grid-template-columns: minmax(min-content, 320px) minmax(
+        min-content,
+        max-content
+      );
+  }
+  body > aside section.container > *,
+  main section.container > * {
+    grid-column: 2/-2;
+    margin-left: var(--spacing__horizontal--1);
+  }
+  body > aside section.container > h2:first-child,
+  body > aside section.container > h3:first-child,
+  main section.container > h2:first-child,
+  main section.container > h3:first-child {
+    padding-bottom: 0;
+    grid-row: span 2;
+    position: sticky;
+    top: var(--spacing__vertical--n1);
+  }
+  blockquote {
+    margin-top: var(--spacing__vertical--n1);
+    margin-bottom: var(--spacing__vertical--1);
+  }
+  blockquote p {
+    background-color: transparent;
+    border: 12px double var(--color__muted);
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+  }
+}
+@media (min-width: 600px) {
+  body > aside ul,
+  main ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1336px) {
+  body > aside section.container,
+  main section.container {
+    grid-template-columns: minmax(min-content, 460px) minmax(
+        min-content,
+        max-content
+      );
+  }
+  body > aside section.container > *,
+  main section.container > * {
+    grid-column: 2/-1;
+    margin-left: var(--spacing__horizontal--2);
+  }
+}
+@media (min-width: 480px) {
+  blockquote p {
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+  }
+}
+@media (min-width: 430px) {
+  #files {
+    border: 12px double var(--color__muted);
+    padding: var(--spacing__vertical--2) var(--spacing__horizontal--1);
+  }
+  #files a {
+    padding: var(--spacing__vertical--n2) var(--spacing__horizontal--1);
+  }
+}
+@media (min-width: 1366px) {
+  #files {
+    margin-bottom: 0;
+  }
+  #files a {
+    display: inline-flex;
+  }
+  #files a:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: var(--spacing__horizontal--1);
+  }
+}
+nav {
+  box-sizing: content-box;
+  background-clip: padding-box;
+  border: 12px double var(--color__muted);
+  max-width: 1366px;
+  margin: 0 auto var(--spacing__vertical--2) auto;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  background-color: var(--color__muted);
+  overflow: hidden;
+  font-size: var(--typography__base);
+}
+nav a {
+  display: block;
+  height: 100%;
+  padding: var(--spacing__vertical--n3) var(--spacing__horizontal--1);
+  white-space: nowrap;
+}
+nav a:active,
+nav a:hover {
+  background-color: var(--color__muted--hue);
+  text-decoration: none !important;
+}
+nav a:not([class]) {
+  color: var(--color__secondary);
+}
+@media (min-width: 1024px) {
+  nav {
+    margin: 0 auto var(--spacing__vertical--3) auto;
+  }
+}
+@media (min-width: 920px) {
+  nav ul {
+    display: flex;
+  }
+}
+@media (min-width: 1366px) {
+  nav a {
+    padding: var(--spacing__vertical--n1) var(--spacing__horizontal--1);
+  }
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([class]) {
+  color: var(--color__tertiary);
+  position: relative;
+}
+a:not([class]):active,
+a:not([class]):hover {
+  text-decoration: underline;
+}
+.sponsor-button,
+body > aside > .container > a {
+  font-weight: 400;
+  box-sizing: content-box;
+  background-clip: padding-box;
+  display: inline-flex;
+  border-radius: 12px;
+  border: 8px double var(--color__cta);
+  box-shadow: 0 0.1em 0 transparent, 0 0.1em 0.2em 0 #0f0f0f;
+  background-color: var(--color__cta);
+  min-height: calc(var(--spacing__vertical--1) + var(--spacing__vertical--n1));
+  line-height: 1;
+  padding: 0 var(--spacing__horizontal--1);
+  color: var(--color__secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  grid-area: unset;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing__vertical--1);
+  max-width: 290px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+.sponsor-button:active,
+.sponsor-button:hover,
+body > aside > .container > a:active,
+body > aside > .container > a:hover {
+  text-decoration: none;
+  background-color: var(--color__cta--shadow);
+  border-color: var(--color__cta--shadow);
+}
+header .link-github,
+header .link-guidelines,
+main .link-github,
+main .link-guidelines {
+  font-weight: 400;
+  box-sizing: content-box;
+  background-clip: padding-box;
+  display: inline-flex;
+  border-radius: 12px;
+  border: 8px double var(--color__cta);
+  box-shadow: 0 0.1em 0 transparent, 0 0.1em 0.2em 0 #0f0f0f;
+  background-color: var(--color__cta);
+  min-height: calc(var(--spacing__vertical--1) + var(--spacing__vertical--n1));
+  line-height: 1;
+  padding: 0 var(--spacing__horizontal--1);
+  color: var(--color__secondary);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  grid-area: unset;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+}
+header .link-github:active,
+header .link-github:hover,
+header .link-guidelines:active,
+header .link-guidelines:hover,
+main .link-github:active,
+main .link-github:hover,
+main .link-guidelines:active,
+main .link-guidelines:hover {
+  text-decoration: none;
+  background-color: var(--color__cta--shadow);
+  border-color: var(--color__cta--shadow);
+}
+header .link-github,
+main .link-github {
+  display: inline-flex;
+  position: relative;
+  padding: 0 var(--spacing__horizontal--1);
+}
+header .link-github span,
+main .link-github span {
+  display: block;
+  display: none;
+  padding-right: var(--spacing__horizontal--1);
+  padding-left: var(--spacing__horizontal--1);
+  width: calc(var(--spacing__horizontal--n1) + var(--spacing__horizontal--n3));
+  margin-right: var(--spacing__horizontal--n1);
+  margin-left: calc(
+    var(--spacing__horizontal--1) * -1 - var(--spacing__horizontal--n1)
+  );
+  fill: var(--color__secondary);
+}
+header .link-github span:after,
+main .link-github span:after {
+  content: "";
+  position: absolute;
+  top: calc(var(--spacing__vertical--n6) * -1);
+  margin-left: var(--spacing__horizontal--n1);
+  height: calc(100% + var(--spacing__vertical--n3));
+  border-left: 2px solid var(--color__background);
+}
+header .link-guidelines,
+main .link-guidelines {
+  margin-top: var(--spacing__vertical--1);
+  max-width: 290px;
+}
+@media (min-width: 430px) {
+  header .link-github span,
+  main .link-github span {
+    display: block;
+  }
+}
+header {
+  position: relative;
+}
+header:before {
+  animation: madness 5s ease-in-out infinite alternate;
+  transform: rotate(180deg);
+  right: -80px;
+}
+header:after,
+header:before {
+  position: absolute;
+  top: -200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 200px;
+}
+header:after {
+  content: "";
+  left: -80px;
+  transform: rotate(180deg) scaleX(-1);
+  transform-origin: center;
+  animation: deceiver 6s ease-in-out infinite alternate;
+}
+@keyframes madness {
+  0% {
+    transform: rotate(180deg) translate3d(-10px, -30px, 0);
+  }
+  25% {
+    transform: rotate(182deg) translate3d(-6px, -50px, 0);
+  }
+  50% {
+    transform: rotate(183deg) translate3d(-3px, 0, 0);
+  }
+  to {
+    transform: rotate(181deg) translate3d(10px, 10px, 0);
+  }
+}
+@keyframes deceiver {
+  0% {
+    transform: rotate(180deg) scaleX(-1) translate3d(-13px, -26px, 0);
+  }
+  25% {
+    transform: rotate(180deg) scaleX(-1) translate3d(-10x, -13px, 0);
+  }
+  50% {
+    transform: rotate(181deg) scaleX(-1) translate3d(4px, 0, 0);
+  }
+  75% {
+    transform: rotate(185deg) scaleX(-1) translate3d(4px, 13px, 0);
+  }
+  to {
+    transform: rotate(180deg) scaleX(-1) translate3d(-13px, -26px, 0);
+  }
+}
+@media (min-width: 630px) {
+  header:after,
+  header:before {
+    content: "";
+    min-height: 710px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 57 176'%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-2.4 119c-.1 2.8.2 5.5 1 8.1h.3a23.8 23.8 0 01-1.1-8c0-.2-.2-.2-.2 0m1 2.2A14 14 0 00-1 125c0 .1.2 0 .2 0a13.8 13.8 0 01-.4-3.6h-.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23bc4b4e' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-29.6 165.3c4.3-12.2 9-19.3 12.5-24.4 3.5-5.2 5.8-8.6 5.8-14v-.8c-.5-7.1-4.1-10.5-8-14.1-3.7-3.7-7.7-7.4-8.2-15v-1.7c0-1.5 0-3.8.8-6.6a30 30 0 013.6-8 37 37 0 017.8-9c.7-.6 7.1-6.1 11.3-11 4.3-5 8.5-11 9.7-13.9l.8-2c1-2.6 1.9-5.2 3.5-6h1c.2.2.3.7.3 1.3l-.3 2.4a18.6 18.6 0 00-.2 1.4v.5c0 .7 0 2.4-.7 4.7h0a1.3 1.3 0 010 .6c0 .8-.3 1.7-.7 2.4l-.2.5h0c-.1.4-.4 1-.7.9h0-.1l-1.3 2.8v.1h0l.1.1v.1h.1v.2c0 .4-.2.8-.4 1.2L6 59.3l-.2.3a6 6 0 01-.6.7c-.1.1-.2.3-.4.2h0-.1a51.9 51.9 0 01-2.5 3.7h0v.1c0 .3-.2.6-.4.9-.4.7-1 1.4-1.6 2l-.2.2c-.2.3-1 1-1.3 1h0-.1L-3 70.3l-.3.3-2.1 2.4h-.1v.1h0c0 .3 0 .6-.2.8-.3.8-.9 1.5-1.5 2.2h-.1c-1 1.3-1.6 1.6-1.8 1.5a.2.2 0 01-.2 0v-.2l-.2.2-1.7 2h0v.5h0c0 .5 0 .9-.2 1.2-.4.9-1.2 1.7-1.8 2.5l-.3.2-1 1.2h-.1l-.5.4a.3.3 0 01-.3 0h0-.1a18.6 18.6 0 00-1.3 3.5h0v1.6l.1.6a26.7 26.7 0 010 2c0 .3-.2.7-.5 1 0 0 0 0 0 0l-.1.1h0c0 .9.2 2 .7 3.1v.1h.1c.5 0 1 .1 1.4.6.3.2.6.6.8 1.1l.8 1.6.3 1.4v.5a.9.9 0 01-.3.4h0v.1l.2.2 2 1.7.2.3h0l.2.1v-.2a.6.6 0 010 0c.4-.2.9-.2 1.4 0l1.2.9h.1l1.2 1.2c.5.5 1 1 1 1.6 0 .3-.1.5-.4.8h0v.1c1 1.1 1.4 1.8 2.2 3h.4c.5 0 1 .3 1.2.7.4.4.6.9.8 1.3h0l.7 1.5c.2.4.3.9.3 1.3v.5a1 1 0 01-.6.5h0v.2c.5 1.8.9 3.8 1 5.9h0c.4.2.7.6.8 1.1.2.5.2 1 .2 1.4v1.7c0 .5 0 1.3-.5 1.8a1 1 0 01-.7.3h0a45.6 45.6 0 01-1 5h0v.1c.2.2.4.6.4 1v.3l-.1 1.1a21.2 21.2 0 01-.4 1.8c-.2.7-.4 1.3-1 1.6a1 1 0 01-.6.2h-.1 0a84.4 84.4 0 01-2 4.8v.1h0c.4.4.5.8.5 1.2v.1c0 1-.5 2-1 3-.2.5-.5 1.3-1.1 1.6h-1v-.1h-.1l-1.4 2.9-.8 1.7h0l.1.9v.2l-.3 1.7a29.5 29.5 0 01-.7 2h0c-.3.7-.6 1.5-1.2 2a1 1 0 01-.8 0h-.2 0a52.2 52.2 0 00-1.4 4.1v.1h0c.4.3.6.8.6 1.5v.1c0 .6 0 1.1-.2 1.5l-.5 2.1h0c-.2.8-.4 1.6-1 2a.8.8 0 01-.4.2h-.1v.1a57 57 0 00-.5 4.5h0v.1c.3.3.5.6.6 1.2.2.5.2 1 .3 1.6v2.2h0c0 .7 0 1.6-.5 2.1a.9.9 0 01-.4.3h0v.1l.2 3.5h.1c.6.3 1 1 1.2 1.6l.6 2v.6l.4 2v.2l.1 1.3c0 .5 0 .9-.2 1.2a.8.8 0 01-.4.4h-.1v.1l1 3.6v.1h0a.8.8 0 01.4 0c.5.1 1 .8 1.3 1.3.4.7.6 1.4.8 2h0l.8 2.4v.2c.3.6.4 1.2.4 1.8v.7a.9.9 0 01-.5.5h0v.2l.3.7a.5.5 0 010 .4.5.5 0 01-.4.3h-20.3' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23bc4b4e' d='M24.4 174.1a31.6 31.6 0 01-1.5-5.2c0-.1.2-.2.3 0a31.3 31.3 0 001.4 5.2c0 .1-.2.2-.2 0m1-2l-.5-1.5c0-.2.1-.2.2-.1l.6 1.6c0 .2-.2.2-.2 0m1.4-.5s0-.2.2-.1c.2.3.4.6.4 1 0 0-.1.1-.2 0a2.4 2.4 0 00-.4-.9m2-4.4a.1.1 0 01.1-.1h.1l.2.9c.8 1.7 1.1 3.4 1.1 3.6l.5 1a.1.1 0 010 .2h-.2a16.8 16.8 0 01-.5-1.1 25.9 25.9 0 01-1.1-3.7l-.2-.8m-6.7-.3v-.5c0-.1.2-.1.2 0v.5h-.2m2.7-1.6a1.8 1.8 0 01-.3-1c0-.1.2-.1.2 0a1.6 1.6 0 00.3 1s-.1.2-.2 0m.5-1.2l.3 1a151.2 151.2 0 00-.3-1m.9-.3l.1.6c0 .2-.1.2-.2 0l-.1-.5c0-.1.2-.2.2 0m-3.7-2.8a8.6 8.6 0 01-.3-2.1c0-.2.2-.2.2 0 0 .7.1 1.4.3 2 0 .2-.2.2-.2.1m-1.3-.2l-.3-3.6h.3c0 1.2 0 2.4.2 3.6h-.2m4.6-5.8l-.1-.8.1-.1h.1v.9c.6 1.8.6 3.6.7 3.8l.2 1a.1.1 0 010 .2h-.1a19.7 19.7 0 01-.3-1.2 26.4 26.4 0 01-.6-3.8m-4-.4v-1.3h.1v1.3c0 .2-.2.2-.2 0m-.8-2.9a11.5 11.5 0 01-.1-2.3c0-.2.2-.2.2 0v2.3c.1.1-.1.2-.1 0m.7-3l.1 2.9h-.2l-.1-2.8c0-.1.1-.2.2 0m1.3 1.9v.4l-.3-.1.1-.4c0-.1.2 0 .2 0m.6.5c0 .1-.2.1-.2 0s.2-.1.2 0m1.3-3.7a14.1 14.1 0 01-.1-2.3v-1.7l.1-.7a.1.1 0 01.1-.1.1.1 0 01.1.1v.7c.2 1.5 0 2.9 0 3v1h-.2m-4.6-1v-1c0-.1.2-.1.2 0v1c0 .1-.2.1-.2 0m.4-3.2a60.5 60.5 0 01.5-4.8 60.6 60.6 0 00-.3 4.8c0 .2-.2.2-.2 0m3.5-5.3a1.5 1.5 0 01-1-1c0-.2.2-.3.2-.1.1.4.4.8.9 1 .1 0 0 .2 0 .1m-1 .5l.3.3s0 .2-.2.1l-.3-.3s0-.2.2-.1m-1.4 2v1.6c0 .2-.2.2-.2 0v-1.6c0-.2.2-.2.2 0m4-5c.1-2.4 1-4.6 1-4.6a.1.1 0 01.2 0l-.2.7a9.7 9.7 0 01-.8 3v.9a.1.1 0 01-.2 0m-3.1-3l.1-.3c.1-.1.3 0 .2 0l-.1.4c0 .1-.3 0-.2-.1m1-4.8a28.7 28.7 0 011.3-3.4c.1-.2.3 0 .2 0a28.3 28.3 0 00-1.3 3.5c0 .1-.2 0-.2 0m5.6-3.8l.2-1a17.3 17.3 0 011-2.9l.4-.6a.1.1 0 01.1 0 8.7 8.7 0 00-.2.7c-.3 1.5-1 2.7-1 2.9l-.3.9a.1.1 0 01-.2 0m-4 2.5l-.2.6c0 .2-.3 0-.2 0 0-.3.2-.5.3-.7 0-.2.2 0 .2 0m.9.3a78.7 78.7 0 01-.5.8l.3-.9c0-.1.2 0 .2 0m1.5-9l.7-1.5s.2 0 .1.2a8.9 8.9 0 00-.6 1.3c0 .1-.3 0-.2 0m3.5-2l.3.4c.1 0 0 .2-.1.1l-.4-.3c0-.1 0-.3.2-.2m-.2 1c.1 0 0 .2 0 .1a1.8 1.8 0 00-1 0c-.2.1-.3 0-.1-.1a2 2 0 011 0m-1.4-2.6a35.9 35.9 0 002.3-4.3l.2.1a35.9 35.9 0 01-2.3 4.3l-.2-.1m6.7-4.7v.1a7.5 7.5 0 00-.3.5 6.8 6.8 0 01-1 2.3l-.2.8a.1.1 0 01-.2 0 9.3 9.3 0 01.2-.8c.3-1 .7-1.9 1-2.4l.3-.5h.2m-3.6-1l.5-.8s.2 0 .1.1l-.4.9-.2-.1m2.2-1.8c-.1 0 0-.2 0-.2l.7.2-.1.2-.6-.2m0-1l.4-.1c.2 0 .2.1.1.2l-.5.1c-.2 0-.2-.2 0-.2m0-2.5l.4-.7a64.8 64.8 0 01-.4.8m4-1.1a8.2 8.2 0 010-.8c.3-1.7.9-3 .9-3a.1.1 0 01.1-.1c.1 0 .1 0 0 .1l-.1.5a6.6 6.6 0 01-.7 2.5v.8a.1.1 0 01-.1 0 .1.1 0 01-.1 0m-1.5-2.8l.3-.6c0-.2.2-.1.2 0l-.3.7c0 .1-.2 0-.2 0m.3-2.8l.1-.6c0-.2.3-.1.2 0l-.1.6c0 .2-.2 0-.2 0m1-1V95h.3l-.2.8c0 .1-.2 0-.2 0m1.4-1.3l-.1.7c0 .1-.2.1-.2 0v-.7h.3m1.4-3.4a7.4 7.4 0 01-.1-.8 10.1 10.1 0 010-1v-1.6l.1-.5a.1.1 0 01.1-.1h.1v.6c.2 1.3 0 2.4-.1 2.6l.1.7a.1.1 0 010 .2l-.2-.1m-3.4-.1a4.6 4.6 0 00.3-1.3c0-.1.2-.1.2 0a4.8 4.8 0 01-.3 1.3c0 .1-.2 0-.2 0m0-5.2v-.3c0-.1.2-.1.2 0v.3c0 .1-.2.1-.2 0m1.6-1.4a9 9 0 00-.4-2.4c0-.2.1-.2.2-.1.2.8.4 1.7.4 2.5 0 .2-.2.2-.2 0m-1-.4a141.2 141.2 0 000-1.2l.2 1c0 .2-.2.3-.2.2m-1-4.4a5.5 5.5 0 00-.2-.6c0-.1 0-.2.2-.1l.3.6s-.1.2-.2 0m2.4-.7a7 7 0 01-.4-.7 12.1 12.1 0 01-1-2.4l-.2-.5.1-.1a.1.1 0 01.2 0v.6c.8 1 1 2.2 1 2.3l.5.7a.1.1 0 010 .1.1.1 0 01-.2 0m-1.2-.2a5.4 5.4 0 01-.4-1s.1-.1.2 0c0 .3.2.6.4 1 0 0-.1.2-.2 0m-4.4-3a66.2 66.2 0 00-4.1-3.5c-.1 0 0-.2.1-.1a66.2 66.2 0 014.1 3.5c.1.1 0 .3-.1.2m-1.6-3l.8.8s0 .2-.2.1l-.7-.7c-.1 0 0-.2.1-.1m.7-1.4l-.4-.2c-.1 0 0-.2.1-.1.2 0 .3 0 .4.2.1 0 0 .2 0 .1m-2.6-.2a1.3 1.3 0 01-.5-.4c-.1-.1 0-.2.1-.1.2.1.3.3.5.3.1 0 0 .3 0 .2m1.5-1.6c0-.1.1-.2.2-.1.3.4.7.8 1.2 1.1 0 .1 0 .3-.1.2a4.7 4.7 0 01-1.3-1.2m-4.7 0a4.7 4.7 0 01-1.7-1.4c-.1-.1 0-.3.1-.2a4.6 4.6 0 001.7 1.3c.2.1 0 .3 0 .2m-.7-1.5a9.9 9.9 0 001.4.8c.1 0 0 .2-.1.1l-1.4-.8c-.1 0 0-.2 0-.1m4.7-.7V67h.1l.4.5c1 .7 1.7 1.6 1.8 1.8l.6.4v.2a7.3 7.3 0 01-.7-.4 11.7 11.7 0 01-1.9-1.9l-.3-.4m-3 0h.3c0 .2-.2.2-.2 0M25.6 66a4.2 4.2 0 01-.6-1c-.1-.1 0-.2.1-.1l.6 1c.1 0 0 .2-.1.1m2.5-.4a1.6 1.6 0 01-1.1.1c-.2 0-.1-.2 0-.2h1c.1-.1.2 0 0 .1m-.1-2.3a7.8 7.8 0 01-.4-.6 11.8 11.8 0 01-1.2-3 .1.1 0 01.2 0l.1.5a6.6 6.6 0 011 2.4l.5.6a.1.1 0 010 .2.1.1 0 01-.2 0m-1.3-.1a3.7 3.7 0 01-.8-1.9c0-.1.2-.1.2 0a3.4 3.4 0 00.7 1.7c.1.1 0 .3-.1.2m-3.8-2.7l.4 1c0 .2-.1.3-.2.1a3.2 3.2 0 01-.4-1c0-.2.2-.2.2 0m0 2.1a3.9 3.9 0 01-.7-3.3c0-.1.2 0 .2 0a3.7 3.7 0 00.6 3.2c0 .2 0 .3-.2.1m1.3-4.2a52.3 52.3 0 00.6-.2l-.5.4s-.2-.1 0-.2m-2.6-.5l-.3-.3c-.1-.1 0-.3.1-.2l.3.3c.1.1 0 .3-.1.2m.6-.9s0-.2.2-.1l.3.2h.1l-.1.2a.8.8 0 01-.5-.3m1-.4a2.2 2.2 0 01-1.1-1.1c-.1-.2 0-.3.1-.1.3.4.6.8 1 1 .2 0 .1.2 0 .2M20.7 54a3.5 3.5 0 010-2l.2.1c-.2.7-.2 1.3 0 1.9 0 .1-.1.2-.1 0m-1.1-.5v-.7c0-.2.3-.2.3 0v.7h-.3m3.6-3.3l.3-.6.2-.1a.1.1 0 110 .2c1.6 2.3.3 4.6.3 4.7a.1.1 0 010 .2.1.1 0 01-.1 0c-.8-1-1-2-1-2.8 0-.8.2-1.3.3-1.6m-2.5.8l-.1-.1a1 1 0 01.2-.4c0-.1.2 0 .1 0a1 1 0 00-.1.4l-.1.1m0-3c.1-1 .3-1.7.7-2.5 0-.1.3 0 .2.1a6.1 6.1 0 00-.6 2.3c0 .2-.3.2-.2 0m4.2-3l-.9-.5c-.4-.6-.3-1.3-.1-2 0-.2.4 0 .4.2-.3.5-.4 1.3.2 1.7.2.1.6.3 1 .3.3 0 .7-.2 1-.4l1.3-1.7c.4-.8 1-1.5 1.3-2.3 0-.4.2-.8 0-1.1-.3-.3-.7-.5-1.1-.4-1.3.1-2.3 1.5-3 2.5 0 .1-.4 0-.2-.2.5-.9 1.2-1.7 2-2.2.5-.3 1-.5 1.4-.5.6 0 1.2.4 1.3 1 .1.5 0 1-.3 1.5-.4 1-1.1 1.9-1.7 2.7-.4.5-.8 1-1.3 1.3-.4.2-.9.2-1.3 0m-2.2 0V44.5a.1.1 0 01.2 0v.2a.1.1 0 01-.2 0m-.3-.8a1.3 1.3 0 01.2-.5c.1-.1.3 0 .2.1a1 1 0 00-.2.5h-.3m5-1.9c-.4.7-1 1.4-1.6 1.8a.7.7 0 00.3 0s.2.1 0 .2c-.4.2-1 0-1.1-.6 0-.7.4-1.4.8-2 .4-.6.7-1.3 1.4-1.7.4-.3 1-.5 1.4 0 .1.1 0 .3-.1.1a.6.6 0 00-.2-.1c0 .8-.4 1.6-.9 2.3m-3.2-1l1-1.6c.2-.2.3 0 .2.1l-1 1.6c-.1 0-.3 0-.2-.1m5.9.7c-.2 0-.5.4-.6.6l-.7.8-.8 1-.4.6c-.2.2-.4.5-.4.8H27c.1-.5.6-1 .9-1.4a15.7 15.7 0 011.7-2.1c.1-.1.3-.5.5-.5s.2.2 0 .2m-5.2 5l-.2.6c0 .1-.3 0-.2 0l.2-.6c0-.1.2 0 .2 0m-1.2.2s.1-.1.2 0l-.1.2h-.2l.1-.2M22 47v.3h-.2V47s.1-.1.2 0m7-9.2l.3-.2c0-.1.2 0 .1.1l-.2.3c-.1 0-.3-.1-.2-.2m-2.2-.1c.6-.7 1.2-1.3 1.9-1.8 0-.1.2 0 .1.1a22.1 22.1 0 00-1.8 2c0 .1-.2 0-.1-.1m3.6-3c.1-.2.4 0 .3.2-.3.5-.5 1.3 0 1.7l1 .4c.4 0 .8-.2 1.1-.5.6-.4 1-1 1.5-1.6.5-.6 1.1-1.2 1.4-1.9 0-.3.2-.7 0-1-.2-.3-.6-.4-1-.4-1.2 0-2.3 1.2-3 2-.2.2-.5 0-.3-.2.8-1 2.2-2.4 3.6-2.1.5 0 1 .4 1.1 1 .1.4-.1 1-.4 1.4-.5.8-1.2 1.6-1.9 2.3-.4.5-.8 1-1.4 1.2-.4.2-.9.2-1.3 0-.3-.2-.6-.3-.8-.6-.4-.6-.2-1.3.1-1.9m3.4 0c-.5.7-1.1 1.3-1.8 1.7a.7.7 0 00.2 0c.1-.1.2 0 0 .1-.5.2-1-.1-1-.7 0-.7.6-1.3 1-1.7.5-.6.9-1.2 1.5-1.6.5-.2 1.2-.3 1.5.2 0 .2-.2.3-.2.2a.5.5 0 00-.2-.2c0 .8-.5 1.4-1 2m-5.5 2.9c-.1.1-.3 0-.2-.1l.4-.4c.1-.1.3 0 .2.1l-.4.4m7-2.2l-.3.3-.4.4a4.9 4.9 0 00-.4.4c-.1.2-.5.5-.5.8 0 .1-.2.1-.2 0 0-.3.2-.5.4-.7a7.1 7.1 0 01.5-.6l.6-.6.3-.2c.1 0 .2.1 0 .2m2-5v-.1l.1-.1h.2l.1.2h-.1a4.4 4.4 0 00-.3 0m.1-.8s.1-.2.2 0c.2.2.4.2.7.2.1 0 .2.1 0 .2a.8.8 0 01-.9-.4m-2.5-.4a8.7 8.7 0 001.4-1.8l.2.1a9 9 0 01-1.5 1.9c-.1 0-.2 0-.1-.2m2.5-3l1.5-1.8c.6-.6 1.5-1.4 2.4-1.2.2 0 .4 0 .5.2.2.2.4.3.4.5.1.4 0 .8-.2 1.2-.4.8-1 1.5-1.6 2.1-.6.7-1.5 2-2.6 1.6-.3-.1-.6-.3-.8-.6-.4-.6 0-1.4.4-2m3.4-3.8c.9-.2 1.8.1 2.4.8 0 .2 0 .3-.2.2a2.2 2.2 0 00-2.2-.8s-.2-.2 0-.2M42 22c-.2 0-.2-.2 0-.2.4 0 .8.2 1 .6 0 .1 0 .2-.2 0a1 1 0 00-.8-.4m1 4.6c-.2 0-.3.2-.4.3l-.4.4a5 5 0 00-.4.4c-.1.2-.5.5-.5.8 0 .1-.3.1-.2 0l.4-.7a7.1 7.1 0 011-1.1l.4-.3c.1 0 .2.2 0 .2m-7 2.7c0 .2-.1.2-.1 0s.2-.1.2 0m8-8.1l-.5-.3c-.1 0 0-.2.1-.1l.5.2-.1.2m-.2-1.4c0-.1.2-.2.2 0 .1.4.5.7 1 .7v.2a1.3 1.3 0 01-1.2-.9m.5-2l1-1.7c.3-.5.9-1.2 1.6-1.3.2 0 .5 0 .6.2h.1l.4.4c.6 1-.4 2.3-.9 3.1-.4.7-.9 1.7-1.9 1.5l-.7-.4c-.4-.5-.4-1.2-.2-1.7m4 .9l-.3.4-.4.4-.4.5c-.1.2-.4.5-.4.8 0 .1-.2.1-.2 0 0-.3.2-.6.4-.8a7.4 7.4 0 01.4-.6l.5-.6.3-.3c.2 0 .2.2 0 .2m-.1-4.2a1 1 0 00-1 0c-.1 0-.2-.1-.1-.2a1.3 1.3 0 011.2 0c0 .1 0 .3-.1.2m0-.6a1 1 0 00-.3 0c-.2-.1-.2-.3 0-.3l.5.1c.1 0 0 .3-.1.2m.2-1.7c-.1-.1 0-.3.1-.2a1 1 0 001.3.1s.2.1 0 .2a1.2 1.2 0 01-1.4-.1M51 6.5a.3.3 0 00-.3 0c-.2 0-.2-.2 0-.2a.5.5 0 01.4 0c.1.2 0 .3-.1.2m-.2-.7h-.2v-.2h.4a.1.1 0 010 .2m.2-.6c0-.2.2-.2.2 0 0 .1-.2.1-.2 0M31.3 175.5v-.1l-.4-.8h-.4c-.3 0-.3-.4 0-.4.6 0 1-.2 1-.8 0-1-.4-2-.7-3-.4-1.2-.8-2.5-1.5-3.7-.2-.3-.6-.9-1-1a.4.4 0 00-.3.2c-.2.2-.5-.1-.3-.3a75.5 75.5 0 01-1-3.7 1.8 1.8 0 01-.5 0c-.2-.1-.1-.5.1-.5.6.2 1 0 1.1-.6.2-1 0-2-.2-3-.2-1.3-.4-2.7-1-3.9 0-.4-.4-1-.9-1.1a.4.4 0 00-.2 0c-.3.2-.6-.1-.4-.3a.7.7 0 01.4-.1 63 63 0 01-.3-3.4 2 2 0 01-.6 0c-.3-.2-.2-.6 0-.5.6.2 1 .2 1.3-.4.3-.7.3-1.6.3-2.3 0-1 0-2.2-.3-3.2-.2-.4-.4-.9-.8-1a.9.9 0 00-.2 0h-.1c-.3 0-.5-.3-.2-.4a1 1 0 01.7 0c0-1.4.2-2.9.4-4.3a2.2 2.2 0 01-.6-.2c-.2-.2 0-.6.3-.4.4.3.8.4 1.2 0 .5-.7.7-1.6.9-2.4.2-1 .5-2 .4-3.1 0-.4 0-.9-.4-1.1a.9.9 0 00-.3 0c-.3 0-.4-.5-.2-.5a.9.9 0 01.4 0l1.4-4-.1-.2c-.3-.1 0-.5.2-.3.4.3.8.5 1.2 0 .6-.6.9-1.5 1.1-2.2.3-1 .7-2 .8-3.1 0-.4-.1-.9-.4-1.1a.5.5 0 00-.4-.1c-.3 0-.2-.4 0-.4.3 0 .5 0 .7.2l.8-1.4 1.3-2.8c-.2-.2 0-.5.2-.4.4.3.9.5 1.3.2.5-.5.8-1.3 1-1.9.3-.8.7-1.6.7-2.5 0-.3-.1-.7-.4-.9a.8.8 0 00-.3 0c-.3 0-.3-.5 0-.5h.3a81.2 81.2 0 001.8-4.6l-.3-.1c-.2-.2 0-.5.2-.4.5.2 1 .4 1.3 0 .5-.6.6-1.4.8-2 .1-.9.4-1.8.3-2.6-.1-.5-.5-1-1-.9-.2 0-.2-.4 0-.4l.6.1c.4-1.6.7-3.1.9-4.7a2.8 2.8 0 01-.3 0c-.2 0-.1-.5.1-.4.5.1 1 .1 1.3-.4.3-.6.2-1.3.2-2 0-.8 0-1.8-.3-2.6-.2-.4-.6-.9-1-.7-.3.1-.4-.3-.2-.4a1 1 0 01.4 0 25 25 0 00-1-5.7H40c-.3.1-.4-.3-.1-.3.6-.1 1-.3 1-1 0-1-.6-2-1-2.8-.3-.6-.8-1.6-1.6-1.6a.8.8 0 00-.5.1c-.2.2-.5 0-.3-.3-.7-1.2-1.2-1.9-2.1-2.9h-.1c-.3.2-.5-.1-.3-.3.6-.3.8-.7.5-1.3-.4-.9-1.3-1.6-2-2.2-.5-.4-1.3-1-2-.8a.7.7 0 00-.4.2s-.1.2 0 .1c-.2.3-.6.2-.5 0a.9.9 0 010-.2l-.1-.2a85.9 85.9 0 01-2-1.7 9.2 9.2 0 01-.2-.3 2.4 2.4 0 01-.6.2c-.3 0-.4-.4-.1-.4.6-.1 1-.4 1-1 0-.5-.2-.9-.4-1.3a15.4 15.4 0 00-.8-1.7c-.4-.6-1-1.4-1.7-1.4a1.3 1.3 0 00-.5.2H25c-.2.2-.5 0-.3-.2l.4-.3c-.4-1-.5-2-.6-2.9a3.4 3.4 0 01-.6.1c-1 .2-1.6-.9-1.8-1.7 0-.2.3-.3.4-.1.1.5.4 1.3 1 1.4h.7c.8-.2.9-1 1-1.7l-.1-2.3a9.4 9.4 0 000-1.1.2.2 0 01-.1-.1V50a4 4 0 00-.2-.7c-.2-.5-.5-1-1-1h-.2c-.6 0-.9.6-1 1-.2.3-.5.2-.4 0 .2-.6.6-1.3 1.3-1.3a1.1 1.1 0 01.2 0 .8.8 0 01.2 0c.7 0 1 .7 1.3 1.3l1.2-3a2 2 0 01-.1-.3c0-.2.3-.3.3 0 0 0 0 .3.2.4l.3-.2 1.7-1.8c.6-.7 1.2-1.4 1.6-2.2.1-.3.3-.6.3-1s-.2-.3-.5-.2c-.2.1-.4-.2-.2-.3l.5-.2 2.2-2.5a.2.2 0 01.3 0 .2.2 0 010 .3c0 .2.2 0 .4 0l1.6-1.9a6 6 0 001.2-1.7.2.2 0 01-.3-.1.2.2 0 010-.2l2.8-3.2 1.6-1.7a1 1 0 010-.3c0-.2.3-.3.3 0v.2l.4-.3c.7-.5 1.4-1.3 2-2 .3-.4.7-.9.8-1.4v-.2c0-.2 0 0-.2 0-.2.2-.4-.1-.2-.3l.6-.1a52.7 52.7 0 002.4-3.5c-.1-.3.2-.4.3-.2l.1.1.3-.3 1.4-1.9c.2-.4.5-.8.5-1.2V18h-.3c-.2.2-.4 0-.2-.2l.2-.2 1.4-3c-.4-.5-.2-1.3 0-1.8a15 15 0 01.6-1.7c.2-.3.5-1.1 1-1h.1l.5-2.3V7c.2-1.1.1-1.8.1-1.8l.2-1.4c0-.7-.2-1-.4-1.1-.4-.1-1.3 1-2.7 4.7l-.1.3c.3-.4.6-1 1.1-1l.5.2a.8.8 0 01.3.4c.2.3.2.7 0 1 0 .7-.4 1.4-.7 2-.3.6-.6 1.6-1.4 1.4-.9-.3-.9-1.2-.7-2a87.3 87.3 0 01-12.7 17.5C30.4 33.2 25.4 38 25.4 38a20.8 20.8 0 00-5.7 19.4c1.1 5.3 4 9 4 9 1.6 2.1 3.6 3.7 5.5 5.3 4 3.3 7.7 6.5 8.3 13.9.4 4.1-.4 8.8-2.3 14.3-1.6 4.6-3.7 8.9-5.5 12.3a151.5 151.5 0 00-1.3 2.8l-1.1 2.1c-4 7.5-13.1 25-4.1 58.4h8'/%3E%3Cpath fill='%23781517' fill-rule='evenodd' d='M7.8 153.7c0-2.6.1-5.3.4-8l.3-2.3a56.3 56.3 0 01.8-4.6 107.8 107.8 0 016.9-21.7 92.3 92.3 0 012.1-4.3c4-7.4 11-16.7 11.7-19.5.3-1.1.7-3 .7-5.3 0-3-.7-6.6-3.2-10.1-3.9-4.7-5-5-7.7-8a21.2 21.2 0 01-5.2-11.8 20.4 20.4 0 010-1.7c0-1.2 0-3.1.6-5.4a35.2 35.2 0 019-15.7 38.6 38.6 0 01.5-.5s15.3-13 18-18.8l.8-1c2.1-2.8 4-4.5 5.2-9.4l.2-.7c.5-1.4 1.1-2.8 1.9-3.7 1-1.1 1.8-1 1.8-1s.4.2.6.7v.6s-.5-1.1-1.4 0c-.5.6-1 2.2-1.6 4.2a38.7 38.7 0 00-.5 1.6 63.1 63.1 0 01-.5 1.7l-.3.8-.4 1.2a1.7 1.7 0 010-.4v-.8c-6.2 11-14 19.5-23.1 28.3a21.2 21.2 0 00-5.7 19.4c1.1 5.3 4 9 4 9 1.6 2.1 3.6 3.7 5.5 5.3 4 3.3 7.7 6.5 8.3 13.9l.1 2c0 3-.5 6-1.5 9.5-4 8.8-11.3 17.9-14.7 26.2a70.2 70.2 0 00-5.3 27.2c0 7.1 1 15.2 3.4 24.3h-8.8a71.1 71.1 0 01-2.9-21.2m14.3-92.2l.8 1.3a.1.1 0 01-.2 0 3.8 3.8 0 01-.6-1.3M24 42.9a3.7 3.7 0 01.1-.4l.2-.2-.3.6m1-1.8V41l1-1.4-1 1.6a.2.2 0 010-.1M26.2 68s.2-.2.2 0a4.6 4.6 0 001.7 1.2l.1.1s0 .2-.2.1a4.7 4.7 0 01-1.7-1.3.1.1 0 010-.1m2.3-32c0 .2-.3.4-.4.6M30.5 72c0-.1 0-.2.1-.1a66.2 66.2 0 014.1 3.5l-.1.2a66.2 66.2 0 00-4.1-3.6M37 27a3.6 3.6 0 01.4-.6 12.5 12.5 0 012.2-2.5 183 183 0 01-2.6 3m7.6-9.5l.7-1.3 1-1a72 72 0 01-1.7 2.3'/%3E%3Cpath fill='%230a090d' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-27.6 95a22.8 22.8 0 010 .3V95m.1 1.8v0m1.6 59.3c.5-1.3 1.2-2.8 2.1-4.3a92.7 92.7 0 00-2.1 4.3m8-82.2a15.1 15.1 0 010 0M.9 54.7v0a32.8 32.8 0 010 0M7 43.6c.6-2 1.3-3.1 2-3.8-.8.9-1.4 2.3-2 3.8m4.3-4.1a1.5 1.5 0 01.1.6v-.6' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23d23b2f' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M7 48.5a13.6 13.6 0 010 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23bc4b4e' d='M19.2 52.9c0-4.4 1.4-9.6 6.2-14.8 0 0 5-4.7 10.4-10.8 4.4-5 10-11.8 12.8-17.6v.1a2.8 2.8 0 00-.2.8v.4a27 27 0 01-2.2 4.1l-.9 1-.7 1.3-5 6.5a8.7 8.7 0 00-.7.6l-1.5 1.8-.4.7-.6.7a.1.1 0 000-.1c0-.1 0-.2-.1 0a8.7 8.7 0 01-1.4 1.7v.2L33 31.3c-.7.7-2.3 2.3-4.2 4.6a.1.1 0 00-.1 0 21.6 21.6 0 00-2 1.9c0 .1.1.2.2.1a22 22 0 011.4-1.3 57.1 57.1 0 00-2.2 3L25 41v.2a43.4 43.4 0 00-.9 1.2 3.7 3.7 0 00-.1.5l-.9 1.6a.1.1 0 00-.2 0 .1.1 0 000 .1v.1h.1L22 47a22.7 22.7 0 00-1.8 7.6c0 2.4.8 4.8 2 6.9 0 .4.2.9.5 1.2a.1.1 0 00.2 0c3.4 5.5 8.8 9.2 8.8 9.2s7.1 5 7.1 14.5c-.1 3.8-1.2 7.5-2.7 10.8a34 34 0 001.4-11.5c-.6-7.4-4.4-10.6-8.3-13.9-2-1.6-3.9-3.2-5.6-5.3 0 0-2.8-3.7-4-9a21.3 21.3 0 01-.4-4.6m.8-.1c0-.2 0-.2 0 0l.3.8-.2-.1c0-.1-.2 0-.2 0v-.7m3.1-9.3s.5 1.1-.2-.1c.6.6.1.5-.2.5.5-.1.4.2.4.2 0 .1-.3 0-.2-.1 0-.2 0-.3.2-.5m2.6-3.6s-.1-.1-.2 0l-1.1 1.6c0 .1.1.2.2 0l1-1.5m2.8 29.3a4.6 4.6 0 01-1.8-1.4l-.2.1a4.7 4.7 0 001.8 1.4h.2m6.5 6a66.2 66.2 0 00-4.2-3.5h-.1v.1a66.2 66.2 0 014 3.6l.3-.1M49.4 7.8v-.3a37.1 37.1 0 01.3-.2 3.5 3.5 0 00-.3.5'/%3E%3Cpath fill='%2368606f' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-17.3 94.3h0a5 5 0 000 0v.1h0m.3 93.7h.1l.1 2.3a63.6 63.6 0 01-.2-2.2h0m.7-100.8l.8-1.8v-.1h.1l-.9 1.9h0M-15 201h0l.3 1.4a71.4 71.4 0 01-.3-1.3h0m0-6.4a7.4 7.4 0 010 0m.2-26.1h0m.4 29.1a4.4 4.4 0 01.1 1.4 11.8 11.8 0 000-1l-.1-.2v-.2m.1-30.8l.9-2.5h0l-.9 2.5m.5-82.6l.3-.4.3-.2-.6.6m.2 18.8h.1a.9.9 0 00.3-.4h0c0 .3-.4.4-.4.4m2.3-23.5h.1l.1-.2-.1.3v-.1m.2 25.8h0v.1h0m1.6-28.2v0h0m.3 28.2c1 .6 2.1 1.6 2.7 2.6a5.7 5.7 0 00-.6-.7 17.8 17.8 0 00-1.2-1.1v-.1a6 6 0 00-1-.7m2.3-29.8a17.1 17.1 0 000 0m5 65.5a8 8 0 00.2-.7l.1-.4a4.2 4.2 0 01-.3 1m.4-22.3h.1l.3-.3a.8.8 0 01-.4.3m.8 12.4v0h.1s0 0 0 0m6.5-71.7l.1-.2.4-.5a16.7 16.7 0 01-.5.7m1.2-3v-.1a1 1 0 000 0h0m.6-1.3l.7-1.5v-.1L7.8 55h0m2.3-5.9h0a.7.7 0 010 .1v0a1.2 1.2 0 000 0h0m.7-5.3l.2-1.4.1-.5a80.7 80.7 0 01-.3 1.8 6.2 6.2 0 010 .6v-.5' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23bc4b4e' d='M21.8 147.7c0-4 .5-8.2 1.5-12.1a123.2 123.2 0 012.6-8h.2l.3-1h-.1c1.2-3.5 2.6-6.8 3.9-9.9h1v-.2a2 2 0 00-.9 0l5-10.8h.2a.1.1 0 000-.1v-.1h-.2l3.2-7c1.3-3 1.8-6.3 1.8-9.5 0-1.7-.1-3.5-.4-5a9.2 9.2 0 00-.4-2.2c-1-3.5-2.3-6.4-3.8-8.5-2-2.8-4.3-4.3-6.3-6 0-.1-.1-.2-.2-.1a26 26 0 01-1.6-1.5 1.6 1.6 0 00.5-.2c0-.1 0-.2-.1-.1a1.4 1.4 0 01-.6.1 15 15 0 01-3-4.4 16.1 16.1 0 01-1.4-4.5h.2a.1.1 0 000-.2 2 2 0 01-.2 0 15.2 15.2 0 010-.8c.2.2.5.3.9.2h.6c0 .8.2 1.8.6 2.8l-.4.3a.2.2 0 00-.1.1c0 .2.2.3.4.2l.2-.1a1.3 1.3 0 01.5-.2c.8 0 1.3.8 1.7 1.4l.8 1.7a4.3 4.3 0 01.4 1.3c0 .6-.4.9-1 1a.2.2 0 00-.2.1c0 .2.1.3.3.3l.6-.2.3.3 1.9 1.7.2.2a.9.9 0 000 .1.2.2 0 00-.1.1c0 .2.3.2.4 0h.1a.7.7 0 01.4-.3c.7-.2 1.5.4 2 .8.7.6 1.6 1.3 2 2.2a1 1 0 01.2.5c0 .3-.3.6-.7.8a.2.2 0 000 .2c0 .1.1.3.3.2 1 1 1.5 1.6 2.2 2.8a.2.2 0 000 .2c0 .1.1.3.3.1a.8.8 0 01.5-.1c.8 0 1.3 1 1.5 1.6.5.8 1 1.8 1.1 2.8 0 .7-.5.9-1 1-.1 0-.2 0-.2.2 0 0 .1.2.3.2h.3a25 25 0 011 5.6 1 1 0 00-.5 0 .2.2 0 00-.1.2c0 .2 0 .3.2.2.5-.2 1 .3 1.1.7.4.8.3 1.8.3 2.6v.4c0 .6 0 1.2-.2 1.6-.3.5-.8.5-1.3.4-.1 0-.2 0-.2.2l.1.2h.3a45.6 45.6 0 01-1 4.8 1 1 0 00-.5-.1c-.2 0-.2.1-.2.2s0 .2.2.2c.4 0 .8.4.9.9v.5c0 .7-.2 1.4-.3 2-.2.7-.3 1.5-.8 2-.4.5-.8.3-1.3.1-.1 0-.3 0-.3.2l.1.2.3.1a81.2 81.2 0 01-1.8 4.7 1 1 0 00-.4 0l-.2.1.2.2h.1l.3.1c.3.2.4.6.4 1 0 .8-.4 1.7-.7 2.4-.2.6-.5 1.4-1 1.9-.5.3-1 .1-1.3-.2-.2 0-.3 0-.3.2v.2h.1l-1.3 2.8-.7 1.5a1 1 0 00-.8-.3c-.1 0-.2 0-.2.2 0 .1 0 .2.2.2a.5.5 0 01.4 0c.3.3.4.8.4 1.2 0 1-.5 2-.8 3-.2.8-.5 1.7-1 2.3-.5.5-1 .3-1.3 0-.2-.1-.3 0-.3.2v.1l.2.1a50.4 50.4 0 00-1.4 4.1.9.9 0 00-.4 0l-.1.2s0 .2.2.2h.4c.3.3.4.8.4 1.2v.3c0 1-.2 2-.4 2.8-.2.8-.4 1.7-.9 2.3-.4.5-.8.4-1.3 0-.1 0-.3.1-.3.3l.1.2.6.2a55.6 55.6 0 00-.4 4.3 1 1 0 00-.7 0l-.1.2c0 .1.1.3.3.2a.9.9 0 01.3 0 .8.8 0 01.4.2l.4.9c.3 1 .3 2 .3 3v.6c0 .7 0 1.3-.3 1.8-.3.6-.7.6-1.2.4-.2 0-.3 0-.3.2 0 0 0 .2.2.2l.6.1.3 3.4a.7.7 0 00-.4.1v.2l.3.2a.4.4 0 01.3-.1.8.8 0 01.4.2l.3.3.3.6c.5 1.2.7 2.6 1 4l.2 2v.9c-.2.6-.6.8-1.2.6l-.2.2.1.2h.5l1 3.7v.1a.2.2 0 00-.1.2c0 .1.2.3.4.1a.4.4 0 01.3-.1c.4 0 .8.6 1 1 .7 1 1.1 2.4 1.5 3.7.3.9.6 1.8.6 2.7v.2c0 .6-.3.8-1 .8l-.1.2s0 .2.2.2h.4l.2.3h-3.2a296.4 296.4 0 01-2-4.4c-.7-.9-4-11.3-4-22.8m1.1 3s-.2-.1-.2 0v.4c0 .1.1.2.1 0l.1-.3m.6-12l-.3-.3c-.1-.1-.2 0-.2 0v.1l.3.3h.2m.7-1a1.2 1.2 0 01-.9-1c0-.2-.2-.1-.2 0 .1.5.5 1 1 1.1h.1m-.7 13.2c0-.1-.2-.1-.2 0s.2.1.2 0m1-93l-.6.3a.1.1 0 000 .1s0 .1.1 0c.2 0 .4-.1.5-.3m.2 106c0-.1-.2-.1-.2 0 0 .4.1.8.3 1 0 .1.2 0 .2 0a1.6 1.6 0 01-.3-1m.3-21.5a.1.1 0 000-.1.1.1 0 00-.2 0 9.4 9.4 0 000 .7 18.7 18.7 0 00-.1 1.8l.1 2.3h.2v-1a9.6 9.6 0 000-3v-.7m.6 22.3l-.3-1a102.7 102.7 0 01.3 1m1-102a3.4 3.4 0 01-.7-1.8c0-.1-.2-.1-.2 0 0 .7.3 1.3.8 1.9l.2-.1M27 160a16.4 16.4 0 01-.3-1.1c0-.2 0-2-.6-3.8a18 18 0 010-.8l-.2-.1h-.1v.9l.6 3.8.4 1.1s0 .1 0 0a.1.1 0 00.2 0m.2-29a.1.1 0 00-.1-.2.1.1 0 00-.1.1s-1 2.2-1.2 4.6h.1a.1.1 0 00.1 0l.1-.9c.1-.2.7-1.5.8-3l.3-.6m-.8 33.5l-.1-.7H26l.1.7c0 .1.2 0 .2 0M28 63.2a7.3 7.3 0 01-.5-.7 6.6 6.6 0 00-1-2.4l-.1-.5a.1.1 0 00-.2 0 11.8 11.8 0 001.2 3c0 .2.2.4.4.6 0 0 0 .1.1 0m-.4 109.3a2.7 2.7 0 00-.5-1h-.2v.1c.2.3.4.6.4.9h.3m3.3.2a20.6 20.6 0 01-.5-1c0-.3-.3-2-1.1-3.7a13.8 13.8 0 01-.2-.8v-.1a.1.1 0 00-.2 0v.1l.2.8a25.8 25.8 0 001.7 4.8m.4-53.3a.1.1 0 00-.2 0l-.3.6c-.3.6-.8 1.7-1 3l-.3.9h.1a.1.1 0 00.1 0l.2-1c.1 0 .8-1.3 1-2.8l.4-.6m.6-3.5a.1.1 0 000-.1l-.4-.4-.2.1a43.9 43.9 0 00.6.4M35 69.8a8 8 0 01-.7-.5c-.1-.2-.8-1.1-1.8-1.8l-.4-.4H32c0 .1 0 .3.3.5a11.7 11.7 0 001.9 1.9l.6.4h.2a.1.1 0 000-.1m-.9.8a4.4 4.4 0 01-1.2-1.2c0-.1-.2 0-.2 0 .3.6.8 1 1.3 1.3h.1m2.2 38.7a.1.1 0 000-.1h-.2l-.3.5a12 12 0 00-1 2.4l-.2.7.1.2a.1.1 0 00.1-.1l.2-.8c.1-.1.8-1 1-2.3l.3-.5m-.7-2.7a.1.1 0 000-.1l-.6-.2-.2.1.1.1.6.2.1-.1m3.5-28.2a5 5 0 01-.4-1c0-.1-.2 0-.2 0 0 .4.2.7.4 1 0 .1.2 0 .2 0m1.2.1a9.1 9.1 0 01-.4-.7c0-.1-.3-1.3-1-2.3l-.1-.6a.1.1 0 00-.2 0l.1.6a12 12 0 001.4 3 .1.1 0 00.2.1M40 98.3a.1.1 0 000-.1.1.1 0 00-.2 0s-.6 1.4-.9 3v.9a.1.1 0 00.2 0v-.8c.1-.1.6-1.2.7-2.5l.2-.5m0-3.9c0-.1-.2-.1-.2 0l-.1.7c0 .1.2.1.2 0v-.7m1.7-7.3a.1.1 0 000-.1.1.1 0 00-.2 0v.6a13.4 13.4 0 00-.1 2.6l.1.8h.1a.1.1 0 00.1 0 7.5 7.5 0 01-.1-.8 6.6 6.6 0 000-2.6l.1-.5M23 54.5l.1-2c.1.6.4 1.3 1 2.1a.1.1 0 00.1 0 .1.1 0 000-.1 2.5 2.5 0 010-.1s.5-1 .5-2.3c0-.7-.2-1.6-.8-2.4a.1.1 0 00.2-.1.1.1 0 00-.2-.1l.4-1c.3.2.5.5.6.9l.2.7a.2.2 0 000 .2v1.1l.1 1.8v.5c0 .7 0 1.5-.9 1.7h-.7a1.1 1.1 0 01-.6-.4v-.5m1.4-6.3l2.2-3.5c.5-.3.8-.7 1.2-1.2.6-.8 1.3-1.7 1.7-2.7A13 13 0 0131 39c.7-.5 1.5-1.4 2.4-2.5l.4-.5 2-2.3v-.2l4.9-5.8c2.2-2.5 4.1-5.5 5.6-8 .4-.3.7-.8 1-1.3.3-.6 1-1.6 1-2.5l.7-1.5a52.6 52.6 0 003.4-9v1.8l-.1.7V8a21.4 21.4 0 01-.5 2.2c-.6 0-.9.8-1 1.1A15 15 0 0050 13l-.2 1c0 .4 0 .6.2.8a41.3 41.3 0 01-1.4 3 1.3 1.3 0 00-.2.2.2.2 0 000 .1c0 .1 0 .3.2.2l.3-.2v.1c0 .5-.3 1-.5 1.3a15.8 15.8 0 01-1.4 1.9l-.3.3v-.1c-.2-.2-.4-.1-.4 0v.2a52.7 52.7 0 01-2.4 3.5l-.6.1a.2.2 0 00-.1.2c0 .1.1.3.3.2.1-.1.2-.3.2 0-.1.6-.5 1.1-.8 1.5a15.1 15.1 0 01-2.3 2.3 1.5 1.5 0 01-.1-.3c0-.2-.3-.1-.3 0v.4l-1.6 1.7-2.8 3.1a.2.2 0 000 .1.2.2 0 000 .2h.3a6 6 0 01-1.2 1.8c-.5.7-1 1.3-1.7 1.8-.1.2-.3.3-.4.2v-.1a.2.2 0 00-.2-.3 121 121 0 00-2.2 2.5 1.2 1.2 0 00-.5.2.2.2 0 000 .1c0 .2 0 .3.2.2.3-.1.4-.2.5.1v.1c0 .4-.2.7-.3 1-.4.8-1 1.5-1.6 2.2L27 46.4l-.3.2-.2-.5c0-.2-.3-.1-.3 0a2 2 0 000 .5 19.1 19.1 0 00-1.1 2.9c-.2-.5-.4-1-.9-1.2m6-6.5l-.2-.1c-.2 0-.4.4-.5.5l-1 1a16.5 16.5 0 00-.7 1c-.3.5-.8 1-.9 1.5h.3c0-.3.2-.6.4-.8l.4-.7.8-.9.7-.8c.1-.2.4-.6.6-.6m5.2-6.4v-.1l-.4.2-.6.6a7.1 7.1 0 00-.5.6c-.2.2-.4.4-.4.7 0 .1.2.1.2 0 0-.3.4-.6.5-.8a4.9 4.9 0 01.4-.4l.4-.4s.2-.3.4-.3v-.1m7.7-8.9l-.1-.1-.3.3a19 19 0 00-.6.5 7 7 0 00-.5.6l-.4.7c0 .1.2.1.2 0 0-.3.4-.6.5-.8l.4-.4.4-.4s.2-.3.4-.3v-.1m5.4-7.8l-.2-.1-.3.3-.5.6a7.4 7.4 0 00-.4.6c-.2.2-.4.5-.4.8 0 .1.2.1.2 0 0-.3.3-.6.4-.8l.4-.5.4-.4.3-.4a.1.1 0 000-.1'/%3E%3Cpath fill='%23ce6067' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-34 185l.3-2.4-.2 2.3' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-20 93c0-.3.3-.4.4-.2.1.6.4 1.3 1 1.5h.8c.8-.3.8-1 .9-1.7v-2.3a9.5 9.5 0 00-.2-1.2V89a4.1 4.1 0 00-.2-.7c-.1-.4-.4-1-1-1h-.2c-.5 0-.9.6-1 1-.1.3-.5.2-.4 0 .2-.6.7-1.3 1.4-1.3h.1a.8.8 0 01.2 0c.7 0 1.1.7 1.3 1.3v.1l.2.8.1 1.9v2.2c0 .4-.2.8-.5 1l-.1.2-.4.2h-.6c-1 .2-1.6-.8-1.8-1.7' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-18.2 93.2v-.1s0 0 0 0c.3-.5 1.1-2.5-.2-4.4v-.2h0a.1.1 0 01.1 0h0c1.6 2.3.3 4.7.3 4.7h0a.1.1 0 01-.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-18 93.5a.1.1 0 000-.2 2.5 2.5 0 010 0 1.9 1.9 0 01-.2-.3c-1-1.5-.7-2.8-.5-3.5 0-.4.2-.7.3-.8a.7.7 0 01.2-.2h0a.1.1 0 000-.2l-.2.1h0l-.4.6c0 .3-.3.9-.3 1.6 0 .8.2 1.8 1 2.9a.1.1 0 00.1 0m1-9.9c-.3 0-.6-.2-.8-.4-.5-.6-.4-1.3-.2-2 .1-.2.5 0 .4.1-.2.6-.4 1.4.2 1.8.2.1.6.3 1 .3s.7-.2 1-.4l1.3-1.7c.5-.8 1-1.5 1.3-2.3.1-.4.2-.8 0-1.1-.2-.4-.7-.5-1-.4-1.3.1-2.3 1.5-3 2.4-.1.2-.4 0-.3-.1.6-.9 1.2-1.7 2.1-2.3.4-.2.9-.5 1.4-.4.5 0 1.1.3 1.3.9.1.5 0 1.1-.3 1.6-.5 1-1.2 1.9-1.8 2.7-.3.5-.7 1-1.3 1.3-.4.2-.9.2-1.3 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-17 82.3c0-.7.5-1.5.8-2 .5-.6.8-1.3 1.4-1.7.5-.4 1.1-.5 1.5 0 0 .1-.1.2-.2.1a.6.6 0 00-.2-.2.5.5 0 00-.2 0c-.4 0-.9.3-1.1.5-.4.3-.6.8-.8 1.2-.3.4-.6.8-.7 1.2-.2.2-.3.6-.2 1l.2.3a.6.6 0 00.3 0 .7.7 0 00.3 0l.1.1c-.5.3-1 0-1.2-.5' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-16.5 82.7h0c.7-.5 1.3-1 1.8-1.8.4-.7 1-1.5.8-2.4v0c0-.2.2-.2.2 0 0 0 0 0 0 0 .1 1-.3 1.7-.8 2.4s-1 1.3-1.7 1.8a3.2 3.2 0 01-.2.2s-.2-.1 0-.2M-11 76c-.3 0-.7-.2-.9-.5-.4-.6-.1-1.4.2-2 0-.1.4 0 .3.2-.3.6-.5 1.3 0 1.8.3.2.7.3 1 .3.4.1.8-.1 1-.4.7-.5 1.1-1 1.6-1.6.5-.6 1.1-1.2 1.4-2 0-.2.2-.6 0-.9-.2-.3-.6-.5-1-.5-1.2 0-2.3 1.3-3 2.1-.2.2-.5 0-.3-.3.8-.9 2.2-2.4 3.6-2.1.5 0 1 .5 1.1 1 .1.5-.1 1-.4 1.4-.5 1-1.2 1.7-1.9 2.4-.4.4-.9 1-1.5 1.2-.4.2-.8.1-1.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-10.8 74.6c0-.6.6-1.2 1-1.7s.9-1.2 1.5-1.5c.5-.3 1.2-.4 1.4.2.1.1 0 .2-.1.1a.5.5 0 00-.4-.3c-.4-.1-1 .2-1.2.5-.3.2-.6.6-.8 1l-1 1-.2.8c0 .2.1.4.3.4l.2.1a.7.7 0 00.3 0c.1 0 .2.2 0 .2-.5.2-1-.2-1-.8' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-10.4 75.2h0c.8-.4 1.4-1 2-1.6.4-.6 1-1.3 1-2.2v0c0-.1.2-.1.2 0v.1c0 .8-.5 1.5-1 2-.5.7-1.1 1.3-1.9 1.7l-.2.1c-.1.1-.2 0 0-.1m5.8-8.2c-.6-.4-.1-1.3.2-1.7l1-1.4c.6-.5 1.1-1.1 1.8-1.4.4-.2.8-.2 1.2 0 0 0 0 0 0 0h0l.1.2c.2.2.1.4 0 .7-.1.6-.6 1.1-1 1.6l-1.5 1.7c-.3.3-.6.6-1 .6-.3 0-.6-.1-.8-.3zm2.9-1c.6-.6 1.2-1.3 1.6-2 .2-.4.4-.9.3-1.3a.8.8 0 00-.4-.5h0a1 1 0 00-.6-.2c-.9-.2-1.7.6-2.3 1.2A12.4 12.4 0 00-4.6 65h0c-.4.5-.8 1.3-.4 2l.8.5c1 .4 2-.9 2.6-1.5' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-3.2 65.2l.5-.7 1.2-1 .2-.2c.3 0 .3.3.2.4l-.7 1a8.1 8.1 0 01-2 1.6c-.1-.3.4-.9.6-1.1zm.3.9a8.4 8.4 0 001.8-2l.3-.4c0-.3-.1-.6-.4-.6-.3 0-.5.2-.7.4a18.2 18.2 0 00-1.6 1.7c-.2.3-.6.9-.4 1.2h0c.3.3.8-.2 1-.3m6.2-7.8L3 58c-.5-.3-.4-1-.2-1.5.4-.9 1-2 1.7-2.5.3-.2.5-.3.8-.2h.3l.2.2c.5.5-.1 1.6-.4 2.1l-1 1.6c-.1.3-.3.5-.6.6l-.5-.1zm2-1c.4-.9 1.5-2.3.9-3.2a1 1 0 00-.4-.4h0-.1a1.2 1.2 0 00-.6-.2c-.8 0-1.3.7-1.7 1.3a9.2 9.2 0 00-1 1.7h0c-.1.6-.2 1.3.2 1.7.2.3.5.4.8.5 1 .2 1.5-.8 1.9-1.5' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M4.1 55.9L5 55h0c.3 0 .3.2.2.4l-.4.7a5 5 0 01-.5.7s-.6.7-.8.6c-.2-.3.4-1.2.6-1.4zm0 1.2l.9-1c.2-.2.5-.7.5-1 0-.2-.2-.4-.4-.4s-.4.2-.5.3l-.6.7c-.3.4-1 1.3-.6 1.8h0c.3.1.6-.2.7-.4m3-7.2c-.4-.3-.3-1-.2-1.4.3-.8.6-1.7 1.2-2.4.3-.2.5-.3.8-.1H9c.2.2.2.5.2.7 0 .5-.3 1-.5 1.5L8 49.6c0 .2-.2.5-.4.5s-.4 0-.5-.2zm1.6-.8l.8-2v-1a.8.8 0 00-.4-.4h0a.7.7 0 00-.5-.2c-.5 0-.9.5-1.1 1a9.8 9.8 0 00-.9 1.9h0c-.2.8-.2 1.8.7 2 .8.3 1.1-.7 1.4-1.3' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M7.9 47.7l.4-.7c.1-.1.2-.3.2 0l-.3.7-.7 1.1c0-.3.2-.8.4-1.1zm.4.3c.1-.2.8-1.3.2-1.4-.3 0-.6.6-.7.8-.2.4-.6 1-.5 1.5v0h0l.1.1c.3.2.8-.8 1-1m0 5c-.2-.4 0-1 .1-1.4.3-.7.5-1.5 1-2.2l.3-.3s0 0 0 0v.2l.1.2c.1.7-.3 1.5-.6 2.2l-.5 1.2-.2.3h0l-.2-.1zm1-.4c.4-1 1-2 .9-3a1.4 1.4 0 000-.5.5.5 0 00-.1-.1.5.5 0 00-.2-.2.3.3 0 00-.1 0h0c-.6 0-1 .7-1 1a15 15 0 00-.8 1.7h0c-.1.6-.3 1.4 0 1.9h.1l.1.1a.5.5 0 00.1 0 .3.3 0 00.1.1c.4 0 .7-.7.8-1' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M8.7 52.3c-.2-.3.2-1 .3-1.3l.5-1c.1 0 .3.1.1.2l-.1.4a25.4 25.4 0 00-.4.9c-.1.1-.3.5-.2.7 0 .1-.1.2-.2.1m-3.9 8.4h0a.4.4 0 01-.2-.2.5.5 0 01-.1-.1h0c-.2-.3.2-.4.3-.2v.1c.2 0 .3-.2.4-.3.5-.6 1-1.2 1.4-2l.4-1v-.1h0v-.1l-.3.1c-.2.2-.4 0-.3-.2a1.3 1.3 0 01.4-.3.4.4 0 01.3 0h0l.1.1a.9.9 0 01.1.2v0h0c0 .6-.2 1-.4 1.4l-1 1.6-.7.8c-.2.2-.3.3-.5.3m-6.1 7.9c-.2 0-.3-.1-.4-.3a1 1 0 010-.3c0-.2.3-.3.3 0v.2l.5-.2L1 66l.9-1.5v-.2c0-.2-.1 0-.3 0-.2.2-.4-.1-.2-.2.2-.2.4-.2.6-.2a.3.3 0 010 0 .3.3 0 01.2.2.4.4 0 010 .2.8.8 0 010 0c0 .4-.1.7-.3 1-.4.7-1 1.4-1.7 2-.3.4-1 1.3-1.5 1.3' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-.8 67.2l.4-.7a6.8 6.8 0 011.1-1.1L1 65c.2 0 .2.2.1.2l-.4.3-.4.4a5 5 0 00-.3.4c-.2.2-.6.6-.6.8 0 .2-.2.2-.2 0m-8.6 10.3a.8.8 0 010-.3c-.1-.2.2-.3.3-.1a.4.4 0 000 .1c0 .2.2 0 .4-.1.7-.5 1.2-1.2 1.7-1.8.5-.5 1-1.1 1.2-1.8h0V73c0-.2.4-.2.4 0h0c0 .3 0 .6-.2.8-.3.9-1 1.6-1.6 2.3-.2.2-1.7 2-2.2 1.4m-6 8.1l-.3-.3a2 2 0 010-.4c-.1-.2.2-.3.3 0l.1.4.4-.2 1.7-1.8c.6-.7 1.2-1.4 1.6-2.2l.2-1v0-.1c0-.3-.2-.3-.4-.1-.2.1-.4-.2-.2-.3l.5-.2a.4.4 0 01.4.2h0l.1.4h0c0 .5-.1.9-.3 1.2-.5 1-1.3 1.9-2 2.8l-1.2 1.1-.6.5a.4.4 0 01-.3 0m20.2-26c0-.3.2-.6.3-.8l.5-.6.5-.6.3-.3c.1 0 .2.1 0 .2l-.3.4-.3.4a6.4 6.4 0 00-.4.5c-.1.2-.4.5-.4.8 0 .1-.2.1-.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-8.6 76.2c0-.3.3-.5.5-.7a7.5 7.5 0 011-1.2l.4-.3c.1 0 .2.2 0 .2l-.3.4-.4.4a5 5 0 00-.4.4c-.1.2-.5.5-.5.8h-.3m-6.4 8.2c0-.5.5-1 .8-1.4a16.3 16.3 0 011.7-2.1c.2-.1.4-.5.6-.5.1 0 .2.2 0 .2l-.5.6-.8.8-.7 1-.5.6c-.1.2-.4.5-.4.8 0 .2-.2.2-.2 0m.8 120.7l-.1-.2a75.8 75.8 0 01-1-3.7 4.6 4.6 0 010-.2l.3-.1.1.2a78 78 0 001 3.6v.3h-.3m-2.8-13v-.3a63.2 63.2 0 01-.3-3.4v-.3h.4v.2a66.2 66.2 0 00.3 3.5v.2h-.4m.2-11.1h-.4v-.4l.5-4.3v-.3h.4v.4a56.9 56.9 0 00-.5 4.4v.2m2-12l-.3-.2a5.2 5.2 0 010-.2l1.4-4.1.1-.2.4.1v.3a52 52 0 00-1.5 4v.2m4.4-11l-.4-.1.2-.4.8-1.5 1.3-2.8.1-.2.4.2a1035.8 1035.8 0 01-1.5 3l-.8 1.7v.2m4.9-10.4l-.4-.2v-.2a81.5 81.5 0 002-4.7v-.3l.4.1v.3a84 84 0 01-2 4.8v.2m3.8-11l-.4-.1v-.4l1-4.6v-.3h.4v.3a45.7 45.7 0 01-1 5h0m.8-11.4v-.3a25 25 0 00-1-5.9h.3v.1a25.4 25.4 0 011 6l.1.1h-.4m-3.6-11.6l-.2-.3a18.8 18.8 0 00-2.3-3l.4-.3.1.2A19 19 0 01-4 113l-.3.3m-6.9-7.6l-.1-.1-.3-.2a86.3 86.3 0 01-1.9-1.8 9.2 9.2 0 01-.3-.2l-.2-.3.3-.3a7 7 0 00.5.5l2 1.7.1.3h0l.2.1-.3.3m-5.6-8l-.1-.2a10.7 10.7 0 01-.7-3.2h.4c0 1 .2 2 .7 3.1v.1l-.3.2m23.7-41a.2.2 0 01-.1-.3h0a41.6 41.6 0 001.4-3.2.2.2 0 01.2-.1.2.2 0 01.1 0l.1.1a.2.2 0 010 .2v.2l-1.4 2.8v.1a.2.2 0 01-.3.1m-5 7.7a.2.2 0 010-.1V64H2a53 53 0 002.5-3.6h0c0-.2.2-.2.3-.1h0v.3h0a52.3 52.3 0 01-2.5 3.7h0a.2.2 0 01-.4 0m-8 9.2a.2.2 0 010-.2v-.1l2.8-3.2 1.6-1.7h0a.2.2 0 01.3 0 .2.2 0 010 .3h0l-1.5 1.7-2.5 2.7-.4.4h0a.2.2 0 01-.3 0m-5.4 6.3a.2.2 0 010-.1v-.2h0l2.2-2.5a.2.2 0 01.2 0 .2.2 0 010 .2v.1l-.3.3-1.7 2-.1.2a.2.2 0 01-.3 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-10.9 215.4h-20.3v-.2a7 7 0 01-.1-.2c-.5-1.3-2.1-6.5-2.9-14.2a81 81 0 01-.3-7.5v-.2a79.5 79.5 0 01.2-6.4v-.6l.2-1.2.2-2a85.4 85.4 0 014.2-17.6c4.3-12.3 9-19.3 12.5-24.5 3.6-5.4 6-9 5.7-14.7-.4-7-4-10.5-7.8-14-3.8-3.7-7.8-7.4-8.3-15.2 0-.2-.4-3.5.8-8.2.8-2.8 2-5.5 3.6-8.1a37 37 0 017.8-9c.1 0 6.9-5.9 11.3-11a68.4 68.4 0 0010.5-16c1-2.5 1.9-5.1 3.5-5.8.5-.2.8-.2 1 0 .8.5.5 2.2.2 3.8a18.5 18.5 0 00-.2 1.3c0 .2.2 2.2-.7 5.2h0-.3 0v-.3l.4-2.2h0l.1-.8v-.1c.2-1.1.1-1.7.1-1.8h0l.2-1.3v0h0l.1-.7c.2-1.2.3-2.5 0-2.8H10c-1.5.7-2.4 3.2-3.3 5.7A55.2 55.2 0 016 47c-1.2 3-5.4 9-9.8 14S-15 72-15.1 72a33 33 0 00-11.3 17c-1.2 4.6-.8 8-.8 8v0c.5 7.6 4.4 11.3 8.2 14.8 1.8 1.8 3.7 3.6 5.2 5.8a17 17 0 012.7 8.5c.3 6-2.1 9.6-5.8 15-3.4 5.2-8.1 12.2-12.4 24.4a83.3 83.3 0 00-4.5 35.3c.8 8 2.6 13.4 2.9 14.3h20l.1-.1v-.2l-.3-.8v-.2l.3-.1.1.2.3.8a.6.6 0 01-.5.8' paint-order='markers fill stroke' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-17 89.2a.2.2 0 010 0 .2.2 0 01-.1-.2h0a19.2 19.2 0 011.4-3.7h0a.2.2 0 01.3-.1v.4a18.5 18.5 0 00-1.3 3.4h0a.2.2 0 01-.2.2m18.8-25l.4-.5a46.5 46.5 0 002.4-3.3h.1A46.4 46.4 0 012.4 64a26.5 26.5 0 01-.3.4l-.2-.1m5-7.8c.5-1 1-2 1.4-3.2l.2.1a39.6 39.6 0 01-1.4 3.2h-.2m-21.2 47c-.3.1-.4-.3-.2-.4.6 0 1-.3 1-1l-.3-1.2a15.5 15.5 0 00-.9-1.8c-.3-.6-.9-1.3-1.7-1.3a1.3 1.3 0 00-.5.1l-.2.1h0c-.2.2-.5 0-.3-.3a1.5 1.5 0 01.5-.2l.4-.1h0c.5 0 1 .2 1.5.6l.8 1.1.8 1.6c.2.6.5 1.4.3 2 0 .2-.2.3-.3.4a1.3 1.3 0 01-.4.3l-.5.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-14.5 101.5s0 0 0 0h-.1s-.2-1.3-1-2.4h0V99a.1.1 0 01.2 0h0a6.6 6.6 0 011 2.4h0a.1.1 0 010 .1' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-14.2 102.1a7.8 7.8 0 01-.4-.6 11.9 11.9 0 01-1.2-3h0s0 0 0 0a.1.1 0 01.2 0l.2.5a11.7 11.7 0 001.4 3 .1.1 0 010 .2.1.1 0 01-.2 0m7.2 7.6c.6-.3.8-.7.5-1.3-.4-.9-1.3-1.6-2-2.2-.6-.4-1.4-1-2-.8a.7.7 0 00-.4.2l-.1.1c-.1.3-.5.2-.4 0a1.2 1.2 0 01.3-.5h0a.7.7 0 01.2-.2c.5-.2 1 0 1.5.2l1.2.8 1.3 1.2c.5.5 1 1 1 1.7 0 .4-.2.6-.4.9a3 3 0 01-.3.2l-.2.1c-.2.2-.4-.2-.2-.4' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-7.7 108.4h0s-.8-1.1-1.9-1.8h0v-.1h0l.1-.1h0c1.1.7 1.8 1.6 1.9 1.8h0a.1.1 0 01-.1.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-7.1 108.8a7.4 7.4 0 01-.6-.4 11.8 11.8 0 01-2-1.9l-.3-.4h0v-.2h.2l.3.5h0a11.6 11.6 0 001.9 1.8l.6.4a.1.1 0 010 .2.1.1 0 01-.1 0M-2 119c-.2 0-.4-.3 0-.4.5 0 1-.3 1-1-.1-1-.7-2-1.1-2.8-.3-.6-.8-1.5-1.6-1.6a.8.8 0 00-.5.2c-.2.2-.5-.1-.3-.3h0a1 1 0 01.7-.3c.5 0 1 .3 1.3.7.4.4.6.8.8 1.3l.7 1.6c.2.5.5 1.3.2 1.9 0 .2-.3.4-.5.5l-.4.2H-2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-2 117a.1.1 0 01-.2 0h0s-.2-1.3-1-2.4h0v-.1a.1.1 0 01.2 0h0c.7 1 1 2.2 1 2.4h0a.1.1 0 010 .1' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-1.8 117.6a7 7 0 01-.4-.6 12.2 12.2 0 01-1-2.4l-.1-.6v-.1a.1.1 0 01.2 0l.1.6a12.2 12.2 0 001.4 3 .1.1 0 010 .2.1.1 0 01-.2 0m1.2 13.6a2.2 2.2 0 01-.4 0 2.9 2.9 0 01-.3-.1c-.2 0-.1-.5.2-.4.4.1 1 .1 1.2-.4.3-.5.3-1.3.3-2 0-.8 0-1.8-.3-2.6-.2-.5-.7-.9-1.1-.7-.3.1-.4-.3-.2-.4h.8c.5.3.8.7 1 1.2l.1 1.4v1.8c0 .6 0 1.4-.5 1.9-.2.2-.5.3-.8.3' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-.5 129.3a.1.1 0 010 0v-.1 0s.2-1.3 0-2.6h0a.1.1 0 010 0 .1.1 0 01.2 0h0c.2 1.2 0 2.4 0 2.6h0s-.1.1-.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-.3 130h-.2a7.5 7.5 0 010-.8h0a10.2 10.2 0 01-.1-1v-1.6h0l.1-.6a.1.1 0 01.2 0s0 0 0 0v.6a11.6 11.6 0 000 2.6v.7a.1.1 0 010 .2m-3 12.3a1.9 1.9 0 01-.5-.1l-.3-.2c-.2-.1 0-.5.2-.3.5.2 1 .3 1.3-.1.5-.5.6-1.3.8-2 .2-.8.4-1.7.3-2.6-.1-.4-.4-1-1-.9-.2 0-.2-.3 0-.4l.6.1a1.1 1.1 0 01.4.3c.3.3.4.8.4 1.2v1.3a21.7 21.7 0 01-.5 1.8c-.2.6-.4 1.4-1 1.7-.2.2-.5.2-.8.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-2.9 140.4a.1.1 0 010 0h0v-.1s.5-1.1.6-2.4l.1-.1h.1v0a6.6 6.6 0 01-.6 2.6h0a.1.1 0 01-.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-3 141.2a.1.1 0 010 0v-.8h0c.3-1.7 1-3.1 1-3.1s0 0 0 0h.1a11.7 11.7 0 00-.8 3h0l-.1.8a.1.1 0 01-.1.1m-5.1 12a2.4 2.4 0 01-.4-.3h0c-.2-.2 0-.5.2-.4.4.3.8.5 1.3.2.5-.5.8-1.3 1-1.9.3-.8.7-1.6.7-2.5 0-.3-.1-.7-.4-.9a.8.8 0 00-.3 0v-.1c-.3 0-.3-.4 0-.4h.3l.3.3h0c.4.3.5.8.5 1.3 0 1-.5 2-1 3-.2.6-.5 1.4-1.2 1.7-.3.2-.7.1-1 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-7 151.4a.1.1 0 010-.1h0s.7-1.1.9-2.4h.2a6.8 6.8 0 01-1 2.4h0a.1.1 0 01-.1 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-7.2 152.2a.1.1 0 010-.1h0l.1-.8h0c.3-1 .7-2 1-2.4l.3-.5h.2a.1.1 0 010 0 11.9 11.9 0 00-1.3 3l-.2.7a.1.1 0 010 0m-6.2 12.4a2 2 0 01-.5-.3c-.2-.2 0-.5.2-.4.4.3.9.5 1.3 0 .6-.5.8-1.4 1-2.2.4-1 .8-2 .8-3 0-.5 0-1-.4-1.2a.5.5 0 00-.3-.1c-.3 0-.3-.4 0-.4.2 0 .5 0 .7.3h0l.3.4c.1.4.2.8.1 1.2l-.3 1.6-.7 2c-.2.7-.5 1.6-1.2 2a1 1 0 01-1 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-12.4 162.3a.1.1 0 010-.1h0s.8-1.4 1-3h0v0h.1l.1.1h0c-.2 1.5-1 2.8-1 3h0a.1.1 0 01-.2 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-12.5 163.2a.1.1 0 01-.1 0v-.1l.2-.9h0a17.4 17.4 0 011-3v0l.3-.6a.1.1 0 01.2 0v.1a8.8 8.8 0 00-.3.6 16.7 16.7 0 00-1 3h0l-.2.8a.1.1 0 01-.1.1m-4.2 13a2.2 2.2 0 01-.6-.3c-.3-.2 0-.6.2-.4.4.3.9.4 1.3 0 .4-.7.6-1.6.8-2.4.3-1 .6-2.1.5-3.2 0-.4-.1-.8-.5-1a.9.9 0 00-.2-.1h-.1 0c-.3 0-.4-.4-.1-.4a.9.9 0 01.3 0 1 1 0 01.4.2h0c.5.3.6 1 .6 1.5s0 1.1-.2 1.6a30.3 30.3 0 01-.4 2.1c-.2.8-.5 1.7-1.1 2.2a1 1 0 01-.5.2 1.2 1.2 0 01-.4 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-16 173.8a.1.1 0 01-.1 0h0c0-.1.6-1.5.8-3a.1.1 0 01.2 0v0a9.8 9.8 0 01-.8 3h-.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-16.1 174.8a.1.1 0 01-.1-.1v0c.2-2.4 1.1-4.6 1.1-4.6a.1.1 0 01.2 0s0 0 0 0a17 17 0 00-1 3.7h0l-.1.9a.1.1 0 01-.1 0m.8 26.5a1.8 1.8 0 01-.5 0c-.3-.1-.2-.5 0-.5.7.2 1 0 1.2-.6.1-1 0-2-.2-3-.2-1.3-.4-2.7-1-4-.1-.3-.4-1-1-1a.4.4 0 00-.2 0h0c-.3.1-.5-.1-.3-.3a.8.8 0 01.3-.1.8.8 0 01.4 0h0c.7.2 1 1 1.3 1.5.3.7.4 1.4.6 2.2l.4 2.5c.1.8.3 2 0 2.7a1 1 0 01-.6.5h-.4' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-15.5 198.3a.1.1 0 01-.1 0v-.1s0-2-.6-3.8h0v-.1a.1.1 0 01.2 0h0c.6 1.9.6 3.7.6 3.9v0a.1.1 0 01-.1 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-15.2 199.4h-.1a19.5 19.5 0 01-.3-1.2h0a26.5 26.5 0 01-.6-3.8h0v-1l.1.1a26.3 26.3 0 00.7 4.7l.3 1a.1.1 0 010 .2m3.5 14.6c-.2 0-.2-.5 0-.4.6 0 1-.2 1-.8 0-1-.3-2-.6-3-.4-1.2-.8-2.6-1.5-3.7-.2-.4-.6-1-1-1a.4.4 0 00-.3 0c-.1.1 0 0 0 .1-.3.2-.6 0-.4-.3h0a.8.8 0 01.5-.2 1 1 0 01.3 0c.6.1 1 .8 1.4 1.3l.8 2 .8 2.5c.3.8.6 1.9.4 2.7a1 1 0 01-.5.6l-.4.1h-.5' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-11.7 211.1a.1.1 0 01-.1 0h0c0-.1-.3-2-1.1-3.7h0a.1.1 0 010-.2h.2c.8 1.8 1 3.6 1 3.8h.1v.1' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-11.3 212.1a16.9 16.9 0 01-.5-1 26 26 0 01-1.1-3.8l-.2-.8h0a.1.1 0 010 0c.1-.1.2 0 .2 0l.2.8a26 26 0 001.5 4.7.1.1 0 010 .2h-.1m-6-24a2.1 2.1 0 01-.6 0c-.2-.1-.1-.5.1-.4.5.1 1 .1 1.2-.4.4-.7.3-1.6.3-2.4 0-1 0-2.2-.3-3.2-.1-.4-.3-.9-.7-1h-.4 0c-.2.1-.4-.3-.2-.4a1 1 0 01.7 0 1.1 1.1 0 01.4.2c.4.3.5.8.7 1.3l.2 1.6v2.2c0 .7 0 1.6-.5 2.2a1 1 0 01-.4.3 1.2 1.2 0 01-.5 0' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-17.2 185.9a.1.1 0 010-.1v0s.3-1.5 0-3v0-.1 0a.1.1 0 010-.1h.2v.1c.2 1.5 0 3 0 3.1v0h0a.1.1 0 01-.2.1' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3Cpath fill='%23040606' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='.2' d='M-17 186.8h-.1a12.2 12.2 0 01-.1-1h0v0a16 16 0 01-.1-1.4v-1.7h0v0l.2-.7a.1.1 0 010 0 .1.1 0 01.2 0l-.1.7v0a17 17 0 000 3.1v0l.1 1a.1.1 0 010 0m-2.4-85.2a3.9 3.9 0 01-.7-3.3c0-.2.3-.1.2 0a3.7 3.7 0 00.6 3.2c.1.1 0 .2-.1.1m11.9 12.9a66.5 66.5 0 00-4.1-3.5c-.2-.1 0-.3.1-.2a66.5 66.5 0 014.1 3.6c.1 0 0 .2-.1.1m-14.9-9.6c1 2.2 2.9 4 4.7 5.5 0 .1.2 0 .1-.1a18.7 18.7 0 01-4.6-5.5l-.2.1m13.8 23.5c.7 3.6-1 7-3 10-.1 0 0 .2.1 0 2-2.9 3.8-6.4 3.1-10 0-.2-.2-.1-.2 0m-.3 9.6l-1.1 2c-.1 0 0 .1.1 0l1.2-1.9s-.2-.2-.2 0m-11 18.7a6 6 0 00-.7 1.6c0 .2.2.2.2.1l.7-1.6c.1-.1 0-.3-.1-.1m5.5-.2l.7-1.3c0-.2.3 0 .2 0a9 9 0 00-.7 1.4c0 .1-.2 0-.2 0m2.7-11.5l-.5 1.1c-.1.1 0 .2.1.1l.6-1.1c0-.1 0-.2-.2-.1m-15.3 21a71.3 71.3 0 00-3 10c0 .2.2.3.2.1a71.4 71.4 0 013-10c0-.2-.2-.2-.2-.1m1.6 5.7l-.4 2.1c0 .2.2.2.2 0l.4-2c0-.2-.1-.2-.2 0m4-5.7a4.3 4.3 0 00-.6 1.4c0 .1.2.2.2 0 .1-.4.3-.9.6-1.3.1 0 0-.2-.2 0m-.2 16.2a60.6 60.6 0 01.5-5 60.8 60.8 0 00-.3 5h-.2m-10.4 14.2a38 38 0 001.1 11s.3 0 .2-.1a37.8 37.8 0 01-1-10.9h-.3m14.1 16.7a31.7 31.7 0 01-1.4-5.3c0-.1.2-.2.2 0 .3 1.8.8 3.5 1.4 5.2 0 .2-.2.2-.2 0m-3-13.2a31 31 0 01-.3-3.6c0-.1.2-.1.2 0 0 1.2 0 2.4.2 3.6h-.2m-4.2-6.4l.1 2.6c0 .1.2.1.2 0l-.1-2.6c0-.2-.2-.2-.2 0m2-110a16.2 16.2 0 00-1 2.4c0 .1.1.2.2 0 .2-.8.5-1.6 1-2.3 0-.1-.2-.2-.3-.1m-2.8 11.1a4.8 4.8 0 000 3.5c0 .2.2.1.2 0a4.6 4.6 0 010-3.4c0-.1-.1-.2-.2 0m10.6-18.4a21.7 21.7 0 012-1.9s.2 0 0 .2a22.2 22.2 0 00-1.8 1.8c-.1.1-.3 0-.2-.1m.2-3.7a30.4 30.4 0 00-2.9 2.8s.1.2.2.1a30.4 30.4 0 012.8-2.7c.1-.1 0-.3-.1-.2m1.2 35.4c-.7-.3-1.3-.7-1.8-1.3 0-.1 0-.3.2-.2a4.6 4.6 0 001.7 1.4c.1 0 0 .2-.1.1m-1.6-6.3a3.7 3.7 0 01-.8-1.8c0-.2.2-.2.2 0 .1.6.4 1.2.8 1.7 0 .1 0 .2-.2.1m7.5 7.6a4.7 4.7 0 01-1.2-1.2c0-.1 0-.2.2-.1.3.4.7.8 1.2 1.1 0 .1 0 .3-.2.2m5.7 13.7a9 9 0 00-.4-2.5c0-.1.2-.2.2 0 .3.8.4 1.6.4 2.5 0 .1-.2.1-.2 0m-6.2-56.5a13.3 13.3 0 01-2.3 2.3c-.2 0 0 .2 0 .2A13.5 13.5 0 00-8.3 67c.1-.1 0-.3-.1-.2M9.8 40.1c-.5.1-.8.8-1 1.3 0 0 .1.2.2 0l.4-.6c.1-.2.2-.4.5-.5.1 0 0-.2 0-.2M3.3 52.4l-.8 1.2c-.1.1 0 .2.1.1l.8-1.2c.1 0 0-.2-.1 0M-1.4 59a15.6 15.6 0 01-2 2.3c0 .1.1.3.2.2a15.9 15.9 0 002-2.4s-.1-.2-.2 0m-9 56.7a12.5 12.5 0 013.8 8.5h.2a12.7 12.7 0 00-3.8-8.7c-.1 0-.3 0-.2.2m-.6 4c.4.4.6.8.7 1.2 0 .2.2.1.2 0a2.9 2.9 0 00-.7-1.3c-.1-.1-.3 0-.2.1m.4 11.5c-.2 1.5-.8 2.9-1.6 4.2-.1 0 0 .2.1 0a10.4 10.4 0 001.7-4.1c0-.2-.2-.2-.2-.1m-6.7 13a44.5 44.5 0 00-4.5 7c0 .2.1.3.2.2a44.2 44.2 0 014.5-7c0-.1-.1-.3-.2-.2m-14 41.8a15 15 0 00-.3 3h.2c0-1 .2-2 .4-2.9 0-.1-.2-.2-.2 0m6.7.7v2.2c0 .1.2.1.2 0V187c0-.1-.2-.1-.2 0m6.3-20a28.8 28.8 0 011.3-3.5l.2.1A28.4 28.4 0 00-18 167c0 .2-.3.1-.2 0m-6.4 34.2c0 1 0 2 .2 3h.3l-.3-3h-.2' transform='matrix(.99464 0 0 .99568 42 -38.4)'/%3E%3C/svg%3E");
+  }
+}
+@media (min-width: 1336px) {
+  header:before {
+    width: 300px;
+    right: auto;
+    top: -300px;
+    left: 110px;
+  }
+  header:after {
+    width: 350px;
+    top: -100px;
+    left: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing__vertical--2) auto;
+  max-width: 1366px;
+  text-align: center;
+}
+header a:not(.link-github) {
+  color: var(--color__tertiary);
+}
+header h2 {
+  max-width: 600px;
+}
+header h2,
+header p {
+  padding-bottom: var(--spacing__vertical--n1);
+}
+@media (min-width: 430px) {
+  header {
+    border: 12px double var(--color__muted);
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--n1);
+  }
+}
+@media (min-width: 630px) {
+  header {
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--2);
+  }
+}
+@media (min-width: 1336px) {
+  header {
+    text-align: left;
+    max-height: 920px;
+    padding: var(--spacing__vertical--2) var(--spacing__horizontal--1)
+      var(--spacing__vertical--2) var(--spacing__horizontal--2);
+  }
+  header .container {
+    padding-left: 320px;
+  }
+}
+.page-footer {
+  position: relative;
+  padding-bottom: var(--spacing__vertical--1);
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+.page-footer a {
+  color: var(--color__tertiary);
+}
+.page-footer a:active,
+.page-footer a:hover {
+  text-decoration: underline;
+}
+.page-footer p {
+  margin: 0;
+}
+.page-footer p:not(:last-child) {
+  padding-bottom: var(--spacing__vertical--1);
+}
+.page-footer .container {
+  align-items: center;
+  justify-content: center;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-top: var(--spacing__vertical--1);
+  border-top: 12px double var(--color__muted);
+}
+.page-footer .container li:after {
+  width: 0;
+  color: var(--color__secondary);
+  padding: 0 var(--spacing__horizontal--n1);
+}
+.page-footer .container li:last-child:after {
+  display: none;
+}
+.page-footer .container ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: var(--spacing__vertical--n1);
+}
+.page-footer .container ul svg {
+  display: none;
+}
+.page-footer .container ul a {
+  display: inline-flex;
+}
+.page-footer .container .link-support:after {
+  display: none;
+}
+@media (min-width: 1366px) {
+  .page-footer {
+    padding-bottom: var(--spacing__vertical--2);
+  }
+  .page-footer .container {
+    padding: var(--spacing__vertical--2) var(--spacing__horizontal--4);
+  }
+}
+@media (min-width: 430px) {
+  .page-footer .container {
+    border: 12px double var(--color__muted);
+    padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+  }
+}
+@media (min-width: 768px) {
+  .page-footer .container li:after {
+    content: "|";
+  }
+  .page-footer .container ul {
+    display: flex;
+  }
+}
+body > aside > .container {
+  grid-gap: 0;
+  grid-template-rows: auto auto auto auto auto 1fr;
+  margin-bottom: var(--spacing__vertical--1);
+}
+body > aside > .container:not(:last-child) {
+  padding-bottom: var(--spacing__vertical--1);
+}
+body > aside > .container > * {
+  align-self: start;
+}
+body > aside > .container > :last-child {
+  margin-bottom: 0;
+}
+body > aside > .container > h3:not(:first-child),
+body > aside > .container > h4:not(:first-child) {
+  font-family: var(--typography__fontFamily--primary);
+  font-size: var(--typography__larger);
+  padding-top: var(--spacing__vertical--n1);
+  padding-bottom: var(--spacing__vertical--n1);
+}
+body > aside > .container > h2:first-child,
+body > aside > .container > h3:first-child,
+body > aside > .container > h4:first-child {
+  margin: 0;
+  line-height: calc(var(--spacing__vertical--2) + var(--spacing__vertical--n3));
+  padding-left: 0;
+  grid-column: span 1;
+  grid-row-start: 1;
+  grid-row-end: 10;
+  padding-bottom: var(--spacing__vertical--1);
+}
+body > aside ul {
+  display: block !important;
+  margin-bottom: 0;
+}
+body > aside ul li {
+  padding-left: var(--spacing__horizontal--n2);
+}
+body > aside .features span > span {
+  display: block;
+  padding-left: var(--spacing__horizontal--1);
+  font-size: var(--typography__small);
+}
+body > aside.profile .container {
+  padding-bottom: var(--spacing__vertical--2);
+  border-bottom: 8px double var(--color__muted);
+}
+#sponsor-footer {
+  max-width: 1024px;
+  padding-bottom: var(--spacing__vertical--1);
+  margin: 0 auto;
+}
+#sponsor-footer span {
+  display: block;
+}
+@media (min-width: 1024px) {
+  body > aside > .container:not(:last-child) {
+    padding-bottom: var(--spacing__vertical--2);
+  }
+  body > aside > .container {
+    margin-bottom: var(--spacing__vertical--2);
+    display: grid;
+    grid-template-columns: minmax(min-content, 320px) minmax(
+        min-content,
+        max-content
+      );
+  }
+  body > aside > .container > * {
+    grid-column: 2/-2;
+    margin-left: var(--spacing__horizontal--1);
+  }
+  body > aside > .container > h2:first-child,
+  body > aside > .container > h3:first-child,
+  body > aside > .container > h4:first-child {
+    position: sticky;
+    grid-row: span 2;
+    padding-bottom: 0;
+    top: var(--spacing__vertical--n1);
+  }
+}
+@media (min-width: 1336px) {
+  body > aside > .container {
+    grid-template-columns: minmax(min-content, 460px) minmax(
+        min-content,
+        max-content
+      );
+  }
+  body > aside > .container > * {
+    grid-column: 2/-1;
+    margin-left: var(--spacing__horizontal--2);
+  }
+}
+@media (min-width: 420px) and (max-width: 1024px) {
+  body > aside {
+    text-align: center;
+  }
+  body > aside ul li {
+    padding-left: 0;
+  }
+  body > aside ul li span > span {
+    padding-left: 0 !important;
+  }
+  body > aside ul li:before {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  #sponsor-footer {
+    text-align: left;
+  }
+  #sponsor-footer > p {
+    display: flex;
+    align-items: flex-start;
+  }
+  #sponsor-footer span {
+    padding-right: var(--spacing__horizontal--1);
+  }
+  #sponsor-footer a {
+    margin-top: 0;
+    min-width: 270px;
+  }
+}
+.skip-link {
+  z-index: 2;
+  position: absolute;
+  background-color: var(--color__muted);
+  color: var(--color__secondary);
+  padding: var(--spacing__vertical--1) var(--spacing__horizontal--1);
+  text-align: center;
+  margin: 0 auto;
+}
+.skip-link:not(:focus) {
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 290px;
+}

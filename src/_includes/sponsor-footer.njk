@@ -1,9 +1,22 @@
 <style>
 #sponsor-footer {
-	background-color: #fff;
-	padding: .5rem;
-	grid-column-start: 1;
-	grid-column-end: last;
+  box-sizing: border-box;
+    background-color: #fff;
+    margin: 0;
+    padding: .5rem .5rem 1.5rem;
+		border: none;
+    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    text-align: left;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+#sponsor-footer::before, #sponsor-footer::after, 
+#sponsor-footer *::before, #sponsor-footer *::after {
+	display: none;
 }
 #sponsor-footer p {
 	width: 100%;
@@ -32,10 +45,12 @@
 	color: #3a00ff;
 	border: 2px solid currentColor;
 	border-radius: 4px;
+  background-color: #fff;
 }
 @media (max-width: 60ch) {
 	#sponsor-footer p {
 		flex-wrap: wrap;
+		justify-content: center;
 	}
 }
 </style>

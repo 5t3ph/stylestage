@@ -2,6 +2,8 @@
 title: "Subscribe to Updates"
 ---
 
+A weekly(ish) newsletter with Style Stage updates and CSS tips.
+
 ## Why Subscribe?
 
 **Fans**:

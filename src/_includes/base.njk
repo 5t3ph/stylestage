@@ -4,22 +4,22 @@
     <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    {% set styleDir %}{% if meta.environment == "production" %}public{% else %}src{% endif %}{% endset %}
     {% if page.url == '/' %}
     <title>{{ meta.siteName }} from Modern CSS Solutions</title>
     <meta name="description" content="{{ meta.siteDescription }}" />
     <link href="{{ '/styles/css/main-stage.css' | url }}" rel="stylesheet" />
+    {% if meta.url !== 'https://stylestage.dev' %}
+    <link rel="canonical" href="https://stylestage.dev" />
+    {% endif %}
     {% else %}
     <title>{{ style.title }} by {{ style.author }} | Style Stage</title>
     {% if style.description %}
     <meta name="description" content="{{ style.description }}" />
     {% endif %}
-    {% set cssFile %}{{styleDir}}/styles/css/{{ style.title | slug }}.css{% endset %}
-    {% set css %} {% include cssFile %} {% endset %}
-    <style>
-      {{ css | safe }}
-    </style>
-    <link rel="canonical" href="{{ meta.url }}" />
+    {% set cssFile %}/styles/css/{{ style.title | slug }}.css{% endset %}
+    <link rel="stylesheet" href="{{ cssFile }}" />
+
+    <link rel="canonical" href="https://stylestage.dev" />
     {% endif %}
     <link rel="icon" href="{{ '/favicon.png' | url }}" />
 
@@ -29,7 +29,7 @@
     {% endif %}
     <meta
       name="twitter:title"
-      content="{% if style.title %}{{ style.title }}{% else %}{{ meta.siteName }}{% endif %}"
+      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
     />
     <meta
       name="twitter:description"
@@ -39,7 +39,7 @@
     />
     <meta
       name="og:title"
-      content="{% if style.title %}{{ style.title }}{% else %}{{ meta.siteName }}{% endif %}"
+      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
     />
     <meta
       name="og:description"

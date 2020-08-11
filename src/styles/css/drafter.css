@@ -1,0 +1,731 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Claudine Ong
+* 
+* Title: Drafter
+* Author: Claudine Ong
+* Website: https://claudine.onglab.com/
+* Twitter: @msclaudo
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/drafter/
+*/
+
+/** 
+ * CSS submission for Style Stage https://stylestage.moderncss.dev/
+ *
+ * By Claudine Ong
+ */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla&display=swap");
+:root {
+    --width--container: 900px;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    font-size: 100%;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 40px;
+    z-index: 10;
+    background-color: #99b7bb;
+    color: #252f38;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    writing-mode: vertical-rl;
+    overflow-y: auto;
+}
+nav ul li {
+    padding: 10px 0;
+    width: 100%;
+    background-color: #99b7bb;
+}
+nav ul li:first-child {
+    border-top-width: 2px;
+}
+nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    line-height: 1em;
+    text-align: center;
+    white-space: nowrap;
+    color: #252f38;
+    width: 100%;
+    padding: 0 10px;
+    display: block;
+    border-left: solid 4px #99b7bb;
+    border-bottom: 0;
+}
+nav ul li a:hover,
+nav ul li a:focus {
+    border-left: solid 4px #edebe3;
+    border-bottom: 0;
+}
+
+@media only screen and (min-width: 640px) {
+    nav {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #99b7bb;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    nav ul {
+        justify-content: flex-end;
+        writing-mode: horizontal-tb;
+        padding: 0;
+        width: auto;
+        overflow: hidden;
+    }
+    nav ul li {
+        padding: 0 10px;
+        width: auto;
+    }
+    nav ul li a {
+        padding: 20px 0;
+        border-bottom: solid 4px #99b7bb;
+        border-left: 0;
+    }
+    nav ul li a:hover,
+    nav ul li a:focus {
+        border-bottom: solid 4px #edebe3;
+        border-left: 0;
+    }
+}
+header {
+    padding-top: 120px;
+    padding-bottom: 1rem;
+    margin: 0;
+    background-color: #252f38;
+    color: #edebe3;
+}
+header .container {
+    max-width: var(--width--container);
+    margin: 0 auto;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-areas: "h1block    h1block" "h2block    h2block" "space      space" "maintained github";
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto auto 4rem max-content;
+}
+header .container > h1 {
+    font-family: "Abril Fatface", "Georgia", "Times New Roman", cursive;
+    font-size: 10rem;
+    font-weight: normal;
+    line-height: 0.8em;
+    padding-bottom: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    grid-area: h1block;
+}
+header .container > h1:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 15px;
+    width: 120px;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0 2px,
+        #e2845b 2px 4px
+    );
+}
+header .container > h2 {
+    font-weight: normal;
+    grid-area: h2block;
+}
+header .container > p {
+    grid-area: maintained;
+    margin: 0;
+}
+header .container > p a {
+    color: #edebe3;
+    text-decoration: none;
+    border-bottom: solid 2px #e2845b;
+    transition: all 0.3s ease-in-out;
+}
+header .container > p a:hover,
+header .container > p a:focus {
+    background-color: #e2845b;
+    color: #252f38;
+}
+header .container > a.link-github {
+    grid-area: github;
+    text-decoration: none;
+    display: inline-block;
+    color: #252f38;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    padding: 8px 20px;
+    text-align: center;
+}
+header .container > a.link-github:hover,
+header .container > a.link-github:focus {
+    background-color: transparent;
+}
+header .container > a.link-github:hover,
+header .container > a.link-github:focus {
+    color: #edebe3;
+}
+
+@media screen and (max-width: 640px) {
+    header {
+        padding-top: 1.5rem;
+    }
+    header .container {
+        max-width: 100%;
+        padding-right: 60px;
+        grid-template-areas: "h1block" "h2block" "space" "maintained" "github";
+        grid-template-columns: auto;
+        grid-template-rows: auto auto 4rem 2fr 1fr;
+    }
+    header .container h1 {
+        font-size: 6rem;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header" "main main" "aside1 aside2" "footer footer";
+    grid-template-columns: 1fr 1fr;
+}
+
+header a,
+main a,
+aside a,
+footer a {
+    text-decoration: none;
+    color: #252f38;
+    border-bottom: solid 2px #e2845b;
+    transition: all 0.3s ease-in-out;
+}
+header a svg,
+main a svg,
+aside a svg,
+footer a svg {
+    width: 0.8rem;
+    height: 0.8rem;
+    fill: #edebe3;
+    margin-right: 5px;
+}
+header a:hover,
+header a:focus,
+main a:hover,
+main a:focus,
+aside a:hover,
+aside a:focus,
+footer a:hover,
+footer a:focus {
+    background-color: #e2845b;
+    color: #252f38;
+}
+header a:hover svg,
+header a:focus svg,
+main a:hover svg,
+main a:focus svg,
+aside a:hover svg,
+aside a:focus svg,
+footer a:hover svg,
+footer a:focus svg {
+    fill: #e2845b;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    margin: 0;
+    padding: 0;
+}
+
+article {
+    max-width: var(--width--container);
+    margin: 0 auto;
+    padding: 1.5rem;
+    padding-bottom: 5rem;
+    position: relative;
+}
+article h2 {
+    font-family: "Abril Fatface", "Georgia", "Times New Roman", cursive;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #557a80;
+    line-height: 1em;
+}
+article h3 {
+    text-transform: uppercase;
+    line-height: 1em;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+article h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background-color: #e2845b;
+}
+article section {
+    margin-top: 2rem;
+}
+article section h3 {
+    margin-top: 3rem;
+}
+article section blockquote {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1.5rem;
+    border: solid 2px #e2845b;
+    box-shadow: 5px 5px 0 #e2845b;
+}
+article section blockquote strong {
+    text-transform: uppercase;
+}
+article section ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+article section ul li {
+    padding: 5px 12px;
+    margin: 2px;
+    background-color: #252f38;
+    color: #edebe3;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+article section ol {
+    list-style: none;
+    counter-reset: steps;
+    padding-left: 1rem;
+    margin-bottom: 3rem;
+}
+article section ol li {
+    counter-increment: steps;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    position: relative;
+    border-left: dashed 2px #e2845b;
+}
+article section ol li:before {
+    content: counter(steps);
+    font-weight: bold;
+    width: 2rem;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #e2845b;
+    position: absolute;
+    left: calc(-1rem - 1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article section ol li:last-child {
+    padding-bottom: 0;
+    border-left: 0;
+}
+article section a.link-guidelines {
+    display: inline-block;
+    color: #252f38;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    padding: 8px 20px;
+    text-align: center;
+    border: solid 2px #a76244;
+}
+article section a.link-guidelines:hover,
+article section a.link-guidelines:focus {
+    background-color: transparent;
+}
+article:not(:last-child):after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: calc((var(--width--container) - 30vw) / 2);
+    width: 30vw;
+    height: 15px;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0 2px,
+        #e2845b 2px 4px
+    );
+}
+article footer#files {
+    scroll-margin-top: 4rem;
+}
+article footer#files .container {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border: solid 2px #e2845b;
+    box-shadow: 5px 5px 0 #e2845b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+article footer#files .container h3 {
+    margin-bottom: 2rem;
+    min-width: 100%;
+}
+article footer#files .container > a {
+    display: inline-block;
+    color: #252f38;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    padding: 8px 20px;
+    text-align: center;
+    border: solid 2px #a76244;
+    text-align: center;
+    margin: 5px;
+    flex: 1;
+}
+article footer#files .container > a:hover,
+article footer#files .container > a:focus {
+    background-color: transparent;
+}
+
+aside {
+    background-color: #d9d5c4;
+}
+aside .container {
+    padding: 1.5rem;
+}
+aside .container ul {
+    list-style: none;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    padding: 0;
+}
+aside .container > a {
+    display: inline-block;
+    color: #252f38;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    padding: 8px 20px;
+    text-align: center;
+    border: solid 2px #a76244;
+}
+aside .container > a:hover,
+aside .container > a:focus {
+    background-color: transparent;
+}
+
+aside.profile {
+    grid-area: aside2;
+    padding: 3rem 1.5rem;
+}
+aside.profile .container {
+    max-width: calc(var(--width--container) / 2 - 3rem);
+    margin: 0;
+    margin-right: auto;
+    border: solid 2px #e2845b;
+    box-shadow: 5px 5px 0 #e2845b;
+    background-color: #edebe3;
+}
+aside.profile h4#profile-title {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    display: inline-block;
+    padding-bottom: 0.6rem;
+    position: relative;
+}
+aside.profile h4#profile-title:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background-color: #e2845b;
+}
+aside.profile ul li {
+    font-size: 1rem;
+}
+aside.profile ul li.profile-title {
+    margin-bottom: 1rem;
+}
+aside.profile ul li.profile-title span:nth-child(1) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+aside.profile ul li.profile-title span:nth-child(2) {
+    font-family: "Abril Fatface", "Georgia", "Times New Roman", cursive;
+    font-size: 2.5rem;
+    line-height: 1em;
+    display: block;
+    margin: 10px 0;
+}
+aside.profile ul li span:first-child {
+    font-weight: bold;
+    display: inline-block;
+}
+
+aside#styles {
+    grid-area: aside1;
+    padding: 1.5rem 0;
+}
+aside#styles .container {
+    max-width: calc(900px / 2);
+    margin: 0;
+    margin-left: auto;
+}
+aside#styles h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1em;
+    padding-bottom: 0.8rem;
+    position: relative;
+}
+aside#styles h2:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: #e2845b;
+}
+aside#styles ul.features {
+    margin: 1rem 0;
+}
+aside#styles ul.features li {
+    margin-bottom: 1rem;
+}
+aside#styles ul.features li span > a {
+    display: block;
+    border: 0;
+    font-family: "Abril Fatface", "Georgia", "Times New Roman", cursive;
+    font-size: 2rem;
+    margin-bottom: -10px;
+}
+aside#styles ul.features li span > span {
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+footer.page-footer {
+    grid-area: footer;
+    background-color: #252f38;
+    color: #edebe3;
+}
+footer.page-footer a {
+    color: #edebe3;
+}
+footer.page-footer a:hover,
+footer.page-footer a:focus {
+    color: #252f38;
+}
+footer.page-footer .container {
+    max-width: var(--width--container);
+    margin: 0 auto;
+    padding: 1.5rem;
+    font-size: 1rem;
+}
+footer.page-footer ul {
+    list-style: none;
+    margin: 0 -5px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer.page-footer ul li {
+    flex: 1;
+    margin: 5px;
+    text-align: center;
+}
+footer.page-footer ul li a {
+    display: inline-block;
+    color: #252f38;
+    font-weight: bold;
+    white-space: nowrap;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    padding: 8px 20px;
+    text-align: center;
+    width: 100%;
+}
+footer.page-footer ul li a:hover,
+footer.page-footer ul li a:focus {
+    background-color: transparent;
+}
+footer.page-footer ul li a:hover,
+footer.page-footer ul li a:focus {
+    color: #edebe3;
+}
+
+.skip-link {
+    position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: #e2845b;
+    border: solid 2px #e2845b;
+    color: #252f38;
+    font-size: 1.125rem;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+.skip-link:focus {
+    position: fixed;
+    top: 4rem;
+    left: 1rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    z-index: 12;
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        grid-template-areas: "header" "main" "aside2" "aside1" "footer";
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        max-width: 100%;
+    }
+    article section a.link-guidelines {
+        display: block;
+    }
+
+    article,
+    aside.profile,
+    aside#styles,
+    aside#sponsor-footer {
+        padding-right: 60px;
+    }
+
+    aside#styles .container {
+        max-width: 100%;
+    }
+
+    footer.page-footer .container {
+        max-width: 100%;
+        padding-right: 60px;
+    }
+
+    .skip-link:focus {
+        top: 1rem;
+    }
+}
+@media screen and (max-width: 900px) {
+    article:not(:last-child):after {
+        left: calc(35vw - 30px);
+    }
+}
+body {
+    font-family: "Karla", sans-serif;
+    font-size: 18px;
+    background-color: #edebe3;
+    color: #252f38;
+}

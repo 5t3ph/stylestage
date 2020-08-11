@@ -1,0 +1,389 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Andy Bell
+* 
+* Title: Web 2.0 Lobster Party
+* Author: Andy Bell
+* Website: https://piccalil.li/
+* Twitter: @hankchizljaw
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/web-2.0-lobster-party/
+*/
+
+@import url("https://unpkg.com/modern-css-reset/dist/reset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&amp;display=swap");
+
+:root {
+  --color-base: #eed3c7;
+  --color-slate: #232323;
+  --color-light: #dddbd7;
+  --size-300: 0.8rem;
+  --size-400: 1rem;
+  --size-500: 1.25rem;
+  --size-600: 1.56rem;
+  --size-700: 1.95rem;
+  --size-800: 2.44rem;
+  --size-900: 3.05rem;
+  --size-max: 4rem;
+  --size-contain: 60rem;
+  --font-base: Georgia, serif;
+  --font-lobster: "Lobster", cursive;
+}
+
+body {
+  font-family: var(--font-base);
+  background: var(--color-base);
+  color: var(--color-slate);
+  line-height: 1.5;
+  padding: var(--size-700) var(--size-500);
+}
+
+body > *:not([href]) + * {
+  margin-top: var(--size-600);
+}
+
+h1 {
+  font-family: var(--font-lobster);
+  font-size: 6rem;
+}
+
+h2 {
+  font-family: var(--font-lobster);
+  font-size: var(--size-900);
+}
+
+h2:first-child {
+  padding-top: var(--size-900);
+}
+
+h1 + h2 {
+  --flow-space: var(--size-300);
+
+  font-weight: normal;
+  font-style: italic;
+  font-size: var(--size-600);
+  font-family: var(--font-base);
+  max-width: 30ch;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+p,
+li {
+  max-width: 65ch;
+}
+
+a {
+  color: currentcolor;
+}
+
+article {
+  font-size: var(--size-500);
+}
+
+:focus {
+  outline: 2px dotted;
+  outline-offset: 0.25rem;
+}
+
+main:focus {
+  outline: none;
+}
+
+svg {
+  height: 1ex;
+  width: auto;
+}
+
+/* Primary nav and features get a fancy glass effect from web 2.0 */
+nav,
+#about > .container > ul li,
+.features li,
+.profile .container {
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(rgba(255, 255, 255, 1)),
+    to(rgba(255, 255, 255, 0))
+  );
+  background: linear-gradient(
+    top,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  border: 2px solid var(--color-light);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.8);
+  border-radius: 1rem;
+  margin: 0 1rem;
+}
+
+/* Primary Nav */
+nav {
+  overflow: hidden;
+  max-width: var(--size-contain);
+  margin: 0 auto;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-lobster);
+  font-size: var(--size-500);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+nav ul li + li {
+  border-left: 2px solid var(--color-light);
+}
+
+nav ul li:last-child {
+  border-right: 2px solid var(--color-light);
+}
+
+nav ul li a {
+  display: block;
+  padding: var(--size-400) var(--size-500);
+  text-decoration: none;
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(rgba(0, 0, 0, 0)),
+    to(rgba(0, 0, 0, 0.1))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  white-space: nowrap;
+  outline-offset: -0.25rem;
+}
+
+nav ul li a:hover {
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(rgba(0, 0, 0, 0.3)),
+    to(rgba(0, 0, 0, 0.5))
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  color: var(--color-light);
+}
+
+/* Blocks */
+.container {
+  max-width: var(--size-contain);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Add flow to sibling elements */
+.container > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+.skip-link {
+  position: absolute;
+  z-index: 10;
+
+  /* https://gist.github.com/hankchizljaw/fae40371ada3ea4301624091bf4379e9 */
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+.skip-link:focus {
+  clip: unset;
+  width: auto;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  z-index: 99;
+  background: var(--color-slate);
+  color: var(--color-base);
+  top: var(--size-500);
+  left: var(--size-500);
+}
+
+/* “Buttons” */
+.link-github,
+.link-downloadcss,
+.link-downloadhtml,
+.link-codepen,
+.link-rss,
+.link-support,
+.link-twittercontact,
+.link-allstyles,
+.profile ul ~ a {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0.85rem 1.5rem 1rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-lobster);
+  font-size: var(--size-600);
+  line-height: 1;
+  text-decoration: none;
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(#959595),
+    color-stop(46%, #0d0d0d),
+    color-stop(50%, #010101),
+    color-stop(53%, #0a0a0a),
+    color-stop(76%, #4e4e4e),
+    color-stop(87%, #383838),
+    to(#1b1b1b)
+  );
+  background: linear-gradient(
+    to bottom,
+    #959595 0%,
+    #0d0d0d 46%,
+    #010101 50%,
+    #0a0a0a 53%,
+    #4e4e4e 76%,
+    #383838 87%,
+    #1b1b1b 100%
+  );
+  color: var(--color-base);
+  border: 1px solid var(--color-slate);
+}
+
+.link-github:hover,
+.link-downloadcss:hover,
+.link-downloadhtml:hover,
+.link-codepen:hover,
+.link-rss:hover,
+.link-support:hover,
+.link-twittercontact:hover,
+.link-allstyles:hover,
+.profile ul ~ a:hover {
+  background: transparent;
+  color: var(--color-slate);
+}
+
+.link-github svg {
+  fill: currentcolor;
+  height: 1ex;
+  height: 1lh;
+  width: auto;
+  -webkit-margin-end: var(--size-300);
+          margin-inline-end: var(--size-300);
+}
+
+/*This span is getting in the goddamn way */
+.link-github span {
+  display: contents;
+}
+
+/* RSS magic */
+.link-rss {
+  color: #ffffff;
+  background: -webkit-gradient(
+    linear,
+    left top, left bottom,
+    from(#f58752),
+    color-stop(46%, #efe5e1),
+    color-stop(48%, #efd3c6),
+    color-stop(85%, #f26522)
+  );
+  background: linear-gradient(
+    to bottom,
+    #f58752 0%,
+    #efe5e1 46%,
+    #efd3c6 48%,
+    #f26522 85%
+  );
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.8);
+  text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 1px -1px 0 #000,
+    -1px -1px 0 #000, 1px 1px 2px #000;
+}
+
+.link-rss:hover {
+  text-shadow: none;
+}
+
+/* Weird combo selectors */
+
+/* About section block list and features */
+#about > .container > ul,
+.features {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size, 16rem), 1fr)
+  );
+  grid-gap: var(--size-500);
+  padding: 0;
+}
+
+#about > .container > ul li,
+.features li {
+  margin: 0;
+  padding: var(--size-600);
+  font-family: var(--font-lobster);
+  font-size: var(--size-600);
+}
+
+/* Footer */
+.page-footer ul {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0 -1rem;
+}
+
+.page-footer li {
+  padding: 1rem 0 0 1rem;
+}
+
+/* Add some space to styles section */
+#styles h2 {
+  padding-bottom: var(--size-700);
+}
+
+/* Profile docked thing. */
+.profile .container {
+  padding: var(--size-400);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#profile-title {
+  font-family: var(--font-lobster);
+  font-size: var(--size-700);
+}
+
+/* Last: selection */
+::-moz-selection {
+  background: #ff00ff;
+  color: #000;
+}
+::selection {
+  background: #ff00ff;
+  color: #000;
+}

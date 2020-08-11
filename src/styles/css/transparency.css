@@ -1,0 +1,217 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Jens Oliver Meiert
+* 
+* Title: Transparency
+* Author: Jens Oliver Meiert
+* Website: https://meiert.com/en/
+* Twitter: @j9t
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/transparency/
+*/
+
+/*
+ * “Transparency” by Jens Oliver Meiert (https://meiert.com/en/)
+ *
+ * With alphabetically sorted declarations: https://meiert.com/en/blog/on-declaration-sorting/
+ * With consistent selector sorting: https://meiert.com/en/blog/how-to-order-css-selectors/
+ * Without declaration repetition: https://meiert.com/en/blog/dry-css/
+ * Without a reset: https://meiert.com/en/blog/reasons-against-resets/
+ * Valid: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fhell.meiert.org%2Fcore%2Fcss%2Fstylestage.dev-transparency.css
+ *
+ */
+
+:before {
+  color: #881280;
+}
+
+html,
+head * { /* Address head styling inconsistencies */
+  font-family: monospace;
+}
+
+html {
+  color: #222;
+}
+
+html:before,
+head {
+  margin: .5rem;
+}
+
+/* html:before {
+  content: '<html>';
+} */
+
+head * { /* Address head styling inconsistencies */
+  font-size: 1rem;
+  line-height: initial;
+}
+
+/* head:before {
+  content: '<head>';
+} */
+
+title:before {
+  content: '<title>';
+}
+
+link:before {
+  content: '<link>';
+}
+
+link[rel]:after {
+  content: attr(href);
+}
+
+meta:before {
+  content: '<meta>';
+}
+
+meta[charset]:after {
+  content: attr(charset);
+}
+
+meta[name]:after {
+  content: attr(content);
+}
+
+head,
+head * {
+  display: block !important; /* Yes, to keep it simple */
+}
+
+style {
+  display: none !important; /* Yes */
+}
+
+/* body:before {
+  content: '<body>';
+}
+
+header:before {
+  content: '<header>';
+}
+
+footer:before {
+  content: '<footer>';
+}
+
+nav:before {
+  content: '<nav>';
+}
+
+main:before {
+  content: '<main>';
+}
+
+article:before {
+  content: '<article>';
+}
+
+aside:before {
+  content: '<aside>';
+}
+
+section:before {
+  content: '<section>';
+} */
+
+p:before {
+  content: '<p>';
+}
+
+/* blockquote:before {
+  content: '<blockquote>';
+}
+
+div:before {
+  content: '<div>';
+} */
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+h1:before {
+  content: '<h1>';
+}
+
+h2:before {
+  content: '<h2>';
+}
+
+h3:before {
+  content: '<h3>';
+}
+
+h4:before {
+  content: '<h4>';
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+ul:before {
+  content: '<ul>';
+}
+
+ol:before {
+  content: '<ol>';
+}
+
+li:before {
+  content: '<li>';
+}
+
+svg {
+  display: inline;
+  height: 1rem;
+  position: relative;
+  top: .125rem;
+  width: 1rem;
+}
+
+svg:before {
+  content: '<svg>';
+}
+
+path:before {
+  content: '<path>';
+}
+
+a:before {
+  content: '<a>';
+}
+
+/* a:after {
+  content: ' ' attr(href);
+} */
+
+strong:before {
+  content: '<strong>';
+}
+
+span:before {
+  content: '<span>';
+}
+
+@media screen and (min-width: 1024px) {
+
+  html {
+    display: grid;
+    grid-template-columns: 61.8% 38.2%;
+  }
+
+  head {
+    order: 1;
+  }
+
+}

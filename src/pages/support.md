@@ -12,6 +12,8 @@ The current concept involves two options. Reach out [in a Twitter message](https
 
 For both options, you may create a branded Style Stage stylesheet theme that will be linked from a "tweet length" banner. The branded Style Stage page will use a different schema for the "profile" section with your ad copy, optional logo, and link of your choice. Sponsors will also be listed with logos on the [Styles Directory](/styles/). The branded Style Stage page will be removed at the end of the paid period.
 
+Sponsorship periods start on Mondays at 12 AM US Central.
+
 1. **Monthly Sponsor: \$400** - Banner placement at the top of all pages.
 
 2. **Weekly Sponsor: \$100** - Banner placement below the footer on the home page.
