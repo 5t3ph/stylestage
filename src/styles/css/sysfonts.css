@@ -1,0 +1,398 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Halvor William Sanden
+* 
+* Title: Sysfonts
+* Author: Halvor William Sanden
+* Website: https://8yd.no
+* Twitter: @8yard
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/sysfonts/
+*/
+
+:root {
+  --pink70: hsl(335, 50%, 70%);
+  --pink91: hsl(335, 50%, 91%);
+  --pink95: hsl(335, 50%, 95%);
+  --bluegray40: hsl(217, 21%, 40%);
+
+  --txtbody: clamp(1rem, 1.6vmin, 1.35rem);
+  --txtsmall: clamp(0.9rem, 1.45vmin, 1.15rem);
+  --txth3: clamp(1.2rem, 2.4vmin, 1.8rem);
+  --txth2: clamp(1.5rem, 3.6vmin, 2.6rem);
+  --txth1: clamp(1.4rem, 17vmin, 14rem);
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+  line-height: 1.35;
+  color: hsl(0, 0%, 10%);
+  font-weight: normal;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+    Noto Sans, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: calc(0.85rem + 0.35vmin);
+  font-size: var(--txtbody);
+  background-color: hsl(335, 20%, 99%);
+}
+
+/* typography etc. */
+
+h1 {
+  margin: 0 0 0.2em;
+  font-size: calc(1.4rem + 14vmin);
+  font-size: var(--txth1);
+  line-height: 0.8;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  flex: 1 0 100%;
+  color: var(--bluegray40);
+}
+
+h2 {
+  margin-top: 0;
+  padding-top: 1.2em;
+  font-size: calc(1.3rem + 1.4vmin);
+  font-size: var(--txth2);
+  margin-bottom: 0.25em;
+  font-weight: 300;
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+h3 {
+  font-size: calc(0.85rem + 0.85vmin);
+  font-size: var(--txth3);
+  margin-bottom: 0.25em;
+  line-height: 1.36;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: calc(0.85rem + 0.35vmin);
+  font-size: var(--txtbody);
+  margin-bottom: 0.25em;
+  line-height: 1.36;
+  font-weight: 600;
+}
+
+p,
+li {
+  line-height: 1.35;
+  max-width: 64ch;
+}
+
+p,
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1em;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+ul ::marker {
+  color: hsl(0, 0%, 20%);
+  font-size: 0.75em;
+}
+
+ol {
+  padding-left: 1.2em;
+}
+
+a,
+a:visited {
+  color: hsl(208, 97%, 37%);
+}
+
+a:hover,
+a:focus {
+  color: hsl(217, 97%, 23%);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--pink70);
+}
+
+strong {
+  font-style: italic;
+  font-weight: 400;
+}
+
+blockquote {
+  margin: 1em 1em 1.4em;
+}
+
+blockquote p {
+  font-size: calc(0.75rem + 0.35vmin);
+  font-size: var(--txtsmall);
+  max-width: calc(64ch - 2em);
+}
+
+blockquote strong {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* common */
+
+header,
+nav,
+main,
+.profile,
+body > aside:nth-child(6),
+.page-footer {
+  padding: 0 6vw;
+}
+
+header .container,
+nav ul,
+main .container,
+.profile .container,
+body > aside:nth-child(6) .container,
+.page-footer .container {
+  margin: 0 auto;
+  max-width: 116ch;
+}
+
+.link-github svg {
+  width: 0.75em;
+  stroke: currentColor;
+  fill: transparent;
+  stroke-width: 3;
+}
+
+header .link-github,
+.link-guidelines,
+.profile > div > a,
+.link-downloadcss,
+.link-downloadhtml,
+.link-codepen,
+.link-allstyles {
+  text-decoration: none;
+  border: 1px dashed var(--pink70);
+  padding: 0.3em 0.5em;
+  border-radius: 0.25rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.link-github:hover,
+.link-github:focus,
+.profile > div > a:hover,
+.profile > div > a:focus {
+  text-decoration: underline;
+}
+
+/* page structure */
+
+.skip-link {
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  display: inline-block;
+  left: 6vw;
+  position: absolute;
+  transform: translateY(-100%);
+  transition: transform 0.15s;
+}
+
+.skip-link:focus {
+  background-color: var(--pink95);
+  transform: translateY(0%);
+}
+
+header {
+  background-color: var(--pink91);
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+header .container {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h2 {
+  margin: 0 0 0.3em;
+  padding: 0;
+  flex: 1 0 100%;
+  font-size: calc(0.85rem + 0.85vmin);
+  font-size: calc((var(--txth2) + var(--txth3)) / 2);
+  color: var(--bluegray40);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+header p {
+  margin: 0;
+}
+
+header .link-github {
+  order: -1;
+  margin-left: auto;
+}
+
+nav {
+  background-color: var(--pink95);
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 1em 0;
+  flex-flow: row wrap;
+}
+
+nav li {
+  margin-right: 1em;
+  font-size: calc(0.85rem + 0.85vmin);
+  font-size: var(--txth3);
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+main {
+  outline: none;
+}
+
+main ul {
+  column-width: 22ch;
+}
+
+.link-downloadcss,
+.link-downloadhtml {
+  margin-right: 0.5rem;
+}
+
+.profile {
+  margin-top: 2rem;
+}
+
+body > aside:nth-child(6) {
+  background-color: var(--pink95);
+  margin-top: 5rem;
+}
+
+body > aside:nth-child(6) > .container {
+  padding-top: 1.4rem;
+  padding-bottom: 5rem;
+}
+
+body > aside:nth-child(6) > .container > h2 {
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: calc(0.85rem + 0.85vmin);
+  font-size: var(--txth3);
+  font-weight: 900;
+  color: var(--bluegray40);
+}
+
+.features {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 0.5rem;
+}
+
+.features li {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 1rem 1rem;
+  flex: 1 1 12rem;
+  max-width: 16rem;
+  background-color: hsl(335, 50%, 98%);
+  font-size: calc(0.75rem + 0.35vmin);
+  font-size: var(--txtsmall);
+  border-radius: 0.25rem;
+}
+
+.features > li > span {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.features a {
+  font-size: calc(0.85rem + 0.85vmin);
+  font-size: var(--txth3);
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.features a:hover,
+.features a:focus {
+  text-decoration: underline;
+}
+
+.features > li > span > span {
+  flex: 1 0 100%;
+}
+
+.page-footer {
+  background-color: var(--pink91);
+  margin: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.page-footer .container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.page-footer p {
+  font-size: calc(0.75rem + 0.35vmin);
+  font-size: var(--txtsmall);
+}
+
+.page-footer > div > p:nth-child(1) {
+  flex: 1 0 100%;
+  max-width: initial;
+  margin-bottom: 0.5em;
+}
+
+.page-footer ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  flex-flow: row wrap;
+  flex: 1 0 100%;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--pink70);
+  padding-bottom: 1.5rem;
+}
+
+.page-footer li {
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+}
+
+.page-footer ul a {
+  text-decoration: none;
+}
+
+.page-footer ul a:hover,
+.page-footer ul a:focus {
+  text-decoration: underline;
+}
+
+.page-footer > div > p:nth-child(3) {
+  margin-right: 2em;
+}

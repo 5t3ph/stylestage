@@ -8,21 +8,21 @@
 
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
-[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
-
-[Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
-
-[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
-
 [Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
-[Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
+[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
+
+[Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
+
+[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
+
+[Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
-[Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
+[Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
 
@@ -46,4 +46,12 @@
 
 [MonoMinimal](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/monominimal.css) By Amit Sheen
 
+[Artsy Blue and Turquoise](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/artsy-blue-and-turquoise.css) By Thea Kitzinger
+
+[Drafter](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/drafter.css) By Claudine Ong
+
 [Pink Outside The Box](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pink-outside-the-box.css) By GabbyKC
+
+[Sysfonts](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/sysfonts.css) By Halvor William Sanden
+
+[Crawling Chaos](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/crawling-chaos.css) By Adrian Bece
