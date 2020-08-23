@@ -1,0 +1,42 @@
+name: Style Stage Messenger
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            var msg = `👋 Thanks for participating! I will review as soon as possible, usually within a few hours.
+
+            **Watch for notifications** as I may request some small changes to make sure this meets the guidelines.
+
+            In a few minutes, the Netlify process at the end of this PR will make a preview available. Look for the message "Deploy preview ready!" then click the "Details" link next to it to launch a preview of your styles. Make changes if needed, and comment if you do so I can re-deploy the preview. Note that the "sponsor footer" is not available to fully style, but you may fix any issues it causes to your layout.
+
+            Thanks again, I hope you learned something while making your stylesheet! 💫`
+
+            var body = context.payload.pull_request.body
+
+            if(body) {
+              var isStylesheet = body.includes('New Stylesheet Submission')
+            }
+
+            if(isStylesheet) {
+              github.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body: msg
+              })
+
+              github.issues.addLabels({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                labels: ['stylesheet submission']
+              })
+            }
