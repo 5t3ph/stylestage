@@ -18,7 +18,7 @@ Sponsorship periods start on Mondays at 12 AM US Central.
 
 2. **Weekly Sponsor: \$100** - Banner placement below the footer on the home page.
 
-Style Stage is not using event tracking analytics, but can provide site and sponsored page total views for the paid period. As a new site, there is not yet historical data to provide.
+Style Stage is not using event tracking analytics, but can provide site and sponsored page total views for the paid period. Current unique visitors average about 15K/month.
 
 ### How Will Sponsorship Money Be Used?
 

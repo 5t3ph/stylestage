@@ -66,7 +66,7 @@
   --line-length-max: 40rem;
   --heading-font-size-base: 1rem;
   --heading-line-height: 1.2;
-  --heading-size-scale: 1.2;
+  --heading-size-scale: 1.175;
   --h6-font-size: calc(var(--heading-font-size-base) * var(--heading-size-scale));
   --h5-font-size: calc(var(--h6-font-size) * var(--heading-size-scale));
   --h4-font-size: calc(var(--h5-font-size) * var(--heading-size-scale));
@@ -132,6 +132,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.25), 0 -1px rgba(0, 0, 0, 0.25), 1px 0 rgba(0, 0, 0, 0.25), -1px 0 rgba(0, 0, 0, 0.25), 1px -1px rgba(0, 0, 0, 0.25), 1px 1px rgba(0, 0, 0, 0.25), -1px 1px rgba(0, 0, 0, 0.25), -1px -1px rgba(0, 0, 0, 0.25), 0 1px rgba(0, 0, 0, 0.25), 0 -1px rgba(0, 0, 0, 0.25), 1px 0 rgba(0, 0, 0, 0.25), -1px 0 rgba(0, 0, 0, 0.25), 1px -1px rgba(0, 0, 0, 0.25), 1px 1px rgba(0, 0, 0, 0.25), -1px 1px rgba(0, 0, 0, 0.25), -1px -1px rgba(0, 0, 0, 0.25);
 }
 @supports (font-size: var(--font-size-base)) {
   :root {
@@ -174,17 +175,12 @@ a {
 a {
   color: var(--link-color);
   text-decoration: underline;
-  text-underline-offset: 0.15em;
-  text-shadow: 0 1px black, 0 -1px black, 1px 0 black, -1px 0 black, 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black, 0 2px black, 0 -2px black, 2px 0 black, -2px 0 black, 2px -2px black, 2px 2px black, -2px 2px black, -2px -2px black;
+  text-underline-offset: 0.1em;
+  text-decoration-thickness: 0.1em;
+  text-shadow: 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color), 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color);
   transition-property: transform, filter, opacity, text-underline-offset;
   transition-duration: 300ms;
   transition-timing-function: ease-in-out;
-}
-@supports (text-decoration-color: red) {
-  a {
-    text-decoration-color: var(--link-accent-color);
-    text-decoration-thickness: 0.1em;
-  }
 }
 
 a:hover {
@@ -277,7 +273,7 @@ h1 {
   line-height: var(--h1-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h1 + * {
@@ -291,7 +287,7 @@ h2 {
   line-height: var(--h2-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h2 + * {
@@ -305,7 +301,7 @@ h3 {
   line-height: var(--h3-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h3 + * {
@@ -319,7 +315,7 @@ h4 {
   line-height: var(--h4-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h4 + * {
@@ -333,7 +329,7 @@ h5 {
   line-height: var(--h5-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h5 + * {
@@ -347,7 +343,7 @@ h6 {
   line-height: var(--h6-line-height, var(--heading-line-height));
   text-transform: uppercase;
   font-style: italic;
-  text-shadow: 0 2px var(--heading-stroke-color), 0 -2px var(--heading-stroke-color), 2px 0 var(--heading-stroke-color), -2px 0 var(--heading-stroke-color), 2px -2px var(--heading-stroke-color), 2px 2px var(--heading-stroke-color), -2px 2px var(--heading-stroke-color), -2px -2px var(--heading-stroke-color), 0 4px var(--heading-stroke-color), 0 -4px var(--heading-stroke-color), 4px 0 var(--heading-stroke-color), -4px 0 var(--heading-stroke-color), 4px -4px var(--heading-stroke-color), 4px 4px var(--heading-stroke-color), -4px 4px var(--heading-stroke-color), -4px -4px var(--heading-stroke-color);
+  text-shadow: 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 0 4px var(--heading-stroke-color, var(--text-stroke-color)), 0 -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 0 var(--heading-stroke-color, var(--text-stroke-color)), -4px 0 var(--heading-stroke-color, var(--text-stroke-color)), 4px -4px var(--heading-stroke-color, var(--text-stroke-color)), 4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px 4px var(--heading-stroke-color, var(--text-stroke-color)), -4px -4px var(--heading-stroke-color, var(--text-stroke-color));
   max-width: max(var(--line-length-max), 100%);
 }
 h6 + * {
@@ -379,7 +375,7 @@ body {
     display: grid;
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 800px) {
   body {
     grid-template-areas: "skiplink skiplink" "header header" "main nav" "profile nav" "styles nav" "footer footer" "sponsor sponsor";
     grid-template-columns: 3fr 1fr;
@@ -438,6 +434,7 @@ aside {
 
 #sponsor-footer {
   grid-area: sponsor;
+  z-index: 100;
 }
 
 header {
@@ -473,23 +470,22 @@ header:before {
 }
 header .container {
   max-width: 100%;
-  padding: 1rem;
+  padding: calc(1rem + 0.5vmin) calc(1rem + 0.5vmin);
   text-align: center;
   color: var(--header-text-primary);
-  text-shadow: 0 1px black, 0 -1px black, 1px 0 black, -1px 0 black, 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black, 0 2px black, 0 -2px black, 2px 0 black, -2px 0 black, 2px -2px black, 2px 2px black, -2px 2px black, -2px -2px black;
+  text-shadow: 0 3px var(--text-stroke-color), 0 -3px var(--text-stroke-color), 3px 0 var(--text-stroke-color), -3px 0 var(--text-stroke-color), 3px -3px var(--text-stroke-color), 3px 3px var(--text-stroke-color), -3px 3px var(--text-stroke-color), -3px -3px var(--text-stroke-color), 0 3px var(--text-stroke-color), 0 -3px var(--text-stroke-color), 3px 0 var(--text-stroke-color), -3px 0 var(--text-stroke-color), 3px -3px var(--text-stroke-color), 3px 3px var(--text-stroke-color), -3px 3px var(--text-stroke-color), -3px -3px var(--text-stroke-color);
 }
 @supports (display: grid) {
   header .container {
     display: grid;
     grid-template-areas: "link" "title" "subtitle" "credit";
     grid-template-columns: 100%;
-    grid-template-rows: max-content max-content max-content max-content;
-    min-height: 100vh;
-    gap: 2rem;
+    grid-template-rows: max-content minmax(min-content, max-content) minmax(min-content, max-content) max-content;
+    gap: calc(1rem + 0.5vmin);
   }
-  @media (min-width: 65rem) {
+  @media (min-width: 800px) {
     header .container {
-      gap: 1rem;
+      grid-template-rows: max-content minmax(min-content, 3fr) minmax(min-content, 1fr) max-content;
     }
   }
   header .container * {
@@ -501,8 +497,22 @@ header .container {
 header .container h2 {
     align-self: center;
   }
+  @media (orientation: portrait) {
+    header .container h2 {
+      margin-top: 3rem;
+    }
+  }
+  header .container p:first-of-type {
+    grid-area: credit;
+  }
   header .container .link-github {
+    margin-left: 1em;
     justify-self: end;
+  }
+  @media (orientation: portrait) {
+    header .container .link-github {
+      justify-self: start;
+    }
   }
 }
 
@@ -523,29 +533,38 @@ header h1 {
   width: 6ch;
   max-width: 15ch;
   text-indent: -2.6ch;
-  font-size: calc(1.5rem + 9vw);
   line-height: 1.6;
   text-shadow: 0 0.06em var(--green-dark), 0 -0.06em var(--green-dark), 0.06em 0 var(--green-dark), -0.06em 0 var(--green-dark), 0.06em -0.06em var(--green-dark), 0.06em 0.06em var(--green-dark), -0.06em 0.06em var(--green-dark), -0.06em -0.06em var(--green-dark), 0 0.12em var(--yellow-neon), 0 -0.12em var(--yellow-neon), 0.12em 0 var(--yellow-neon), -0.12em 0 var(--yellow-neon), 0.12em -0.12em var(--yellow-neon), 0.12em 0.12em var(--yellow-neon), -0.12em 0.12em var(--yellow-neon), -0.12em -0.12em var(--yellow-neon);
 }
-@media (min-width: 50rem) {
+@media (orientation: portrait) {
   header h1 {
-    font-size: 6rem;
+    font-size: calc(1.5rem + 9vmin);
+  }
+}
+@media (orientation: landscape) {
+  header h1 {
+    font-size: calc(1.5rem + 9vmin);
+  }
+}
+@media (orientation: landscape) and (min-width: 800px) {
+  header h1 {
+    font-size: calc(4.5rem + 4.5vmax);
   }
 }
 
 header h2 {
   grid-area: subtitle;
   max-width: 28ch;
-  padding: 1rem;
+  padding: 0 1rem;
   font-size: var(--h4-font-size);
   color: var(--header-text-secondary);
 }
-@media (min-width: 35rem) {
+@media (min-width: 560px) {
   header h2 {
     font-size: var(--h3-font-size);
   }
 }
-@media (min-width: 50rem) {
+@media (min-width: 800px) {
   header h2 {
     font-size: var(--h2-font-size);
   }
@@ -597,24 +616,24 @@ header h1 {
   animation-direction: normal;
   animation-iteration-count: 1, infinite;
   transform-origin: center center;
-  --rotate: -65deg;
-  --translateX: -0.4ch;
-  --translateY: 0ch;
-  --scaleX-fudge: 0;
-  --scaleY-fudge: 0;
+  --rotate: -20deg;
+  --translateX: 0ch;
+  --translateY: -0.4ch;
 }
-@media (min-width: 35rem) {
+@media (orientation: portrait) {
   header h1 {
-    --rotate: -20deg;
-    --translateX: 0ch;
-    --translateY: -0.4ch;
+    --rotate: -60deg;
+    --translateX: -0.4ch;
+    --translateY: 0ch;
+    --scaleX-fudge: 0;
+    --scaleY-fudge: 0;
   }
 }
 @supports (-webkit-text-fill-color: white) {
   header h1 {
     z-index: 5;
     line-height: 1.45;
-    text-shadow: 0 3px black, 0 -3px black, 3px 0 black, -3px 0 black, 3px -3px black, 3px 3px black, -3px 3px black, -3px -3px black, 0 4px black, 0 -4px black, 4px 0 black, -4px 0 black, 4px -4px black, 4px 4px black, -4px 4px black, -4px -4px black;
+    text-shadow: 0 4px var(--text-stroke-color), 0 -4px var(--text-stroke-color), 4px 0 var(--text-stroke-color), -4px 0 var(--text-stroke-color), 4px -4px var(--text-stroke-color), 4px 4px var(--text-stroke-color), -4px 4px var(--text-stroke-color), -4px -4px var(--text-stroke-color), 0 4px var(--text-stroke-color), 0 -4px var(--text-stroke-color), 4px 0 var(--text-stroke-color), -4px 0 var(--text-stroke-color), 4px -4px var(--text-stroke-color), 4px 4px var(--text-stroke-color), -4px 4px var(--text-stroke-color), -4px -4px var(--text-stroke-color);
   }
   header h1::before, header h1::after {
     content: "Style Stage";
@@ -652,11 +671,17 @@ nav {
   align-items: center;
   justify-content: center;
   text-align: center;
+  min-height: 40vw;
   padding: 3rem 1rem;
   --link-color: var(--black);
   --link-color--hover: var(--red);
   --link-color--active: var(--green-neon);
   --link-color--focus: var(--yellow-neon);
+}
+@media (min-width: 800px) {
+  nav {
+    min-height: unset;
+  }
 }
 nav:before, nav:after {
   content: "Style Stage";
@@ -665,26 +690,33 @@ nav:before, nav:after {
   text-transform: uppercase;
   font-style: normal;
   color: var(--header-text-primary);
+  font-size: 8vmin;
+  line-height: 1.45;
+  text-indent: -1.5ch;
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  font-size: 8vh;
+  max-height: 6ch;
   position: absolute;
-  right: calc(50% - 4vh);
+  margin-top: auto;
+  margin-bottom: auto;
   isolation: isolate;
-  backdrop-filter: saturate(80%);
   mix-blend-mode: color-dodge;
-  filter: contrast(0.5) brightness(0.5) opacity(0.25);
+  filter: contrast(1.5) brightness(1.5) opacity(0.25);
   animation-name: beat;
   animation-duration: calc(var(--beat-interval));
   animation-timing-function: cubic-bezier(0.31, 0.37, 1, 1.65);
   animation-iteration-count: infinite;
 }
-@media (min-width: 50rem) {
+@media (min-width: 800px) {
   nav:before, nav:after {
+    font-size: 8vh;
+    max-height: unset;
+    text-indent: unset;
     position: fixed;
     top: 5vh;
     bottom: 5vh;
     right: 2.5vw;
+    left: unset;
   }
 }
 nav::before {
@@ -721,7 +753,7 @@ nav ul {
   nav ul > *:nth-child(4n+2) {
     margin-left: -5vw;
   }
-  @media (min-width: 50rem) {
+  @media (min-width: 800px) {
     nav ul {
       top: 10vh;
       bottom: 10vh;
@@ -763,12 +795,12 @@ nav li a {
   text-decoration: none;
 }
 nav li a:hover, nav li a:focus, nav li a:active {
-  text-shadow: 0 2px var(--white), 0 -2px var(--white), 2px 0 var(--white), -2px 0 var(--white), 2px -2px var(--white), 2px 2px var(--white), -2px 2px var(--white), -2px -2px var(--white), 0 3px var(--white), 0 -3px var(--white), 3px 0 var(--white), -3px 0 var(--white), 3px -3px var(--white), 3px 3px var(--white), -3px 3px var(--white), -3px -3px var(--white);
+  text-shadow: 0 3px var(--white), 0 -3px var(--white), 3px 0 var(--white), -3px 0 var(--white), 3px -3px var(--white), 3px 3px var(--white), -3px 3px var(--white), -3px -3px var(--white), 0 3px var(--white), 0 -3px var(--white), 3px 0 var(--white), -3px 0 var(--white), 3px -3px var(--white), 3px 3px var(--white), -3px 3px var(--white), -3px -3px var(--white);
 }
 @supports (-webkit-text-fill-color: var(--white)) {
   nav li a:hover, nav li a:focus, nav li a:active {
     -webkit-text-fill-color: var(--white);
-    text-shadow: 0 2px var(--black), 0 -2px var(--black), 2px 0 var(--black), -2px 0 var(--black), 2px -2px var(--black), 2px 2px var(--black), -2px 2px var(--black), -2px -2px var(--black), 0 3px var(--black), 0 -3px var(--black), 3px 0 var(--black), -3px 0 var(--black), 3px -3px var(--black), 3px 3px var(--black), -3px 3px var(--black), -3px -3px var(--black);
+    text-shadow: 0 3px var(--black), 0 -3px var(--black), 3px 0 var(--black), -3px 0 var(--black), 3px -3px var(--black), 3px 3px var(--black), -3px 3px var(--black), -3px -3px var(--black), 0 3px var(--black), 0 -3px var(--black), 3px 0 var(--black), -3px 0 var(--black), 3px -3px var(--black), 3px 3px var(--black), -3px 3px var(--black), -3px -3px var(--black);
   }
 }
 nav li a::before, nav li a::after {
@@ -1153,7 +1185,7 @@ aside .container::after {
   margin: var(--list-spacing, 0);
   font-weight: bold;
   mix-blend-mode: color-dodge;
-  text-shadow: 0 1px black, 0 -1px black, 1px 0 black, -1px 0 black, 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black, 0 2px black, 0 -2px black, 2px 0 black, -2px 0 black, 2px -2px black, 2px 2px black, -2px 2px black, -2px -2px black;
+  text-shadow: 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color), 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color);
   transform: rotate(var(--list-rotation, 1deg));
 }
 #about ul li:nth-child(1n) {
@@ -1332,12 +1364,17 @@ aside .container::after {
   margin-top: 1em;
   margin-right: 1em;
   margin-bottom: 1em;
-  flex-basis: calc(50% - 2em);
+  flex-basis: 100%;
+}
+@media (min-width: 560px) {
+  .profile ul > * {
+    flex-basis: calc(50% - 2em);
+  }
 }
 .profile li {
   display: flex;
   flex-flow: column nowrap;
-  text-shadow: 0 2px black, 0 -2px black, 2px 0 black, -2px 0 black, 2px -2px black, 2px 2px black, -2px 2px black, -2px -2px black, 0 3px black, 0 -3px black, 3px 0 black, -3px 0 black, 3px -3px black, 3px 3px black, -3px 3px black, -3px -3px black;
+  text-shadow: 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color), 0 2px var(--text-stroke-color), 0 -2px var(--text-stroke-color), 2px 0 var(--text-stroke-color), -2px 0 var(--text-stroke-color), 2px -2px var(--text-stroke-color), 2px 2px var(--text-stroke-color), -2px 2px var(--text-stroke-color), -2px -2px var(--text-stroke-color);
 }
 .profile li span:first-child {
   text-transform: uppercase;
@@ -1348,6 +1385,14 @@ aside .container::after {
   margin-top: 0em;
   font-size: 1.2em;
   color: var(--orange-light);
+}
+
+.profile-twitter span:last-child:before {
+  content: "@";
+  font-size: 70%;
+  margin-right: 0.1em;
+  color: white;
+  text-decoration: none;
 }
 
 .profile .container > a {
@@ -1421,7 +1466,7 @@ aside .container::after {
 .page-footer .container {
   padding: 2rem;
   z-index: 5;
-  text-shadow: 0 1px black, 0 -1px black, 1px 0 black, -1px 0 black, 1px -1px black, 1px 1px black, -1px 1px black, -1px -1px black, 0 2px black, 0 -2px black, 2px 0 black, -2px 0 black, 2px -2px black, 2px 2px black, -2px 2px black, -2px -2px black;
+  text-shadow: 0 3px var(--text-stroke-color), 0 -3px var(--text-stroke-color), 3px 0 var(--text-stroke-color), -3px 0 var(--text-stroke-color), 3px -3px var(--text-stroke-color), 3px 3px var(--text-stroke-color), -3px 3px var(--text-stroke-color), -3px -3px var(--text-stroke-color), 0 3px var(--text-stroke-color), 0 -3px var(--text-stroke-color), 3px 0 var(--text-stroke-color), -3px 0 var(--text-stroke-color), 3px -3px var(--text-stroke-color), 3px 3px var(--text-stroke-color), -3px 3px var(--text-stroke-color), -3px -3px var(--text-stroke-color);
 }
 .page-footer .container > * + * {
   margin-top: 2rem;
@@ -1461,6 +1506,10 @@ aside .container::after {
   --icon: "✔";
   --icon-fudge-x: -0.125em;
   --icon-fudge-y: -0.55em;
+}
+
+#sponsor-footer {
+  --text-stroke-outline: transparent;
 }
 
 /* Animations were generated with many insane Sass loops. */
