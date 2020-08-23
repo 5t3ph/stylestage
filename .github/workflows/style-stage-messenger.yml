@@ -23,6 +23,7 @@ jobs:
 
             if(body) {
               var isStylesheet = body.includes('New Stylesheet Submission')
+              var incompleteGuidelines = body.includes('[]')
             }
 
             if(isStylesheet) {
@@ -39,4 +40,13 @@ jobs:
                 repo: context.repo.repo,
                 labels: ['stylesheet submission']
               })
+
+              if(incompleteGuidelines) {
+                github.issues.addLabels({
+                  issue_number: context.issue.number,
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  labels: ['invalid']
+                })
+              }
             }
