@@ -23,7 +23,7 @@
  *
  */
 
-:before {
+::before {
   color: #881280;
 }
 
@@ -36,12 +36,12 @@ html {
   color: #222;
 }
 
-html:before,
+html::before,
 head {
   margin: .5rem;
 }
 
-/* html:before {
+/* html::before {
   content: '<html>';
 } */
 
@@ -50,31 +50,31 @@ head * { /* Address head styling inconsistencies */
   line-height: initial;
 }
 
-/* head:before {
+/* head::before {
   content: '<head>';
 } */
 
-title:before {
+title::before {
   content: '<title>';
 }
 
-link:before {
+link::before {
   content: '<link>';
 }
 
-link[rel]:after {
+link[rel]::after {
   content: attr(href);
 }
 
-meta:before {
+meta::before {
   content: '<meta>';
 }
 
-meta[charset]:after {
+meta[charset]::after {
   content: attr(charset);
 }
 
-meta[name]:after {
+meta[name]::after {
   content: attr(content);
 }
 
@@ -87,47 +87,47 @@ style {
   display: none !important; /* Yes */
 }
 
-/* body:before {
+/* body::before {
   content: '<body>';
 }
 
-header:before {
+header::before {
   content: '<header>';
 }
 
-footer:before {
+footer::before {
   content: '<footer>';
 }
 
-nav:before {
+nav::before {
   content: '<nav>';
 }
 
-main:before {
+main::before {
   content: '<main>';
 }
 
-article:before {
+article::before {
   content: '<article>';
 }
 
-aside:before {
+aside::before {
   content: '<aside>';
 }
 
-section:before {
+section::before {
   content: '<section>';
 } */
 
-p:before {
+p::before {
   content: '<p>';
 }
 
-/* blockquote:before {
+/* blockquote::before {
   content: '<blockquote>';
 }
 
-div:before {
+div::before {
   content: '<div>';
 } */
 
@@ -138,19 +138,19 @@ h4 {
   font-weight: 400;
 }
 
-h1:before {
+h1::before {
   content: '<h1>';
 }
 
-h2:before {
+h2::before {
   content: '<h2>';
 }
 
-h3:before {
+h3::before {
   content: '<h3>';
 }
 
-h4:before {
+h4::before {
   content: '<h4>';
 }
 
@@ -159,15 +159,15 @@ ol {
   list-style: none;
 }
 
-ul:before {
+ul::before {
   content: '<ul>';
 }
 
-ol:before {
+ol::before {
   content: '<ol>';
 }
 
-li:before {
+li::before {
   content: '<li>';
 }
 
@@ -179,27 +179,27 @@ svg {
   width: 1rem;
 }
 
-svg:before {
+svg::before {
   content: '<svg>';
 }
 
-path:before {
+path::before {
   content: '<path>';
 }
 
-a:before {
+a::before {
   content: '<a>';
 }
 
-/* a:after {
+/* a::after {
   content: ' ' attr(href);
 } */
 
-strong:before {
+strong::before {
   content: '<strong>';
 }
 
-span:before {
+span::before {
   content: '<span>';
 }
 
