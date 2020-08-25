@@ -1,0 +1,100 @@
+main {
+  padding-top: 0;
+  h2 {
+    background-color: unset;
+    color: var(--color-primary);
+  }
+  // stylelint-disable-next-line selector-no-qualifying-type
+  section.container {
+    max-width: 140ch;
+  }
+}
+
+#styles {
+  margin: 0;
+}
+
+.features__flexible {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 1rem);
+  margin-right: -0.5rem;
+  margin-left: -0.5rem;
+
+  a span {
+    clip-path: circle(50% at 100% 50%);
+    background-color: var(--color-background);
+    display: inline-block;
+    width: 1rem;
+    position: absolute;
+    right: 0;
+    height: 1.5rem;
+    bottom: 0.25rem;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0.5rem;
+      color: var(--color-background);
+      content: "✔";
+    }
+  }
+
+  a:visited span::after {
+    color: var(--color-secondary);
+  }
+
+  li {
+    flex: 1 1 20ch;
+    margin: 0.5rem;
+    padding: 0;
+    transition: box-shadow 180ms ease-in-out;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 30vw 15vh rgba(213, 34, 87, 0.3);
+    place-content: end;
+
+    span {
+      border: none;
+    }
+
+    > span {
+      padding-right: 1.5rem;
+    }
+
+    > span a {
+      font-size: 1.15rem;
+    }
+
+    &:nth-child(even) {
+      box-shadow: inset 30vw 15vh rgba(58, 3, 255, 0.15);
+
+      > span {
+        background-color: var(--color-primary);
+      }
+
+      a:visited span::after {
+        color: var(--color-primary);
+      }
+    }
+
+    &:hover {
+      box-shadow: inset 30vw 15vh transparent;
+    }
+  }
+}
+
+/* Gap for flex is currently only available in Firefox, so we have to extra scope it */
+@supports (gap: 1rem) and (-moz-appearance: none) {
+  .features__flexible {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    gap: 1rem;
+    li {
+      margin: 0;
+    }
+  }
+}
