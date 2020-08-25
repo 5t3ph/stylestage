@@ -17,18 +17,18 @@ main {
   margin-right: -0.5rem;
   margin-left: -0.5rem; }
   .features__flexible a span {
-    clip-path: circle(50% at 100% 50%);
-    background-color: var(--color-background);
     display: inline-block;
-    width: 1rem;
     position: absolute;
     right: 0;
+    bottom: 0.25rem;
+    width: 1rem;
     height: 1.5rem;
-    bottom: 0.25rem; }
+    background-color: var(--color-background);
+    clip-path: circle(50% at 100% 50%); }
     .features__flexible a span::after {
       position: absolute;
-      bottom: 0;
       right: 0;
+      bottom: 0;
       width: 0.5rem;
       color: var(--color-background);
       content: "✔"; }
