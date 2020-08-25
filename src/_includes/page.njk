@@ -7,6 +7,9 @@
     <title>{{ title }} | {{ meta.siteName }}</title>
     <meta name="description" content="{{ description }}" />
     <link href="{{ '/styles/css/main-stage.css' | url }}" rel="stylesheet" />
+    {%- if page.url == '/styles/' %}
+    <link href="{{ '/styles/css/showcase.css' | url }}" rel="stylesheet" />
+    {% endif -%}
     <link rel="icon" href="{{ '/favicon.png' | url }}" />
     <link
       rel="alternate"
@@ -23,76 +26,6 @@
     main {
       padding-bottom: 10vh;
     }
-    {% if page.url == '/styles/' %}
-    main {
-      padding-top: 0;
-    }
-    main h2 {
-      background-color: unset;
-      color: var(--color-primary);
-    }
-    main section.container {
-      max-width: 140ch;
-    }
-    #styles {
-      margin: 0;
-    }
-    .features__flexible {
-      display: flex;
-      flex-wrap: wrap;
-      margin-left: -.5rem;
-      margin-right: -.5rem;
-      width: calc(100% + 1rem);
-    }
-    .features__flexible li {
-      background-color:rgba(213, 34, 87, 0.3);
-      flex: 1 1 20ch;
-      margin: .5rem;
-    }
-    /* Gap for flex is currently only available in Firefox, so we have to extra scope it */
-    @supports (gap: 1rem) and (-moz-appearance: none) {
-      .features__flexible {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        width: 100%;
-        gap: 1rem;
-      }
-      .features__flexible li {
-        margin: 0;
-      }
-    }
-    .features__flexible li span {
-      border: none;
-    }
-    .features__flexible li:nth-child(even) {
-      background-color: rgba(58, 3, 255, 0.1);
-    }
-    .features__flexible li:nth-child(even) span {
-      background-color: var(--color-primary);
-    }
-    .features__flexible a span {
-      width: 100%;
-    }
-    .features__flexible a span::after {
-      content: "✓ Viewed!";
-      position: absolute;
-      bottom: 0.5em;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      color: #D7BEC7;
-    }
-    .features__flexible li:nth-child(even) a span::after {
-      color: #C3E3F9;
-    }
-    .features__flexible a:visited span::after {
-      color: var(--color-secondary);
-    }
-    .features__flexible li:nth-child(even) a:visited span::after {
-      color: var(--color-primary);
-    }
-    {% endif %}
     {% if page.url == '/guidelines/' or page.url == '/thanks/' or page.url == '/subscribe/' %}
     article p:first-of-type {
       font-size: var(--font-size-h4);

@@ -1,0 +1,73 @@
+@charset "UTF-8";
+main {
+  padding-top: 0; }
+  main h2 {
+    background-color: unset;
+    color: var(--color-primary); }
+  main section.container {
+    max-width: 140ch; }
+
+#styles {
+  margin: 0; }
+
+.features__flexible {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% + 1rem);
+  margin-right: -0.5rem;
+  margin-left: -0.5rem; }
+  .features__flexible a span {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 0.25rem;
+    width: 1rem;
+    height: 1.5rem;
+    background-color: var(--color-background);
+    clip-path: circle(50% at 100% 50%); }
+    .features__flexible a span::after {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0.5rem;
+      color: var(--color-background);
+      content: "✔"; }
+  .features__flexible a:visited span::after {
+    color: var(--color-secondary); }
+  .features__flexible li {
+    flex: 1 1 20ch;
+    margin: 0.5rem;
+    padding: 0;
+    transition: box-shadow 180ms ease-in-out;
+    background-color: var(--color-secondary);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    box-shadow: inset 30vw 15vh rgba(213, 34, 87, 0.3);
+    place-content: end; }
+    .features__flexible li span {
+      border: none; }
+    .features__flexible li > span {
+      padding-right: 1.5rem; }
+    .features__flexible li > span a {
+      font-size: 1.15rem; }
+    .features__flexible li:nth-child(even) {
+      background-color: var(--color-primary);
+      box-shadow: inset 30vw 15vh rgba(58, 3, 255, 0.15); }
+      .features__flexible li:nth-child(even) > span {
+        background-color: var(--color-primary); }
+      .features__flexible li:nth-child(even) a:visited span::after {
+        color: var(--color-primary); }
+    .features__flexible li:hover {
+      box-shadow: inset 30vw 15vh transparent; }
+
+/* Gap for flex is currently only available in Firefox, so we have to extra scope it */
+@supports (gap: 1rem) and (-moz-appearance: none) {
+  .features__flexible {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    gap: 1rem; }
+    .features__flexible li {
+      margin: 0; } }
