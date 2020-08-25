@@ -18,6 +18,6 @@ layout: page
 		<span>
 			Awaiting your contribution!
 		</span>
-	</li>
+	</li> 
 {%- endfor -%}
 </ul>

@@ -25,7 +25,7 @@ const slugify = require("slugify");
   });
 
   // Create a `previews` directory in the public folder
-  const dir = path.resolve(__dirname, "../src/img/styles");
+  const dir = path.resolve(__dirname, "../public/img/styles");
   if (!fs.existsSync(dir)) fs.mkdirSync(dir);
 
   // Go over all the posts
