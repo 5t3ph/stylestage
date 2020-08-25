@@ -39,8 +39,10 @@ main {
     margin: 0.5rem;
     padding: 0;
     transition: box-shadow 180ms ease-in-out;
-    background-size: cover;
+    background-color: var(--color-secondary);
     background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
     box-shadow: inset 30vw 15vh rgba(213, 34, 87, 0.3);
     place-content: end; }
     .features__flexible li span {
@@ -50,6 +52,7 @@ main {
     .features__flexible li > span a {
       font-size: 1.15rem; }
     .features__flexible li:nth-child(even) {
+      background-color: var(--color-primary);
       box-shadow: inset 30vw 15vh rgba(58, 3, 255, 0.15); }
       .features__flexible li:nth-child(even) > span {
         background-color: var(--color-primary); }

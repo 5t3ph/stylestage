@@ -21,7 +21,7 @@ const slugify = require("slugify");
   await page.setViewport({
     width: 1300,
     height: 800,
-    deviceScaleFactor: 0.45,
+    deviceScaleFactor: 0.35,
   });
 
   // Create a `previews` directory in the public folder
@@ -65,12 +65,13 @@ const slugify = require("slugify");
       await page.waitFor(250);
     }
 
-    console.log(`Image: ${slug}.png`);
+    console.log(`Image: ${slug}.jpg`);
 
     // Save a screenshot to public/img/slug-of-post.png
     await page.screenshot({
-      path: `${dir}/${slug}.png`,
-      type: "png",
+      path: `${dir}/${slug}.jpg`,
+      type: "jpeg",
+      quality: 80,
       clip: { x: 0, y: 0, width: 1300, height: 800 },
     });
   }

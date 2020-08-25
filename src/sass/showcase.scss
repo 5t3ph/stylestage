@@ -22,19 +22,19 @@ main {
   margin-left: -0.5rem;
 
   a span {
-    clip-path: circle(50% at 100% 50%);
-    background-color: var(--color-background);
     display: inline-block;
-    width: 1rem;
     position: absolute;
     right: 0;
-    height: 1.5rem;
     bottom: 0.25rem;
+    width: 1rem;
+    height: 1.5rem;
+    background-color: var(--color-background);
+    clip-path: circle(50% at 100% 50%);
 
     &::after {
       position: absolute;
-      bottom: 0;
       right: 0;
+      bottom: 0;
       width: 0.5rem;
       color: var(--color-background);
       content: "✔";
@@ -50,8 +50,10 @@ main {
     margin: 0.5rem;
     padding: 0;
     transition: box-shadow 180ms ease-in-out;
-    background-size: cover;
+    background-color: var(--color-secondary);
     background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
     box-shadow: inset 30vw 15vh rgba(213, 34, 87, 0.3);
     place-content: end;
 
@@ -68,6 +70,7 @@ main {
     }
 
     &:nth-child(even) {
+      background-color: var(--color-primary);
       box-shadow: inset 30vw 15vh rgba(58, 3, 255, 0.15);
 
       > span {
