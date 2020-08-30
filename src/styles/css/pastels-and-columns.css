@@ -1,0 +1,1060 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Carol McKay
+* 
+* Title: Pastels & Columns
+* Author: Carol McKay
+* Website: https://webaware.com.au/
+* Twitter: @carolmckayau
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/pastels-and-columns/
+*/
+
+@charset "UTF-8";
+/*! fonts */
+@import url(https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Rowdies:wght@700&Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+/*! constants */
+/*! https://contrast-ratio.com/#%23333-on-wheat - text
+	https://contrast-ratio.com/#teal-on-wheat - buttons
+*/
+:root {
+  /*! site title text */--ff-cursive: "Rowdies",cursive;
+  /*! body text */--ff-serif: "Libre Caslon Text",serif;
+  /*! mobile body text */--ff-ss: "Open Sans",sans-serif;
+  --fs-h1: calc(2rem + 6vw);
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.5rem;
+  --fs-h4: 1.25rem;
+  --fs-text: 0.95rem;
+  --fw-text: normal;
+  --col-accent: DarkOrchid;
+  --col-cta: Teal;
+  --col-outline: var(--col-accent);
+  --col-h1-fallback: #777;
+  --col-text: rgb(51, 51, 51);
+  --col-text-alpha: rgba(51, 51, 51, 0.5);
+  --col-bg: wheat;
+  --col-after-bg: rgba(255, 255, 255, 0.4);
+  --col-after-opacity: 0.7;
+  --col-menu: white;
+  --col-menu-hover: --col-bg;
+  --col-selection: var(--col-bg);
+  --col-selectionbg: var(--col-text);
+  --col-placeholder: #555;
+  --col-button-text: var(--col-menu);
+  --col-button-text-hover: var(--col-menu);
+  --col-button-bg: var(--col-cta);
+  --col-button-bg-hover: var(--col-text);
+  --rule-colour: rgba(0, 0, 0, 0.2);
+  --rule: 1px dashed var(--rule-colour);
+  --h1-bg: url(https://source.unsplash.com/ux7TZRK7tDo/1600x900);
+  --files-bg: url(https://source.unsplash.com/KOtu2rPqWs4/1600x900);
+  --padding-page-side: 2em;
+  --padding: 3em;
+  --column-width: 33rem;
+  --column-gap: 7rem;
+  --columns-max-width: calc((var(--column-width) * 2) + var(--column-gap));
+  /*! for webkit browsers */font-size: 16px;
+  color: var(--col-text);
+  background: var(--col-bg);
+  --col-sb-thumb: salmon;
+  --col-sb-track: var(--col-cta)
+}
+nav {
+  --col-outline: var(--col-menu)
+}
+@media (prefers-color-scheme:dark) {
+  /*! https://contrast-ratio.com/#wheat-on-%23333 - text
+  	https://contrast-ratio.com/#salmon-on-%23333 - buttons
+  */
+:root {
+    --col-text: wheat;
+    --col-text-alpha: rgba(245, 222, 179, 0.5);
+    --col-h1-fallback: var(--col-text);
+    --col-bg: #333;
+    --col-cta: DarkOrchid;
+    --col-accent: salmon;
+    --col-after-bg: transparent;
+    --col-menu-hover: var(--col-text);
+    --col-button-text: var(--col-bg);
+    --col-button-text-hover: var(--col-bg);
+    --col-button-bg: var(--col-accent);
+    --col-after-opacity: 1;
+    --rule-colour: rgba(255, 255, 255, 0.2);
+    --outline-after: 1px dashed rgba(245, 222, 179, 0.2);
+    --h1-bg: url(https://source.unsplash.com/KOtu2rPqWs4/1600x900);
+    --files-bg: url(https://source.unsplash.com/ux7TZRK7tDo/1600x900)
+  }
+  #files .container h3 {
+    --col-text: var(--col-bg)
+  }
+  #files .container {
+    --col-button-text: var(--col-menu);
+    --col-button-text-hover: var(--col-menu);
+    --col-button-bg: var(--col-cta);
+    --col-button-bg-hover: var(--col-bg);
+    --pink-bg: hsl(70, 14%, 32%);
+    --pink-bg-transparent: hsla(70, 14%, 32%, 0.8)
+  }
+}
+/*! sass mixins */
+/*! browser resets */
+/*! experience */
+html {
+  scroll-behavior: smooth;
+  /*! when js isn't doing it */scrollbar-color: var(--col-sb-thumb) var(--col-sb-track)
+}
+@media (prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior: auto
+  }
+}
+/*! layout including margins */
+/*! https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap */
+body {
+  width: 100%;
+  min-height: 100vh;
+  min-block-size: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+  /*! touch - smoother scrolling for iphone */-webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-wrap: anywhere;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  font-weight: var(--fw-text);
+  line-height: 1.6
+}
+a[class],
+button,
+input {
+  overflow-wrap: normal
+}
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+img,
+picture {
+  max-width: 100%;
+  height: auto
+}
+dd,
+li,
+p {
+  max-width: 70ch
+}
+form li,
+nav li {
+  max-width: none
+}
+/*! stop pre from overflowing the container on mobile */
+pre {
+  white-space: pre-line
+}
+/*! margins */
+* {
+  margin-top: 0;
+  -webkit-margin-before: 0;
+  margin-block-start: 0
+}
+.container ol,
+.container p,
+.container ul {
+  margin-bottom: 1.6em;
+  -webkit-margin-after: 1.6em;
+  margin-block-end: 1.6em
+}
+* + :last-child {
+  margin-bottom: 0;
+  -webkit-margin-after: 0;
+  margin-block-end: 0
+}
+figure,
+nav li {
+  margin: 0
+}
+dd {
+  margin-left: 0;
+  -webkit-margin-start: 0;
+  margin-inline-start: 0
+}
+li {
+  margin-bottom: .5em;
+  -webkit-margin-after: .5em;
+  margin-block-end: .5em
+}
+nav ul {
+  list-style-type: none;
+  padding: 1em 2em;
+  color: var(--col-menu);
+  background-color: var(--col-cta);
+  position: relative
+}
+nav a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700
+}
+aside ul {
+  padding-left: 0;
+  list-style-type: none
+}
+/*! colours and fonts */
+/*! Inherit fonts for inputs and buttons */
+button,
+input,
+select,
+textarea {
+  font: inherit
+}
+a {
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  /*! focus outline */outline-offset: .15em;
+  outline: transparent solid 2px;
+  transition: outline-color 150ms ease-in
+}
+@media (any-pointer:coarse) {
+  a {
+    padding: .6rem 0
+  }
+}
+a:focus {
+  outline-color: var(--col-outline)
+}
+::selection {
+  color: var(--col-selection);
+  background-color: var(--col-selectionbg)
+}
+::-webkit-input-placeholder {
+  color: var(--col-placeholder)
+}
+:-ms-input-placeholder {
+  color: var(--col-placeholder)
+}
+::-ms-input-placeholder {
+  color: var(--col-placeholder)
+}
+::placeholder {
+  color: var(--col-placeholder)
+}
+svg {
+  fill: currentColor
+}
+/*! cursors, focus outlines */
+details summary {
+  cursor: pointer;
+  /*! chrome fix */outline: 0;
+  /*! edge fix */display: block
+}
+/*! see constants */
+body {
+  font-family: var(--ff-serif)
+}
+@media only screen and (max-width:83.5em) {
+  /*! larger font size to cater for mobile retina screens */
+:root {
+    --fs-h1: calc(2rem + 8vmax)
+  }
+  .container,
+  nav {
+    --fs-text: calc(0.95rem * 1.3)
+  }
+  .container a,
+  .container li,
+  .container p,
+  nav a,
+  nav li,
+  nav p {
+    font-family: var(--ff-ss)
+  }
+}
+header p {
+  max-width: none
+}
+/*!see animations for color of h1 */
+h1 {
+  font-family: var(--ff-cursive);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  text-align: center;
+  background-image: var(--h1-bg),linear-gradient(var(--col-h1-fallback),var(--col-h1-fallback));
+  background-size: var(--h1-bg-size,auto);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  margin: .75em 0
+}
+@media screen and (max-width:600px) {
+  h1 {
+    margin: 1em 0 .75em
+  }
+}
+h2 {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  font-size: var(--fs-h2)
+}
+h3 {
+  font-size: var(--fs-h3)
+}
+h4 {
+  font-size: var(--fs-h4)
+}
+li,
+p {
+  font-size: var(--fs-text)
+}
+blockquote {
+  margin: var(--padding);
+  column-span: all;
+  font-style: italic
+}
+blockquote p {
+  font-size: 138%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-margin-start: auto;
+  margin-inline-start: auto;
+  -webkit-margin-end: auto;
+  margin-inline-end: auto
+}
+blockquote :last-child {
+  margin-bottom: 0
+}
+header .container {
+  text-align: center
+}
+header .container h2,
+header .container p {
+  margin-bottom: 1rem;
+  -webkit-margin-after: 1rem;
+  margin-block-end: 1rem
+}
+#main .container > p:first-of-type::first-letter {
+  color: var(--col-bg);
+  background-color: var(--col-accent);
+  padding: .2em .1em;
+  margin-right: .1em;
+  -webkit-margin-end: .1em;
+  margin-inline-end: .1em;
+  font-size: var(--padding);
+  line-height: 1;
+  float: left
+}
+ol li::marker {
+  font-size: 1.5em
+}
+.skip-link {
+  position: absolute;
+  top: .75em;
+  background: var(--col-bg);
+  transition: font-size .1s ease-in,color .1s ease-in
+}
+.skip-link:not(:hover):not(:focus) {
+  font-size: 90%;
+  color: var(--col-text-alpha)
+}
+.skip-link:focus,
+.skip-link:hover {
+  color: var(--col-text)
+}
+.skip-link::after {
+  content: "To top of content ^";
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: .25em .75em;
+  color: var(--col-text);
+  background: var(--col-bg);
+  opacity: 0;
+  animation: 50ms 10s forwards top-link
+}
+/*! menu and links */
+main:focus {
+  /*! turn off annoying outline in chrome */outline: 0
+}
+nav::before {
+  content: "Menu";
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  background: var(--col-bg)
+}
+nav ul::after,
+nav ul::before {
+  position: absolute;
+  left: .25em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--col-bg);
+  -webkit-clip-path: polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  clip-path: polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)
+}
+nav ul::before {
+  top: .25em;
+  content: "menu";
+  color: transparent
+}
+nav ul::after {
+  bottom: .25em;
+  content: " "
+}
+nav ul li:first-child::after,
+nav ul li:last-child::after {
+  content: " ";
+  position: absolute;
+  right: .25em;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: var(--col-bg);
+  -webkit-clip-path: polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+  clip-path: polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%)
+}
+nav ul li:first-child::after {
+  top: .25em
+}
+nav ul li:last-child::after {
+  bottom: .25em
+}
+nav ul a {
+  /*! make a tag full width of container */display: block
+}
+nav ul a[href^="#"] {
+  position: relative;
+  padding-left: 1.25em
+}
+nav ul a[href^="#"]::before {
+  position: absolute;
+  left: 0;
+  font-family: FontAwesome;
+  font-weight: 400;
+  /*! hashtag symbol */content: ""
+}
+nav ul a:active,
+nav ul a:focus,
+nav ul a:hover {
+  color: var(--col-menu-hover);
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--col-accent);
+  text-decoration-color: var(--col-accent)
+}
+aside {
+  padding: var(--padding) 0 0;
+  border-bottom: var(--rule)
+}
+@media screen and (max-width:900px) {
+  nav {
+    width: 100%;
+    margin: var(--padding) 0 0;
+    --mobile-menu-gap: 1.25em
+  }
+  nav::before {
+    display: none
+  }
+  nav ul {
+    /*! flex fallback */display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: calc(-1 * var(--mobile-menu-gap));
+    margin-bottom: 0;
+    /*! better layout with grid */display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(-webkit-max-content,10em));
+    grid-template-columns: repeat(auto-fit,minmax(max-content,10em))
+  }
+  nav ul li {
+    flex: 1 0 0;
+    margin-right: var(--mobile-menu-gap)
+  }
+  @supports (display:grid) {
+    nav ul {
+      column-gap: var(--mobile-menu-gap);
+      margin-right: 0
+    }
+    nav ul li {
+      margin-right: 0
+    }
+  }
+  aside {
+    width: 100%
+  }
+  body {
+    --padding-page-side: 2em
+  }
+  header h1 {
+    position: relative;
+    max-width: 8ch;
+    margin-left: auto;
+    -webkit-margin-start: auto;
+    margin-inline-start: auto;
+    margin-right: auto;
+    -webkit-margin-end: auto;
+    margin-inline-end: auto
+  }
+  header h1::before {
+    content: " ";
+    position: absolute;
+    width: 2ch;
+    height: .18em;
+    top: 52%;
+    left: 51%;
+    transform: translateX(-50%);
+    background-image: var(--h1-bg),linear-gradient(var(--col-h1-fallback),var(--col-h1-fallback));
+    background-position: left bottom
+  }
+}
+aside a {
+  color: inherit
+}
+@media screen and (min-width:901px) {
+  :root {
+    --position: fixed
+  }
+  h1 {
+    line-height: initial;
+    --h1-bg-size: cover
+  }
+  nav {
+    position: var(--position);
+    z-index: 1;
+    height: 1px;
+    overflow: visible;
+    inset-block-start: 0;
+    right: 0;
+    inset-inline-end: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    inset-block-start: 0;
+    left: 100%;
+    inset-inline-start: 100%;
+    margin-right: -2em
+  }
+  body {
+    /*! to cater for nav position sticky */overflow-x: hidden
+  }
+  aside {
+    padding: var(--padding) 0;
+    background-color: var(--col-bg);
+    border: var(--rule);
+    transition: transform .3s ease-in;
+    position: var(--position);
+    bottom: 0;
+    inset-block-end: 0;
+    height: 18rem;
+    block-size: 18rem
+  }
+  /*! aside */
+.profile {
+    bottom: var(--column-gap);
+    inset-block-end: var(--column-gap);
+    left: 0;
+    inset-inline-start: 0;
+    padding: 1em var(--padding) 1em 1em
+  }
+  #profile-title,
+  #styles h2 {
+    color: var(--col-menu);
+    background-color: var(--col-cta);
+    margin: 0;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    padding: .5em 0 .5em .25em;
+    white-space: nowrap;
+    height: 100%;
+    inline-size: 100%
+  }
+  #profile-title {
+    right: 0;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    transform-origin: center;
+    text-align: right
+  }
+  /*! aside */
+#styles {
+    width: -webkit-max-content;
+    width: max-content;
+    padding: 1em 1em 1em var(--padding);
+    bottom: var(--column-gap);
+    inset-block-end: var(--column-gap);
+    left: 100%;
+    inset-inline-start: 100%;
+    transform: translateX(-2.25rem)/*! seperate so it doesn't break :hover in edge */
+  }
+  #styles:active,
+  #styles:focus,
+  #styles:hover {
+    transform: translateX(-100%);
+    z-index: 2
+  }
+  #styles:focus-within {
+    transform: translateX(-100%);
+    z-index: 2
+  }
+  #styles h2 {
+    left: 0;
+    font-size: var(--fs-h4);
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr
+  }
+}
+/*! 83.5em (1336px) - ipad pro landscape */
+@media only screen and (min-width:901px) and (max-width:83.5em) {
+  nav {
+    transform: translateX(85%);
+    transition: transform .3s ease-in/*! focus-within seperate so it doesn't break :hover in edge */
+  }
+  nav:active,
+  nav:focus,
+  nav:hover {
+    transform: translateX(0)
+  }
+  nav:focus-within {
+    transform: translateX(0)
+  }
+  .profile {
+    transform: translateX(-88%)/*! focus-within seperate so it doesn't break :hover in edge */
+  }
+  .profile:active,
+  .profile:focus,
+  .profile:hover {
+    transform: translateX(0);
+    z-index: 2
+  }
+  .profile:focus-within {
+    transform: translateX(0);
+    z-index: 2
+  }
+}
+/*! 83.5em (1336px) - ipad pro landscape */
+@media only screen and (min-width:83.51em) {
+  nav {
+    transform: translateX(82%);
+    transition: transform .3s ease-in/*! focus-within seperate so it doesn't break :hover in edge */
+  }
+  nav:active,
+  nav:focus,
+  nav:hover {
+    transform: translateX(0)
+  }
+  nav:focus-within {
+    transform: translateX(0)
+  }
+  .profile {
+    transform: translateX(-85%)/*! focus-within seperate so it doesn't break :hover in edge */
+  }
+  .profile:active,
+  .profile:focus,
+  .profile:hover {
+    transform: translateX(0);
+    z-index: 2
+  }
+  .profile:focus-within {
+    transform: translateX(0);
+    z-index: 2
+  }
+}
+/*! animations */
+@keyframes site-title {
+  0% {
+    color: inherit
+  }
+  100% {
+    color: transparent
+  }
+}
+header h1 {
+  animation: 3s linear forwards site-title;
+  position: relative
+}
+@keyframes top-link {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1
+  }
+}
+/*! button look */
+#files a,
+.link-allstyles,
+.link-guidelines,
+.profile .container > a {
+  text-align: center;
+  text-decoration: none;
+  color: var(--col-button-text);
+  background-color: var(--col-button-bg);
+  padding: .25em 1em;
+  border-radius: 1em;
+  background-clip: padding-box;
+  border: 6px double var(--col-button-bg);
+  margin: .25em;
+  transition: color 150ms ease-in,background-color 150ms ease-in,border-color 150ms ease-in
+}
+#files a:active,
+#files a:focus,
+#files a:hover,
+.link-allstyles:active,
+.link-allstyles:focus,
+.link-allstyles:hover,
+.link-guidelines:active,
+.link-guidelines:focus,
+.link-guidelines:hover,
+.profile .container > a:active,
+.profile .container > a:focus,
+.profile .container > a:hover {
+  color: var(--col-button-text-hover);
+  background-color: var(--col-button-bg-hover);
+  border-color: var(--col-button-bg-hover)
+}
+.link-allstyles,
+.profile .container > a {
+  display: block;
+  width: -webkit-max-content;
+  width: max-content;
+  margin: 3em 0
+}
+@media screen and (min-width:901px) {
+  .link-allstyles,
+  .profile .container > a {
+    margin: 3em auto
+  }
+}
+/*! layout */
+body {
+  align-items: center;
+  padding: 1em var(--padding-page-side) var(--padding-page-side)
+}
+.link-github {
+  position: relative;
+  display: inline-flex;
+  display: inline flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end
+}
+.link-github span {
+  /*! use display flex to shrink span to the size of it's content (svg) */display: flex
+}
+.link-github svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--col-accent)
+}
+header .link-github {
+  justify-content: center
+}
+a:active,
+a:hover {
+  -webkit-text-decoration-style: dashed;
+  text-decoration-style: dashed;
+  /*! future css */text-decoration-offset: .25em
+}
+#files .container,
+.page-footer .container,
+section.container {
+  padding: 3rem 0;
+  border-bottom: var(--rule)
+}
+/*! https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style
+for browsers that support list ::marker - currently only firefox
+system font icons picked from the character map
+https://emojipedia.org/bouquet/ */
+@counter-style style-counter {
+  system: cyclic;
+  symbols: "🌂" "🍃" "🍍" "🍆" "🐇" "🐔" "🐋" "🎆" "🎇" "🎏" "🐄" "🐘" "🐙" "💐";
+  suffix: " ";
+  speak-as: numbers
+}
+#about section + section ul {
+  list-style-type: style-counter;
+  padding-left: 1em
+}
+#about section + section ul li {
+  margin: 2em 0 2em 1em
+}
+#about section + section ul li::marker {
+  font-size: 2em
+}
+@supports not (list-style-type:style-counter) {
+  #about section + section ul {
+    list-style-type: none
+  }
+  #about section + section ul li::before {
+    /*! decoration, space */content: "🌂 ";
+    font-size: 2.5em;
+    margin-left: -1.25em;
+    -webkit-margin-start: -1.25em;
+    margin-inline-start: -1.25em
+  }
+}
+#about section + section ul li::after {
+  display: block;
+  margin: .25em 0 1em;
+  padding: .5em;
+  background-color: var(--col-after-bg);
+  opacity: var(--col-after-opacity);
+  outline: var(--outline-after);
+  word-break: break-all
+}
+#about section + section ul li:nth-of-type(1)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Glossary/Flexbox"
+}
+#about section + section ul li:nth-of-type(2)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Glossary/Grid"
+}
+#about section + section ul li:nth-of-type(3)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties"
+}
+#about section + section ul li:nth-of-type(4)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/@supports"
+}
+#about section + section ul li:nth-of-type(5)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/gradient"
+}
+#about section + section ul li:nth-of-type(6)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/animation"
+}
+#about section + section ul li:nth-of-type(7)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d"
+}
+#about section + section ul li:nth-of-type(8)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"
+}
+#about section + section ul li:nth-of-type(9)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-within"
+}
+#about section + section ul li:nth-of-type(10)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+}
+#about section + section ul li:nth-of-type(11)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/clamp"
+}
+#about section + section ul li:nth-of-type(12)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS#Viewport_units"
+}
+#about section + section ul li:nth-of-type(13)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-margin"
+}
+#about section + section ul li:nth-of-type(14)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning#position_sticky"
+}
+#about section + section ul li:nth-of-type(15)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/display#Which_syntax_should_you_use_now"
+}
+#about section + section ul li:nth-of-type(16)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+}
+#about section + section ul li:nth-of-type(17)::after {
+  content: "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide"
+}
+#files .container {
+  --pink-bg: hsl(323, 23%, 89%);
+  --pink-bg-transparent: hsla(323, 23%, 89%, 0.8);
+  padding: var(--padding);
+  display: grid;
+  grid-template-columns: minmax(1em,1fr) repeat(4,-webkit-max-content) minmax(1em,1fr);
+  grid-template-columns: minmax(1em,1fr) repeat(4,max-content) minmax(1em,1fr);
+  grid-template-rows: -webkit-max-content repeat(3,auto);
+  grid-template-rows: max-content repeat(3,auto);
+  row-gap: var(--padding);
+  align-content: start;
+  background-color: var(--pink-bg);
+  background-image: linear-gradient(var(--pink-bg-transparent),var(--pink-bg-transparent)),var(--files-bg);
+  background-repeat: no-repeat,no-repeat;
+  background-size: 90% 88%,cover;
+  background-position: 50% 2em,0 0
+}
+#files .container h3 {
+  grid-column: 2/-2;
+  color: var(--col-text)
+}
+#files .container a {
+  align-self: start
+}
+#files .container .link-downloadcss {
+  grid-column: 2/span 2
+}
+#files .container .link-downloadhtml {
+  grid-column: 3/5
+}
+#files .container .link-codepen {
+  grid-column: 4/span 2
+}
+@media only screen and (max-width:600px) {
+  blockquote {
+    margin-left: 0;
+    margin-right: 0
+  }
+  #files .container {
+    display: flex;
+    flex-direction: column
+  }
+  #files .container h3 {
+    text-align: center;
+    margin-bottom: 0
+  }
+  #files .container a:nth-of-type(1) {
+    align-self: flex-start
+  }
+  #files .container a:nth-of-type(2) {
+    align-self: center
+  }
+  #files .container a:nth-of-type(3) {
+    align-self: flex-end
+  }
+  #files .container a:last-of-type {
+    margin-bottom: 1em
+  }
+}
+@media only screen and (min-width:601px) and (max-width:900px) {
+  #files .container {
+    row-gap: var(--padding)
+  }
+  #files .container h3 {
+    margin-bottom: 0
+  }
+}
+.page-footer ul {
+  /*! for when in columns */break-inside: avoid-column
+}
+.page-footer ul li {
+  /*! because the a tags have padding */margin-bottom: 0
+}
+.page-footer {
+  margin-bottom: var(--padding)
+}
+.page-footer .container::before {
+  /*! firefox */content: url(https://source.unsplash.com/u_kMWN-BWyU/160x220);
+  /*! webkit */content: url(https://source.unsplash.com/u_kMWN-BWyU/160x220)/"Photo of a white rabbit for cuteness value";
+  /*! safari */alt: "Photo of a white rabbit for cuteness value";
+  display: inline-block;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
+  /*! hide the alt text in webkit - why is it displaying anyway?! */width: 160px;
+  height: 220px;
+  overflow: hidden
+}
+@media screen and (max-width:580px) {
+  .page-footer .container {
+    /*! display grid to center bunny */display: grid
+  }
+  .page-footer .container::before {
+    margin: 0 auto 1em/*! margin auto to center bunny */
+  }
+}
+@media screen and (min-width:581px) {
+  .page-footer .container::before {
+    float: right;
+    margin: .25em;
+    -webkit-shape-outside: circle(50%);
+    shape-outside: circle(50%);
+    -webkit-shape-margin: 1em;
+    shape-margin: 1em;
+    transform: translateX(-25%)
+  }
+}
+#sponsor-footer {
+  margin-top: auto
+}
+#main .container > p {
+  /*! so that first letter float doesn't fall outside of the paragraph block */display: flow-root
+}
+/*! desktop layout */
+@media screen and (min-width:901px) {
+  body {
+    padding-bottom: var(--column-gap)
+  }
+  #main,
+  .page-footer {
+    /*! cater for sticky nav */padding: 0 2em
+  }
+  .page-footer .container,
+  section.container {
+    columns: var(--column-width) 2;
+    column-gap: var(--column-gap);
+    column-rule: var(--rule);
+    /*! max width for webkit browsers */max-width: var(--columns-max-width)
+  }
+  .page-footer .container h2,
+  section.container h2 {
+    column-span: all
+  }
+  /*! short content so don't break into next column */
+#contribute section.container {
+    columns: unset;
+    max-width: var(--column-width)
+  }
+}
+@media screen and (min-width:83.5em) {
+  #contribute {
+    display: grid;
+    grid-template-columns: var(--column-width) var(--column-gap) var(--column-width);
+    grid-template-rows: auto auto;
+    grid-template-areas: "contribute-intro . files" "contribute-steps . files"
+  }
+  #contribute section:nth-of-type(1) {
+    grid-area: contribute-intro
+  }
+  #contribute section:nth-of-type(2) {
+    grid-area: contribute-steps
+  }
+  #contribute footer {
+    grid-area: files;
+    /*! use display grid to stretch content */display: grid
+  }
+}
+/*! scrollbar style */
+/*! You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers: */
+/*! the entire scrollbar */
+::-webkit-scrollbar {
+  width: 14px;
+  height: 14px
+}
+/*! the track (progress bar) of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: var(--col-sb-track)
+}
+/*! the draggable scrolling handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--col-sb-thumb)
+}
+/*! the buttons on the scrollbar (arrows pointing upwards and downwards) */
+::-webkit-scrollbar-button {
+  /*! color: var(--col-sb-track);
+  background-color: var(--col-sb-thumb); - not used because I have set it's height to zero */height: 0
+}
+/*!	Resources:
+	- https://developer.mozilla.org/en-US/
+	- https://en.wikipedia.org/wiki/Web_colors
+	- https://contrast-ratio.com
+	- https://fonts.google.com/ including a variable font
+	- https://unsplash.com/photos/
+	- - Thanks to Annie Spratt for sharing their work on Unsplash.
+	- - Thanks to Satyabrata sm for sharing their work on Unsplash.
+	- https://bennettfeely.com/clippy/
+	- https://fontawesome.com/
+	- https://emojipedia.org/
+*/
+/*! Date: August 2020
+	Stylesheet Author: Carol McKay
+	Website: https://webaware.com.au/
+*/

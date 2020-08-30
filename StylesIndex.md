@@ -8,6 +8,8 @@
 
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
+[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
+
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
 [Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
@@ -15,8 +17,6 @@
 [Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
-
-[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
 
 [Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
@@ -59,3 +59,5 @@
 [Jet Set](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/jet-set.css) By Cory Birdsong
 
 [Geocities](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/geocities.css) By whitep4nth3r
+
+[Pastels &amp; Columns](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pastels-and-columns.css) By Carol McKay
