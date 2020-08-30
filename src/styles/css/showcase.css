@@ -36,6 +36,7 @@ main {
     color: var(--color-secondary); }
   .features__flexible li {
     flex: 1 1 20ch;
+    max-width: 33ch;
     margin: 0.5rem;
     padding: 0;
     transition: box-shadow 180ms ease-in-out;
