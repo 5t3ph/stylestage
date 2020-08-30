@@ -2,25 +2,25 @@
 ## Styles Index
 
 
-[Barebones](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/barebones.css) By Vinícius Philot
-
 [Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
+
+[Barebones](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/barebones.css) By Vinícius Philot
 
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
-[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
+[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
 
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
-[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
-
 [Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
+
+[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
-[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
-
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
+
+[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
 [Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
 
@@ -61,3 +61,5 @@
 [Geocities](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/geocities.css) By whitep4nth3r
 
 [Pastels &amp; Columns](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pastels-and-columns.css) By Carol McKay
+
+[CSS CLI](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/css-cli.css) By Ryan Mulligan

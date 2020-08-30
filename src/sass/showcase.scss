@@ -17,6 +17,7 @@ main {
 .features__flexible {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: calc(100% + 1rem);
   margin-right: -0.5rem;
   margin-left: -0.5rem;
