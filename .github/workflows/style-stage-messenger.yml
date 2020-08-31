@@ -22,8 +22,8 @@ jobs:
             var body = context.payload.pull_request.body
 
             if(body) {
-              var isStylesheet = body.contains('New Stylesheet Submission')
-              var incompleteGuidelines = body.contains('[]')
+              var isStylesheet = body.includes('New Stylesheet Submission')
+              var incompleteGuidelines = body.includes('[]')
             }
 
             if(isStylesheet) {

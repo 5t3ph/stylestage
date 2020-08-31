@@ -2,27 +2,27 @@
 ## Styles Index
 
 
-[Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
-
 [Barebones](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/barebones.css) By Vinícius Philot
 
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
-[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
+[Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
 
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
+[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
+
 [Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
+
+[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
 [Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
 
-[Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
+[Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
 
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
-
-[Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
 
@@ -63,3 +63,5 @@
 [Pastels &amp; Columns](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pastels-and-columns.css) By Carol McKay
 
 [CSS CLI](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/css-cli.css) By Ryan Mulligan
+
+[Soff](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/soff.css) By Beatrice Bock
