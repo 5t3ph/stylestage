@@ -1,7 +1,7 @@
 {
   "title": "Soff",
   "author": "Beatrice Bock",
-  "stylesheet": "https://stylestage-a76t8oosl.vercel.app/css/main.css",
+  "stylesheet": "https://raw.githubusercontent.com/beatricebock/stylestage/master/app/css/main.css",
   "twitter": "techwithtris",
   "websiteTitle": "TechWithTris",
   "websiteUrl": "https://techwithtris.com"
