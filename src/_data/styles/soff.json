@@ -1,9 +1,7 @@
 {
-  // Required
   "title": "Soff",
   "author": "Beatrice Bock",
   "stylesheet": "https://stylestage-a76t8oosl.vercel.app/css/main.css",
-  // Optional
   "twitter": "techwithtris",
   "websiteTitle": "TechWithTris",
   "websiteUrl": "https://techwithtris.com"
