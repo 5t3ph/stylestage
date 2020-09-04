@@ -78,7 +78,7 @@
     }
     {% endif %}
     {% if page.url === '/resources/' %}
-    #main h2 {
+    main h2 {
       background-color: unset;
       color: var(--color-primary);
     }
@@ -86,11 +86,22 @@
       margin-left: auto;
       margin-right: auto;
     }
+    main li strong:first-child {
+      color: var(--color-secondary);
+    }
+    main li {
+      list-style-type: '👉';
+      padding-left: 1ch;
+    }
+    main li:nth-child(even) {
+      list-style-type: '👉🏿';
+      padding-left: 1ch;
+    }
     {% endif %}
     </style>
   </head>
   <body class="page">
-    <a href="#main" class="skip-link">Skip to main content</a>
+    <a href="main" class="skip-link">Skip to main content</a>
     {% include "nav.njk" %}
     <header>
       <div class="container">
