@@ -11,7 +11,8 @@ Trust me - it feels good to say: "I can do that in CSS!"
 
 ## Stylesheet Creation Tips
 
-- **Enjoy using Sass?** - Me too! Once you fork the repo, you can easily copy the `src/sass/` directory into your own project to start from.
+> **Enjoy using Sass?** - Me too! You can start from the [Sass template](https://github.com/5t3ph/stylestage-sass) that includes the original Sass from the Main Stage theme. The template also features BrowserSync to hot-reload updates as you build your submission.
+
 - **Use a style reset** - The source styles include a modified version of Andy Bell's [Modern CSS Reset](https://github.com/hankchizljaw/modern-css-reset)
 - **Inspect!** - All modern browsers have an "Inspector" built in which allows you to choose an element on the page and quickly learn more about its HTML structure and related styles. Spend a bit of time learning tricks about the Inspector included in your favorite browser!
 - **Become one with the cascade** - The "C" in CSS is going to be your greatest enabler on this project. With limited availability of classes and IDs, you will have much greater success by working _with_ inheritance. Need a refresher? [Check out my episode about the cascade](https://dev.to/5t3ph/intro-to-the-css-cascade-the-c-in-css-1kh0) from my web development course for beginners.

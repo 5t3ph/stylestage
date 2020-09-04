@@ -1,6 +1,6 @@
 ## Contribute a Stylesheet
 
-Visit the [files section](https://stylestage.dev/) to download the source files.
+Visit the [files section](https://stylestage.dev/) to download the source files, or [get the Sass template](https://github.com/5t3ph/stylestage-sass).
 
 Or jump right in by [forking the CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291).
 

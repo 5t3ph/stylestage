@@ -12,9 +12,9 @@ Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
 ## Contribute a Stylesheet
 
-Visit the [files section](https://stylestage.dev/) to download the source files.
-
-Or jump right in by [forking the CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291).
+- Visit the [files section](https://stylestage.dev/) to download the source files
+- [Get the Sass template](https://github.com/5t3ph/stylestage-sass) for the original Main Stage which includes BrowerSync for hot-reload as you create your styles
+- Jump right in by [forking the CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291).
 
 Then, create your own version of the stylesheet, being sure to adhere to [the guidelines](https://stylestage.dev/guidelines/). Use it as a starting point, or begin from a blank file! Keep in mind you may not modify the HTML, including adding classes.
 

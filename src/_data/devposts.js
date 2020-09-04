@@ -33,7 +33,7 @@ module.exports = async () => {
   const { data } = await axios.get(apiRoot, { headers: { "api-key": process.env.DEVTO } });
 
   let response = [];
-  const seriesText = "modern CSS";
+  const seriesText = "modern CSS solutions";
 
   // Grab the items and re-format to the fields we want
   if (data.length) {
