@@ -44,7 +44,7 @@
     "luxon": "^1.25.0",
     "markdown-it": "^11.0.0",
     "markdown-it-anchor": "^5.2.7",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "postcss-cli": "^7.1.2",
     "prettier": "^2.1.1",
     "puppeteer": "5.2.1",
