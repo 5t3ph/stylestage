@@ -1,0 +1,368 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Mike Aparicio
+* 
+* Title: Retro Modern
+* Author: Mike Aparicio
+* Website: https://mikeaparicio.com
+* Twitter: @peruvianidol
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/retro-modern/
+*/
+
+:root {
+  --color-black: #191919;
+  --color-green: #00ff00;
+  --color-white: #ffffff;
+}
+
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v12/pxiKyp0ihIEF2isfFJXUdVNF.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* 
+Based on Andy Bell's "A Modern CSS Reset"
+https://hankchizljaw.com/wrote/a-modern-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+  list-style: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+  
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: 'VT323', monospace;
+  background-color: var(--color-black);
+  color: var(--color-green);
+  text-shadow: 1px 1px 1px rgba(255,255,255,.5);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: .5rem;
+}
+
+/* Based on Alec Lownes' "Using CSS to Create a CRT"
+http://aleclownes.com/2017/02/01/crt-display.html
+*/
+
+body:before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: var(--color-white);
+}
+
+ol li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: absolute;
+  top: .5rem;
+  left: .5rem;
+  right: .5rem;
+  padding: .5rem;
+  width: calc(100% - 1rem);
+  height: auto;
+  line-height: 1;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.skip-link:focus + header {
+  margin-top: 4rem;
+}
+
+.link-github svg {
+  height: .75em;
+  width: .75em;
+  fill: currentColor;
+  margin-right: .25rem;
+  position: relative;
+  top: 1px;
+}
+
+.link-github {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+}
+
+body > * {
+  border: 8px double var(--color-green);
+  padding: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+body > :not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+main .container {
+  max-width: 65rem;
+  margin: 0 auto;
+}
+
+main section:not(:last-child) {
+  border-bottom: 2px solid var(--color-green);
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+main .container > *,
+.page-footer .container > *:not(:last-child)  {
+  margin-bottom: 1rem;
+}
+
+#files a {
+  display: block;
+}
+
+nav {
+  grid-area: nav;
+  padding: .75rem;
+  overflow: auto;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li:not(:last-child) {
+  margin-bottom: .75rem;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+  border: 2px solid var(--color-green);
+  padding: .5rem;
+}
+
+nav a:hover {
+  border-color: var(--color-white);
+  color: var(--color-white);
+}
+
+aside.profile {
+  grid-area: current;
+}
+
+.profile ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside#styles {
+  grid-area: featured;
+}
+
+#styles span {
+  display: block;
+}
+
+#styles ul {
+  margin: 1.5rem 0;
+}
+
+#styles li {
+  margin-bottom: .75rem;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+.page-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, strong {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: uppercase;
+}
+
+blockquote strong {
+  display: block;
+}
+
+@media (min-width: 760px) {
+
+  body {
+    display: grid;
+    grid-gap: .5rem;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows:  auto auto auto auto auto 1fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "current main"
+      "featured main"
+      "footer main"
+      ". main";
+  }
+
+  body > :not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  header .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  header h2 {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  header p {
+    text-align: right;
+  }
+
+  header .link-github {
+    justify-self: right;
+    align-self: start;
+  }
+
+}
+
+@media (min-width: 1280px) {
+
+  body {
+    grid-template-columns: 1.5fr 6fr 2.5fr;
+    grid-template-rows:  auto auto auto 1fr auto;
+    grid-template-areas:
+      "header header header"
+      "nav main current"
+      ". main featured"
+      ". main ."
+      ". footer .";
+  }
+
+  .features {
+    display: block;
+  }
+
+  .page-footer ul {
+    display: flex;
+    align-items: center;  
+  }
+
+  .page-footer li:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}

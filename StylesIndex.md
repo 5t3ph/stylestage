@@ -2,27 +2,27 @@
 ## Styles Index
 
 
+[Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
+
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
 [Barebones](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/barebones.css) By Vinícius Philot
 
-[Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
-
-[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
-
-[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
+[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
 
 [Propaganda](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/propaganda.css) By Maryam Hanafiah
 
 [Retro](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro.css) By Rachel B
 
-[Purplify &amp; Pastel](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/purplify-and-pastel.css) By Dominic Duffin
+[Queer Modes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/queer-modes.css) By Miriam Suzanne
 
-[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
+[Retroish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retroish.css) By Jean Louise Tiston
 
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Transparency](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/transparency.css) By Jens Oliver Meiert
+
+[Skewten](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/skewten.css) By Donnie D&#39;Amato
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
 
@@ -50,9 +50,9 @@
 
 [Drafter](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/drafter.css) By Claudine Ong
 
-[Sysfonts](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/sysfonts.css) By Halvor William Sanden
-
 [Pink Outside The Box](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/pink-outside-the-box.css) By GabbyKC
+
+[Sysfonts](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/sysfonts.css) By Halvor William Sanden
 
 [Crawling Chaos](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/crawling-chaos.css) By Adrian Bece
 
@@ -65,3 +65,7 @@
 [CSS CLI](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/css-cli.css) By Ryan Mulligan
 
 [Blueprint](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/blueprint.css) By Todd Libby
+
+[Retro Cyberpunk](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro-cyberpunk.css) By Inès K.
+
+[Retro Modern](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/retro-modern.css) By Mike Aparicio
