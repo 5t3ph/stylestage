@@ -12,11 +12,14 @@ Created by Stephanie Eckles ([@5t3ph](https://twitter.com/5t3ph))
 
 ## Contribute a Stylesheet
 
+### There are 4 ready-to-go options to get started:
+
 - Visit the [files section](https://stylestage.dev/) to download the source files
 - [Get the Sass template](https://github.com/5t3ph/stylestage-sass) for the original Main Stage which includes BrowerSync for hot-reload as you create your styles
-- Jump right in by [forking the CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291).
+- Jump right in by [forking the full source CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291).
+- Get a minimal boost with the [Style Stage Skeleton Starter CodePen](https://codepen.io/5t3ph/pen/xxVpYjo)
 
-Then, create your own version of the stylesheet, being sure to adhere to [the guidelines](https://stylestage.dev/guidelines/). Use it as a starting point, or begin from a blank file! Keep in mind you may not modify the HTML, including adding classes.
+Then, create your own version of the stylesheet, being sure to adhere to [the guidelines](https://stylestage.dev/guidelines/). Use the starters listed above, or begin from a blank file! Keep in mind you may not modify the HTML, including adding classes.
 
 You may use any build setup you prefer, but the final submission should be the compiled CSS _unminified_. Style Stage processing will autoprefix your styles and prepend the stylesheet with the [CC BY-NC-SA license](https://creativecommons.org/licenses/by-nc-sa/3.0/) as well as attribution using the metadata you provide.
 
