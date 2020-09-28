@@ -47,7 +47,7 @@ A dedicated page will be generated for your stylesheet that will restyle a copy 
 You can host on your own domain, but if you don't have one, the following will also work:
 
 - **Github**: You'll need to submit the link to the "raw" version instead of the Github page for it to work properly. This can be a gist or a file within a repo.
-- **CodePen**: If you [fork the Style Stage CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291) you can add `.css` to your pen URL and use that.
+- **CodePen**: If you [fork the Style Stage CodePen](https://codepen.io/5t3ph/pen/b493845ae41e836889dd84fdbb0f5291) you can add `.css` to your pen URL and use that. Don't worry about the 404 - Style Stage will be able to extract the styles anyway!
 
 ### How do I create a pull request (PR)?
 

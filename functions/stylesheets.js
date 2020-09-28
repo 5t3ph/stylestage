@@ -1,6 +1,5 @@
 const chromium = require("chrome-aws-lambda");
 const fs = require("fs");
-const path = require("path");
 const slugify = require("slugify");
 
 (async () => {
@@ -15,7 +14,7 @@ const slugify = require("slugify");
   const page = await browser.newPage();
 
   // Get styles data
-  const styles = require("../src/_data/styles.json");
+  let styles = require("../src/_data/styles.json");
 
   // Go over all the styles
   for (const style of styles) {
@@ -25,14 +24,23 @@ const slugify = require("slugify");
       remove: /[*+~·,()'"`´%!?¿:@\/]/g,
     });
     const fileName = `${slug}.css`;
+    let stylesheet = style.stylesheet;
 
-    if (!style.stylesheet.includes(".css")) {
+    if (!stylesheet.includes(".css")) {
       console.log(`${slug} is invalid`);
       continue;
     }
 
+    // CodePen changed things up and no longer makes the pen styles
+    // available as a separate stylesheet
+    let codepen = false;
+    if (stylesheet.includes("codepen")) {
+      codepen = true;
+      stylesheet = stylesheet.replace(/codepen.io\/(.+)\/pen\/(.+).css/, "cdpn.io/$1/fullpage/$2");
+    }
+
     try {
-      await page.goto(style.stylesheet);
+      await page.goto(stylesheet);
 
       const attribution = `/*!
 * LICENSE - style only: CC BY-NC-SA
@@ -48,9 +56,18 @@ const slugify = require("slugify");
 * @link https://stylestage.dev/styles/${slug}/
 */`;
 
-      const stylesheet = await page.evaluate(() => document.querySelector("pre").innerText);
+      let styles = "";
+      if (codepen) {
+        styles = await page.evaluate(() => document.querySelector("iframe").getAttribute("srcdoc"));
 
-      fs.writeFileSync(`src/styles/css/${fileName}`, `${attribution}\n\n${stylesheet}`);
+        const stylesRE = /<style>(.+)<\/style>/gms;
+        const stylesContent = styles.match(stylesRE);
+        styles = stylesContent[0].replace("<style>", "").replace("</style>", "");
+      } else {
+        styles = await page.evaluate(() => document.querySelector("pre").innerText);
+      }
+
+      fs.writeFileSync(`src/styles/css/${fileName}`, `${attribution}\n\n${styles}`);
     } catch (e) {
       console.log(`404: ${fileName}`);
       console.error(e);
