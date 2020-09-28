@@ -12,6 +12,7 @@
 * @link https://stylestage.dev/styles/retro-cyberpunk/
 */
 
+
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Share+Tech+Mono&display=swap");
 
 :root {
@@ -64,13 +65,17 @@ body {
   color: hsl(var(--very-light-blue));
   font-family: var(--font-body);
   text-align: center;
-  line-height: 1.6rem;
+  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  line-height: 1.5rem;
+  line-height: clamp(1.5rem, 2vw, 3rem);
   overflow-x: hidden;
 }
 
 @media screen and (min-width: 769px) {
   body {
     margin-left: 13rem;
+    max-width: calc(100vw- 13rem);
   }
 }
 
@@ -85,6 +90,16 @@ h4 {
 
 h3 {
   font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.5vw, 3rem);
+  margin-top: 2rem;
+}
+
+a,
+li,
+p,
+span {
+  font-size: inherit;
+  line-height: inherit;
 }
 
 strong {
@@ -94,22 +109,16 @@ strong {
 p {
   margin: 1.5rem;
   text-align: left;
-  font-size: 1.5rem;
-  font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
 li {
   list-style-type: none;
-  font-size: 1.1rem;
-  font-size: clamp(1.1rem, 2vw, 2rem);
   margin-top: 1rem;
 }
 
 a {
   position: relative;
   color: hsl(var(--neon-pink));
-  font-size: 1.5rem;
-  font-size: clamp(1.5rem, 2vw, 1.5rem);
 }
 
 a:hover,
@@ -141,14 +150,25 @@ header,
 #about .container,
 #guidelines,
 #contribute {
-  max-width: 100%;
+  width: 100%;
   border: 0.4rem solid hsl(var(--neon-blue));
-  padding: 2rem 1rem;
+  padding: 2rem 0.6rem;
   margin-top: 2em;
   background-color: hsl(var(--dark-blue));
   -webkit-border-image: linear-gradient(45deg, var(--border)) 1% stretch;
   -moz-border-image: linear-gradient(45deg, var(--border)) 1% stretch;
   border-image: linear-gradient(45deg, var(--border)) 1% stretch;
+}
+
+@media screen and (min-width: 769px) {
+  .page-footer,
+  aside,
+  header,
+  #about .container,
+  #guidelines,
+  #contribute {
+    padding: 2rem;
+  }
 }
 
 header h1::before,
@@ -194,12 +214,27 @@ a[href="/styles/css/retro-cyberpunk.css"],
 .link-support,
 .link-github {
   display: block;
-  margin: 1.5rem auto 0 auto;
+  margin: 2rem auto 0 auto;
   border: 0.2rem solid hsl(var(--yellow));
   padding: 1rem 0.6rem;
-  max-width: 20rem;
+  width: auto;
+  width: min(65vw, 25rem);
   color: hsl(var(--neon-blue));
   text-decoration: none;
+}
+
+@media screen and (min-width: 1441px) {
+  a[href="/styles/css/retro-cyberpunk.css"],
+  #files a,
+  .link-allstyles,
+  .link-guidelines,
+  .link-twittercontact,
+  .link-rss,
+  .link-support,
+  .link-github {
+    padding: 2rem;
+    width: 35rem;
+  }
 }
 
 a[href="/styles/css/retro-cyberpunk.css"]:hover,
@@ -256,10 +291,10 @@ header h1 {
   position: relative;
   max-width: 30rem;
   margin: 0 auto;
-  font-size: 3.8rem;
-  font-size: clamp(3.8rem, 10vw, 6rem);
-  line-height: 4rem;
-  line-height: clamp(3.8rem, 10vw, 6rem);
+  font-size: 3.5rem;
+  font-size: clamp(3.5rem, 10vw, 6rem);
+  line-height: 3.5rem;
+  line-height: clamp(3.5rem, 10vw, 6rem);
   overflow: hidden;
   opacity: 0.9;
 }
@@ -287,8 +322,6 @@ header h2 {
 
 header p {
   text-align: center;
-  font-size: 1.3rem;
-  font-size: clamp(1.3rem, 2vw, 2rem);
 }
 
 .link-github svg {
@@ -330,8 +363,7 @@ nav li {
 nav a {
   margin: 0;
   padding: 0;
-  font-size: 0.85rem;
-  font-size: clamp(0.85rem, 5vw, 1.6rem);
+  font-size: 1.2rem;
 }
 
 nav li:nth-child(2n) {
@@ -370,6 +402,9 @@ nav li:nth-child(-n + 2) {
 }
 
 @media screen and (min-width: 769px) {
+  nav a {
+    font-size: clamp(0.85rem, 5vw, 1.6rem);
+  }
   nav {
     position: fixed;
     left: 0;
@@ -414,10 +449,10 @@ main p {
 }
 
 #about ul {
-  margin: 0 auto;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  margin: 2.5rem auto;
 }
 
 @media screen and (min-width: 426px) {
@@ -434,6 +469,9 @@ main p {
 }
 
 #about li {
+  font-size: initial;
+  height: fit-content;
+  height: -moz-fit-content;
   margin: 1.6rem 1rem;
   border: 0.2rem solid hsl(var(--very-light-blue));
   padding: 1rem;
@@ -462,16 +500,26 @@ main p {
     -0.1rem -0.1rem 1.5rem hsla(var(--neon-blue), 0.2) inset;
 }
 
+@media screen and (min-width: 426px) {
+  #about ul {
+    max-width: 80%;
+  }
+  #about li {
+    font-size: inherit;
+    margin: 1.5vw;
+  }
+}
+
 #about li:nth-child(3n) {
-  -webkit-transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
-  transform: rotate(10deg);
+  -webkit-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
 }
 
 #about li:nth-child(2n + 2) {
-  -webkit-transform: rotate(-10deg);
-  -ms-transform: rotate(-10deg);
-  transform: rotate(-10deg);
+  -webkit-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
 }
 
 #about li:nth-child(3n):hover,
@@ -555,6 +603,7 @@ blockquote::after {
 
 #contribute ol {
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   margin-left: 3.5rem;
   counter-reset: contribution-steps;
 }
@@ -567,14 +616,18 @@ blockquote::after {
 }
 
 #contribute li::before {
+  box-sizing: content-box;
   content: counter(contribution-steps);
   position: absolute;
   top: 0rem;
-  left: -2.5rem;
+  left: -3.5rem;
   border: 0.2rem solid hsl(var(--neon-blue));
-  width: 1.8rem;
-  height: 1.8rem;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
   border-radius: 50%;
+  padding: 0 0.5rem;
   color: hsl(var(--neon-blue));
   text-align: center;
 }
@@ -606,10 +659,15 @@ blockquote::after {
 
 #files {
   margin-top: 1.5rem;
-  border: none;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 990px) and (max-width: 1440px) {
+  #files a {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 990px) {
   #files .container {
     display: -ms-grid;
     display: grid;
@@ -619,7 +677,11 @@ blockquote::after {
     -ms-grid-rows: min-content min-content;
     grid-template-rows: -webkit-min-content -webkit-min-content;
     grid-template-rows: min-content min-content;
-    gap: 0.5rem;
+    gap: 1rem;
+  }
+
+  #files a {
+    margin-top: 0.5rem;
   }
 
   #files .container > *:nth-child(1) {
@@ -654,13 +716,6 @@ blockquote::after {
     -ms-grid-row: 1;
     grid-row: 1;
   }
-
-  #files a[href="/source-files/style.css"] {
-    -ms-grid-column: 1;
-    grid-column: 1;
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
 }
 
 /* profile */
@@ -680,20 +735,33 @@ aside h2::after {
 }
 
 /* .page-footer */
-.page-footer ul {
-  margin-bottom: 3rem;
+.page-footer ul,
+.page-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-wrap: no-wrap;
+  flex-wrap: no-wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 .page-footer li {
-  margin: 0;
-  height: 100%;
+  margin: 1rem auto;
 }
 
 .page-footer a {
-  height: 100%;
+  margin: 0;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 990px) {
   .page-footer ul {
     display: -ms-grid;
     display: grid;
@@ -701,7 +769,9 @@ aside h2::after {
     grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 0.5rem min-content 0.5rem min-content;
     grid-template-rows: min-content min-content;
-    gap: 0.5rem;
+    gap: 2rem;
+    justify-items: center;
+    margin: 2rem;
   }
 
   .page-footer ul :nth-child(1) {
@@ -730,6 +800,16 @@ aside h2::after {
     grid-column: 2;
     -ms-grid-row: 2;
     grid-row: 2;
+  }
+
+  .page-footer li {
+    margin: 0;
+  }
+
+  .page-footer a {
+    margin: 0;
+    width: clamp(20rem, 30vw, 40rem);
+    height: 100%;
   }
 }
 
