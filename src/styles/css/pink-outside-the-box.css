@@ -22,12 +22,12 @@
 
 /*variables*/
 :root {
-    --bg-color: #fcf5ee;
+    --bg-color: pink;
     --main-font: #322f3d;
     --darkest-pink: #ffc4d0;
     --mid-pink: #f7ddde;
     --border-radius: 10px;
-    --small-font: .9rem;
+    --small-font: 2.9rem;
 }
 
 /*general */
@@ -70,7 +70,7 @@ h1 {
 
 h1::after {
     content: "";
-    background: var(--darkest-pink);
+    background: blue;
     height: .5rem;
     position: absolute;
     width: 3.5rem;
