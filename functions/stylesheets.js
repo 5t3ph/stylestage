@@ -36,7 +36,7 @@ const slugify = require("slugify");
     let codepen = false;
     if (stylesheet.includes("codepen")) {
       codepen = true;
-      stylesheet = stylesheet.replace(/codepen.io\/(.+)\/pen\/(.+).css/, "cdpn.io/$1/fullpage/$2");
+      stylesheet = stylesheet.replace(/codepen.io\/(.+)\/(.+)\/(.+).css/, "cdpn.io/$1/fullpage/$3");
     }
 
     try {

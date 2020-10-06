@@ -36,20 +36,20 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",
     "autoprefixer": "^9.8.6",
     "dotenv": "^8.2.0",
     "emoji-regex": "^9.0.0",
     "fast-glob": "^3.2.4",
     "luxon": "^1.25.0",
-    "markdown-it": "^11.0.0",
-    "markdown-it-anchor": "^5.2.7",
-    "node-fetch": "^2.6.0",
-    "postcss-cli": "^7.1.2",
-    "prettier": "^2.1.1",
-    "puppeteer": "5.2.1",
-    "sass": "^1.26.10",
-    "stylelint": "^13.7.0",
+    "markdown-it": "^11.0.1",
+    "markdown-it-anchor": "^6.0.0",
+    "node-fetch": "^2.6.1",
+    "postcss-cli": "^8.0.0",
+    "prettier": "^2.1.2",
+    "puppeteer": "5.3.1",
+    "sass": "^1.26.11",
+    "stylelint": "^13.7.2",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.1.0",
@@ -60,7 +60,7 @@
     "last 2 versions"
   ],
   "dependencies": {
-    "chrome-aws-lambda": "5.2.1",
-    "puppeteer-core": "5.2.1"
+    "chrome-aws-lambda": "5.3.1",
+    "puppeteer-core": "5.3.1"
   }
 }

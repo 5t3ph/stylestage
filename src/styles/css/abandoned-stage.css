@@ -1,0 +1,512 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Andrey Kudryavtsev
+* 
+* Title: Abandoned Stage
+* Author: Andrey Kudryavtsev
+* Website: https://catlogic.ru
+* Twitter: @cat__logic
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/abandoned-stage/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@1,300;1,600&display=swap");
+
+/* Prevent animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  overflow-y: hidden;
+  padding: 5vh clamp(5px, 2vmin, 50px);
+  background: #000;
+
+  --header-font: "Amatic SC", cursive;
+  --header-font-normal: 400;
+  --header-font-bold: 700;
+  --thin-border: 1px dotted rgba(255, 255, 255, .4);
+  --quote-bg: rgba(0, 0, 0, .5);
+  --big-margin: 3rem;
+  --normal-margin: 1rem;
+  --small-margin: .6rem;
+  --tiny-margin: .3rem;
+  --main-font-size: 1.05rem;
+  --bigger-font-size: 1.2rem;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Background photo by Ailing Mill
+https://pixabay.com/photos/ailing-mill-uninhabited-house-140804/
+Pixabay License - Free for commercial use / No attribution required */
+
+body {
+  margin: 0 auto;
+  padding: var(--small-margin);
+  text-rendering: optimizeSpeed;
+  background: url("https://cdn.pixabay.com/photo/2013/06/23/18/37/ailing-mill-140804_1280.jpg") left center / cover no-repeat;
+  font-size: 100%;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  color: #fff;
+  max-width: 1280px;
+  max-height: 80vh;
+  overflow-y: scroll;
+  border: 2vh solid #eee;
+  border-right-width: 1.2vh;
+  scrollbar-width: thin;
+  scrollbar-color: #bbb #eee;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Scrollbars for Firefox */
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: #eee;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #bbb;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -10000px;
+  font-size: 14px;
+  width: 1px;
+  height: 1px;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--header-font);
+  font-style: normal;
+}
+
+header h1,
+header h2 {
+  padding-left: var(--tiny-margin);
+  margin-bottom: var(--tiny-margin);
+}
+
+header h1 {
+  font-weight: var(--header-font-normal);
+  font-size: clamp(76px, 10vmax, 100px);
+  line-height: 1;
+}
+
+header h2 {
+  font-weight: var(--header-font-bold);
+  font-size: clamp(26px, 3vmax, 32px);
+  line-height: 1.1;
+}
+
+/* 'Maintained by...' text */
+header p,
+.page-footer .container p:first-of-type {
+  background-color: rgba(0, 0, 0, .5);
+  padding: var(--tiny-margin);
+  font-size: 1rem;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  min-height: 32px;
+  margin-bottom: var(--tiny-margin);
+}
+
+/* Glowing links */
+@keyframes links {
+  0% {
+    text-shadow: 0 0 2px rgba(255, 255, 255, .4), 0 0 4px rgba(255, 255, 255, .2);
+  }
+  20% {
+    text-shadow: 0 0 3px rgba(255, 255, 255, .5), 0 0 6px rgba(255, 255, 255, .3);
+  }
+  50% {
+    text-shadow: 0 0 4px rgba(255, 255, 255, .6), 0 0 8px rgba(255, 255, 255, .4);
+  }
+  75% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, .7), 0 0 10px rgba(255, 255, 255, .5);
+  }
+  100% {
+    text-shadow: 0 0 6px rgba(255, 255, 255, .8), 0 0 12px rgba(255, 255, 255, .6);
+  }
+}
+
+a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 300ms;
+  border-bottom: 1px dotted rgba(255, 255, 255, .7);
+}
+
+a:hover {
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, .7);
+  animation: links 300ms linear forwards;
+}
+
+/* Dark glowing buttons */
+@keyframes buttons {
+  0% {
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, .8);
+  }
+  25% {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .8);
+  }
+  50% {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .6);
+  }
+  75% {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, .4);
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .2);
+  }
+}
+
+/* Button links */
+.link-github,
+.page-footer li a,
+#files a {
+  color: #000;
+  display: inline-block;
+  background: rgba(255, 255, 255, .6);
+  padding: 0 7px;
+  font-family: var(--header-font);
+  font-weight: var(--header-font-bold);
+  font-style: normal;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  border: 0;
+  min-height: 32px;
+  box-sizing: border-box;
+  vertical-align: bottom;
+  border-radius: 2px;
+  margin-bottom: var(--tiny-margin);
+}
+
+.link-github:hover,
+.page-footer li a:hover,
+#files a:hover {
+  color: #fff;
+  border: 0;
+  background-color: rgba(0, 0, 0, .8);
+  animation: buttons 1s linear forwards infinite;
+}
+
+/* Star in Github button */
+.link-github svg {
+  width: 16px;
+  height: 16px;
+  transition: fill 300ms, transform 1s ease-out;
+}
+
+.link-github:hover svg {
+  fill: #fff;
+  border-color: #fff;
+  transform: rotate(360deg);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Main navigation */
+nav ul {
+  padding: 0 0 0 24px;
+  margin: var(--big-margin) 0;
+}
+
+nav li a {
+  position: relative;
+  font-size: var(--bigger-font-size);
+}
+
+nav li a:hover::before {
+  content: "➤";
+  font-style: normal;
+  position: absolute;
+  left: -24px;
+}
+
+/* Darker page sections */
+#main section.container,
+#files,
+#styles {
+  background-color: rgba(0, 0, 0, .6);
+  padding: var(--small-margin);
+  border-radius: 2px;
+}
+
+#main section.container p {
+  margin: var(--normal-margin) 0;
+  font-size: var(--main-font-size);
+}
+
+/* Header for darker sections */
+#main h2,
+#styles h2 {
+  font-size: clamp(38px, 6vmax, 46px);
+  font-weight: var(--header-font-normal);
+  background-color: rgba(0, 0, 0, .5);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 2.5rem;
+  gap: .5rem;
+  padding: var(--tiny-margin) 0;
+}
+
+#main h2::before,
+#main h2::after,
+#styles h2::before,
+#styles h2::after {
+  content: "💀";
+  font-size: 1.1rem;
+}
+
+#about,
+#guidelines,
+#contribute,
+#styles {
+  margin-bottom: var(--big-margin);
+}
+
+/* First two darker sections with auto-width */
+#about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--normal-margin);
+}
+
+/* Style Stage in paragraph */
+#about p:nth-of-type(2) strong {
+  font-family: var(--header-font);
+  font-size: 1.5rem;
+  font-style: normal;
+}
+
+blockquote {
+  margin: 0 var(--normal-margin);
+  padding: var(--tiny-margin) var(--normal-margin);
+  border: var(--thin-border);
+  border-radius: 2px;
+  background-color: var(--quote-bg);
+}
+
+/* CSS properties list */
+#about ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--tiny-margin);
+}
+
+#about ul li {
+  padding: var(--tiny-margin);
+  border: var(--thin-border);
+  background-color: var(--quote-bg);
+  font-weight: 600;
+  border-radius: 10px;
+  transition: transform 200ms ease-out;
+}
+
+#about ul li:hover {
+  transform: rotate3d(1, 1, 0, 30deg);
+  background-color: rgba(0, 0, 0, .9);
+}
+
+/* Centered darker sections */
+#guidelines,
+#contribute,
+#styles {
+  max-width: 750px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 2px;
+}
+
+/* Smaller title */
+h3 {
+  font-size: 2rem;
+  margin-left: var(--big-margin);
+}
+
+/* Bottom links in darker sections */
+.link-guidelines,
+.link-allstyles {
+  font-size: var(--bigger-font-size);
+  display: block;
+  margin: 0 auto var(--normal-margin) auto;
+  width: max-content;
+}
+
+ol {
+  padding: 0 0 0 var(--big-margin);
+  font-size: var(--main-font-size);
+}
+
+ol li {
+  margin: var(--normal-margin) 0;
+}
+
+/* Source files */
+#files .container {
+  text-align: center;
+  padding-bottom: var(--normal-margin);
+}
+
+#files h3 {
+  margin: 0 0 var(--normal-margin);
+}
+
+/* Source files buttons */
+#files .container a {
+  text-align: center;
+  margin: var(--tiny-margin) 0;
+  font-size: 1.5rem;
+  padding: var(--normal-margin);
+  min-width: 180px;
+}
+
+/* Current style */
+.profile {
+  border: var(--small-margin) solid #ddd;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6), rgba(0, 0, 0, .4)), url("https://cdn.pixabay.com/photo/2013/06/23/18/37/ailing-mill-140804_1280.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: auto, center center;
+  background-size: auto, cover;
+  max-width: 300px;
+  margin: 0 auto var(--big-margin);
+  text-align: center;
+  font-size: var(--main-font-size);
+  padding: var(--normal-margin) var(--tiny-margin);
+  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, .4), 8px 8px 8px 0 rgba(0, 0, 0, .2);
+}
+
+/* Current style title */
+h4 {
+  font-size: 2rem;
+}
+
+/* Featured styles */
+#styles {
+  text-align: center;
+}
+
+.features {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: var(--tiny-margin);
+}
+
+/* Features styles buttons */
+.features li {
+  border-radius: 2px;
+  position: relative;
+  width: 1fr;
+  flex: auto;
+  box-sizing: border-box;
+  padding: 2vh;
+  font-size: var(--bigger-font-size);
+  border: var(--thin-border);
+  border-radius: 2px;
+  background: repeating-linear-gradient(45deg,
+      transparent 0, transparent 3px,
+      rgba(0, 0, 0, .6) 3px, rgba(0, 0, 0, .6) 6px);
+}
+
+.features li span span {
+  display: block;
+}
+
+/* Features links expanded to the element */
+.features li a::before {
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 2px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.features li a:hover::before {
+  border: 1px dotted #fff;
+}
+
+.page-footer {
+  text-align: right;
+}
+
+.page-footer ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--tiny-margin);
+  flex-wrap: wrap;
+}
+
+.page-footer .container p:first-of-type {
+  margin-bottom: calc(-16px + var(--tiny-margin));
+}
+
+.page-footer .container p:first-of-type a {
+  display: inline-block;
+}
+
+.page-footer .container ul~p {
+  font-size: 0.875rem;
+}
+
+.page-footer .container p:last-of-type {
+  padding-bottom: var(--normal-margin);
+}
+
+@media all and (max-width: 375px) {
+  body {
+    padding: var(--tiny-margin);
+  }
+
+  #about ul li {
+    font-size: .9rem;
+  }
+}
