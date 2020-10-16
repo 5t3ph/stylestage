@@ -1,0 +1,10 @@
+{
+    // Required
+    "title": "Dot grid",
+    "author": "Abigail Colina",
+    "stylesheet": "https://raw.githubusercontent.com/maenad/stylestage-submission/master/style.css",
+    // Optional
+    "twitter": "stabby_1",
+    "websiteTitle": "Colina.dev",
+    "websiteUrl": "https://colina.dev"
+  }
