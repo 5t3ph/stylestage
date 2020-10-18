@@ -1,0 +1,746 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Nic Mayer
+* 
+* Title: Rainbow
+* Author: Nic Mayer
+* Website: https://nicm42.github.io/
+* Twitter: @nicm4242
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/rainbow/
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+  --colour-red: rgba(255, 0, 0, 1);
+  --colour-orange: rgba(255, 165, 0, 1);
+  --colour-yellow: rgba(255, 255, 0, 1);
+  --colour-green: rgba(0, 128, 0, 1);
+  --colour-blue: rgba(0, 0, 255, 1);
+  --colour-indigo: rgba(75, 0, 130, 1);
+
+  --colour-red-half: rgba(255, 0, 0, 0.5);
+  --colour-orange-half: rgba(255, 165, 0, 0.5);
+  --colour-yellow-half: rgba(255, 255, 0, 0.5);
+  --colour-green-half: rgba(0, 128, 0, 0.5);
+  --colour-blue-half: rgba(0, 0, 255, 0.5);
+  --colour-indigo-half: rgba(75, 0, 130, 0.5);
+
+  --colour-yellow-three-quarters: rgba(255, 255, 0, 0.75);
+
+  --colour-dark: black;
+  --colour-light: white;
+  --colour-white-nearly: rgba(255, 255, 255, 0.95);
+
+  --gradient-down: linear-gradient(var(--colour-red) 0%, var(--colour-orange) 20%, var(--colour-yellow) 40%, var(--colour-green) 60%, var(--colour-blue) 80%, var(--colour-indigo) 100%);
+  --gradient-right: linear-gradient(to right, var(--colour-red) 0%, var(--colour-orange) 20%, var(--colour-yellow) 40%, var(--colour-green) 60%, var(--colour-blue) 80%, var(--colour-indigo) 100%);
+  --gradient-right-half: linear-gradient(to right, var(--colour-red-half) 0%, var(--colour-orange-half) 20%, var(--colour-yellow-half) 40%, var(--colour-green-half) 60%, var(--colour-blue-half) 80%, var(--colour-indigo-half) 100%);
+
+  --width-limit: 60ch;
+  --font-body: 'Poppins', sans-serif;
+  --font-headings: 'Itim', cursive;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/********** General **********/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 1em;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-areas: "header"
+                       "nav"
+                       "main"
+                       "profile"
+                       "styles"
+                       "footer";
+  gap: 1em;
+  background: var(--colour-light);
+  background: var(--gradient-down);
+  background-attachment: fixed;
+  font-family: var(--font-body);
+  color: var(--colour-dark);
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  font-family: var(--font-headings);
+}
+
+h2 {
+  line-height: 1;
+}
+
+/* rainbow lines above section headers */
+#about h2,
+#guidelines h2,
+#contribute h2 {
+  position: relative;
+  display: inline-block; /* so it's only as wide as the text, so the underline is in right place */
+  left: 50%;
+  transform: translateX(-50%); /* to then centre it again */
+}
+
+/* whole section is centred, so we don't need to re-centre the heading */
+.profile h4,
+#styles h2 {
+  position: relative;
+  display: inline-block;
+}
+
+#about h2::after,
+#guidelines h2::after,
+#contribute h2::after,
+.profile h4::after,
+#styles h2::after {
+  position: absolute;
+  content: '';
+  top: -0.2em;
+  left: 0;
+  width: 25%;
+  height: 0.15em;
+  background: var(--gradient-right);
+}
+
+a {
+  color: var(--colour-indigo);
+  text-decoration-color: var(--colour-green);
+  text-decoration-thickness: 0.1em; /* This currently only works in Firefox and Safari, but looks fine without it, just slightly less exciting */
+}
+
+a:hover,
+a:focus {
+  color: var(--colour-green);
+  text-decoration-thickness: 0.15em;
+}
+
+header,
+main,
+aside,
+footer {
+  background-color: var(--colour-white-nearly);
+  border-radius: 0.5em;
+}
+
+.container {
+  margin-top: 2em;
+  padding: 0.5em;
+}
+
+#about .container,
+#guidelines .container,
+#contribute .container {
+  max-width: var(--width-limit);
+  margin: 0 auto;
+}
+
+#about h2,
+#guidelines h2,
+#contribute h2,
+#styles h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* buttons */
+.skip-link,
+.link-guidelines,
+.link-downloadcss,
+.link-downloadhtml,
+.link-codepen,
+.link-github,
+.link-twittercontact,
+.link-rss,
+.link-support {
+  text-decoration: none;
+  padding: 0.5em 1em;
+  background-color: var(--colour-light);
+  color: var(--colour-blue);
+  border: 0.15em solid;
+  border-image-source: var(--gradient-right-half);
+  border-image-slice: 1;
+}
+
+.skip-link:hover,
+.skip-link:focus,
+.link-guidelines:hover,
+.link-guidelines:focus,
+.link-downloadcss:hover,
+.link-downloadcss:focus,
+.link-downloadhtml:hover,
+.link-downloadhtml:focus,
+.link-codepen:hover,
+.link-codepen:focus,
+.link-github:hover,
+.link-github:focus,
+.link-twittercontact:hover,
+.link-twittercontact:focus,
+.link-rss:hover,
+.link-rss:focus,
+.link-support:hover,
+.link-support:focus {
+  color: var(--colour-red);
+  border-image-source: var(--gradient-right);
+}
+
+/********** Skip link **********/
+
+.skip-link {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/********** Header **********/
+
+header {
+  grid-area: header;
+  padding-bottom: 2em;
+  text-align: center;
+  background: var(--colour-yellow-three-quarters);
+}
+
+header .container {
+  margin-top: 0;
+}
+
+header h1 {
+  display: inline-block;
+  font-size: 5rem;
+  line-height: 1.2;
+  margin-bottom: 0.5em;
+}
+
+/* gradient text - but the yellow only shows up if it has a black border
+  so only do the gradient text if we can also have a black border */
+@supports (-webkit-text-stroke: 1px black) {
+  header h1 {
+    background: var(--colour-dark);
+    background: var(--gradient-right);
+    -webkit-text-stroke: 1px var(--colour-dark);
+    background-size: 100%;
+    background-clip: text;
+    /* -webkit-background-clip: text; */ /* Need this for it to work in Chrome, but auto-prefixer will add it on the live site */
+    color: transparent;
+  }
+}
+
+header h2 {
+  margin-bottom: 1.5em;
+}
+
+header p {
+  margin-bottom: 3em;
+  font-size: max(20px, 1rem); /* This will always be 20px or 1rem, whichever is bigger */
+}
+
+header svg {
+  height: 1em;
+  fill: var(--colour-blue)
+}
+
+header .link-github:hover svg,
+header .link-github:focus svg {
+  fill: var(--colour-red);
+}
+
+/********** Navigation **********/
+
+nav {
+  grid-area: nav;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 0.25em solid;
+  border-image-source: var(--gradient-right);
+  border-image-slice: 1;
+}
+
+nav li {
+  padding: 1em 0;
+  flex: 1;
+  background-color: var(--colour-light);
+  text-align: center;
+}
+
+nav li:nth-of-type(6n + 2),
+nav li:nth-of-type(6n + 4),
+nav li:nth-of-type(6n + 6) {
+  border-left: 0.15em solid var(--colour-dark);
+}
+
+nav li:nth-of-type(6n + 3),
+nav li:nth-of-type(6n + 4),
+nav li:nth-of-type(6n + 5),
+nav li:nth-of-type(6n + 6) {
+  border-top: 0.15em solid var(--colour-dark);
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--colour-blue);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--colour-red);
+}
+
+/********** About **********/
+
+main {
+  grid-area: main;
+}
+
+#about .container:first-of-type h2 {
+  color: var(--colour-red);
+}
+
+#about .container:last-of-type h2 {
+  color: var(--colour-green);
+}
+
+/* Want the grid to use all the width
+so we'll tell this container to use all the width
+and just the p elements to be limited */
+#about .container:last-of-type {
+  max-width: 100%;
+  margin: 0;
+}
+
+#about .container:last-of-type p {
+  max-width: var(--width-limit);
+  margin-left: auto; /* can't use margin: 0 auto here because that gets rid of the space between the paragraphs */
+  margin-right: auto;
+}
+
+blockquote {
+  position: relative;
+  margin: 1em;
+}
+
+blockquote::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  bottom: 0;
+  left: -0.75em;
+  width: 0.25em;
+  background: var(--colour-dark);
+  background: var(--gradient-down);
+}
+
+#about ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 1em auto 2em auto;
+  max-width: calc(100vw - 4em); /* the em figure comes from the body and container's margins and padding + grid gap */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 1em;
+}
+
+#about li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex: 1; */
+  padding: 0.5em;
+  border-width: 0.15em;
+  border-style: solid;
+  text-align: center;
+}
+
+#about li:nth-child(6n + 1) {
+  border-color: var(--colour-red);
+}
+
+#about li:nth-child(6n + 2) {
+  border-color: var(--colour-orange);
+}
+
+#about li:nth-child(6n + 3) {
+  border-color: var(--colour-yellow);
+}
+
+#about li:nth-child(6n + 4) {
+  border-color: var(--colour-green);
+}
+
+#about li:nth-of-type(6n + 5) {
+  border-color: var(--colour-blue);
+}
+
+#about li:nth-of-type(6n + 6) {
+  border-color: var(--colour-indigo);
+}
+
+/********** Guidelines **********/
+
+#guidelines h2 {
+  color: var(--colour-blue);
+}
+
+#guidelines h3 {
+  margin-top: 1.5em;
+}
+
+.link-guidelines {
+  display: inline-block;
+  margin-top: 0.5em;
+}
+
+/********** Contribute **********/
+
+#contribute {
+  margin-top: 2em;
+}
+
+#contribute h2 {
+  color: var(--colour-indigo);
+}
+
+#contribute ol {
+  list-style-type: none;
+  counter-reset: steps;
+}
+
+#contribute ol li {
+  position: relative;
+  counter-increment: steps;
+}
+
+#contribute ol li + li {
+  margin-top: 0.5em;
+}
+
+#contribute ol li::before {
+  position: absolute;
+  content: counter(steps);
+  left: -2em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background-color: var(--colour-light);
+  text-align: center;
+}
+
+#contribute ol li::before {
+  border-width: 0.05em;
+  border-style: solid;
+}
+
+#contribute ol li:nth-child(4n + 1)::before {
+  border-color: var(--colour-red);
+}
+
+#contribute ol li:nth-child(4n + 2)::before {
+  border-color: var(--colour-green);
+}
+
+#contribute ol li:nth-child(4n + 3)::before {
+  border-color: var(--colour-blue);
+}
+
+#contribute ol li:nth-child(4n + 4)::before {
+  border-color: var(--colour-indigo);
+}
+
+/********** Files **********/
+
+#files {
+  background-color: transparent; /* because this is a container in a container, it's much whiter than everything else, so this fixes it */
+  text-align: center;
+}
+
+#files h3 {
+   text-align: left;
+}
+
+#files a {
+  display: inline-block;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+}
+
+#files a {
+  margin-top: 1em;
+}
+
+/********** Profile **********/
+
+.profile {
+  grid-area: profile;
+  text-align: center;
+}
+
+.profile h4 {
+  font-size: 1.5rem;  
+}
+
+.profile ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile li span {
+  display: block;
+}
+
+.profile li {
+  margin-top: 1em;
+}
+
+.profile li span:first-child {
+  font-weight: bold;
+}
+
+.profile li span span {
+  display: block;
+}
+
+/********** Styles **********/
+
+#styles {
+  grid-area: styles;
+  text-align: center;
+}
+
+#styles ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1em;
+}
+
+#styles li span {
+  display: block;
+}
+
+#styles li+li {
+  margin-top: 1 em;
+}
+
+#styles li span span {
+  display: block;
+}
+
+/********** Page footer **********/
+
+.page-footer {
+  grid-area: footer;
+}
+
+.page-footer p {
+  max-width: var(--width-limit);
+  margin-left: auto; /* can't use margin: 0 auto here because that gets rid of the space between the paragraphs */
+  margin-right: auto;
+}
+
+.page-footer p:last-of-type {
+  max-width: 100%;
+  text-align: center;
+}
+
+.page-footer .container {
+  margin-top: 0;
+}
+
+.page-footer ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 3em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-footer li {
+  margin-top: 1.5em; /* Added 1em of padding total to top & bottom to make the button*/
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.page-footer p:last-of-type {
+  font-size: 0.85rem;
+}
+
+.page-footer svg{
+  display: none;
+}
+
+/********** Media queries **********/
+
+@media screen and (min-width: 500px) {
+  #about ul {
+    grid-template-columns: repeat(auto-fit, minmax(28ch, 1fr));
+    /* 28ch is the number of characters without a space between them, so browsers don't put new lines in weird, hard-to-read places */
+  }
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    grid-template-areas: "header header"
+      "nav nav"
+      "main main"
+      "profile styles"
+      "footer footer";
+  }
+
+  nav ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  nav li:nth-of-type(6n + 2),
+  nav li:nth-of-type(6n + 3),
+  nav li:nth-of-type(6n + 5),
+  nav li:nth-of-type(6n + 6) {
+    border-left: 0.15em solid var(--colour-dark);
+  }
+
+  nav li:nth-of-type(6n + 4),
+  nav li:nth-of-type(6n + 5),
+  nav li:nth-of-type(6n + 6) {
+    border-top: 0.15em solid var(--colour-dark);
+  }
+
+  nav li:nth-of-type(6n + 4) {
+    border-left: none;
+  }
+
+  nav li:nth-of-type(6n + 3) {
+    border-top: none;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  nav ul {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  nav li:nth-of-type(6n + 4),
+  nav li:nth-of-type(6n + 5),
+  nav li:nth-of-type(6n + 6) {
+    border-top: none;
+  }
+
+  nav li:nth-of-type(6n + 4) {
+    border-left: 0.15em solid var(--colour-dark);
+  }
+
+}
+
+@media screen and (min-width: 1000px) {
+  .profile ul {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .profile ul {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #styles ul {
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

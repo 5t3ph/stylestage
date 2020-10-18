@@ -1,0 +1,446 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Nicole Ortiz
+* 
+* Title: Plants on Pink
+* Author: Nicole Ortiz
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/plants-on-pink/
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Karla:400|Inconsolata:400");
+:root {
+  --pink: #e60067;
+  --lighterPink: #fec7d7;
+  --darkerPink: #de1b5c;
+  --darkerGreen: #1A6315;
+  --lighterGreen: #D2FBD0;
+  --darkGrey: #222;
+  --light: #fffffe;
+  --main: var(--pink);
+  --background: var(--light);
+  --nav-color: var(--lighterGreen);
+  --text-color: var(--darkGrey);
+  --anchor: var(--darkGrey);
+  --anchor-hover: var(--darkerGreen);
+  --font-family: "Karla", sans-serif;
+  --font-size-h1: 3rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.85rem;
+  --font-size-h4: 1.5rem;
+  --font-size-text: 1.25rem;
+  --font-weight-medium: 600;
+  --border-radius: 20px;
+  --width--container: 1170px;
+  --level-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --size-base: 1rem;
+  --size-600: calc(var(--size-base) * 1.77);
+  --size-700: calc(var(--size-base) * 2.36);
+}
+
+@media only screen and (max-width: 640px) {
+  :root {
+    --font-size-text: 1rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.85rem;
+    --font-size-h3: 1.5rem;
+  }
+}
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+::selection {
+  background: var(--lighterPink);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.2;
+  font-family: var(--font-family);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  color: var(--main);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+header h2 {
+  font-size: calc(var(--font-size-h2) * 0.8);
+}
+
+blockquote {
+  margin: 0;
+  padding-left: var(--size-base);
+  border-left: 2px solid var(--darkerPink);
+}
+
+@media only screen and (max-width: 640px) {
+  :root {
+    --font-size-text: 1rem;
+    --font-size-h1: 2rem;
+    --font-size-h2: 1.85rem;
+    --font-size-h3: 1.5rem;
+  }
+
+  #about {
+    display: block;
+  }
+  #about section:nth-child(2) ul li {
+    font-size: 0.8rem;
+  }
+}
+body {
+  display: grid;
+  grid-template-areas: "header header" "nav nav" "main main" "aside1 aside2" "footer footer";
+  grid-template-columns: 1fr 1fr;
+  background: var(--background);
+  color: var(--text-color);
+  font-family: "Inconsolata", monospace;
+  font-size: var(--font-size-text);
+}
+
+nav ul,
+main ul,
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main {
+  grid-area: main;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+article {
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-top: var(--size-700);
+  max-width: var(--width--container);
+}
+
+aside .container {
+  padding: 1.5rem;
+}
+
+.container {
+  width: 100%;
+}
+
+#guidelines > * + *,
+#contribute > * + *,
+#files > * + * {
+  margin-top: var(--size-600);
+}
+
+.profile,
+#files {
+  padding-top: var(--size-700);
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    display: grid;
+    grid-template-areas: "header" "nav" "main" "aside2" "aside1" "footer";
+    grid-template-columns: 1fr;
+  }
+}
+header {
+  grid-area: header;
+  background: url("https://source.unsplash.com/5em1lVBmvw8/1920x1280") no-repeat;
+  background-size: auto;
+  padding: 10%;
+  background-size: cover;
+}
+header h2 {
+  font-size: calc(var(--font-size-h2) * 0.8);
+  background: var(--lighterPink);
+  max-width: 51%;
+}
+header p {
+  margin-top: 0.5rem;
+  padding: 0.2rem 0.2rem 0.2rem 0;
+  line-height: normal;
+  background: var(--lighterPink);
+  max-width: 43%;
+}
+header * + * {
+  margin-top: 3vh;
+}
+
+@media only screen and (max-width: 640px) {
+  header {
+    padding: 5rem 2rem;
+  }
+  header h2,
+header p {
+    max-width: 100%;
+  }
+}
+nav {
+  grid-area: nav;
+  background-color: var(--nav-color);
+}
+nav ul {
+  margin: 0;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0.5em;
+}
+
+#about {
+  display: flex;
+}
+#about blockquote {
+  margin: 0;
+  padding-left: var(--size-base);
+  border-left: 2px solid var(--darkerPink);
+}
+#about section:nth-child(1) {
+  padding-right: var(--size-base);
+}
+#about section:nth-child(2) ul li {
+  --border-radius: 3px;
+  margin: 0.35em;
+  padding: 0.3em 0.5em;
+  background-color: var(--main);
+  color: var(--light);
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  box-shadow: var(--level-3);
+  cursor: default;
+}
+
+@media only screen and (max-width: 640px) {
+  #about {
+    display: block;
+  }
+  #about section:nth-child(2) ul li {
+    font-size: 0.8rem;
+  }
+}
+#guidelines h3 {
+  margin-top: 2rem;
+  background: var(--lighterPink);
+  max-width: 5.5rem;
+}
+
+#contribute ol {
+  counter-reset: counts 0;
+}
+#contribute ol li {
+  counter-increment: counts 1;
+}
+#contribute ol li::before {
+  content: counter(counts) ". ";
+  color: var(--main);
+  font-weight: var(--font-weight-medium);
+}
+
+#files a {
+  margin-top: var(--size-600);
+}
+
+#styles {
+  background: var(--lighterGreen);
+  grid-area: aside1;
+  padding-bottom: var(--size-700);
+}
+#styles .container {
+  max-width: calc(var(--width--container) / 2);
+  margin: 0;
+  margin-left: auto;
+}
+@media only screen and (min-width: 641px) {
+  #styles {
+    padding-top: var(--size-700);
+  }
+}
+
+.profile {
+  background: var(--lighterGreen);
+  grid-area: aside2;
+}
+.profile .container {
+  max-width: calc(var(--width--container) / 2);
+  margin: 0;
+  margin-left: auto;
+}
+
+.page-footer {
+  grid-area: footer;
+  max-width: var(--width--container);
+  margin: 0 auto;
+  padding: var(--size-700);
+  font-size: 1rem;
+}
+.page-footer ul li {
+  margin: 8px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--darkGrey);
+  border-bottom: solid 2px var(--anchor);
+  transition: all 0.3s ease-in-out;
+}
+a:not([class]):hover {
+  color: var(--anchor-hover);
+  border-bottom: none;
+  transition: transform 200ms ease 0s;
+}
+
+a[class] {
+  padding: 0.3em 1em;
+  background: var(--main);
+  color: var(--light);
+  border-radius: var(--border-radius);
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+a[class] span {
+  line-height: 14px;
+}
+a[class]:hover {
+  box-shadow: var(--level-3);
+  transform: scale(1.05);
+}
+
+header a:not([class]):hover,
+main a:not([class]):hover,
+footer a:not([class]):hover {
+  --anchor-hover: var(--darkerPink);
+}
+
+.skip-link {
+  --main: hsla(0, 0%, 100%, 0.2);
+  position: absolute;
+  top: 1rem;
+}
+@media only screen and (min-width: 641px) {
+  .skip-link {
+    right: 1rem;
+  }
+}
+
+aside#styles .container ul + a {
+  --light: var(--darkGrey);
+  background: inherit;
+  border: 1px solid black;
+  border-bottom: solid 2px var(--anchor);
+}
+
+aside.profile .container ul + a {
+  padding: 0.3rem 1rem;
+  display: inline-block;
+  background: inherit;
+  border-radius: var(--border-radius);
+  border: 1px solid black;
+  border-bottom: solid 2px var(--anchor);
+  text-decoration: none;
+  transition: all 0.3s ease 0s;
+}
+aside.profile .container ul + a:after {
+  background: none;
+}
+aside.profile .container ul + a:hover {
+  --anchor-hover: var(--darkGrey);
+  box-shadow: var(--level-3);
+  transform: scale(1.05);
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  fill: currentColor;
+}
+
+@media only screen and (max-width: 640px) {
+  .skip-link {
+    left: 1rem;
+  }
+}

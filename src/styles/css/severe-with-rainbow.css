@@ -14,6 +14,10 @@
 
 
 @charset "UTF-8";
+/* Import header font */
+@import url(https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap);
+/* Import main text font */
+@import url(https://fonts.googleapis.com/css2?family=Poiret+One&display=swap);
 
 :root {
   --color-primary: #750d37;
@@ -293,7 +297,7 @@ header h1 {
           transform: skewY(-20deg);
 }
 header h2 {
-  max-width: 30ch;
+  max-width: 60ch;
 }
 
 nav ul {
@@ -342,19 +346,19 @@ nav ul li {
 #about section:first-child,
 #about section:nth-child(2) p,
 #guidelines section {
-  padding: 0 9em;
+  padding: 0 6em;
 }
 
 #contribute section ol {
-  padding: 0 7em;
+  padding: 0 4em;
 }
 
 #contribute section p {
-  padding: 0 5em;
+  padding: 0 2em;
 }
 
 #contribute section h3 {
-  padding: 0 3em;
+  padding: 0 1.5em;
 }
 
 #about section:nth-child(2) {
@@ -599,7 +603,6 @@ nav ul li {
 
 .features {
   position: relative;
-  width: 88%;
   grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
   /*! 
     * SVGs from Hero Patterns
@@ -747,11 +750,14 @@ nav ul li {
   }
   .profile ul li {
     padding: 0;
-    font-size: 15px;
   }
   .profile ul li span:nth-child(1) {
     width: 8ch;
     margin-right: 0;
+  }
+  .profile ul li,
+  .profile ul li a {
+    font-size: 0.8rem;
   }
 }
 
