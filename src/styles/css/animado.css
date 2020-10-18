@@ -1,0 +1,379 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Elisangela Silva
+* 
+* Title: Animado
+* Author: Elisangela Silva
+* Website: N/A
+* Twitter: @elisannsilva
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/animado/
+*/
+
+*, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #43658b;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    font-size: 1.18rem;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: -1000;
+}
+.skip-link:focus {
+    z-index: 10;
+} 
+
+a {
+     color: inherit; 
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+main, aside, footer {
+    padding: 30px;
+}
+
+header {
+    display: grid;
+    min-height: 100vh;
+    text-align: center;
+    place-items: center;
+    padding: 10vh 2rem;
+    background: linear-gradient(45deg, #4e89ae,#43658b,#ed6663,#ffa372);
+    background-size: 200% 200%;
+    animation: colors 13s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 5%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+      -webkit-animation-duration: 0.01ms !important;
+              animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+              animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+              transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+header h1 {
+    display: inline-grid;
+    font-size: max(4vw,70px);
+    border: 3px solid #fff;
+    padding: 1vw;
+}
+
+header h2 {
+    margin-top: 15px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+header a.link-github {
+    max-width: 12rem;
+    margin: 0 auto;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 0.25em 1em;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+svg {
+    margin-top: 1%;
+    height: max(1.1vw, 15px);
+    fill: #fff;
+}
+
+nav {
+    padding: 3rem;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: nome;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 1rem;
+}
+
+nav ul a {
+    display: inline-grid;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+main, .link-guidelines {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+}
+
+#main h2 {
+    font-size: 1.7rem;
+    line-height: 2;
+    margin: 0.50rem;
+}
+
+#about p, #guidelines p, ol {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+blockquote {
+    border: 3px solid #fff;
+    border-left-color: #ffa372;
+    border-right-color: #ffa372;
+    padding: 7px;
+}
+
+#main strong {
+    color: #ffa372;
+}
+
+#about section:nth-child(2) ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+#about ul li {
+    display: inline-grid;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ffa372;
+}
+
+#about section:nth-child(2) p:nth-child(3) {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #ffa372;
+} 
+
+main h3 {
+    color: #ffa372;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.link-guidelines {
+    /* text-decoration: none; */
+    font-weight: bold;
+    text-align: center;
+    color: #ffa372;
+}
+
+#guidelines p:nth-of-type(1), #contribute p:nth-of-type(1) {
+    font-weight: bolder;
+}
+
+#contribute h3 {
+    line-height: 1;
+    margin-bottom: 0.65em;
+    font-size: 1.7rem;
+}
+
+ol {
+    list-style-type: decimal;
+    padding-inline-start: 40px;
+    line-height: 25px;
+}
+
+#files a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    background: #ffa372;
+    font-weight: bold;
+    color: #43658b;
+    padding: 15px;
+}
+
+.profile {
+    width: 95vw;
+    max-width: 80ch;
+    margin: 1rem auto 10vh;
+    padding: 1.25rem;
+    z-index: 1;
+
+}
+
+aside {
+    display: block;
+}
+
+.profile .container {
+    border: 3px solid #ffa372;
+    color: #fff;
+    padding: 10px;
+    display: grid;
+    justify-items: center;
+    grid-gap: 1rem;
+}
+
+.profile h4 {
+    margin: 5px;
+    text-align: center;
+}
+
+.profile ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 3px;
+    list-style: none;
+}
+
+.profile ul li {
+    margin-right: 15px;
+}
+
+#styles {
+    margin: 5vh 0 20vh;
+    text-align: center;
+}
+
+article .container, .page-footer .container, #styles .container {
+    width: 100%;
+    max-width: 80ch;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#styles h2 {
+    color: #fff;
+    font-size: 1.9rem;
+    margin-bottom: 13px;
+}
+
+.features {
+    position: relative;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+}
+
+.page-footer ul, .features {
+    display: grid;
+    margin: 0 0 2rem;
+    padding: 0;
+    grid-gap: 1em;
+    list-style: none;
+}
+
+#styles .features li, .features.patterned li {
+    background-color: #ffa372;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23fff' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.features li {
+    display: grid;
+    position: relative;
+    place-content: center;
+    min-height: 12rem;
+    padding: 1rem;
+    font-weight: bold;
+    color: #43658b;
+    text-align: center;
+}
+
+.features li > span {
+    display: grid;
+    place-content: center;
+    padding: 0.5em;
+    grid-gap: 0.5rem;
+    border: 1px solid #fff;
+    background-color: #ffa372;
+    line-height: 1.1;
+}
+
+.link-allstyles {
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border: 3px solid #fff;
+}
+
+.page-footer p:first-child {
+    margin-top: 3rem;
+    color: #fff;
+    letter-spacing: 0.03em;
+    text-align: center;
+}
+
+.page-footer ul {
+    grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+}
+
+.page-footer ul a {
+    text-decoration: none;
+    font-size: max(1.1vw, 19px);
+    text-align: center;
+}
+
+.page-footer ul li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #ffa372;
+    color: #43658b;
+}
+
+.page-footer .container > :last-child {
+    margin-bottom: 0;
+}
+
+a:hover {
+    text-decoration: underline !important;
+}

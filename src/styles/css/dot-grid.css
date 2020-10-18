@@ -1,0 +1,581 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Abigail Colina
+* 
+* Title: Dot grid
+* Author: Abigail Colina
+* Website: https://colina.dev
+* Twitter: @stabby_1
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/dot-grid/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  color: #444f62;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("./img/dot-grid.png");
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+a:hover {
+  color: #b60202;
+  text-decoration: none;
+  font-size: 1.02em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.skip-link {
+  position: absolute;
+  top: 4em;
+  left: 1em;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header .link-github {
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 1.5em 1em;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #444f62;
+  -webkit-box-shadow: 5px 5px 60px lightgray;
+          box-shadow: 5px 5px 60px lightgray;
+  font-weight: 600;
+}
+
+header .link-github span {
+  display: none;
+}
+
+header .link-github:hover {
+  background-color: white;
+  border: 1px solid #444f62;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+header .container {
+  width: 60%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  -webkit-box-shadow: 5px 5px 60px lightgray;
+          box-shadow: 5px 5px 60px lightgray;
+}
+
+header .container h2 {
+  margin: 1em 0em;
+  text-align: center;
+}
+
+header .container p {
+  margin-bottom: 2em;
+}
+
+nav {
+  width: 100vw;
+  top: 2em;
+  position: absolute;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+  text-decoration: none;
+}
+
+nav ul li {
+  margin: 1em 0em;
+  background-color: white !important;
+  padding: 1em 2em;
+}
+
+main,
+aside {
+  /**general big blex**/
+}
+
+main .container,
+aside .container {
+  /** contains all main as well**/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container article,
+aside .container article {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .container article .container,
+aside .container article .container {
+  /** SECTIONS containers setting the stage and spotlight **/
+  width: 40%;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2em;
+  -webkit-box-shadow: 5px 5px 60px lightgray;
+          box-shadow: 5px 5px 60px lightgray;
+  margin: 1em 1em;
+}
+
+main .container article .container h2,
+aside .container article .container h2 {
+  margin: 1em 0em;
+  text-align: center;
+}
+
+main .container article .container h3,
+aside .container article .container h3 {
+  margin: 1em 0em;
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 5px 5px 0px lightgray;
+          box-shadow: 5px 5px 0px lightgray;
+}
+
+main .container article .container ol li,
+aside .container article .container ol li {
+  margin: 1em 0em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid lightgray;
+}
+
+main .container article .container p,
+aside .container article .container p {
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+main .container article .container .link-guidelines,
+aside .container article .container .link-guidelines {
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 1.5em 1em;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #444f62;
+  -webkit-box-shadow: 5px 5px 60px lightgray;
+          box-shadow: 5px 5px 60px lightgray;
+  font-weight: 600;
+}
+
+main .container article .container .link-guidelines:hover,
+aside .container article .container .link-guidelines:hover {
+  background-color: white;
+  border: 1px solid #474747;
+  color: #444f62;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .container article .container ul,
+aside .container article .container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+main .container article .container ul li,
+aside .container article .container ul li {
+  margin: 0.3em;
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 1em;
+  font-weight: 400;
+}
+
+main .container article .container ul li:hover,
+aside .container article .container ul li:hover {
+  background-color: white;
+  border: 1px solid #444f62;
+  color: #444f62;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+main .container #contribute,
+aside .container #contribute {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .container #contribute .container,
+aside .container #contribute .container {
+  margin: 1em 0em;
+}
+
+main .container #files,
+aside .container #files {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1em;
+}
+
+main .container #files .container,
+aside .container #files .container {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.page-footer {
+  background-color: white;
+  line-height: 1.5em;
+  padding-top: 1em;
+  border-top: 2px solid lightgrey;
+}
+
+.page-footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100vw;
+  padding: 2em;
+}
+
+.page-footer .container ul {
+  text-align: center;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  margin: 1em;
+}
+
+.page-footer .container ul li {
+  margin: 1em;
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 5px 5px 0px lightgray;
+          box-shadow: 5px 5px 0px lightgray;
+  font-weight: 600;
+}
+
+.page-footer .container ul li a:hover {
+  color: #444f62;
+}
+
+.page-footer .container ul li .link-github svg {
+  display: none;
+}
+
+aside {
+  background-color: white;
+  width: 20%;
+  -webkit-box-shadow: 5px 5px 60px lightgray;
+          box-shadow: 5px 5px 60px lightgray;
+  padding: 2em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 1em;
+  text-align: center;
+  bottom: 20em;
+}
+
+aside .profile-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 0.5em 0em;
+  background-color: #ffc6c6;
+  border: 1px solid #474747;
+  padding: 0.5em 1em;
+  -webkit-box-shadow: 5px 5px 0px lightgray;
+          box-shadow: 5px 5px 0px lightgray;
+}
+
+aside .profile-title span:first-child {
+  display: none;
+}
+
+aside ul {
+  list-style: none;
+  margin-bottom: 1em;
+}
+
+#styles h2 {
+  margin-bottom: 0.5em;
+}
+
+#styles ul li {
+  margin: 0.5em 0em;
+}
+
+@media (max-width: 1024px) {
+  .skip-link {
+    width: 100vw;
+    text-align: center;
+  }
+  #about,
+  #guidelines,
+  #contribute {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about .container,
+  #guidelines .container,
+  #contribute .container {
+    width: 80%;
+  }
+  nav {
+    display: none;
+  }
+  aside {
+    width: 70%;
+  }
+  main .container #files .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.page-footer {
+  text-align: center;
+}
+
+.page-footer p {
+  padding: 0em 8em;
+}
+
+@media (max-width: 600px) {
+  .skip-link {
+    width: 100vw;
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+  header .container {
+    width: 95%;
+  }
+  header .container .link-github {
+    width: 70%;
+  }
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about,
+  #guidelines,
+  #contribute {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about section,
+  #about .container,
+  #guidelines section,
+  #guidelines .container,
+  #contribute section,
+  #contribute .container {
+    width: 95%;
+    margin: 0.5em 0em;
+  }
+  aside {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .container #files {
+    width: 100%;
+  }
+  main .container #files .container {
+    width: 95%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-footer {
+    width: 100%;
+    text-align: center;
+  }
+  .page-footer ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .page-footer p {
+    padding: 0em;
+  }
+}
+/*# sourceMappingURL=style.css.map */

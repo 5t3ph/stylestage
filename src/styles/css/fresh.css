@@ -1,0 +1,590 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Thomas Champion
+* 
+* Title: Fresh
+* Author: Thomas Champion
+* Website: http://thomaschampion.info/
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/fresh/
+*/
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Piazzolla:wght@300;600;900&family=Roboto:wght@400;500;700&display=swap");
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --font-wght-title: 600 ;
+}
+
+body {
+  overflow-x: visible;
+}
+@media (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 25vw 34px 1fr 1fr 45px 34vw;
+    grid-template-rows: auto auto auto;
+  }
+}
+body .skip-link {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  header .container {
+    position: sticky;
+    top: 0px;
+    margin-right: -35px;
+  }
+}
+header .container:before, header .container:after {
+  content: " ";
+  display: table;
+}
+header .container:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  visibility: hidden;
+}
+header .container {
+  *zoom: 1;
+}
+
+nav {
+  z-index: 0;
+}
+@media (min-width: 1024px) {
+  nav {
+    background: #f2d1c8;
+  }
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul:before, nav ul:after {
+  content: " ";
+  display: table;
+}
+nav ul:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  visibility: hidden;
+}
+nav ul {
+  *zoom: 1;
+}
+nav ul li {
+  float: left;
+}
+@media (min-width: 1024px) {
+  nav ul {
+    position: absolute;
+    position: sticky;
+    top: 0px;
+    transform-origin: left top;
+    width: 570px;
+    height: 570px;
+    transform: rotate(-90deg) translateX(-100%);
+  }
+  nav ul li {
+    float: right;
+    display: block;
+  }
+}
+
+#main {
+  grid-column-start: span 4;
+  position: relative;
+  color: #000;
+  margin: 15px 15px;
+}
+@media (min-width: 1024px) {
+  #main {
+    margin: 6vw 8vw;
+  }
+}
+#main:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(100deg, #025940, #F26052);
+  z-index: 0;
+}
+#main .container {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+#main .container > article section {
+  mix-blend-mode: screen;
+  background-color: #fff;
+  padding: max(3vw, 30px) 0;
+}
+#main .container > article section:before, #main .container > article section:after {
+  content: " ";
+  display: table;
+}
+#main .container > article section:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  visibility: hidden;
+}
+#main .container > article section {
+  *zoom: 1;
+}
+
+aside#styles {
+  grid-column-start: span 6;
+}
+.page-footer {
+  grid-column-start: span 6;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+body {
+  font-family: "Roboto";
+  color: #025940;
+  font-size: max(1.35vw, 16px);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Piazzolla";
+  font-weight: 600;
+}
+
+h2 {
+  font-size: clamp(38px, 3vw, 36px);
+  letter-spacing: clamp(1px, 0.2vw, 36px);
+  line-height: 1.1;
+}
+
+h3 {
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #025940;
+  transition: all 0.3s ease-in-out;
+}
+nav a {
+  background: #fff;
+  display: block;
+  padding: 7px 10px 7px;
+  border-bottom: none;
+  white-space: nowrap;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-right: 3px;
+}
+@media (min-width: 1024px) {
+  nav a {
+    font-size: 14px;
+  }
+}
+
+header .container {
+  padding: 15px;
+  background: #F2D1C9;
+}
+@media (min-width: 1024px) {
+  header .container {
+    height: 100vh;
+    text-align: right;
+    padding: 0.3vw calc(3.1vw + 35px) 1.5vw 1.5vw;
+  }
+}
+header .container h1 {
+  font-size: max(5vw, 60px);
+  width: max(17vw, 200px);
+  line-height: 0.8;
+  margin-bottom: 30px;
+  font-weight: 900;
+  margin-right: -1px;
+  margin-top: 6vw;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+}
+@media (min-width: 1024px) {
+  header .container h1 {
+    margin-left: auto;
+  }
+}
+header .container h2 {
+  font-size: max(1.5vw, 18px);
+  font-weight: 600;
+  line-height: 1;
+}
+header .link-github {
+  border: none;
+  color: #000;
+  margin-top: 10vh;
+  display: block;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  left: 0;
+  text-align: center;
+}
+header .link-github span {
+  background: #F26052;
+  display: block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  border-radius: 50px;
+  padding-bottom: 3px;
+  justify-content: center;
+  margin: 0 auto 1vw;
+}
+header .link-github span svg {
+  width: 30px;
+  fill: #F2D1C9;
+}
+
+main article {
+  mix-blend-mode: screen;
+}
+main article h2 {
+  margin-bottom: max(3vw, 30px);
+}
+@media (min-width: 1024px) {
+  main article h2 {
+    width: 45vw;
+  }
+}
+main article a {
+  border-color: #000;
+}
+main article [class^=link-] {
+  background-color: #fff;
+  color: #000;
+  padding: max(1vw, 10px) max(4vw, 30px);
+  border-radius: 40px;
+  margin: 1vw auto;
+  display: block;
+  box-shadow: 0 0 0px 2px inset #c5c5c5, 0 0 0px 3px inset #101010;
+  border-bottom: 1px solid #868686;
+  text-align: center;
+}
+main article [class^=link-]:hover {
+  box-shadow: 0 0 0px 1px inset #c5c5c5, 0 0 0px 3px inset #101010;
+}
+main article ul {
+  margin: 0;
+  padding: 0;
+}
+main article ul > li {
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  padding: max(0.4vw, 3px) max(0.9vw, 10px);
+  margin-right: max(0.4vw, 3px);
+  margin-bottom: max(0.6vw, 4px);
+  box-shadow: 0 0 0px 2px inset #c5c5c5, 0 0 0px 3px inset #101010;
+}
+main article blockquote {
+  font-family: "Merriweather";
+  box-shadow: 0 0 0px 5px inset #dadada, 0 0 0px 7px inset #000000;
+  padding: max(2.5vw, 30px);
+  margin: max(3vw, 30px) 0;
+  background: #fff;
+  color: #000;
+  line-height: 1.6;
+  transform: rotate(-1deg);
+}
+main article blockquote p {
+  margin: 0;
+}
+main article section {
+  border-bottom: 1px solid #000;
+}
+main article #files {
+  color: #fff;
+}
+main article #files .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #ffffff;
+  color: #000;
+  padding-top: 4vw;
+  gap: 0px 20px;
+}
+main article #files .container h3 {
+  grid-column: 1/3;
+  text-align: center;
+  font-family: "Merriweather";
+}
+main article #files .container .link-downloadcss,
+main article #files .container .link-downloadhtml {
+  text-align: center;
+  margin: max(2vw, 15px) 0;
+  padding: max(4vw, 30px);
+  border-radius: 0;
+  font-size: max(2vw, 18px);
+  font-family: "Piazzolla";
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+main article #files .container .link-downloadcss:hover,
+main article #files .container .link-downloadhtml:hover {
+  box-shadow: 0 0 0px 2px inset #c5c5c5, 0 0 0px 5px inset #101010;
+}
+main article #files .container .link-codepen {
+  grid-column: 1/3;
+}
+
+#styles {
+  text-align: center;
+  background: #025940;
+  color: #fff;
+  padding: max(3vw, 30px) max(2vw, 15px);
+}
+#styles h2 {
+  margin-bottom: max(2.5vw, 30px);
+}
+#styles ul.features {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+#styles ul.features li {
+  margin-bottom: 1vw;
+  flex: 1;
+}
+#styles ul.features li:nth-child(1) a::before {
+  content: "👏 ";
+}
+#styles ul.features li:nth-child(2) a::before {
+  content: "🤘 ";
+}
+#styles ul.features li:nth-child(3) a::before {
+  content: "👍 ";
+}
+#styles ul.features li > span a {
+  border: 1px solid #ffffff5c;
+  padding: max(0.4vw, 5px) max(1.1vw, 5px);
+  font-size: max(2vw, 16px);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 0.6vw;
+  display: block;
+}
+@media (min-width: 1024px) {
+  #styles ul.features li > span a {
+    display: inline;
+  }
+}
+#styles ul.features li > span > span {
+  font-family: "Merriweather";
+  font-size: max(1vw, 14px);
+}
+#styles a {
+  border-color: #fff;
+}
+
+.profile {
+  z-index: 2;
+  font-size: 16px;
+}
+@media (min-width: 1024px) {
+  .profile {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+  }
+}
+.profile .container {
+  background: #F26052;
+  color: #fff;
+  padding: 0 30px 30px 30px;
+  line-height: 1.7;
+  text-align: center;
+}
+.profile .container:before, .profile .container:after {
+  content: " ";
+  display: table;
+}
+.profile .container:after {
+  display: block;
+  clear: both;
+  height: 1px;
+  margin-top: -1px;
+  visibility: hidden;
+}
+.profile .container {
+  *zoom: 1;
+}
+@media (min-width: 1024px) {
+  .profile .container {
+    background: #025940;
+    text-align: left;
+    animation-name: jumping;
+    min-width: 250px;
+    animation-duration: 1s;
+    transition: ease all 0.4s;
+    margin-bottom: calc(-100% + 95px);
+  }
+}
+.profile .container a {
+  text-decoration: underline;
+}
+.profile .container #profile-title {
+  line-height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.profile:hover .container, .profile:focus-within .container {
+  margin-bottom: 0%;
+}
+.profile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+.profile ul li span:first-child {
+  font-weight: bold;
+}
+@keyframes jumping {
+  0% {
+    margin-bottom: -100%;
+  }
+  50% {
+    margin-bottom: 0%;
+  }
+  100% {
+    margin-bottom: calc(-100% + 95px);
+  }
+}
+.page-footer {
+  background-color: #80BF9B;
+  text-align: center;
+  padding: 3vw;
+  font-size: max(1.35vw, 18.5px);
+}
+.page-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.page-footer ul li {
+  text-align: center;
+  margin: 0 1vw;
+}
+.page-footer ul li a {
+  text-decoration: none;
+  background-color: #fff;
+  padding: 1vw 2vw;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  display: block;
+}
+.page-footer ul li a:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0);
+}
+.page-footer ul li a svg {
+  display: none;
+}
+.page-footer p {
+  width: 60vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3vw;
+}
+.page-footer .link-github svg {
+  width: 30px;
+  fill: #F2D1C9;
+}
