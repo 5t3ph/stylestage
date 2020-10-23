@@ -1,0 +1,485 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+:root {
+  --border-radius: 0.25rem;
+
+  --color-accent: hsl(0, 0%, 35%);
+  --color-anchor: hsl(333, 84%, 60%);
+  --color-anchor-focus: hsl(0, 0%, 100%);
+  --color-background: hsl(7, 80%, 64%);
+  --color-background-alt: hsl(7, 80%, 72%);
+  --color-highlight: hsl(64, 92%, 52%);
+  --color-os: hsl(195, 24%, 6%);
+  --color-os-header: hsl(240, 4%, 17%);
+  --color-os-close: hsl(4, 62%, 64%);
+  --color-os-minimize: hsl(47, 66%, 59%);
+  --color-os-fullscreen: hsl(98, 63%, 51%);
+  --color-text: hsl(0, 0%, 80%);
+  --color-warning: hsl(0, 75%, 62%);
+
+  --font-main: "IBM Plex Mono", monospace;
+  --font-system: "Helvetica Neue", sans-serif;
+  --font-size: 1rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+
+  --height-header: 42px;
+  --max-width-body: 1000px;
+
+  --space-xxs: 0.125rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-base: 1rem;
+  --space-md: 1.25rem;
+  --space-lg: 2rem;
+  --space-xl: 2.5rem;
+  --space-body: 5vmin;  
+}
+
+@media (min-width: 500px) {
+  :root {
+    --font-size: 1.25rem;
+  }
+}
+
+html {
+  overflow: hidden;
+  height: 100%;
+  background: linear-gradient(-25deg, var(--color-background), var(--color-background-alt));
+  padding: var(--space-body);
+}
+
+body {
+  position: relative;
+  font-family: var(--font-main);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight-normal);
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-os);
+  margin: 0 auto;
+  padding: var(--space-body) var(--space-body) 0;
+  max-width: var(--max-width-body);
+  height: 100%;
+  border-top: var(--height-header) solid var(--color-os-header);
+  border-radius: var(--border-radius);
+  overflow: scroll;
+  scroll-behavior: smooth;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1), 
+              0 2px 4px rgba(0,0,0,0.1), 
+              0 4px 8px rgba(0,0,0,0.1), 
+              0 8px 16px rgba(0,0,0,0.1),
+              0 16px 32px rgba(0,0,0,0.1), 
+              0 32px 64px rgba(0,0,0,0.1);
+}
+
+/* Section layout */
+body {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body > * {
+  -webkit-box-flex: 1;
+          flex: 1 0 100%;
+}
+
+aside {
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 800px) {
+  body > aside {
+    -webkit-box-flex: 1;
+            flex: 1 0 50%;
+  }
+}
+
+/* Elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-size: unset;
+  font-weight: unset;
+  margin: unset;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+ol li + li {
+  margin-top: var(--space-sm);
+}
+
+svg {
+  fill: currentcolor;
+  width: 1em;
+}
+
+/* Remove animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Blockquotes and files container */
+#files .container,
+blockquote {
+  overflow: hidden;
+  text-overflow: clip;
+  border: 2px dashed var(--color-accent);
+  max-width: 50ch;
+  margin: var(--space-xl) auto;
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+}
+
+blockquote strong {
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+#files .container h3::before,
+#files .container h3::after,
+blockquote strong::before,
+blockquote strong::after {
+  content: "* * * * * * * *";
+  display: block;
+  color: var(--color-highlight);
+  white-space: nowrap;
+  font-weight: var(--font-weight-normal);
+  -webkit-animation: marquee 2s linear infinite;
+          animation: marquee 2s linear infinite;
+}
+
+@-webkit-keyframes marquee {
+  0%   { content: "* * * * * * * * *" }
+  10%  { content: "# * * * * * * * *" }
+  20%  { content: "* # * * * * * * *" }
+  30%  { content: "* * # * * * * * *" }
+  40%  { content: "* * * # * * * * *" }
+  50%  { content: "* * * * # * * * *" }
+  60%  { content: "* * * * * # * * *" }
+  70%  { content: "* * * * * * # * *" }
+  80%  { content: "* * * * * * * # *" }
+  90%  { content: "* * * * * * * * #" }
+  100% { content: "* * * * * * * * *" }
+}
+
+@keyframes marquee {
+  0%   { content: "* * * * * * * * *" }
+  10%  { content: "# * * * * * * * *" }
+  20%  { content: "* # * * * * * * *" }
+  30%  { content: "* * # * * * * * *" }
+  40%  { content: "* * * # * * * * *" }
+  50%  { content: "* * * * # * * * *" }
+  60%  { content: "* * * * * # * * *" }
+  70%  { content: "* * * * * * # * *" }
+  80%  { content: "* * * * * * * # *" }
+  90%  { content: "* * * * * * * * #" }
+  100% { content: "* * * * * * * * *" }
+}
+
+/* Links */
+a {
+  display: inline-block;
+  color: var(--color-anchor);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-anchor-focus);
+}
+
+a:focus {
+  outline: 2px dashed var(--color-anchor-focus);
+  outline-offset: 4px;
+  text-decoration: none;
+}
+
+.skip-link {
+  -webkit-box-flex: 0;
+          flex: 0 0 auto;
+  margin-bottom: var(--space-base);
+}
+
+.skip-link:not(:focus) {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Container children spacing */
+main .container > * + *:not(blockquote),
+.page-footer .container > * + * {
+  margin-top: var(--space-lg);
+}
+
+/* Header */
+header p::before {
+  content: "‣";
+  display: inline-block;
+  color: var(--color-highlight);
+}
+
+header .link-github {
+  margin-top: var(--space-lg);
+}
+
+header .link-github {
+  position: relative;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  color: var(--color-os);
+  background-color: var(--color-highlight);
+  padding: 0 var(--space-xs);
+  text-decoration: none;
+}
+
+header .link-github:hover,
+header .link-github:focus {
+  color: var(--color-os);
+}
+
+header .link-github svg {
+  position: relative;
+  top: 0.125rem;
+  margin-right: var(--space-xs);
+}
+
+header h1 {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: var(--space-body);
+  margin: 0 auto;
+  margin-left: calc(var(--space-body) * -1);
+  font-family: var(--font-system);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: var(--space-sm);
+  width: calc(100% - var(--space-body) * 2);
+  max-width: var(--max-width-body);
+  height: var(--height-header);
+}
+
+header h1::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: var(--space-base);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-os-close);
+  border-radius: 50%;
+  box-shadow: var(--color-os-minimize) var(--space-md) 0,
+    var(--color-os-fullscreen) calc(var(--space-md) * 2) 0;
+}
+
+header h2 {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+header h2::before,
+.page-footer::before {
+  -webkit-box-ordinal-group: -1;
+          order: -2;
+  content: "~/Desktop$";
+  color: var(--color-accent);
+}
+
+header h2::after {
+  -webkit-box-ordinal-group: 0;
+          order: -1;
+  content: "run StyleStage.dev";
+  margin-left: var(--space-sm);
+  color: var(--color-highlight);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Navigation */
+nav {
+  margin: var(--space-xl) 0 0;
+}
+
+nav ul,
+.page-footer ul {
+  -webkit-column-width: 240px;
+     -moz-column-width: 240px;
+          column-width: 240px;
+  max-width: 45ch;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  padding: var(--space-xxs) 0;
+}
+
+main {
+  outline: none;
+}
+
+/* Main */
+main .container h2,
+main .container h3,
+#profile-title,
+#styles h2 {
+  color: var(--color-highlight);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Articles */
+article .container {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  border-top: 2px dashed var(--color-accent);
+}
+
+#about .container ul {
+  -webkit-column-width: 260px;
+     -moz-column-width: 260px;
+          column-width: 260px;
+  -webkit-column-fill: auto;
+     -moz-column-fill: auto;
+          column-fill: auto;
+}
+
+#about .container ul li {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  width: 100%;
+}
+
+#about .container ul li::before {
+  content: "*";
+  margin-right: var(--space-sm);
+  color: var(--color-accent);
+}
+
+#guidelines h3 {
+  display: inline-block;
+  padding: 0 var(--space-xs);
+  color: var(--color-os);
+  background-color: var(--color-warning);
+}
+
+#files .container h3 {
+  color: var(--color-text);
+  margin-bottom: var(--space-base);
+}
+#files .container a {
+  margin-top: unset;
+  padding: var(--space-xs);
+}
+
+/* Footer */
+.page-footer {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-ordinal-group: 1;
+          order: 0;
+  margin-top: var(--space-xl);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-body);
+  border-top: 2px dashed var(--color-accent);
+}
+
+.page-footer .container {
+  -webkit-box-flex: 1;
+          flex: 1 0 100%;
+  margin-bottom: var(--space-xl);
+}
+
+.page-footer ul {
+  margin: var(--space-xl) 0;
+}
+
+.page-footer ul a {
+  padding: var(--space-xxs) 0;
+}
+
+.page-footer .link-github svg {
+  position: relative;
+  top: 0.15rem;
+}
+
+.page-footer::before {
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+}
+
+.page-footer::after {
+  -webkit-box-ordinal-group: 3;
+          order: 2;
+  content: "";
+  display: inline-block;
+  position: relative;
+  top: 0.25rem;
+  margin-left: 0.5rem;
+  width: 2px;
+  height: 1.125em;
+  background-color: var(--color-highlight);
+  -webkit-animation: blink-cursor 1s steps(1, start) infinite;
+          animation: blink-cursor 1s steps(1, start) infinite;
+}
+
+@-webkit-keyframes blink-cursor {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink-cursor {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#sponsor-footer {
+  margin-bottom: var(--space-body);
+}
