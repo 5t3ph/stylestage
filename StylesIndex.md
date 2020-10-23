@@ -97,3 +97,5 @@
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Yellowed](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/yellowed.css) By Sowmya Seshadri
+
+[Cheems](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/cheems.css) By Abhinav Japesh
