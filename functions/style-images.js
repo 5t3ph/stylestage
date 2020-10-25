@@ -36,46 +36,52 @@ const slugify = require("slugify");
       remove: /[*+~·,()'"`´%!?¿:@\/]/g,
     });
 
-    const html = fs
-      .readFileSync(path.resolve(__dirname, `../public/styles/${slug}/index.html`))
-      .toString();
+    const styleImg = path.resolve(__dirname, `../public/img/styles/${slug}.jpg`);
+    if (fs.existsSync(styleImg)) continue;
 
-    const style = fs
-      .readFileSync(path.resolve(__dirname, `../public/styles/css/${slug}.css`))
-      .toString();
+    let html = path.resolve(__dirname, `../public/styles/${slug}/index.html`);
+    if (!fs.existsSync(html)) continue;
+    html = fs.readFileSync(html).toString();
 
-    if (style) {
-      // Render html, wait for 0 network connections to ensure webfonts downloaded
-      await page.setContent(html, {
+    let style = path.resolve(__dirname, `../public/styles/css/${slug}.css`);
+    if (!fs.existsSync(style)) continue;
+    style = fs.readFileSync(style).toString();
+
+    // Render html, wait for 0 network connections to ensure webfonts downloaded
+    await page
+      .setContent(html, {
+        timeout: 3000,
         waitUntil: ["networkidle0"],
+      })
+      .catch(() => {
+        return;
       });
 
-      await page.evaluate((style) => {
-        const head = document.getElementsByTagName("head")[0];
-        var css = document.createElement("STYLE");
-        css.innerHTML = style;
-        head.appendChild(css);
-      }, style);
+    await page.evaluate((style) => {
+      const head = document.getElementsByTagName("head")[0];
+      var css = document.createElement("STYLE");
+      css.innerHTML = style;
+      head.appendChild(css);
+    }, style);
 
-      // Wait until the document is fully rendered
-      await page.evaluateHandle("document.fonts.ready");
+    // Wait until the document is fully rendered
+    await page.evaluateHandle("document.fonts.ready");
 
-      if (post.title === "Headquarters") {
-        await page.waitFor(400);
-      } else {
-        await page.waitFor(250);
-      }
-
-      console.log(`Image: ${slug}.jpg`);
-
-      // Save a screenshot to public/img/slug-of-post.png
-      await page.screenshot({
-        path: `${dir}/${slug}.jpg`,
-        type: "jpeg",
-        quality: 80,
-        clip: { x: 0, y: 0, width: 1300, height: 800 },
-      });
+    if (post.title === "Headquarters") {
+      await page.waitForTimeout(400);
+    } else {
+      await page.waitForTimeout(250);
     }
+
+    console.log(`Image: ${slug}.jpg`);
+
+    // Save a screenshot to public/img/slug-of-post.png
+    await page.screenshot({
+      path: `${dir}/${slug}.jpg`,
+      type: "jpeg",
+      quality: 80,
+      clip: { x: 0, y: 0, width: 1300, height: 800 },
+    });
   }
 
   await browser.close();
