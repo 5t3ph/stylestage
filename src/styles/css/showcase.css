@@ -9,6 +9,11 @@ main h2 {
 main section.container {
   max-width: 140ch;
 }
+main blockquote {
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 #styles {
   margin: 0;

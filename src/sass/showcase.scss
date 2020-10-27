@@ -8,6 +8,12 @@ main {
   section.container {
     max-width: 140ch;
   }
+
+  blockquote {
+    max-width: 80ch;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 #styles {
