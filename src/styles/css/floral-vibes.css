@@ -1,0 +1,498 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Neelam Chavan
+* 
+* Title: Floral vibes
+* Author: Neelam Chavan
+* Website: https://www.linkedin.com/in/neelam-chavan-3110141b7/
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/floral-vibes/
+*/
+
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+
+@font-face{
+	font-family: 'Satisfy', cursive;
+	font-family: 'Hi Melody', cursive;
+}
+
+:root {
+ 	--color-background: #F8ECD2;
+	--color-anchor: #ce2400;
+}
+html{
+	scroll-behavior: smooth;
+}
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h5,
+h6 {
+	margin: 0;
+	font-family: 'Hi Melody', cursive;
+}
+h2, h3, h4{
+	font-family: 'Satisfy', cursive;
+}
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	font-size: 2rem;
+	text-rendering: optimizeSpeed;
+	background-image: url(https://image.freepik.com/free-vector/cute-flat-style-tiny-white-daisy-flower-blue-background-seamless-pattern_70155-426.jpg);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+	    animation-duration: 0.01ms !important;
+	    animation-iteration-count: 1 !important;
+	    transition-duration: 0.01ms !important;
+	    scroll-behavior: auto !important;
+  }
+}
+a{
+	text-decoration: none;
+	color: var(--color-anchor);
+}
+a:hover{
+	color: #0086c5;
+}
+header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
+	background-image: url(https://image.freepik.com/free-vector/tropical-leaves-background-zoom_23-2148592871.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
+	border: 50px solid #F5F5EB;
+}
+header h1{
+	font-size: 6rem;
+	margin: 0;
+	margin-top: 0.5em;
+	color: black;
+	line-height: 1.2;
+	text-shadow: 5px 5px 0px pink;
+	font-family: 'Satisfy', cursive;
+}
+header h2{
+	font-style: italic;
+	color: #7B887A;
+	text-align: center;
+	font-size: 2rem;
+	margin: 0.8em 2em;
+}
+header p{
+	margin: 0.5em 2em;
+}
+header .link-github{
+	font-weight: 600;
+}
+header .link-github:hover{
+	color: #fc8383;
+}
+header .link-github span{
+	display: block;
+}
+header .link-github path{
+	transition: fill .6s cubic-bezier(0.4, 0, 1, 1);
+}
+header .link-github:hover path{
+	fill: black;
+}
+
+header .link-github svg{
+	width: 1.5em;
+	fill: white;
+  	filter: drop-shadow(0 0 0.18rem crimson);
+}
+nav{
+	position: sticky;
+	z-index: 1;
+	top: 0;
+}
+nav ul{
+	padding: 5px 0;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 0;
+	background-color: white;
+	line-height: 2;
+	z-index: 1;
+}
+nav li a{
+	margin: 0.5em;
+	color: black;
+	border-radius: 10px;
+	padding: 0.2em 0.8em;
+	background-color: var(--color-background);
+	transition: all 0.3s ease-in-out;
+	position: relative;
+}
+nav ul li > a:hover{
+	background:
+	    linear-gradient(to right, black 3px, transparent 3px) 0 0,
+	    linear-gradient(to right, black 3px, transparent 3px) 0 100%,
+	    linear-gradient(to left, black 3px, transparent 3px) 100% 0,
+	    linear-gradient(to left, black 3px, transparent 3px) 100% 100%,
+	    linear-gradient(to bottom, black 3px, transparent 3px) 0 0,
+	    linear-gradient(to bottom, black 3px, transparent 3px) 100% 0,
+	    linear-gradient(to top, black 3px, transparent 3px) 0 100%,
+	    linear-gradient(to top, black 3px, transparent 3px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 12px 12px;
+	border-radius: unset;
+	background-color: #F5FAF4;
+	color: black;
+}
+.skip-link{
+	position: absolute;
+    top: auto;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    background-color: var(--color-background);
+    color: black;
+    font-size: 1.125rem;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 0.5em;
+}
+main[tabIndex="-1"]{
+	outline: none;
+}
+main, .profile, #styles{
+	margin: 0 auto;
+	width: 70%;
+}
+section.container{
+	background:
+	    linear-gradient(to right, black 10px, transparent 10px) 0 0,
+	    linear-gradient(to right, black 10px, transparent 10px) 0 100%,
+	    linear-gradient(to left, black 10px, transparent 10px) 100% 0,
+	    linear-gradient(to left, black 10px, transparent 10px) 100% 100%,
+	    linear-gradient(to bottom, black 10px, transparent 10px) 0 0,
+	    linear-gradient(to bottom, black 10px, transparent 10px) 100% 0,
+	    linear-gradient(to top, black 10px, transparent 10px) 0 100%,
+	    linear-gradient(to top, black 10px, transparent 10px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 60px 60px;
+	background-color: white;
+	padding: 0 2em;
+	margin-bottom: 2em;
+	padding-bottom: 3em;
+}
+section.container h2{
+	font-family: 'Satisfy', cursive;
+	padding: 2em 0 1em 0;
+	margin-bottom: 0;
+}
+section.container h3{
+	padding: 2em 0 1em 0;
+	margin:0;
+}
+section ul, #styles ul, .page-footer .container ul{
+	padding-left: 0;
+}
+section.container ul{
+	background-color: var(--color-background);
+	border-radius: 20px;
+	margin: 1em 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 1em;
+}
+section.container ul li{
+	margin: 0.3em;
+	padding: 0 0.5em;
+	border-radius: 10px;
+	background-color: #F5FAF4;
+}
+.profile h4, .container h3, section h2, #styles h2, .page-footer .container, .features li, .profile .container ul li{
+	text-align: center;
+}
+.profile ul, #styles .container ul{
+	line-height: 2;
+	padding: 2em;
+	background:
+	    linear-gradient(to right, black 10px, transparent 10px) 0 0,
+	    linear-gradient(to right, black 10px, transparent 10px) 0 100%,
+	    linear-gradient(to left, black 10px, transparent 10px) 100% 0,
+	    linear-gradient(to left, black 10px, transparent 10px) 100% 100%,
+	    linear-gradient(to bottom, black 10px, transparent 10px) 0 0,
+	    linear-gradient(to bottom, black 10px, transparent 10px) 100% 0,
+	    linear-gradient(to top, black 10px, transparent 10px) 0 100%,
+	    linear-gradient(to top, black 10px, transparent 10px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 60px 60px;
+	background-color: white;
+}
+li.profile-title, li.profile-author, li.profile-twitter, li.profile-website, #styles ul li{
+	margin: 0.3em;
+	padding: 0 0.5em;
+	border-radius: 10px;
+	background-color: var(--color-background);
+}
+.profile .container > a, aside .container > a, #files .container a, .link-guidelines, .profile .container > a, #styles .container > a{
+	display: block;
+	text-align: center;
+}
+.features, .profile .container ul, nav ul, .page-footer .container ul, section.container ul{
+	list-style-type: none;
+}
+.profile h4{
+	margin: 2em 0 1em 0;
+	font-size: 3rem;
+}
+section.container ol{
+	list-style: none;
+	padding-left: 0;
+  	counter-reset: my-awesome-counter;
+}
+section.container ol li{
+	counter-increment: my-awesome-counter;
+
+}
+section.container ol li::before{
+	content: counter(my-awesome-counter) ". ";
+  	color: rgb(99, 190, 233);
+  	font-weight: bold;
+  	font-size: 3rem;
+  	font-family: 'Josefin Sans', sans-serif;
+}
+
+#files .container{
+	width: 500px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-areas: "header header" "link1 link2" "link3 link3" ;
+	justify-items: center;
+	grid-row-gap: 30px;
+}
+#files .container h3{
+	grid-area: header;
+	margin-bottom: 0;
+}
+#files .container h3{
+	background:
+	    linear-gradient(to right, black 5px, transparent 5px) 0 0,
+	    linear-gradient(to right, black 5px, transparent 5px) 0 100%,
+	    linear-gradient(to left, black 5px, transparent 5px) 100% 0,
+	    linear-gradient(to left, black 5px, transparent 5px) 100% 100%,
+	    linear-gradient(to bottom, black 5px, transparent 5px) 0 0,
+	    linear-gradient(to bottom, black 5px, transparent 5px) 100% 0,
+	    linear-gradient(to top, black 5px, transparent 5px) 0 100%,
+	    linear-gradient(to top, black 5px, transparent 5px) 100% 100%;
+
+	background-repeat: no-repeat;
+	background-size: 15px 15px;
+	background-color: var(--color-background);
+	padding: 0.5em 1em;
+ }
+#files .container a:nth-child(4){
+	grid-area: link3;
+}
+#files .container a:nth-child(2), #files .container a:nth-child(3), #files .container a:nth-child(4){
+	padding: 0.3em 1em;
+	border-radius: 15px;
+	background-color: #0e3e44;
+	color: white;
+	transition: all 0.3s ease-in-out;
+}
+#files .container a:nth-child(2):hover, #files .container a:nth-child(3):hover, #files .container a:nth-child(4):hover{
+	background-color: #1f666f;
+}
+#styles .container{
+	margin-bottom: 2em;
+}
+#styles h2{
+	margin: 2em 0 1em 0;
+}
+blockquote{
+	text-align: center;
+	padding: 1em 2em;
+	margin: 0 auto;
+	border-radius: 20px;
+	background-color: var(--color-background);
+}
+.link-guidelines, .profile .container > a, #styles .container > a{
+	background-color: #0e3e44;
+	color: white;
+	border-radius: 15px;
+	max-width: 300px;
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+}
+.link-guidelines:hover, .profile .container > a:hover, #styles .container > a:hover{
+	background-color: #1f666f;
+	color: white;
+}
+.page-footer{
+	background-color: #F5FAF4;
+	padding: 1em;
+}
+.page-footer svg{
+	width: 0.6em;
+}
+.page-footer .container ul li{
+	background-color: var(--color-background);
+	margin: 0.3em auto;
+	width: 30%;
+	border-radius: 15px;
+	transition: all 0.3s ease-in-out;
+}
+.page-footer .container ul li a{
+	color: black;
+}
+.page-footer .container ul li:hover{
+	background-color: #f7dea6;
+}
+
+@media screen and (max-width: 1080px){
+	header{
+		border: 0;
+	}
+	section.container{
+		padding: 0 1em;
+		padding-bottom: 2em;
+	}
+	section.container ul{
+		padding: 0;
+	}
+	blockquote{
+		padding: 0.5em;
+	}
+	nav ul{
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	main, .profile, #styles, blockquote{
+		width: 95%;
+	}
+	.page-footer .container ul li{
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 576px){
+	body{
+		font-size: 1.7rem;
+	}
+	header{
+		min-height: 84vh;
+	}
+	.link-guidelines, .profile .container > a, #styles .container > a{
+		max-width: 230px;
+	}
+	header h1{
+		font-size: 3.5rem;
+	}
+	header h2{
+		font-size: 1.5rem;
+	}
+	nav{
+		position: relative;
+	}
+	#styles .container ul {
+		padding: 1em 0;
+	}
+	
+	#files .container{
+		grid-template-columns: 1fr;
+		grid-template-areas: "header" "link1" "link2" "link3";
+		width:auto;
+	}
+
+	section.container{
+		background:
+		    unset;
+		background:
+			linear-gradient(to right, black 5px, transparent 5px) 0 0,
+		    linear-gradient(to right, black 5px, transparent 5px) 0 100%,
+		    linear-gradient(to left, black 5px, transparent 5px) 100% 0,
+		    linear-gradient(to left, black 5px, transparent 5px) 100% 100%,
+		    linear-gradient(to bottom, black 5px, transparent 5px) 0 0,
+		    linear-gradient(to bottom, black 5px, transparent 5px) 100% 0,
+		    linear-gradient(to top, black 5px, transparent 5px) 0 100%,
+		    linear-gradient(to top, black 5px, transparent 5px) 100% 100%;;
+		background-repeat: no-repeat;
+		background-size: 35px 35px;
+		background-color: white;
+		padding: 0.5em;
+		margin-bottom: 2em;
+		padding-bottom: 3em;
+	}
+	.profile ul, #styles .container ul{
+		line-height: 2;
+	padding: 1em;
+	background:
+	    linear-gradient(to right, black 5px, transparent 5px) 0 0,
+	    linear-gradient(to right, black 5px, transparent 5px) 0 100%,
+	    linear-gradient(to left, black 5px, transparent 5px) 100% 0,
+	    linear-gradient(to left, black 5px, transparent 5px) 100% 100%,
+	    linear-gradient(to bottom, black 5px, transparent 5px) 0 0,
+	    linear-gradient(to bottom, black 5px, transparent 5px) 100% 0,
+	    linear-gradient(to top, black 5px, transparent 5px) 0 100%,
+	    linear-gradient(to top, black 5px, transparent 5px) 100% 100%;;
+	background-repeat: no-repeat;
+	background-size: 35px 35px;
+	background-color: white;
+	}
+}
+
+@media screen and (max-width: 467px){
+	header{
+		min-height: 77vh; 
+	}
+	.profile ul, #styles .container ul{
+		line-height: 1.5;
+	}
+	.page-footer .container ul li{
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 330px){
+	header{
+		min-height: 70vh;
+	}
+	section.container{
+		padding: 0.3em;
+		padding-bottom: 2em;
+	}
+}
+
+

@@ -97,3 +97,5 @@
 [Vaporwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vaporwave.css) By Shannon Crabill
 
 [Yellowed](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/yellowed.css) By Sowmya Seshadri
+
+[Floral vibes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/floral-vibes.css) By Neelam Chavan
