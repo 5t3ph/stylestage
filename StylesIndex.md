@@ -99,3 +99,7 @@
 [Yellowed](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/yellowed.css) By Sowmya Seshadri
 
 [Floral vibes](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/floral-vibes.css) By Neelam Chavan
+
+[Gallery](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/gallery.css) By Olivia Ng
+
+[Neon Beetles](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neon-beetles.css) By Barbara Aliverti

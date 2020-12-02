@@ -3,8 +3,6 @@ title: "Styles Directory"
 layout: page
 ---
 
-> **We've reached 50 styles**! To celebrate, participate in the giveaway for the chance at one of two awesome prizes - [details here](https://dev.to/5t3ph/a-giveaway-to-celebrate-50-stylestage-dev-stylesheets-4220), entries due by Friday, October 30, at 12 midnight PST.
-
 ## All Styles
 
 <ul class="features features__flexible">
