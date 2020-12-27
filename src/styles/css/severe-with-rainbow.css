@@ -94,8 +94,7 @@ select {
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -213,8 +212,7 @@ blockquote::before {
 }
 @media (max-width: 60rem) {
   blockquote::after {
-    -webkit-transform: translate(25%, 55%) rotate(-5deg);
-            transform: translate(25%, 55%) rotate(-5deg);
+    transform: translate(25%, 55%) rotate(-5deg);
   }
 }
 
@@ -242,13 +240,9 @@ main h3 {
 }
 
 article section {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
@@ -293,19 +287,16 @@ header h1 {
   min-height: var(--logomark-height);
   padding: var(--logomark-padding);
   place-content: center;
-  -webkit-transform: skewY(-20deg);
-          transform: skewY(-20deg);
+  transform: skewY(-20deg);
 }
 header h2 {
   max-width: 60ch;
 }
 
 nav ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -391,18 +382,7 @@ nav ul li {
 
   border-width: 0 0.5em;
   border-style: solid;
-  -webkit-border-image: -webkit-gradient(
-      linear,
-      left top, right top,
-      from(orange),
-      color-stop(yellow),
-      color-stop(green),
-      color-stop(cyan),
-      color-stop(blue),
-      to(violet)
-    )
-    25;
-  -webkit-border-image: linear-gradient(
+  -o-border-image: linear-gradient(
       to right,
       orange,
       yellow,
@@ -412,28 +392,7 @@ nav ul li {
       violet
     )
     25;
-       -o-border-image: linear-gradient(
-      to right,
-      orange,
-      yellow,
-      green,
-      cyan,
-      blue,
-      violet
-    )
-    25;
-          border-image: -webkit-gradient(
-      linear,
-      left top, right top,
-      from(orange),
-      color-stop(yellow),
-      color-stop(green),
-      color-stop(cyan),
-      color-stop(blue),
-      to(violet)
-    )
-    25;
-          border-image: linear-gradient(
+     border-image: linear-gradient(
       to right,
       orange,
       yellow,
@@ -487,8 +446,7 @@ nav ul li {
 }
 
 #about section:nth-child(2) ul li {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  transition-duration: 0.5s;
   margin: 1em;
   padding: 0.25em 0.5em;
 }
@@ -496,16 +454,6 @@ nav ul li {
 /* Modern CSS list items grow slightly and change to rainbow on hover */
 #about section:nth-child(2) ul li:hover {
   font-size: 1.2em;
-  background: -webkit-gradient(
-    linear,
-    left top, right top,
-    from(orange),
-    color-stop(yellow),
-    color-stop(green),
-    color-stop(cyan),
-    color-stop(blue),
-    to(violet)
-  );
   background: linear-gradient(
     to right,
     orange,
@@ -526,20 +474,15 @@ nav ul li {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: 300ms -webkit-transform ease-in;
-  transition: 300ms -webkit-transform ease-in;
+  transform: translate(-50%, -50%);
   transition: 300ms transform ease-in;
-  transition: 300ms transform ease-in, 300ms -webkit-transform ease-in;
   opacity: 0.8;
   content: "";
   z-index: -1;
 }
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
-    -webkit-transform: scale(2) translate(-25%, -25%);
-            transform: scale(2) translate(-25%, -25%);
+    transform: scale(2) translate(-25%, -25%);
   }
 }
 
@@ -550,14 +493,12 @@ nav ul li {
 
 #guidelines h3 {
   display: inline-block;
-  -webkit-transform: rotate(-8deg) translateX(-10%);
-          transform: rotate(-8deg) translateX(-10%);
+  transform: rotate(-8deg) translateX(-10%);
 }
 
 @media (min-width: 120ch) {
   #guidelines h3 {
-    -webkit-transform: rotate(-8deg) translateX(-30%);
-            transform: rotate(-8deg) translateX(-30%);
+    transform: rotate(-8deg) translateX(-30%);
   }
 }
 #guidelines .container > a {
@@ -700,18 +641,15 @@ nav ul li {
   color: var(--color-background);
 }
 .profile ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0;
   padding: 0.5rem 1rem;
   list-style: none;
   background-color: var(--color-background);
 }
 .profile ul li {
-  display: -webkit-box;
   display: flex;
   padding: 0.45em;
 }
@@ -721,8 +659,7 @@ nav ul li {
   font-weight: var(--font-weight-strong);
 }
 .profile ul li span:nth-child(2) {
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   word-break: break-word;
 }
 .profile ul li span:nth-child(2) a {
@@ -745,8 +682,7 @@ nav ul li {
     font-size: 1rem;
   }
   .profile ul {
-    -webkit-box-pack: unset;
-            justify-content: unset;
+    justify-content: unset;
   }
   .profile ul li {
     padding: 0;
@@ -780,8 +716,7 @@ nav ul li {
   position: absolute;
   left: 50%;
   width: 2em;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
   background-color: var(--color-background);
   color: var(--color-primary);
   font-size: 3rem;
@@ -837,16 +772,11 @@ nav ul li {
 
 [class^="link"]:not(.link-codepen),
 .profile .container > a {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 0 0.75em;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  -webkit-transition: 180ms all ease-in-out;
+  transform: translate(0, 0);
   transition: 180ms all ease-in-out;
   font-size: 1.125rem;
   line-height: 1;
@@ -857,8 +787,7 @@ nav ul li {
 [class^="link"]:not(.link-codepen):focus,
 .profile .container > a:hover,
 .profile .container > a:focus {
-  -webkit-transform: translate(-0.15em, -0.15em);
-          transform: translate(-0.15em, -0.15em);
+  transform: translate(-0.15em, -0.15em);
   box-shadow: 0.3em 0.3em var(--color-secondary);
 }
 [class^="link"]:not(.link-codepen):focus,
@@ -902,7 +831,6 @@ nav ul li {
   }
 
   #about section:nth-child(2) ul {
-    display: -webkit-box;
     display: flex;
     flex-wrap: wrap;
   }

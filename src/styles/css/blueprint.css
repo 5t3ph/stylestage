@@ -92,8 +92,7 @@ select {
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -216,8 +215,7 @@ blockquote::before {
 
 @media (max-width: 60rem) {
   blockquote::after {
-    -webkit-transform: translate(25%, 55%) rotate(-5deg);
-            transform: translate(25%, 55%) rotate(-5deg);
+    transform: translate(25%, 55%) rotate(-5deg);
   }
 }
 
@@ -249,13 +247,9 @@ main h3 {
 }
 
 article section {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
   padding-top: 5vh;
   padding-bottom: 5vh;
 }
@@ -286,8 +280,7 @@ article,
   padding: 0;
   grid-gap: 1em;
   list-style: none;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 header {
@@ -335,11 +328,9 @@ nav {
 }
 
 nav ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -365,7 +356,6 @@ nav ul a:hover::after,
 nav ul a:focus::after {
   opacity: 1;
   background-color: var(--color-alt-background);
-  -webkit-transition: all 1s ease-out;
   transition: all 1s ease-out;
 }
 
@@ -388,11 +378,9 @@ nav ul li {
 }
 
 #about section:nth-child(2) ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 1rem 0 2rem;
   padding: 0;
   list-style: none;
@@ -411,20 +399,15 @@ nav ul li {
   width: 100%;
   height: 0;
   padding-bottom: 100%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: 300ms -webkit-transform ease-in;
-  transition: 300ms -webkit-transform ease-in;
+  transform: translate(-50%, -50%);
   transition: 300ms transform ease-in;
-  transition: 300ms transform ease-in, 300ms -webkit-transform ease-in;
   content: "";
   z-index: -1;
 }
 
 @media (max-width: 35rem) {
   #about section:nth-child(2)::before {
-    -webkit-transform: scale(2) translate(-25%, -25%);
-            transform: scale(2) translate(-25%, -25%);
+    transform: scale(2) translate(-25%, -25%);
   }
 }
 
@@ -436,14 +419,7 @@ nav ul li {
   display: inline-block;
   padding-left: 2.75rem;
   margin-bottom: 2.5rem;
-  -webkit-transform: rotate(-8deg) translateX(-10%);
   transform: rotate(-8deg) translateX(-10%);
-  background: -webkit-gradient(
-    linear,
-    left top, right top,
-    from(var(--color-bright)),
-    to(var(--color-light))
-  );
   background: linear-gradient(
     to right,
     var(--color-bright),
@@ -462,7 +438,6 @@ nav ul li {
 
 @media (min-width: 120ch) {
   #guidelines h3 {
-    -webkit-transform: rotate(-28deg) translateX(-30%);
     transform: rotate(-28deg) translateX(-30%);
   }
 }
@@ -477,9 +452,7 @@ nav ul li {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: rotate(4deg) translate(4.75rem, -3.5rem);
     transform: rotate(4deg) translate(4.75rem, -3.5rem);
-    -webkit-transform-origin: left center;
     transform-origin: left center;
     -webkit-background-clip: text;
     background-clip: text;
@@ -648,10 +621,8 @@ a.link-downloadhtml:hover {
   bottom: -4.5em;
   width: 10ch;
   padding-top: 3em;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
+  transform: rotate(-15deg);
+  transform-origin: bottom right;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 199.1 111.3'%3E%3Cpath fill='%379a6afd' d='M118 77a77 77 0 00-2-18c-2-4-3-9-3-13a29 29 0 011-12 19 19 0 017-9c4-3 8-4 13-3a14 14 0 018 7 31 31 0 012 5 75 75 0 005 10 47 47 0 002 5 17 17 0 003 3c4 4 8 4 13 0a15 15 0 005-8 37 37 0 001-7l1-11a18 18 0 014-11 2 2 0 000-3l-3-3-2-3a2 2 0 011-2 11 11 0 012-1l19-3c4 0 5 1 3 5l-7 16c-1 3-2 3-5 1l-4-5a1 1 0 00-1 0 9 9 0 00-3 5 23 23 0 00-1 6l-1 11a26 26 0 01-1 7 18 18 0 01-8 10c-5 3-9 3-13 0a20 20 0 01-6-6 68 68 0 01-6-13l-2-4a18 18 0 00-2-4 10 10 0 00-14-2 15 15 0 00-4 4 19 19 0 00-3 9 32 32 0 000 11l2 6a78 78 0 012 27 32 32 0 01-4 15 24 24 0 01-11 9 33 33 0 01-19 3 16 16 0 01-13-9 29 29 0 01-3-11 70 70 0 012-18l2-14a33 33 0 000-14c-1-4-4-7-8-7-7-1-14 1-19 6a34 34 0 00-6 9 59 59 0 00-4 10l-3 12-2 6a26 26 0 01-5 8 17 17 0 01-16 6 26 26 0 01-10-4 7 7 0 01-2-1 2 2 0 010-2 2 2 0 012 0l3 1a22 22 0 0010 3 13 13 0 009-4 22 22 0 005-6 41 41 0 003-8l3-12a59 59 0 015-13 31 31 0 017-9c6-5 14-7 22-5a12 12 0 019 7 21 21 0 011 7 57 57 0 01-2 17 132 132 0 00-2 16 37 37 0 000 13 27 27 0 002 5 13 13 0 0011 8 30 30 0 0016-3 22 22 0 0010-10c3-4 3-9 4-13v-5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 90%;
@@ -689,11 +660,9 @@ a.link-downloadhtml:hover {
 }
 
 .profile ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -712,8 +681,7 @@ a.link-downloadhtml:hover {
 }
 
 .profile ul li span:nth-child(2) {
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   word-break: break-word;
 }
 
@@ -726,13 +694,11 @@ a.link-downloadhtml:hover {
     max-width: 60ch;
     background-color: var(--color-light);
     border: 5px solid var(--color-primary-alt);
-    -webkit-filter: drop-shadow(12px 12px 2px var(--color-alt-background));
-            filter: drop-shadow(12px 12px 2px var(--color-alt-background));
+    filter: drop-shadow(12px 12px 2px var(--color-alt-background));
   }
 
   .profile ul {
-    -webkit-box-pack: end;
-            justify-content: flex-end;
+    justify-content: flex-end;
   }
 
   .profile ul li {
@@ -768,8 +734,7 @@ a.link-downloadhtml:hover {
   position: absolute;
   left: 50%;
   width: 2em;
-  -webkit-transform: translate(-50%, -100%);
-          transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
   background-color: var(--color-background);
   color: var(--color-primary);
   font-size: 3rem;
@@ -826,16 +791,11 @@ a.link-downloadhtml:hover {
 
 [class^="link"]:not(.link-codepen),
 .profile .container > a {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 0 0.75em;
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  -webkit-transition: 180ms all ease-in-out;
+  transform: translate(0, 0);
   transition: 180ms all ease-in-out;
   font-size: 1.125rem;
   line-height: 1;
@@ -881,8 +841,7 @@ a.link-downloadhtml:hover {
 .link-codepen::before {
   position: absolute;
   padding-right: 1.25em;
-  -webkit-transform: translate(15%, -90%) rotate(-3deg);
-          transform: translate(15%, -90%) rotate(-3deg);
+  transform: translate(15%, -90%) rotate(-3deg);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 79.6 187.1'%3E%3Cpath fill='%379a6afd' d='M12 131l-2 13-3 26a10 10 0 000 2 1 1 0 001 0 24 24 0 002-3 37 37 0 016-8 73 73 0 007-9l24-33 4-5a70 70 0 006-7l15-20a8 8 0 001-1 1 1 0 000-1 16 16 0 00-2-1l-8-3a69 69 0 01-13-6 7 7 0 00-1-1l-16-6-13-7a57 57 0 00-10-4 17 17 0 01-2-1 2 2 0 01-1-4 18 18 0 012-2 93 93 0 0011-13 95 95 0 018-8l10-11a32 32 0 003-4c3-5 7-9 12-13a12 12 0 011-1 1 1 0 012 0 2 2 0 010 2 27 27 0 01-3 3 104 104 0 00-10 12 115 115 0 01-11 13 102 102 0 00-11 13 78 78 0 01-5 7l-2 2a1 1 0 000 1l19 8 9 4 3 2a77 77 0 0113 5 22 22 0 003 2l17 8a8 8 0 011 1 2 2 0 010 2 22 22 0 01-1 3l-11 14a33 33 0 00-2 3 98 98 0 01-10 13l-5 7-23 31a87 87 0 01-7 9 60 60 0 00-6 8l-2 3a1 1 0 000 1l9-4 12-6 10-6 13-7a10 10 0 012 0 2 2 0 012 1 2 2 0 010 3 24 24 0 01-3 1l-8 4-20 11-24 12a19 19 0 01-2 1 2 2 0 01-3-2 10 10 0 010-2l1-7 3-24 3-21a39 39 0 011-5 2 2 0 013-1 2 2 0 011 2v4z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 130%;
@@ -936,8 +895,7 @@ a.link-downloadhtml:hover {
   }
 
   nav ul {
-    -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 
   .skip-link {
@@ -972,7 +930,6 @@ a.link-downloadhtml:hover {
 
   [class^="link"]:not(.link-codepen),
   .profile .container > a {
-    display: -webkit-box;
     display: flex;
     place-items: center;
   }

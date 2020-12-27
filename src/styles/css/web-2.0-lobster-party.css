@@ -107,12 +107,6 @@ nav,
 #about > .container > ul li,
 .features li,
 .profile .container {
-  background: -webkit-gradient(
-    linear,
-    left top, left bottom,
-    from(rgba(255, 255, 255, 1)),
-    to(rgba(255, 255, 255, 0))
-  );
   background: linear-gradient(
     top,
     rgba(255, 255, 255, 1) 0%,
@@ -133,7 +127,6 @@ nav {
 }
 
 nav ul {
-  display: -webkit-box;
   display: flex;
   list-style: none;
   padding: 0;
@@ -156,12 +149,6 @@ nav ul li a {
   display: block;
   padding: var(--size-400) var(--size-500);
   text-decoration: none;
-  background: -webkit-gradient(
-    linear,
-    left top, left bottom,
-    from(rgba(0, 0, 0, 0)),
-    to(rgba(0, 0, 0, 0.1))
-  );
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0) 0%,
@@ -172,12 +159,6 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: -webkit-gradient(
-    linear,
-    left top, left bottom,
-    from(rgba(0, 0, 0, 0.3)),
-    to(rgba(0, 0, 0, 0.5))
-  );
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.3) 0%,
@@ -235,27 +216,14 @@ nav ul li a:hover {
 .link-twittercontact,
 .link-allstyles,
 .profile ul ~ a {
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0.85rem 1.5rem 1rem 1.5rem;
   border-radius: 0.5rem;
   font-family: var(--font-lobster);
   font-size: var(--size-600);
   line-height: 1;
   text-decoration: none;
-  background: -webkit-gradient(
-    linear,
-    left top, left bottom,
-    from(#959595),
-    color-stop(46%, #0d0d0d),
-    color-stop(50%, #010101),
-    color-stop(53%, #0a0a0a),
-    color-stop(76%, #4e4e4e),
-    color-stop(87%, #383838),
-    to(#1b1b1b)
-  );
   background: linear-gradient(
     to bottom,
     #959595 0%,
@@ -300,14 +268,6 @@ nav ul li a:hover {
 /* RSS magic */
 .link-rss {
   color: #ffffff;
-  background: -webkit-gradient(
-    linear,
-    left top, left bottom,
-    from(#f58752),
-    color-stop(46%, #efe5e1),
-    color-stop(48%, #efd3c6),
-    color-stop(85%, #f26522)
-  );
   background: linear-gradient(
     to bottom,
     #f58752 0%,
@@ -350,7 +310,6 @@ nav ul li a:hover {
 
 /* Footer */
 .page-footer ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
   list-style: none;

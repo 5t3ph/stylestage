@@ -91,7 +91,6 @@ h1 {
 a {
   text-decoration: none;
   color: var(--color-anchor);
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-weight: 700;
 }
@@ -113,11 +112,9 @@ nav {
   background: #412d86;
 }
 nav ul {
-  display: -webkit-box;
   display: flex;
   justify-content: space-around;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   padding: 1rem;
   margin: 1rem 0;
   flex-wrap: wrap;
@@ -160,15 +157,10 @@ header h2 {
 }
 
 .container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 .container a {
@@ -195,11 +187,9 @@ h3 {
 /* about section styles */
 
 #about ul {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 #about ul li {
   border: 1px solid #000;
@@ -210,7 +200,6 @@ h3 {
 /* files section */
 
 #files .container {
-  display: -webkit-box;
   display: flex;
   background: var(--color-section-background);
   margin: 1rem;
@@ -233,15 +222,10 @@ aside {
 }
 
 aside .container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   border: 1px solid #000;
 }
 
@@ -273,9 +257,7 @@ aside .container {
     width: 95%;
   }
   aside .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
   ol {
     overflow: hidden;

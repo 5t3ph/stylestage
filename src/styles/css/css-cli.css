@@ -90,14 +90,12 @@ body {
 
 /* Section layout */
 body {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
 }
 
 body > * {
-  -webkit-box-flex: 1;
-          flex: 1 0 100%;
+  flex: 1 0 100%;
 }
 
 aside {
@@ -106,8 +104,7 @@ aside {
 
 @media (min-width: 800px) {
   body > aside {
-    -webkit-box-flex: 1;
-            flex: 1 0 50%;
+    flex: 1 0 50%;
   }
 }
 
@@ -151,8 +148,7 @@ svg {
             animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
             animation-iteration-count: 1 !important;
-    -webkit-transition-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
 }
@@ -233,8 +229,7 @@ a:focus {
 }
 
 .skip-link {
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   margin-bottom: var(--space-base);
 }
 
@@ -268,10 +263,8 @@ header .link-github {
 
 header .link-github {
   position: relative;
-  display: -webkit-inline-box;
   display: inline-flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   color: var(--color-os);
   background-color: var(--color-highlight);
   padding: 0 var(--space-xs);
@@ -290,12 +283,9 @@ header .link-github svg {
 }
 
 header h1 {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: var(--space-body);
   margin: 0 auto;
@@ -314,8 +304,7 @@ header h1::before {
   position: absolute;
   top: 50%;
   left: var(--space-base);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 12px;
   height: 12px;
   background-color: var(--color-os-close);
@@ -325,22 +314,19 @@ header h1::before {
 }
 
 header h2 {
-  display: -webkit-inline-box;
   display: inline-flex;
   flex-wrap: wrap;
 }
 
 header h2::before,
 .page-footer::before {
-  -webkit-box-ordinal-group: -1;
-          order: -2;
+  order: -2;
   content: "~/Desktop$";
   color: var(--color-accent);
 }
 
 header h2::after {
-  -webkit-box-ordinal-group: 0;
-          order: -1;
+  order: -1;
   content: "run StyleStage.dev";
   margin-left: var(--space-sm);
   color: var(--color-highlight);
@@ -354,9 +340,8 @@ nav {
 
 nav ul,
 .page-footer ul {
-  -webkit-column-width: 240px;
-     -moz-column-width: 240px;
-          column-width: 240px;
+  -moz-column-width: 240px;
+       column-width: 240px;
   max-width: 45ch;
   margin: 0;
   padding: 0;
@@ -387,16 +372,13 @@ article .container {
 }
 
 #about .container ul {
-  -webkit-column-width: 260px;
-     -moz-column-width: 260px;
-          column-width: 260px;
-  -webkit-column-fill: auto;
-     -moz-column-fill: auto;
-          column-fill: auto;
+  -moz-column-width: 260px;
+       column-width: 260px;
+  -moz-column-fill: auto;
+       column-fill: auto;
 }
 
 #about .container ul li {
-  display: -webkit-inline-box;
   display: inline-flex;
   width: 100%;
 }
@@ -425,11 +407,9 @@ article .container {
 
 /* Footer */
 .page-footer {
-  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  -webkit-box-ordinal-group: 1;
-          order: 0;
+  order: 0;
   margin-top: var(--space-xl);
   padding-top: var(--space-xl);
   padding-bottom: var(--space-body);
@@ -437,8 +417,7 @@ article .container {
 }
 
 .page-footer .container {
-  -webkit-box-flex: 1;
-          flex: 1 0 100%;
+  flex: 1 0 100%;
   margin-bottom: var(--space-xl);
 }
 
@@ -456,13 +435,11 @@ article .container {
 }
 
 .page-footer::before {
-  -webkit-box-ordinal-group: 2;
-          order: 1;
+  order: 1;
 }
 
 .page-footer::after {
-  -webkit-box-ordinal-group: 3;
-          order: 2;
+  order: 2;
   content: "";
   display: inline-block;
   position: relative;

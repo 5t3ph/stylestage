@@ -262,12 +262,9 @@ blockquote.is-rounded.is-dark {
 }
 
 .nes-badge.is-icon span.is-dark:first-child {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 2.7em;
   font-size: 0.5em;
   color: #fff;
@@ -281,10 +278,8 @@ blockquote.is-rounded.is-dark {
 
 .nes-badge.is-icon span.is-dark:last-child {
   display: inline-block;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 6em;
   font-size: 0.88em;
   color: #fff;
@@ -335,12 +330,9 @@ blockquote.is-rounded.is-dark {
 
 .nes-badge.is-icon span.is-primary:first-child,
 .nes-badge.is-icon span.link-twittercontact:first-child {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 2.7em;
   font-size: 0.5em;
   color: #fff;
@@ -355,10 +347,8 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.is-primary:last-child,
 .nes-badge.is-icon span.link-twittercontact:last-child {
   display: inline-block;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 6em;
   font-size: 0.88em;
   color: #fff;
@@ -410,12 +400,9 @@ blockquote.is-rounded.is-dark {
 
 .nes-badge.is-icon span.is-success:first-child,
 .nes-badge.is-icon span.link-support:first-child {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 2.7em;
   font-size: 0.5em;
   color: #fff;
@@ -430,10 +417,8 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.is-success:last-child,
 .nes-badge.is-icon span.link-support:last-child {
   display: inline-block;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 6em;
   font-size: 0.88em;
   color: #fff;
@@ -488,12 +473,9 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.is-warning:first-child,
 .nes-badge.is-icon span.link-codepen:first-child,
 .nes-badge.is-icon span.link-rss:first-child {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 2.7em;
   font-size: 0.5em;
   color: #212529;
@@ -509,10 +491,8 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.link-codepen:last-child,
 .nes-badge.is-icon span.link-rss:last-child {
   display: inline-block;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 6em;
   font-size: 0.88em;
   color: #212529;
@@ -568,12 +548,9 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.is-error:first-child,
 .nes-badge.is-icon span.link-downloadcss:first-child,
 .nes-badge.is-icon span.link-downloadhtml:first-child {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 2.7em;
   font-size: 0.5em;
   color: #fff;
@@ -589,10 +566,8 @@ blockquote.is-rounded.is-dark {
 .nes-badge.is-icon span.link-downloadcss:last-child,
 .nes-badge.is-icon span.link-downloadhtml:last-child {
   display: inline-block;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   width: 6em;
   font-size: 0.88em;
   color: #fff;
@@ -1385,30 +1360,25 @@ blockquote.is-rounded.is-dark.with-title.is-right > .title {
   height: 16px;
   margin-right: 16px;
   margin-bottom: 16px;
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  -webkit-transform-origin: top left;
-          transform-origin: top left;
+  transform: scale(2);
+  transform-origin: top left;
 }
 
 .nes-icon.is-small {
   margin: 0;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  transform: scale(1);
 }
 
 .nes-icon.is-medium {
   margin-right: 32px;
   margin-bottom: 32px;
-  -webkit-transform: scale(3);
-          transform: scale(3);
+  transform: scale(3);
 }
 
 .nes-icon.is-large {
   margin-right: 48px;
   margin-bottom: 48px;
-  -webkit-transform: scale(4);
-          transform: scale(4);
+  transform: scale(4);
 }
 
 .nes-icon::before {
@@ -3841,31 +3811,25 @@ h4 {
 
 @-webkit-keyframes flip {
   0% {
-    -webkit-transform: scale(4) rotateY(0deg);
-            transform: scale(4) rotateY(0deg);
+    transform: scale(4) rotateY(0deg);
   }
   50% {
-    -webkit-transform: scale(4) rotateY(180deg);
-            transform: scale(4) rotateY(180deg);
+    transform: scale(4) rotateY(180deg);
   }
   100% {
-    -webkit-transform: scale(4) rotateY(0deg);
-            transform: scale(4) rotateY(0deg);
+    transform: scale(4) rotateY(0deg);
   }
 }
 
 @keyframes flip {
   0% {
-    -webkit-transform: scale(4) rotateY(0deg);
-            transform: scale(4) rotateY(0deg);
+    transform: scale(4) rotateY(0deg);
   }
   50% {
-    -webkit-transform: scale(4) rotateY(180deg);
-            transform: scale(4) rotateY(180deg);
+    transform: scale(4) rotateY(180deg);
   }
   100% {
-    -webkit-transform: scale(4) rotateY(0deg);
-            transform: scale(4) rotateY(0deg);
+    transform: scale(4) rotateY(0deg);
   }
 }
 
@@ -3883,12 +3847,9 @@ h1::after {
 
 h1::before,
 h1::after {
-  -webkit-transition: 0.6s;
   transition: 0.6s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: 9px;
-          transform-origin: 9px;
+  transform-style: preserve-3d;
+  transform-origin: 9px;
   -webkit-animation: flip 2s ease-in-out infinite;
           animation: flip 2s ease-in-out infinite;
   content: "";
@@ -3942,8 +3903,7 @@ h1::after {
   h1::after {
     -webkit-animation: none;
             animation: none;
-    -webkit-transform: scale(4);
-            transform: scale(4);
+    transform: scale(4);
   }
 }
 
@@ -3962,13 +3922,9 @@ body {
 
 html {
   scroll-behavior: smooth;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
@@ -4014,11 +3970,8 @@ body {
 }
 
 #styles .container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #styles .container .link-allstyles {
@@ -4029,11 +3982,8 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #styles li {
@@ -4046,11 +3996,8 @@ body {
 }
 
 #guidelines .container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 #guidelines .container .link-guidelines {
@@ -4059,23 +4006,19 @@ body {
 
 .profile .container {
   margin-top: 2rem;
-  display: -webkit-box;
   display: flex;
   position: relative;
 }
 
 @media (max-width: 600px) {
   .profile .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .profile .container > * {
   flex-basis: 50%;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 
 .profile .container > h4 {
@@ -4148,10 +4091,7 @@ header .container p {
 .link-codepen,
 .link-allstyles {
   margin: 0;
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
   transition: transform;
-  transition: transform, -webkit-transform;
 }
 
 .link-guidelines:hover,
@@ -4159,8 +4099,7 @@ header .container p {
 .link-downloadhtml:hover,
 .link-codepen:hover,
 .link-allstyles:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .link-guidelines {
@@ -4172,18 +4111,14 @@ header .container p {
 .link-rss,
 .link-support {
   display: block;
-  -webkit-transition: -webkit-transform;
-  transition: -webkit-transform;
   transition: transform;
-  transition: transform, -webkit-transform;
 }
 
 .link-github:hover,
 .link-twittercontact:hover,
 .link-rss:hover,
 .link-support:hover {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .link-github span,
@@ -4198,16 +4133,6 @@ a {
 
 a:focus,
 a:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top, right top,
-    from(#ff2400),
-    color-stop(#a17607),
-    color-stop(#11ac2b),
-    color-stop(#11a4ac),
-    color-stop(#4f77e6),
-    to(#dd00f3)
-  );
   background-image: linear-gradient(
     90deg,
     #ff2400,
@@ -4260,13 +4185,11 @@ a:hover {
   position: absolute;
   top: 5px;
   left: 5px;
-  -webkit-transform: translateY(-200%);
-          transform: translateY(-200%);
+  transform: translateY(-200%);
 }
 
 .skip-link:focus {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 #about .container + .container ul {
