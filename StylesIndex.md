@@ -32,8 +32,6 @@
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
 
-[Jet Set](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/jet-set.css) By Cory Birdsong
-
 [Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
 
 [Dot grid](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/dot-grid.css) By Abigail Colina
@@ -103,3 +101,5 @@
 [Gallery](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/gallery.css) By Olivia Ng
 
 [Neon Beetles](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neon-beetles.css) By Barbara Aliverti
+
+[Jet Set](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/jet-set.css) By Cory Birdsong
