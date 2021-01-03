@@ -17,6 +17,12 @@
       title="RSS Feed for {{ meta.siteName }}"
       href="/feed/"
     />
+    {% if 'stylestage' in meta.url %}
+    <link rel="preconnect" href="https://plausible.io">
+    <link rel="dns-prefetch" href="https://plausible.io">
+    <script async defer data-domain="stylestage.dev" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+    <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    {% endif %}
 
     <style>
     header {
@@ -128,5 +134,17 @@
     {% endif %}
     {% include "footer.njk" %}
     {% include 'sponsor-footer.njk' %}
+    {% if page.url == '/styles/' %}
+    <script>
+    const styleLinks = document.querySelectorAll('.features a');
+    styleLinks.forEach(function(link) {
+      {% if 'stylestage' in meta.url %}
+      plausible('Select Style', {
+        props: { Style: link.innerText },
+      });
+      {% endif %}
+    });
+    </script>
+    {% endif %}
   </body>
 </html>
