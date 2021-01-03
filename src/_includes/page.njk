@@ -138,11 +138,13 @@
     <script>
     const styleLinks = document.querySelectorAll('.features a');
     styleLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
       {% if 'stylestage' in meta.url %}
-      plausible('Select Style', {
-        props: { Style: link.innerText },
-      });
+        plausible('Select Style', {
+          props: { Style: link.innerText },
+        });
       {% endif %}
+      })
     });
     </script>
     {% endif %}
