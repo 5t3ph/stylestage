@@ -2,8 +2,6 @@
 ## Styles Index
 
 
-[Abandoned Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/abandoned-stage.css) By Andrey Kudryavtsev
-
 [Animado](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/animado.css) By Elisangela Silva
 
 [Artsy Blue and Turquoise](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/artsy-blue-and-turquoise.css) By Thea Kitzinger
@@ -103,3 +101,13 @@
 [Neon Beetles](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neon-beetles.css) By Barbara Aliverti
 
 [Jet Set](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/jet-set.css) By Cory Birdsong
+
+[Abandoned Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/abandoned-stage.css) By Andrey Kudryavtsev
+
+[Eighties Synthwave](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/eighties-synthwave.css) By Kevin Powell
+
+[SolidState](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/solidstate.css) By Maheshkumar
+
+[Spectrum](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/spectrum.css) By Robert Manders
+
+[The Styles Must Go On!](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/the-styles-must-go-on.css) By Joe Lamyman

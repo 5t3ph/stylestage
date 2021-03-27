@@ -75,6 +75,9 @@ a{
 a:hover{
 	color: #0086c5;
 }
+/* ==========================================================================
+    Header section
+   ========================================================================== */
 header{
 	display: flex;
 	justify-content: center;
@@ -127,6 +130,9 @@ header .link-github svg{
 	fill: white;
   	filter: drop-shadow(0 0 0.18rem crimson);
 }
+/* ==========================================================================
+    Navbar section
+   ========================================================================== */
 nav{
 	position: sticky;
 	z-index: 1;
@@ -187,6 +193,10 @@ nav ul li > a:hover{
     height: auto;
     padding: 0.5em;
 }
+/* ==========================================================================
+    Main section
+   ========================================================================== */
+
 main[tabIndex="-1"]{
 	outline: none;
 }
@@ -221,9 +231,6 @@ section.container h3{
 	padding: 2em 0 1em 0;
 	margin:0;
 }
-section ul, #styles ul, .page-footer .container ul{
-	padding-left: 0;
-}
 section.container ul{
 	background-color: var(--color-background);
 	border-radius: 20px;
@@ -238,6 +245,41 @@ section.container ul li{
 	padding: 0 0.5em;
 	border-radius: 10px;
 	background-color: #F5FAF4;
+}
+section.container ol{
+	list-style: none;
+	padding-left: 0;
+  	counter-reset: my-awesome-counter;
+}
+section.container ol li{
+	counter-increment: my-awesome-counter;
+}
+section.container ol li::before{
+	content: counter(my-awesome-counter) ". ";
+  	color: rgb(99, 190, 233);
+  	font-weight: bold;
+  	font-size: 3rem;
+  	font-family: 'Josefin Sans', sans-serif;
+}
+blockquote{
+	text-align: center;
+	padding: 1em 2em;
+	margin: 0 auto;
+	border-radius: 20px;
+	background-color: var(--color-background);
+}
+/* ==========================================================================
+    Aside section
+   ========================================================================== */
+.profile h4{
+	margin: 2em 0 1em 0;
+	font-size: 3rem;
+}
+#styles .container{
+	margin-bottom: 2em;
+}
+#styles h2{
+	margin: 2em 0 1em 0;
 }
 .profile h4, .container h3, section h2, #styles h2, .page-footer .container, .features li, .profile .container ul li{
 	text-align: center;
@@ -265,34 +307,8 @@ li.profile-title, li.profile-author, li.profile-twitter, li.profile-website, #st
 	border-radius: 10px;
 	background-color: var(--color-background);
 }
-.profile .container > a, aside .container > a, #files .container a, .link-guidelines, .profile .container > a, #styles .container > a{
-	display: block;
-	text-align: center;
-}
-.features, .profile .container ul, nav ul, .page-footer .container ul, section.container ul{
-	list-style-type: none;
-}
-.profile h4{
-	margin: 2em 0 1em 0;
-	font-size: 3rem;
-}
-section.container ol{
-	list-style: none;
-	padding-left: 0;
-  	counter-reset: my-awesome-counter;
-}
-section.container ol li{
-	counter-increment: my-awesome-counter;
-
-}
-section.container ol li::before{
-	content: counter(my-awesome-counter) ". ";
-  	color: rgb(99, 190, 233);
-  	font-weight: bold;
-  	font-size: 3rem;
-  	font-family: 'Josefin Sans', sans-serif;
-}
-
+/* Files section
+   ========================================================================== */
 #files .container{
 	width: 500px;
 	margin: 0 auto;
@@ -335,31 +351,9 @@ section.container ol li::before{
 #files .container a:nth-child(2):hover, #files .container a:nth-child(3):hover, #files .container a:nth-child(4):hover{
 	background-color: #1f666f;
 }
-#styles .container{
-	margin-bottom: 2em;
-}
-#styles h2{
-	margin: 2em 0 1em 0;
-}
-blockquote{
-	text-align: center;
-	padding: 1em 2em;
-	margin: 0 auto;
-	border-radius: 20px;
-	background-color: var(--color-background);
-}
-.link-guidelines, .profile .container > a, #styles .container > a{
-	background-color: #0e3e44;
-	color: white;
-	border-radius: 15px;
-	max-width: 300px;
-	margin: 0 auto;
-	transition: all 0.3s ease-in-out;
-}
-.link-guidelines:hover, .profile .container > a:hover, #styles .container > a:hover{
-	background-color: #1f666f;
-	color: white;
-}
+/* ==========================================================================
+    Footer section
+   ========================================================================== */
 .page-footer{
 	background-color: #F5FAF4;
 	padding: 1em;
@@ -380,6 +374,34 @@ blockquote{
 .page-footer .container ul li:hover{
 	background-color: #f7dea6;
 }
+/* ==========================================================================
+    Miscellaneous section
+   ========================================================================== */
+.link-guidelines, .profile .container > a, #styles .container > a{
+	background-color: #0e3e44;
+	color: white;
+	border-radius: 15px;
+	max-width: 300px;
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+}
+.link-guidelines:hover, .profile .container > a:hover, #styles .container > a:hover{
+	background-color: #1f666f;
+	color: white;
+}
+.profile .container > a, aside .container > a, #files .container a, .link-guidelines, .profile .container > a, #styles .container > a{
+	display: block;
+	text-align: center;
+}
+.features, .profile .container ul, nav ul, .page-footer .container ul, section.container ul{
+	list-style-type: none;
+}
+section ul, #styles ul, .page-footer .container ul{
+	padding-left: 0;
+}
+/* ==========================================================================
+    Media queries
+   ========================================================================== */
 
 @media screen and (max-width: 1080px){
 	header{

@@ -1,0 +1,323 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Maheshkumar
+* 
+* Title: SolidState
+* Author: Maheshkumar
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/solidstate/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Open+Sans:wght@300&display=swap");
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.4;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* layout */
+body {
+  max-width: 100%;
+}
+
+body > a {
+  display: block;
+}
+
+blockquote {
+  margin: 0;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+  vertical-align: text-top;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+ol li {
+  margin: 1em;
+}
+
+.container {
+  width: 100%;
+  padding: 0.35em;
+}
+
+nav ul {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0.25em;
+  margin: 0.5em 0;
+}
+
+main ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+main ul li {
+  padding: 0.1em 0.2em;
+}
+
+#files a {
+  width: 33%;
+  display: inline-block;
+  margin: 1em 1em;
+  padding: 0.25em;
+}
+
+aside {
+  display: inline-block;
+  width: 100%;
+  padding: 1em;
+}
+
+/* design */
+body {
+  background-image: linear-gradient(135deg, #ebcccc, #96ffb4, #ebcccc);
+}
+
+nav ul li,
+main ul li,
+#files a {
+  border: 1px solid #2aa5a5;
+  border-radius: 10px;
+  background-color: rgba(42, 165, 165, 0.1);
+  cursor: pointer;
+  transition: all ease-out 0.1s;
+  box-shadow: 2px 2px #2aa5a5;
+}
+
+main ul li {
+  cursor: auto;
+  box-shadow: 3px 3px #2aa5a5;
+}
+
+nav ul li:hover,
+#files a:hover {
+  background-color: rgba(42, 165, 165, 0.3);
+  box-shadow: 3px 3px #2aa5a5;
+}
+
+#files a {
+  border: 1px solid #2aa5a5;
+}
+
+/* typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  text-align: justify;
+  font-size: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 300;
+}
+
+body > a {
+  font-size: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #075858;
+  font-weight: 600;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 450;
+}
+
+h2 {
+  font-size: 3.25rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.5rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+strong {
+  color: #075858;
+}
+
+main {
+  font-family: "Libre Baskerville", serif;
+}
+
+footer {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+body > a,
+header,
+main ul li,
+nav,
+aside,
+footer {
+  text-align: center;
+}
+
+header h2 {
+  font-size: 2.5rem;
+  font-weight: 350;
+}
+
+nav a:hover {
+  text-decoration: none;
+}
+
+main ul {
+  font-size: 2rem;
+  font-weight: 350;
+  color: brown;
+}
+
+aside h4,
+aside h2 {
+  font-size: 3.25rem;
+}
+
+#files a:hover {
+  text-decoration: none;
+}
+
+/* media queries */
+@media screen and (max-width: 800px) {
+  body {
+    padding: 1em 0.5em;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  #files a {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    padding: 1em;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 1em 6em;
+  }
+}

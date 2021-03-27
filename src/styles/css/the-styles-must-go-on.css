@@ -1,0 +1,779 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Joe Lamyman
+* 
+* Title: The Styles Must Go On!
+* Author: Joe Lamyman
+* Website: https://joelamyman.co.uk/
+* Twitter: @JoeLamyman
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/the-styles-must-go-on/
+*/
+
+/* Importing the Fascinate Inline font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap");
+
+/* Setting up CSS Custom Properties */
+:root {
+  --color-background-body: #343434;
+  --color-red-primary: #931a1d;
+  --color-red-secondary: #f33;
+  --color-golden: #e0c968;
+  --color-text-body: #ebebeb;
+  --font-family-heading: "Fascinate Inline", cursive;
+  --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --font-size-h1: 3.052rem;
+  --font-size-h2: 2.441rem;
+  --font-size-h3: 1.953rem;
+  --font-size-h4: 1.563rem;
+  --font-size-text: 1.25rem;
+  --font-size-small: 0.8rem;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* End of CSS Reset */
+
+/* --- */
+/* Styling for The Styles Must Go On! */
+/* --- */
+
+* {
+  /* Applying System Fonts */
+  /* Method 1 from https://css-tricks.com/snippets/css/system-font-stack/ */
+  font-family: var(
+    --font-family-body,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol"
+  );
+}
+
+html {
+  background-color: var(--color-background-body, #343434);
+  color: var(--color-text-body, #ebebeb);
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading, "Fascinate Inline", cursive);
+  text-transform: uppercase;
+  word-break: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+li {
+  max-width: 60ch;
+}
+
+h1 {
+  color: var(--color-golden, #e0c968);
+  font-size: var(--font-size-h1, 3.052rem);
+  width: max-content;
+}
+
+h2 {
+  font-size: var(--font-size-h2, 2.441rem);
+}
+
+h3 {
+  font-size: var(--font-size-h3, 1.953rem);
+}
+
+h4 {
+  font-size: var(--font-size-h4, 1.563rem);
+}
+
+p {
+  margin: 0;
+}
+
+/* Wanted a movie poster look, so before the <h1> I have added in the kind of text you'd find on a movie poster */
+h1::before {
+  content: "From the developer that brought you ModernCss.dev";
+  color: white;
+  display: block;
+  font-family: var(
+    --font-family-body,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol"
+  );
+  font-size: var(--font-size-small, 0.8rem);
+  font-weight: lighter;
+  text-align: center;
+}
+
+svg {
+  fill: white;
+  display: inline;
+  max-height: 1rem;
+  max-width: 1rem;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style-image: url("data:image/svg+xml;utf8,<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 890 3320'><ellipse cx='437' cy='3000' rx='400' ry='100' fill='%232D1E20'/><ellipse cx='445' cy='3185' rx='445' ry='135' fill='%232D1E20'/><path fill='%232D1E20' d='M37 2999h800v132H37z'/><path fill='%23E0C968' d='M303 2688h269v260H303z'/><path fill='%23E0C968' d='M326 394h224v40H326z'/><rect x='295' width='286' height='454' rx='138' fill='%23E0C968'/><path fill='%23E0C968' d='M206 2843h463v105H206z'/><path fill='%23E0C968' d='M236 2031h403v657H236z'/><path fill='%23E0C968' d='M193 1225h490v806H193z'/><path d='M109 1225L21 581h833l-88 644H109z' fill='%23E0C968'/><path d='M326 434L21 581h833L550 434H326z' fill='%23E0C968'/><path d='M134.5 742L176 883.5l189.5-85' stroke='%23A87F2C' stroke-width='10'/><path d='M533 961l129.5 59.5 33.5-116' stroke='%23A87F2C' stroke-width='10'/><path d='M348 182c0-17.121 13.879-31 31-31h5c17.121 0 31 13.879 31 31h-67z' fill='%23AB5F28'/><path d='M461 182c0-17.121 13.879-31 31-31h5c17.121 0 31 13.879 31 31h-67z' fill='%23AB5F28'/><path d='M355 174.463c13.333-4.5 42.8-10.8 54 0' stroke='%23823C09' stroke-width='10'/><path d='M521.5 174.463c-13.333-4.5-42.8-10.8-54 0' stroke='%23823C09' stroke-width='10'/><path d='M412 211.5l11.5 56' stroke='%23D5BA4A' stroke-width='10'/><path d='M463.5 211.5l-11.5 56' stroke='%23D5BA4A' stroke-width='10'/><path d='M402 329.5h72.5' stroke='%23823C09' stroke-width='10'/><path d='M428.5 2910.5V1302' stroke='%23A87F2C' stroke-width='10'/></svg>");
+}
+
+li {
+  padding: 0 1rem;
+}
+
+/* Defining the different styling for interactions with links */
+a:link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.25rem;
+  text-decoration-color: var(--color-red-secondary, #f33);
+  font-weight: bold;
+  padding: 0.1rem 0.25rem;
+  width: max-content;
+}
+
+a:hover {
+  text-decoration-thickness: 0.1rem;
+  box-shadow: 0 8px 6px -6px black;
+}
+
+a:focus {
+  background-color: var(--color-red-secondary, #f33);
+  color: white;
+  text-decoration-color: white;
+}
+
+a:focus svg {
+  fill: white !important;
+}
+
+a:active {
+  background-color: var(--color-red-secondary, #f33);
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration-color: white;
+}
+
+main,
+nav,
+#styles {
+  padding: 0 8vw;
+}
+
+nav {
+  display: flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: center;
+  font-size: var(--font-size-text, 1.25rem);
+  margin: 2rem 0;
+}
+
+article {
+  font-size: var(--font-size-text, 1.25rem);
+  max-width: 60ch;
+  width: 100%;
+  min-width: 10rem;
+  margin: 0 auto;
+}
+
+blockquote {
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 1.5rem 2rem;
+}
+
+blockquote::before {
+  content: "Style Stage";
+  display: block;
+  font-family: var(--font-family-heading, "Fascinate Inline", cursive);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+blockquote::after {
+  content: "How it works";
+  display: block;
+  border-top: 0.1rem solid black;
+  padding: 1rem 0 0 0;
+  margin: 1rem 0 0 0;
+  text-align: center;
+  font-size: var(--font-size-text, 1.25rem);
+  font-style: italic;
+}
+
+header {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  /* I use the important selector to stop the very specific sibling selector from adding a margin top later on */
+  margin-top: 0 !important;
+}
+
+/* This block is sorting the size of the div within the header, so that the curtains can be added in the before and after pseudo classes */
+header .container {
+  min-height: 100vh;
+  max-height: 100vh;
+  /* The max width below relates to the space that the content inbetween the content has */
+  max-width: 45vw;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* This is the bit of CSS that's styling the shared features of the curtains */
+header .container::before,
+header .container::after {
+  content: "";
+  position: absolute;
+  min-width: 50vw;
+  width: 50vw;
+  max-width: 50vw;
+  height: 100vh;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 3940'><path d='M7.5 7.5h185V3840c0 51.09-41.414 92.5-92.5 92.5S7.5 3891.09 7.5 3840V7.5z' fill='%23B60000' stroke='%23941D1D' stroke-width='15' stroke-linejoin='round'/></svg>");
+  z-index: 2;
+}
+
+/* The animation for the left curtain */
+@keyframes openLeftCurtain {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: -25vw;
+  }
+}
+
+/* The animation for the right curtain */
+@keyframes openRightCurtain {
+  0% {
+    right: 0vw;
+  }
+  100% {
+    right: -25vw;
+  }
+}
+
+/* The animation for the left curtain */
+@keyframes openLeftCurtainMobile {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: -45vw;
+  }
+}
+
+/* The animation for the right curtain */
+@keyframes openRightCurtainMobile {
+  0% {
+    right: 0vw;
+  }
+  100% {
+    right: -45vw;
+  }
+}
+
+/* Specific styles for the individual curtains */
+header .container::before {
+  top: 0;
+  left: 50vw;
+  animation: openLeftCurtain ease-in-out forwards 3s;
+}
+
+header .container::after {
+  top: 0;
+  right: 50vw;
+  animation: openRightCurtain ease-in-out forwards 3s;
+}
+
+/* Styling the GitHub link in the header */
+header a.link-github {
+  margin: 2rem auto 0 auto;
+  font-size: var(--font-size-text, 1.25rem);
+}
+
+header a.link-github svg {
+  display: block;
+  fill: var(--color-golden, #e0c968);
+  max-height: 2rem;
+  margin: 0 auto;
+}
+
+/* Adding the trophy before the list items */
+ul li::before {
+  display: inline-block;
+  content: " ";
+  height: 2.5rem;
+  width: 1rem;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 890 3320'><ellipse cx='437' cy='3000' rx='400' ry='100' fill='%232D1E20'/><ellipse cx='445' cy='3185' rx='445' ry='135' fill='%232D1E20'/><path fill='%232D1E20' d='M37 2999h800v132H37z'/><path fill='%23E0C968' d='M303 2688h269v260H303z'/><path fill='%23E0C968' d='M326 394h224v40H326z'/><rect x='295' width='286' height='454' rx='138' fill='%23E0C968'/><path fill='%23E0C968' d='M206 2843h463v105H206z'/><path fill='%23E0C968' d='M236 2031h403v657H236z'/><path fill='%23E0C968' d='M193 1225h490v806H193z'/><path d='M109 1225L21 581h833l-88 644H109z' fill='%23E0C968'/><path d='M326 434L21 581h833L550 434H326z' fill='%23E0C968'/><path d='M134.5 742L176 883.5l189.5-85' stroke='%23A87F2C' stroke-width='10'/><path d='M533 961l129.5 59.5 33.5-116' stroke='%23A87F2C' stroke-width='10'/><path d='M348 182c0-17.121 13.879-31 31-31h5c17.121 0 31 13.879 31 31h-67z' fill='%23AB5F28'/><path d='M461 182c0-17.121 13.879-31 31-31h5c17.121 0 31 13.879 31 31h-67z' fill='%23AB5F28'/><path d='M355 174.463c13.333-4.5 42.8-10.8 54 0' stroke='%23823C09' stroke-width='10'/><path d='M521.5 174.463c-13.333-4.5-42.8-10.8-54 0' stroke='%23823C09' stroke-width='10'/><path d='M412 211.5l11.5 56' stroke='%23D5BA4A' stroke-width='10'/><path d='M463.5 211.5l-11.5 56' stroke='%23D5BA4A' stroke-width='10'/><path d='M402 329.5h72.5' stroke='%23823C09' stroke-width='10'/><path d='M428.5 2910.5V1302' stroke='%23A87F2C' stroke-width='10'/></svg>");
+  background-repeat: no-repeat;
+}
+
+ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+ol li::marker {
+  font-family: var(--font-family-heading, "Fascinate Inline", cursive);
+  background-color: var(--color-red-primary, #931a1d);
+}
+
+/* The position absolute in this pseudo selector and position relative on the <li> (the <a> tag's parent) is from Heydon Pickering, to increase the size of the clickable area */
+/* Source: https://inclusive-components.design/cards/#thepseudocontenttrick */
+ul li a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: " ";
+}
+
+nav ul li:hover::before {
+  transform: rotate(10deg);
+}
+
+/* Skip link styling, initially position it off screen */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* When focused on, display it on screen */
+.skip-link:focus {
+  top: 1rem;
+  left: 26vw;
+  outline: 0.25rem solid var(--color-red-secondary, #f33);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styling the footer */
+footer.page-footer {
+  background-color: var(--color-red-primary, #931a1d);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 8vw;
+}
+
+footer.page-footer > .container {
+  font-size: var(--font-size-h4, 1.563rem);
+  max-width: 60ch;
+  width: 100%;
+  min-width: 10rem;
+}
+
+/* This block of code sets the profile section to be displayed on the right of the screen */
+/* Laying it out with a grid */
+.profile {
+  position: fixed;
+  right: 2.5vw;
+  top: -2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 1fr 20vh;
+  max-height: 80vh;
+  height: 80vh;
+  width: 20vw;
+  max-width: 20vw;
+}
+
+/* The before pseudo selector displays the rope and span the entire length of the grid */
+.profile::before {
+  content: "";
+  display: block;
+  height: 80vh;
+  width: 5rem;
+  margin: 0 auto;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 337 4191'><path d='M69 0h200v3940H69V0z' fill='%23775735'/><path stroke='%2383623E' stroke-width='200' stroke-miterlimit='2.613' stroke-dasharray='100 100' d='M169 0v3940'/><path fill='%23E0C968' d='M69 3940h200v137H69z'/><circle cx='68.5' cy='4008.5' r='68.5' fill='%23E0C968'/><circle cx='268.5' cy='4008.5' r='68.5' fill='%23E0C968'/><path fill='%23E0C968' d='M49 4028h240v163H49z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: center center;
+  grid-row: 1 / 4;
+  grid-column: 1 / 2;
+}
+
+/* Stlying the board that the profile information displays upon */
+.profile .container {
+  background-color: #161616;
+  color: white;
+  padding: 1rem;
+  height: max-content;
+  border: 1rem solid #372009;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
+
+/* The containers that have the snap scrolling */
+/* Source: https://www.ishadeed.com/article/css-scroll-snap/ */
+ul.features,
+#about .container ul {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  align-items: center;
+  scroll-snap-type: x mandatory;
+  scrollbar-color: #931a1d black;
+}
+
+/* Adding a bit of space between list items */
+ul.features li + li,
+#about .container ul li + li {
+  margin-left: 1rem;
+}
+
+/* Styling the cards that appear in the scrolling containers */
+ul.features li,
+#about .container ul li {
+  width: 20ch;
+  min-width: 20ch;
+  max-width: 20ch;
+  background-color: white;
+  color: black;
+  padding: 1rem 2rem;
+  flex-direction: column;
+  height: max-content;
+  scroll-snap-align: start;
+}
+
+/* Clearing the content before so that the trophies don't appear */
+ul.features li::before,
+#about .container ul li::before {
+  content: "";
+  background-image: none;
+  display: inline;
+  height: 0;
+  width: 0;
+}
+
+/* Adding in some content at the bottom of the card, to look like the cards that the winners are written on during the Oscars */
+ul.features li::after,
+#about .container ul li::after {
+  content: "Style Stage style";
+  display: block;
+  border-top: 0.1rem solid black;
+  padding: 1rem 0 0 0;
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+  margin: 1rem 0 0 0;
+}
+
+ul.features li:nth-of-type(1):after {
+  content: "Best Picture";
+}
+
+ul.features li:nth-of-type(2):after {
+  content: "Best Original Stylesheet";
+}
+
+ul.features li:nth-of-type(3):after {
+  content: "Best Visual Effects";
+}
+
+#styles .container {
+  font-size: var(--font-size-text, 1.25rem);
+  max-width: 60ch;
+  width: 100%;
+  min-width: 10rem;
+  margin: 0 auto;
+}
+
+body > * + *,
+article > * + *,
+section > * + *,
+ol > * + *,
+main > div > * + * {
+  margin-top: 2rem;
+}
+
+a[class*="link-download"],
+a[class*="link-codepen"] {
+  color: black;
+  display: inline-block;
+  padding: 2rem;
+  background-color: var(--color-golden, #e0c968);
+  font-size: var(--font-size-h4, 1.563rem);
+  text-decoration: none;
+}
+
+a[class*="link-download"]:hover,
+a[class*="link-codepen"]:hover {
+  text-decoration: underline;
+}
+
+a[class*="link-download"]:active,
+a[class*="link-codepen"]:active {
+  text-decoration: underline;
+  text-decoration-thickness: 0.25rem;
+}
+
+a[class*="link-download"]:focus,
+a[class*="link-codepen"]:focus {
+  text-decoration: underline;
+  background-color: var(--color-red-primary);
+  color: white;
+}
+
+a[class*="link-download"]::before,
+a[class*="link-codepen"]::before {
+  content: "Style Stage Ticket";
+  display: block;
+  text-decoration: none;
+  font-family: var(--font-family-heading, "Fascinate Inline", cursive);
+  text-transform: uppercase;
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+a[class*="link-download"]::after,
+a[class*="link-codepen"]::after {
+  content: "Permits one download";
+  display: block;
+  text-decoration: none;
+  font-size: 0.8rem;
+  margin: 0.5rem 0 0 0;
+}
+
+#files .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 1rem;
+}
+
+#files h3 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+}
+
+#files a {
+  grid-row: 2 / 3;
+}
+
+blockquote a:visited,
+.features a:visited {
+  color: black;
+  text-decoration-color: var(--color-golden, #e0c968);
+}
+
+@media (max-width: 100rem) {
+  @keyframes openLeftCurtain {
+    0% {
+      left: 0vw;
+    }
+    100% {
+      left: -30vw;
+    }
+  }
+
+  @keyframes openRightCurtain {
+    0% {
+      right: 0vw;
+    }
+    100% {
+      right: -30vw;
+    }
+  }
+
+  .profile {
+    display: block;
+    position: initial;
+    height: auto;
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .profile::before {
+    content: none;
+  }
+
+  aside {
+    padding: 0 8vw;
+  }
+
+  aside.profile .container {
+    max-width: 60ch;
+    margin: 0 auto;
+    font-size: var(--font-size-text, 1.25rem);
+  }
+
+  #files .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 1rem;
+  }
+
+  #files a:nth-of-type(1) {
+    grid-row: 2 / 3;
+  }
+
+  #files a:nth-of-type(2) {
+    grid-row: 3 / 4;
+  }
+
+  #files a:nth-of-type(3) {
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 60rem) {
+  header .container {
+    margin: 0 8vw;
+    max-width: 100%;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: var(--font-size-h2, 2.441rem);
+  }
+
+  h2 {
+    font-size: var(--font-size-h4, 1.563rem);
+  }
+
+  /* I found that for some reason iOS WebKit doesn't agree with keyframes being defined in media queries 😅 */
+  header .container::before {
+    animation: openLeftCurtainMobile ease-in-out forwards 3s;
+  }
+
+  header .container::after {
+    animation: openRightCurtainMobile ease-in-out forwards 3s;
+  }
+}
+
+@media (prefers-reduced-motion) {
+  /* Specific styles for the individual curtains */
+  header .container::before {
+    left: -25vw;
+    animation: none;
+  }
+
+  header .container::after {
+    right: -25vw;
+    animation: none;
+  }
+
+  @media (max-width: 100rem) {
+    header .container::before {
+      left: -30vw;
+    }
+
+    header .container::after {
+      right: -30vw;
+    }
+  }
+
+  @media (max-width: 60rem) {
+    header .container::before {
+      left: -45vw;
+    }
+
+    header .container::after {
+      right: -45vw;
+    }
+  }
+}
