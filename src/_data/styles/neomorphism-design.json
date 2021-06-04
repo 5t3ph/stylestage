@@ -1,9 +1,5 @@
 {
-    // Required
     "title": "Neomorphism Design",
     "author": "Manoranjan D",
-    "stylesheet": "https://hungry-mayer-97a224.netlify.app/style.css",
-    // Optional
-    "websiteUrl": "https://moderncss.dev"
-  }
-  
+    "stylesheet": "https://hungry-mayer-97a224.netlify.app/style.css"
+}
