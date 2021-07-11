@@ -1,0 +1,605 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Otomanopee+One&display=swap');
+
+*{
+  list-style-type: none;
+  margin: 0;
+}
+
+:root{
+  --clr-primary-200:#8A817C;
+  --clr-primary-400:#2F4858;
+  --clr-secondary:#463F3A;
+  --clr-link:#E0AFA0;
+  --clr-basic:white;
+  --font-main:'Otomanopee One', sans-serif;
+  --font-sub: 'Inter', sans-serif;
+  --font-size-400:110px;
+  --font-size-300:45px;
+  --font-size-200:30px;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body{
+  box-sizing: border-box;
+  background-color: #F4F3EE;
+  color: var(--clr-primary-400);
+  text-align:center;
+  font-family: var(--font-sub);
+  font-size: var(--font-size-200);
+}
+
+/*header and nav*/
+
+
+header .container{
+  padding-top: 50px ;
+  padding-bottom: 100px;
+}
+
+header >.container> p >a:hover{
+  font-family: var(--font-main);
+  color: var(--clr-secondary);
+  font-size: 33px;
+  text-decoration: none;
+}
+
+div.container>*{
+  margin: 60px 0px;
+}
+
+header >div.container> a{
+  color: var(--clr-link);
+  font-size: var(--font-size-200);
+  background:
+     linear-gradient(
+       to bottom, var(--clr-secondary) 0%,
+       var(--clr-secondary) 100%
+     );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 4px;
+  text-decoration: none;
+  transition: background-size .2s;
+}
+
+header div.container a:hover{
+  background-size: 8px 60px;
+}
+
+
+
+nav ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li{
+  background-color: var(--clr-secondary);
+  font-size: var(--font-size-300);
+  padding: 20px;
+}
+
+nav ul li:hover{
+  transition: transform 0.1s ease-in;
+  transform: translateY(-15px);
+}
+
+/*about*/
+#about .container>p{
+  margin-left:  80px;
+  margin-right: 80px;
+}
+
+
+#about >.container *{
+  margin-top: 50px  ;
+  margin-bottom: 50px;
+}
+
+#about p:nth-child(5){
+  font-size: 28px;
+  padding: 30px 50px;
+}
+
+#about .container blockquote{
+  position: relative;
+  padding: 5px 100px;
+  margin: 0px 60px;
+  font-size: 28px;
+  box-shadow: var(--clr-secondary) 0px 20px 30px -10px;
+  border-left: 20px solid var(--clr-secondary) ;
+  border-right: 20px solid var(--clr-secondary) ;
+  outline: 1px solid var(--clr-secondary);
+}
+
+
+
+#about .container blockquote a{
+  font-size: 28px;
+}
+
+/*modern css*/
+
+#about .container:nth-child(2){
+  margin: 0px 90px;
+}
+
+#about .container:nth-child(2)>ul {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: var(--clr-secondary);
+  color:var(--clr-basic);
+  text-shadow: 0 0 10px var(--clr-link);
+  font-size: 30px;
+  
+}
+
+/*guidelines*/
+#guidelines .container{
+  margin: 30px 100px;
+}
+
+#guidelines .container p:nth-child(4),#guidelines .container p:nth-child(5){
+  font-size: 28px;
+  padding-right:  20px;
+  padding-left: 20px ;
+  background-color: var(--clr-link);
+}
+
+#guidelines .container p:nth-child(4) a{
+  font-size: 28px;
+  color: var(--clr-basic);
+}
+
+
+
+#guidelines .container>*{
+  padding: 20px 0px;
+}
+
+/*contribute*/
+#contribute .container{
+  margin: 30px 100px;
+}
+
+#contribute .container>*{
+  padding: 20px 0px;
+}
+
+#contribute .container ol li{
+   font-size: 28px;
+   padding: 20px 20px;
+   box-shadow: var(--clr-secondary) 0px 20px 30px -10px;
+   margin-top:30px ;
+   margin-bottom: 30px;
+}
+
+#contribute .container ol li a{
+  font-size: 28px;
+}
+
+/*files*/
+
+#files .container{
+    background-color: var(--clr-link);
+  }
+
+#files .container>*{
+  margin-left: 50px ;
+  margin-right: 50px;
+}
+
+#files .container:not(:first-child) {
+  display: flex;
+  justify-content:space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#files .container a{
+   background-color: var(--clr-secondary);
+}
+
+#files .container a:hover{
+  transition: transform 0.1s ease-in;
+  transform: translateY(-15px);
+}
+
+/*profile*/
+
+.profile .container{
+  margin: 50px 50px;
+  padding: 20px 20px;
+}
+
+.profile .container ul{
+  color: var(--clr-basic);
+  background-color: var(--clr-secondary);
+  border-left: 10px solid var(--clr-link);
+  border-right: 10px solid var(--clr-link);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.profile .container ul li{
+  padding: 10px 0px;
+}
+
+/*features styles*/
+#styles .container ul li{
+  padding: 10px 0px;
+}
+
+.link-allstyles{
+  background-color: var(--clr-link);
+  color: var(--clr-secondary);
+  padding: 10px 10px;
+}
+
+.link-allstyles:hover{
+  text-decoration: none;
+}
+
+/*page footer*/
+.page-footer .container {
+  padding: 10px;
+  background-color: var(--clr-secondary);
+  color: var(--clr-basic);
+  font-size: 28px;
+}
+
+
+
+.page-footer .container a{
+  font-size: 28px;
+}
+
+.page-footer .container ul{
+  display: flex;
+  justify-content: space-between ;
+  padding-left: 100px;
+  padding-right: 0px;
+}
+
+.page-footer .container ul li{
+  background-color: var(--clr-secondary);
+  outline: 2px solid var(--clr-link);
+}
+
+
+svg,.skip-link{
+  display: none;
+}
+
+h1{
+  color: var(--clr-secondary);
+  font-family: var(--font-main);
+  font-size: var(--font-size-400);
+  animation:slideInFromTop 1s ease-in ;
+}
+
+ h2{
+  color: var(--clr-primary-200);
+  font-size: var(--font-size-300);
+}
+
+a {
+  color: var(--clr-link);
+  font-size: var(--font-size-200);
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline var(--clr-secondary);
+}
+
+/*animations*/
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/*responsive*/
+
+/*tablets and under*/
+@media (max-width: 768px) {
+  header >.container> p >a:hover{
+    font-size: 23px;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  :root{
+    
+    --font-size-400:90px;
+    --font-size-300:38px;
+    --font-size-200:25px;
+  }
+
+  header .container{
+    padding-top: 0px ;
+    margin-top: 0px;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  nav ul li{
+    background-color: var(--clr-secondary);
+    font-size: var(--font-size-300);
+    padding-bottom: 0;
+  }
+
+  nav ul li:hover{
+    transition: none;
+    transform: none;
+  }
+
+  #about .container blockquote{
+    padding: 2px;
+    margin: 0px 20px;
+    font-size: 25px;
+  }
+
+  #about .container blockquote a{
+    font-size: 25px;
+  }
+
+  #about p:nth-child(5){
+    font-size: 25px;
+    padding: 20px 0px;
+  }
+
+#about .container:nth-child(2){
+  margin: 0px 10px;
+}
+
+#about .container:nth-child(2)>ul {
+  font-size: 25px;
+}
+
+#about .container:nth-child(2)>ul {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: var(--clr-secondary);
+  color:var(--clr-basic);
+  text-shadow: 0 0 10px var(--clr-link);
+  font-size: 25px;
+  
+}
+
+#guidelines .container{
+  margin: 30px 20px;
+}
+
+#guidelines .container p:nth-child(4),#guidelines .container p:nth-child(5){
+  font-size: 25px;
+}
+
+#guidelines .container p:nth-child(4) a{
+  font-size: 25px;
+}
+
+#contribute .container{
+  margin: 30px 20px;
+}
+
+#contribute .container ol li{
+  font-size: 25px;
+}
+
+#contribute .container ol li a{
+ font-size: 25px;
+}
+
+
+#files .container{
+    background-color: var(--clr-link);
+  }
+
+
+
+#files .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#files .container h3{
+  margin: 10px 0px;
+  padding: 0;
+}
+
+#files .container a{
+  margin: 30px 50px;
+  padding: 0;
+}
+
+#files .container a:hover{
+  transition: none;
+  transform: none;
+}
+
+
+.page-footer .container a{
+  font-size: 25px;
+}
+
+.page-footer .container ul{
+  display: flex;
+  justify-content: space-between ;
+  padding-left:0;
+}
+
+.page-footer .container {
+  font-size: 25px;
+}
+  
+}
+
+/* Mobile */
+@media (max-width: 500px){
+  header >.container> p >a:hover{
+    font-size: 23px;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  :root{
+    
+    --font-size-400:90px;
+    --font-size-300:38px;
+    --font-size-200:25px;
+  }
+
+  header .container{
+    padding-top: 0px ;
+    margin-top: 0px;
+  }
+
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 0;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  nav ul li{
+    background-color: var(--clr-secondary);
+    font-size: var(--font-size-300);
+    padding-bottom: 0;
+  }
+
+  nav ul li:hover{
+    transition: none;
+    transform: none;
+  }
+
+  #about .container blockquote{
+    padding: 2px;
+    margin: 0px 20px;
+    font-size: 25px;
+  }
+
+  #about .container blockquote a{
+    font-size: 25px;
+  }
+
+  #about p:nth-child(5){
+    font-size: 25px;
+    padding: 20px 0px;
+  }
+
+#about .container:nth-child(2){
+  margin: 0px 10px;
+}
+
+#about .container:nth-child(2)>ul {
+  font-size: 25px;
+}
+
+#about .container:nth-child(2)>ul {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  background-color: var(--clr-secondary);
+  color:var(--clr-basic);
+  text-shadow: 0 0 10px var(--clr-link);
+  font-size: 25px;
+  padding-left: 0px;
+}
+
+#guidelines .container{
+  margin: 30px 20px;
+}
+
+#guidelines .container p:nth-child(4),#guidelines .container p:nth-child(5){
+  font-size: 25px;
+}
+
+#guidelines .container p:nth-child(4) a{
+  font-size: 25px;
+}
+
+#contribute .container{
+  margin: 30px 20px;
+}
+
+#contribute .container ol li{
+  font-size: 25px;
+}
+
+#contribute .container ol li a{
+ font-size: 25px;
+}
+
+
+#files .container{
+    background-color: var(--clr-link);
+  }
+
+
+
+#files .container {
+  display: flex;
+  flex-direction: column;
+}
+
+#files .container h3{
+  margin: 10px 0px;
+  padding: 0;
+}
+
+#files .container a{
+  margin: 30px 50px;
+  padding: 0;
+}
+
+#files .container a:hover{
+  transition: none;
+  transform: none;
+}
+
+
+.page-footer .container a{
+  font-size: 25px;
+}
+
+.page-footer .container ul{
+  display: flex;
+  justify-content: space-between ;
+  padding-left:0;
+}
+
+.page-footer .container {
+  font-size: 25px;
+}
+}
