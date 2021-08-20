@@ -63,6 +63,7 @@ body{
   width: auto;
   height: auto;
   padding: 0.5em;
+  color: var(--clr-secondary);
 }
 
 /*header and nav*/
