@@ -6,7 +6,7 @@
   "scripts": {
     "scss:main": "sass --no-source-map src/sass/main-stage.scss src/styles/css/main-stage.css",
     "scss:showcase": "sass --no-source-map src/sass/showcase.scss src/styles/css/showcase.css",
-    "scss:social": "sass --no-source-map src/sass/social-previews.scss api/social-previews.css",
+    "scss:social": "sass --no-source-map src/sass/social-previews.scss src/_generate/social-previews.css",
     "scss": "npm run scss:main ; npm run scss:showcase ; npm run scss:social",
     "css": "postcss src/styles/css/*.css -d public/styles/css -u autoprefixer --no-map",
     "watch:eleventy": "eleventy --serve",

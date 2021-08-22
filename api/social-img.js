@@ -4,6 +4,8 @@ const fs = require("fs");
 const path = require("path");
 
 async function screenshot(slug, title, author) {
+  const baseURL = process.env.URL;
+  const url = `${baseURL}/social-template/`;
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
@@ -13,8 +15,10 @@ async function screenshot(slug, title, author) {
 
   const page = await browser.newPage();
 
-  // Load html from template
-  const html = fs.readFileSync(path.resolve(__dirname, "./template.html")).toString();
+  await page.goto(url, {
+    waitUntil: ["load", "networkidle0"],
+    timeout: 1000,
+  });
 
   await page.setContent(html, {
     waitUntil: ["networkidle0"],

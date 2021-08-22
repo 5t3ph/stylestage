@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /source-files
 Disallow: /thanks
+Disallow: /social-template
