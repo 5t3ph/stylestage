@@ -1,7 +1,5 @@
 const { builder } = require("@netlify/functions");
 const chromium = require("chrome-aws-lambda");
-const fs = require("fs");
-const path = require("path");
 
 async function screenshot(slug, title, author) {
   const baseURL = process.env.URL;
@@ -17,7 +15,7 @@ async function screenshot(slug, title, author) {
 
   await page.goto(url, {
     waitUntil: ["load", "networkidle0"],
-    timeout: 1000,
+    timeout: 3000,
   });
 
   await page.setContent(html, {
