@@ -1,3 +1,17 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Tripti Nayak
+* 
+* Title: Calm
+* Author: Tripti Nayak
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/calm/
+*/
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Otomanopee+One&display=swap');
 
@@ -57,6 +71,7 @@ body{
   overflow: hidden;
 }
 .skip-link:focus {
+ color: var(--clr-secondary);
   position: fixed;
   top: 0;
   left: 0;

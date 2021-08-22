@@ -127,3 +127,7 @@
 [Neomorphism Design](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neomorphism-design.css) By Manoranjan D
 
 [Slide Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/slide-stage.css) By Thomas Tuvignon
+
+[Calm](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/calm.css) By Tripti Nayak
+
+[Liquid Style](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/liquid-style.css) By Toni Rome

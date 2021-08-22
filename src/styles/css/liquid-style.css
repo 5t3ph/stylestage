@@ -1,0 +1,222 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Toni Rome
+* 
+* Title: Liquid Style
+* Author: Toni Rome
+* Website: https://guyrome.com
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/liquid-style/
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* global vars */
+:root {
+  --color-primary: #002b77; /* Dark Blue */
+  --color-secondary: #c80000; /* Red */
+  --color-tertiary: #fde976; /* Yellow */
+  --color-tertiary-alt: #a4eff9; /* Light Blue */
+  --color-light: #fff;
+  --color-anchor: #002b77;
+  --color-anchor-alt: #666;
+  --font-size-text: 1.15rem;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+
+/* Box sizing rules */
+*, *::before, *::after {box-sizing: border-box;}
+
+/* Remove default margin */
+body, h1, h2, h3, h4, h5, h6 {margin: 0;}
+
+html {overflow-x: hidden;}
+
+/* Set core body defaults */
+body {height: 100vh; font-size: 100%; line-height: 1.5; text-rendering: optimizeSpeed; overflow-x: hidden;}
+
+/* Make images easier to work with */
+img {display: block; max-width: 100%;}
+
+/* Inherit fonts for inputs and buttons */
+input, button, textarea, select {font: inherit;}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+/*--------------------------------------------------------------
+## Links/Buttons
+--------------------------------------------------------------*/
+
+a {color: var(--color-anchor);}
+a:visited {color: var(--color-anchor-alt);}
+a:hover, a:active, a:focus {color: var(--color-anchor);}
+a:focus {outline: max(1px, 0.1em) solid; outline-offset: .5em;}
+a:focus:not(:focus-visible) {outline: none;}
+a:focus-visible {outline: max(1px, 0.1em) solid; outline-offset: .125em;}
+
+.skip-link {position: absolute; top: auto; left: -10000px; width: 1px; height: 1px; background-color:var(--color-secondary); text-transform:capitalize; font-family: 'Roboto Slab', serif; font-size: 1.125rem; overflow: hidden;}
+.skip-link:focus {position: fixed; top: 0; left: 1em; width: auto; height: auto; padding: 0.5em; padding:.375em .75em .5em; border:0; border-bottom-left-radius:1em; border-bottom-right-radius:1em; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+.skip-link, .skip-link:visited, .skip-link:hover, .skip-link:active {color: var(--color-light);}
+.skip-link:focus, header .link-github:focus, .link-guidelines:focus, .link-allstyles:focus {color: var(--color-light); outline: max(1px, 0.1em) solid; outline-offset:0;}
+header .link-github, .link-guidelines,  .link-allstyles {border: 4px solid transparent; transition: all .25s, border 0.25s .25s;}
+header .link-github:hover,  .link-allstyles:hover {background: var(--color-primary); border: 4px solid  var(--color-tertiary-alt);}
+.link-guidelines:hover {background: var(--color-primary); border: 4px solid  var(--color-light);}
+header .link-github, .link-guidelines, .link-allstyles {border-radius:2em; background: var(--color-secondary); padding:.5em .875em; text-decoration:none; font-family: 'Roboto Slab', serif;}
+.link-guidelines, .link-guidelines:visited, .link-guidelines:hover, .link-guidelines:active {color: var(--color-light); text-transform:capitalize;}
+header .link-github, header .link-github:visited, header .link-github:hover, header .link-github:active {color: var(--color-light);}
+.link-allstyles, .link-allstyles:visited, .link-allstyles:hover, .link-allstyles:active {color: var(--color-light);}
+.link-github svg {width: 1em; height: 1em; margin-right: 0.25em; fill: currentColor;}
+.profile a:nth-child(3n+0) {text-decoration:none;}
+.profile a:nth-child(3n+0):after {content: " \25b8"; color: var(--color-primary);}
+#files a {border-radius:2em; border: 4px solid  var(--color-secondary); padding:.5em .875em; text-decoration:none; font-family: 'Roboto Slab', serif;}
+#files a, #files a:visited, #files a:active {color: var(--color-secondary);}
+#files a:hover {color: var(--color-primary); border-color: var(--color-primary);}
+
+/*--------------------------------------------------------------
+## Elements
+--------------------------------------------------------------*/
+
+/* Photo by Pawel Czerwinski on Unsplash */
+body {font-family: 'Roboto', sans-serif; background: url("https://source.unsplash.com/g2Zf3hJyYAc") no-repeat left top fixed; background-size:cover;}
+
+h1, h2, h3, h4 {font-weight: 500; line-height: 1;}
+h2, h3, h4 {font-family: 'Roboto Slab', serif; margin-bottom: 0.5em;}
+h2 {color: var(--color-secondary); font-size:2em;}
+h3 {color: var(--color-primary); font-size:1.5em;}
+h1 {color: var(--color-light); -webkit-text-stroke: 2px #002b77; font-family: 'Roboto', sans-serif; text-transform:uppercase; letter-spacing:1px; margin-bottom:.125em;}
+p:last-of-type {margin-bottom:2em;}
+
+/* Header */
+header {display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; background-image: linear-gradient(to top, rgba(0,43,119,0), rgba(0,43,119,1));}
+/* Animation by Pawel Czerwinski on Unsplash */
+header h1 {
+    font-size: 7em; 
+    margin: 0 auto;
+    /* Clip Background Image */
+    background: url(https://source.unsplash.com/aMPfitH2tT0) repeat-y;
+    -webkit-background-clip: text;
+    /* Animate Background Image */
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: aitf 20s linear infinite;
+    /* Activate hardware acceleration for smoother animations */
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-backface-visibility: hidden; }
+
+/* Animate Background Image */
+@-webkit-keyframes aitf {
+  0% {
+    background-position: 70% 0%; }
+  100% {
+    background-position: 0% 50%; } }
+header h2 {font-size:1.5em; color: var(--color-primary); text-shadow:#a4eff9 0 0 7px, #a4eff9 0 0 10px, #fff 0 0 21px, #fff 0 0 32px, #fff 0 0 48px; margin-bottom:.125em;}
+header p {width:80%; margin:1.5em auto; padding:.5em; background-image: linear-gradient(to right, rgba(250,250,250,0), rgba(250,250,250,1), rgba(250,250,250,1), rgba(250,250,250,0));}
+
+/* Navigation */
+nav {width:80%; margin:0 auto; padding:.75em 0 .625em; text-align:center; background: var(--color-tertiary);}
+nav ul {width:auto; margin:0 auto; padding:0;}
+nav ul li {display:inline-block; margin:0 .5em;}
+nav a, nav a:visited, nav a:active {color: var(--color-primary);}
+nav a, nav a:visited, nav a:active {text-decoration:none;}
+nav a:hover {color: var(--color-secondary); text-decoration:underline;}
+
+/* Blockquote */
+blockquote {margin:3.5em 0 1em;}
+blockquote p {position:relative; padding: 1.75em 1em; background-image: linear-gradient(to top, rgba(164,239,249,1), rgba(164,239,249,.5), rgba(164,239,249,.3), rgba(164,239,249,.2), rgba(164,239,249,.2), rgba(164,239,249,.3), rgba(164,239,249,.5), rgba(164,239,249,1));}
+blockquote strong {position:absolute; top:-2.875em; left:0; font-weight: 500; color: var(--color-light); text-transform:capitalize; padding:0.5em 0.75em 0.938em; border-top-left-radius:1em; border-top-right-radius:1em;  background-image: linear-gradient(to bottom, rgba(0,43,119,1), rgba(0,43,119,1), rgba(164,239,249,1));}
+
+main {background:rgba(250,250,250, 0.9);}
+#about ul {width:auto; margin:0 auto; padding:0;}
+#about ul li {background:rgba(253,233,118, 0.3); display:inline-block; margin:0 .75em .75em 0; padding:.25em .75em; border-radius:2em; border:2px solid var(--color-tertiary-alt);}
+#guidelines {background: var(--color-tertiary-alt); padding:1.25em 1.25em 1.75em; text-align:center; margin-bottom:1em;}
+#guidelines p, #guidelines h2, #guidelines h3 {text-align:left;}
+#guidelines p:last-of-type {margin-bottom:1.5em;}
+#contribute {counter-reset:section;}
+#contribute section ol {counter-reset: section; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; padding-left: 0; margin-top:1.125em; margin-bottom:1.5em; position: relative; border-bottom: 4px solid  var(--color-tertiary-alt);}
+#contribute section ol li {list-style:none;}
+#contribute section ol li::before {counter-increment: section; content: "Step " counter(section); color: var(--color-light); padding:.125em 0; font-weight:500; letter-spacing:1px; font-size:1.25em; text-transform:uppercase; text-align: center; background-image: linear-gradient(to right, rgba(164,239,249,1), rgba(0,43,119,1), rgba(164,239,249,1)); display: -webkit-box; display: -ms-flexbox; display: flex; margin: 0 auto .75em auto; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center;}
+#contribute section h3, #files {text-align:center;}
+aside {background:rgba(253,233,118, 0.8);}
+.profile {margin-top: 1.5em; padding:1em; text-align: center;}
+#styles {margin-bottom: 1.5em; text-align: center;}
+#styles h2 {text-align:left;}
+.profile h4 {color: var(--color-primary); font-size:1.5em;}
+.profile ul, .features {list-style:none; padding:0;}
+.features {margin:2em 0;}
+.features li {color: var(--color-light); background: var(--color-primary); padding:1em; line-height:1;}
+.features li a {display:block; margin-bottom:.25em; color: var(--color-tertiary-alt); text-decoration:none; text-transform:uppercase; font-size:1.25em; font-weight:600;}
+.features li a:hover {color: var(--color-tertiary);}
+.features li a:visited, .features li a:active {color: var(--color-tertiary-alt);}
+.features li a:after {content: " \25b8"; color: var(--color-tertiary);}
+/* Page Footer */
+.page-footer {clear:both; background:#ccc; margin-bottom:-1em; text-align:center; padding:.75em;}
+.page-footer ul {list-style:none; padding:0;}
+.page-footer ul a {border-radius:2em; border: 4px solid  var(--color-primary); padding:.5em .875em; text-decoration:none; font-family: 'Roboto Slab', serif;}
+.page-footer ul a:hover {border-radius:2em; border: 4px solid  var(--color-tertiary-alt); transition: all .25s, border 0.25s .25s;}
+
+/*--------------------------------------------------------------
+## Media Queries
+--------------------------------------------------------------*/
+
+/* Devices Up To 799px+ */ 
+@media only screen and (max-width:49.938em) {
+nav, main {width:90%; margin:0 auto;}
+nav {padding:.75em .25em .625em;}
+main {padding:1em;}
+#contribute section ol {list-style:none; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column;}
+#contribute section ol li {margin-bottom:1em;}
+#files a {display:block; width:70%; margin:1em auto;}
+aside {width:90%; margin:0 auto;}
+.profile .container {padding:1em 1em 0;}
+#styles .container {padding:1em 1em 1.5em;}
+.page-footer p:first-of-type a, .page-footer p:last-of-type a {display:block;}
+.page-footer ul li {padding:1em 0;}
+.features li:nth-child(2) {margin:1em 0;}
+}
+/* 800px+ */ 
+@media only screen and (min-width:50em) {
+main {width:80%; margin:0 auto; padding:2.5em 3em;}
+#contribute {clear:both;}
+#contribute section ol li {display:block; padding-bottom:1em; margin-right:2em; -webkit-box-flex: 1; -ms-flex: 1; flex: 1; z-index: 1;}
+#contribute section ol li:last-child {margin-right:0;}
+#files a {display:inline-block; margin:.5em 1em 0;}
+.page-footer ul {margin:1.5em 0 2em;}
+.page-footer ul li {display:inline-block; margin:.5em 1em 0;}
+aside {width:80%; margin:0 auto;}
+.profile .container {padding:1em 2.5em 0;}
+#styles .container {padding:0 2.5em 2.5em;}
+.profile li {display:inline-block; margin-right:1em; padding-right:1em; border-right: 1px solid #666;}
+.profile li:last-child {margin-right:0; padding-right:0; border-right: none;}
+.features {display:flex; padding:0;}
+.features li {width:33.333%;}
+.features li:nth-child(2) {margin:0 1em;}
+}
+/* 1200px+ */
+@media only screen and (min-width:75em) {
+#about {width:60%; float:left;}
+#guidelines {width:35%; float:right;}
+}
+/* 1760px */
+@media only screen and (min-width:110em) {
+nav, main {width:70%;}
+}
+
