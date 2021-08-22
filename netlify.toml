@@ -9,7 +9,7 @@
   publish = "public"
 
   # Default build command.
-  command = "npm run build"
+  command = "AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer npm run build"
 
   Functions = "api"
 

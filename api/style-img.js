@@ -22,7 +22,7 @@ async function screenshot(stylesheet) {
 
   await page.goto(url, {
     waitUntil: ["load", "networkidle0"],
-    timeout: 3000,
+    timeout: 4500,
   });
 
   let options = {
@@ -64,7 +64,7 @@ async function handler(event, _context) {
       headers: {
         "content-type": "image/svg+xml",
       },
-      body: `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="#d2fbf7"><rect width="400" height="300" /></svg>`,
+      body: `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300" fill="#b1eae5"><rect width="400" height="300" /></svg>`,
       isBase64Encoded: false,
     };
   }
