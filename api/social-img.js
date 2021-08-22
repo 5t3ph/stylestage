@@ -36,20 +36,20 @@ async function screenshot(slug, title, author) {
   await page.evaluate(({ slug, title, author }) => {
     const h1 = document.querySelector("h1");
     const subtitle = document.querySelector("h2");
-    var authorEl = document.createElement("SMALL");
+    const authorEl = document.createElement("SMALL");
+    const isHome = slug === "home";
 
     if (h1) {
       h1.innerHTML = title;
     }
 
     if (subtitle) {
-      subtitle.innerHTML =
-        slug === "home"
-          ? "A modern CSS showcase styled by community&nbsp;contributions"
-          : "Style Stage";
+      subtitle.innerHTML = isHome
+        ? "A modern CSS showcase styled by community&nbsp;contributions"
+        : "Style Stage";
     }
 
-    if (author && h1) {
+    if (!isHome && author && h1) {
       authorEl.innerHTML = `By ${author}`;
       h1.appendChild(authorEl);
     }
