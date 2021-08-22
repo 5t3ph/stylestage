@@ -4,6 +4,12 @@ const chromium = require("chrome-aws-lambda");
 async function screenshot(slug, title, author) {
   const baseURL = process.env.URL;
   const url = `${baseURL}/social-template/`;
+  let options = {
+    type: "png",
+    encoding: "base64",
+  };
+  let pageData = { slug, title, author };
+
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
@@ -26,32 +32,22 @@ async function screenshot(slug, title, author) {
     deviceScaleFactor: 2,
   });
 
-  let options = {
-    type: "png",
-    encoding: "base64",
-  };
+  await page.evaluate(({ slug, title, author }) => {
+    const h1 = document.querySelector("h1");
+    h1.innerHTML = title;
 
-  await page.evaluate(
-    (slug, title, author) => {
-      const h1 = document.querySelector("h1");
-      h1.innerHTML = title;
+    const subtitle = document.querySelector("h2");
+    subtitle.innerHTML =
+      slug === "home"
+        ? "A modern CSS showcase styled by community&nbsp;contributions"
+        : "Style Stage";
 
-      const subtitle = document.querySelector("h2");
-      subtitle.innerHTML =
-        slug === "home"
-          ? "A modern CSS showcase styled by community&nbsp;contributions"
-          : "Style Stage";
-
-      if (author) {
-        var author = document.createElement("SMALL");
-        author.innerHTML = `By ${author}`;
-        h1.appendChild(author);
-      }
-    },
-    slug,
-    title,
-    author
-  );
+    if (author) {
+      var author = document.createElement("SMALL");
+      author.innerHTML = `By ${author}`;
+      h1.appendChild(author);
+    }
+  }, pageData);
 
   let output = await page.screenshot(options);
 
