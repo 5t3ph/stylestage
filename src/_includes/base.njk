@@ -1,5 +1,5 @@
 {%- set pageTitle %}{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}{% endset -%}
-{%- set pageSlug %}{% if style.title %}{{ style.title | slug }}{% elif not page.fileSlug %}home{% else %}{{ page.fileSlug }}{% endif %}{% endset -%}
+{%- set pageSlug %}{% if style.title %}{{ style.title | slug }}{% elif page.url == '/' %}home{% else %}{{ page.fileSlug }}{% endif %}{% endset -%}
 {%- set pageDescription %}{% if style.description %}{{ style.description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
 {%- set socialImg %}/social-img/{{ pageSlug }}/{% if style.title %}{{ style.title }}{% elif not page.fileSlug %}{{ meta.siteName }}{% else %}{{ title }}{% endif %}/{% if style.author %}{{ style.author }}{% endif %}{% endset -%}
 <!DOCTYPE html>
