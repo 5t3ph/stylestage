@@ -1,73 +1,62 @@
+require("dotenv").config();
 const chromium = require("chrome-aws-lambda");
-const fs = require("fs");
-const path = require("path");
 
-(async () => {
-  console.log("Starting social images...");
+async function screenshot(slug, title, author) {
+  const baseURL = process.env.URL || "https://social-images--moderncss-styles.netlify.app/";
+  const url = `${baseURL}/social-template/`;
+  let options = {
+    path: "./image.png",
+    type: "png",
+    // encoding: "base64",
+  };
+  let pageData = { slug, title: decodeURIComponent(title), author: decodeURIComponent(author) };
 
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath,
     headless: chromium.headless,
   });
 
   const page = await browser.newPage();
 
-  // Load html from template
-  const html = fs.readFileSync(path.resolve(__dirname, "./template.html")).toString();
-
-  // Get generated data json
-  const pages = require("./pages.json");
-
-  // Render html, wait for 0 network connections to ensure webfonts downloaded
-  await page.setContent(html, {
-    waitUntil: ["networkidle0"],
+  await page.goto(url, {
+    waitUntil: ["load", "networkidle0"],
+    timeout: 5000,
   });
 
-  // Wait until the document is fully rendered
   await page.evaluateHandle("document.fonts.ready");
 
-  // Set the viewport to your preferred image size
   await page.setViewport({
     width: 600,
     height: 315,
     deviceScaleFactor: 2,
   });
 
-  // Create a `previews` directory in the public folder
-  const dir = path.resolve(__dirname, "../public/previews");
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir);
+  await page.evaluate(({ slug, title, author }) => {
+    const h1 = document.querySelector("h1");
+    h1.innerHTML = title;
 
-  // Go over all the posts
-  for (const post of pages) {
-    // Update the H1 element with the post title
-    await page.evaluate((post) => {
-      const title = document.querySelector("h1");
-      title.innerHTML = post.title;
+    const subtitle = document.querySelector("h2");
+    subtitle.innerHTML =
+      slug === "home"
+        ? "A modern CSS showcase styled by community&nbsp;contributions"
+        : "Style Stage";
 
-      const subtitle = document.querySelector("h2");
-      subtitle.innerHTML =
-        post.slug === "home"
-          ? "A modern CSS showcase styled by community&nbsp;contributions"
-          : "Style Stage";
+    if (author) {
+      var authorEl = document.createElement("SMALL");
+      authorEl.innerHTML = `By ${author}`;
+      h1.appendChild(authorEl);
+    }
+  }, pageData);
 
-      if (post.author) {
-        var author = document.createElement("SMALL");
-        author.innerHTML = `By ${post.author}`;
-        title.appendChild(author);
-      }
-    }, post);
-
-    console.log(`Image: ${post.slug}.png`);
-
-    // Save a screenshot to public/img/slug-of-post.png
-    await page.screenshot({
-      path: `${dir}/${post.slug}.png`,
-      type: "png",
-      clip: { x: 0, y: 0, width: 600, height: 315 },
-    });
-  }
+  let output = await page.screenshot(options);
 
   await browser.close();
-  console.log("Social images complete!");
+
+  return output;
+}
+
+(async () => {
+  await screenshot("gallery", "Gallery", "Olivia%20Ng");
 })();

@@ -44,9 +44,9 @@ async function screenshot(slug, title, author) {
         : "Style Stage";
 
     if (author) {
-      var author = document.createElement("SMALL");
-      author.innerHTML = `By ${author}`;
-      h1.appendChild(author);
+      var authorEl = document.createElement("SMALL");
+      authorEl.innerHTML = `By ${author}`;
+      h1.appendChild(authorEl);
     }
   }, pageData);
 
