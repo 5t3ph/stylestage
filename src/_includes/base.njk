@@ -44,8 +44,8 @@
       name="og:description"
       content="{{ pageDescription }}"
     />
-    <meta property="og:image" content="{{ socialImg | url }}" />
-    <meta name="twitter:image" content="{{ socialImg | url }}" />
+    <meta property="og:image" content="{{ socialImg | url | absoluteUrl(meta.url) }}" />
+    <meta name="twitter:image" content="{{ socialImg | url | absoluteUrl(meta.url) }}" />
     <link
       rel="alternate"
       type="application/rss+xml"

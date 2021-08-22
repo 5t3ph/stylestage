@@ -3,7 +3,7 @@ const { builder } = require("@netlify/functions");
 const chromium = require("chrome-aws-lambda");
 
 async function screenshot(slug, title, author) {
-  const baseURL = process.env.DEPLOY_PRIME_URL || process.env.URL;
+  const baseURL = "https://social-images--moderncss-styles.netlify.app"; //process.env.URL;
   const url = `${baseURL}/social-template/`;
   let options = {
     type: "png",
