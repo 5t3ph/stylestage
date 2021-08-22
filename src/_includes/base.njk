@@ -1,7 +1,10 @@
+{%- set pageTitle %}{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}{% endset -%}
+{%- set pageSlug %}{% if style.title %}{{ style.title | slug }}{% elif not page.fileSlug %}home{% else %}{{ page.fileSlug }}{% endif %}{% endset -%}
+{%- set pageDescription %}{% if style.description %}{{ style.description }}{% else %}{{ meta.siteDescription }}{% endif %}{% endset -%}
+{%- set socialImg %}/social-img/{{ pageSlug }}/{% if style.title %}{{ style.title }}{% elif not page.fileSlug %}{{ meta.siteName }}{% else %}{{ title }}{% endif %}/{% if style.author %}{{ style.author }}{% endif %}{% endset -%}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Generated from the 11ty Netlify Jumpstart: https://github.com/5t3ph/11ty-netlify-jumpstart -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     {% if page.url == '/' %}
@@ -12,10 +15,8 @@
     <link rel="canonical" href="https://stylestage.dev" />
     {% endif %}
     {% else %}
-    <title>{{ style.title }} by {{ style.author }} | Style Stage</title>
-    {% if style.description %}
-    <meta name="description" content="{{ style.description }}" />
-    {% endif %}
+    <title>{{ pageTitle }}</title>
+    <meta name="description" content="{{ pageDescription}}" />
     {% set cssFile %}/styles/css/{{ style.title | slug }}.css{% endset %}
     <link rel="stylesheet" href="{{ cssFile }}" />
 
@@ -29,26 +30,22 @@
     {% endif %}
     <meta
       name="twitter:title"
-      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
+      content="{{ pageTitle }}"
     />
     <meta
       name="twitter:description"
-      content="{% if style.description %}{{ style.description }}{% else %}{{
-        meta.siteDescription
-      }}{% endif %}"
+      content="{{ pageDescription }}"
     />
     <meta
       name="og:title"
-      content="{% if style.title %}{{ style.title }} by {{ style.author }} | Style Stage{% else %}{{ meta.siteName }}{% endif %}"
+      content="{{ pageTitle }}"
     />
     <meta
       name="og:description"
-      content="{% if style.description %}{{ style.description }}{% else %}{{
-        meta.siteDescription
-      }}{% endif %}"
+      content="{{ pageDescription }}"
     />
-    <meta property="og:image" content="{{ meta.url }}/previews/{% if style.title %}{{ style.title  | slug}}{% else %}home{% endif %}.png" />
-    <meta name="twitter:image" content="{{ meta.url }}/previews/{% if style.title %}{{ style.title | slug }}{% else %}home{% endif %}.png" />
+    <meta property="og:image" content="{{ socialImg | url | absoluteUrl(meta.url) }}" />
+    <meta name="twitter:image" content="{{ socialImg | url | absoluteUrl(meta.url) }}" />
     <link
       rel="alternate"
       type="application/rss+xml"

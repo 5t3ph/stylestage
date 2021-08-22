@@ -23,3 +23,15 @@
     to = "/.netlify/functions/style-img"
     status = 200
     force = true
+
+  [[redirects]]
+    from = "/social-img/:slug/:title"
+    to = "/.netlify/functions/social-img"
+    status = 200
+    force = true
+
+  [[redirects]]
+    from = "/social-img/:slug/:title/:author"
+    to = "/.netlify/functions/social-img"
+    status = 200
+    force = true
