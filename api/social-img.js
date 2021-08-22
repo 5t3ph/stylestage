@@ -18,10 +18,6 @@ async function screenshot(slug, title, author) {
     timeout: 3000,
   });
 
-  await page.setContent(html, {
-    waitUntil: ["networkidle0"],
-  });
-
   await page.evaluateHandle("document.fonts.ready");
 
   await page.setViewport({
