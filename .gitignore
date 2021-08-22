@@ -9,7 +9,9 @@ src/_data/styles.json
 src/img/styles
 functions/*.json
 functions/*.html
+api/*.html
 functions/*.css
+api/*.css
 
 # secrets and errors
 .env
