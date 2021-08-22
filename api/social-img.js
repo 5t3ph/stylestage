@@ -1,3 +1,4 @@
+require("dotenv").config();
 const { builder } = require("@netlify/functions");
 const chromium = require("chrome-aws-lambda");
 
@@ -8,7 +9,7 @@ async function screenshot(slug, title, author) {
     type: "png",
     encoding: "base64",
   };
-  let pageData = { slug, title, author };
+  let pageData = { slug, title: decodeURIComponent(title), author: decodeURIComponent(author) };
 
   const browser = await chromium.puppeteer.launch({
     args: chromium.args,
@@ -21,7 +22,7 @@ async function screenshot(slug, title, author) {
 
   await page.goto(url, {
     waitUntil: ["load", "networkidle0"],
-    timeout: 3000,
+    timeout: 5000,
   });
 
   await page.evaluateHandle("document.fonts.ready");
