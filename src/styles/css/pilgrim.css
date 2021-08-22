@@ -58,7 +58,7 @@ blockquote.is-rounded.is-dark {
   background-color: #fff;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 0), all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .nes-balloon,
   #styles li {
     border-image-repeat: space;
@@ -98,7 +98,7 @@ blockquote.is-rounded.is-dark {
   box-shadow: 0 0 0 8px #212529;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 0), all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .nes-balloon.is-dark,
   #styles li.is-dark {
     border-image-repeat: space;
@@ -620,7 +620,7 @@ blockquote.is-rounded.is-dark {
   background-color: #fff;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 0), all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .nes-btn,
   .link-guidelines,
   .link-downloadcss,
@@ -1217,7 +1217,7 @@ blockquote.is-rounded {
   margin: 4px;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 0), all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .nes-container.is-rounded,
   blockquote.is-rounded {
     border-image-repeat: space;
@@ -1255,7 +1255,7 @@ blockquote.is-rounded.is-dark {
   border-image-outset: 0;
 }
 
-@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+@media all and (-webkit-min-device-pixel-ratio: 0) and (-webkit-min-device-pixel-ratio: 0), all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
   .nes-container.is-rounded.is-dark,
   blockquote.is-rounded.is-dark {
     border-image-repeat: space;
@@ -4226,7 +4226,6 @@ blockquote p {
 
 nav {
   background: black;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1;

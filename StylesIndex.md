@@ -32,8 +32,6 @@
 
 [Web 2.0 Lobster Party](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/web-2.0-lobster-party.css) By Andy Bell
 
-[Dot grid](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/dot-grid.css) By Abigail Colina
-
 [Manual](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/manual.css) By Lynn Fisher
 
 [Mburucuya](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/mburucuya.css) By Lide O.
@@ -111,3 +109,21 @@
 [Spectrum](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/spectrum.css) By Robert Manders
 
 [The Styles Must Go On!](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/the-styles-must-go-on.css) By Joe Lamyman
+
+[A Scottish Landscape](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/a-scottish-landscape.css) By Alistair Shepherd
+
+[AeroJet-505](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/aerojet-505.css) By Charles Henri
+
+[At The Desk](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/at-the-desk.css) By Tamás Tömördi
+
+[Bulletin](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/bulletin.css) By Paulo Nunes
+
+[Comic](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/comic.css) By Katherine Kato
+
+[Dark-Purple](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/dark-purple.css) By Jayashakthi Vishnu P
+
+[Darkified ](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/darkified.css) By Arul Murugavel
+
+[Neomorphism Design](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neomorphism-design.css) By Manoranjan D
+
+[Slide Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/slide-stage.css) By Thomas Tuvignon

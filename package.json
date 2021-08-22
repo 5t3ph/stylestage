@@ -35,32 +35,32 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-plugin-rss": "^1.0.9",
-    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.2",
-    "autoprefixer": "^9.8.6",
-    "dotenv": "^8.2.0",
-    "emoji-regex": "^9.0.0",
-    "fast-glob": "^3.2.4",
-    "luxon": "^1.25.0",
-    "markdown-it": "^11.0.1",
-    "markdown-it-anchor": "^6.0.0",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.1.2",
+    "autoprefixer": "^10.3.2",
+    "dotenv": "^10.0.0",
+    "emoji-regex": "^9.2.2",
+    "fast-glob": "^3.2.7",
+    "luxon": "^2.0.2",
+    "markdown-it": "^12.2.0",
+    "markdown-it-anchor": "^8.1.2",
     "node-fetch": "^2.6.1",
-    "postcss-cli": "^8.0.0",
-    "prettier": "^2.1.2",
-    "puppeteer": "5.3.1",
-    "sass": "^1.26.11",
-    "stylelint": "^13.7.2",
+    "postcss-cli": "^8.3.1",
+    "prettier": "^2.3.2",
+    "puppeteer": "10.2.0",
+    "sass": "^1.38.0",
+    "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.18.0",
-    "stylelint-selector-bem-pattern": "^2.1.0"
+    "stylelint-scss": "^3.20.1",
+    "stylelint-selector-bem-pattern": "^2.1.1"
   },
   "browserslist": [
     "last 2 versions"
   ],
   "dependencies": {
-    "chrome-aws-lambda": "5.3.1",
-    "puppeteer-core": "5.3.1"
+    "chrome-aws-lambda": "10.1.0",
+    "puppeteer-core": "10.2.0"
   }
 }

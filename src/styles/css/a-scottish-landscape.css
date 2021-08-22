@@ -1,0 +1,432 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Alistair Shepherd
+* 
+* Title: A Scottish Landscape
+* Author: Alistair Shepherd
+* Website: https://alistairshepherd.uk
+* Twitter: @accudio
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/a-scottish-landscape/
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Literata:wght@400;700&family=Londrina+Solid:wght@400;900&display=swap");
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  color: currentColor;
+  font-weight: bold;
+}
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  text-decoration-color: var(--decoration, var(--c1));
+  text-decoration-thickness: 0.2em;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  --c0: rgb(245, 229, 229);
+  --c1: rgb(254, 212, 213);
+  --c2: rgb(220, 190, 217);
+  --c3: rgb(200, 174, 217);
+  --c4: rgb(177, 159, 204);
+  --c8: rgb(85, 89, 134);
+  --c9: rgb(64, 67, 100);
+  --c10: rgb(46, 44, 63);
+  --divider-8: url("https://as-stylestage.netlify.app/divider-8.svg");
+  --divider-9: url("https://as-stylestage.netlify.app/divider-9.svg");
+  --divider-10: url("https://as-stylestage.netlify.app/divider-10.svg");
+}
+@media (prefers-color-scheme: dark) {
+  html {
+    --c0: rgb(190, 216, 248);
+    --c1: rgb(125, 165, 213);
+    --c2: rgb(48, 120, 191);
+    --c3: rgb(24, 96, 165);
+    --c4: rgb(21, 87, 152);
+    --c8: rgb(2, 33, 63);
+    --c9: rgb(2, 26, 50);
+    --c10: rgb(0, 16, 31);
+    --divider-8: url("https://as-stylestage.netlify.app/divider-8-dark.svg");
+    --divider-9: url("https://as-stylestage.netlify.app/divider-9-dark.svg");
+    --divider-10: url("https://as-stylestage.netlify.app/divider-10-dark.svg");
+  }
+}
+
+.page-footer ul a, #styles .container > a, .profile .container > a, .link-downloadcss,
+.link-downloadhtml,
+.link-codepen, .link-guidelines, nav a, header .link-github {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  padding: 0.5rem 2rem;
+  background: var(--c1);
+  color: var(--c9);
+  cursor: pointer;
+  text-align: center;
+  font-family: "Londrina Solid", cursive;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.page-footer ul a span, #styles .container > a span, .profile .container > a span, .link-downloadcss span,
+.link-downloadhtml span,
+.link-codepen span, .link-guidelines span, nav a span, header .link-github span {
+  display: inherit;
+}
+.page-footer ul a svg, #styles .container > a svg, .profile .container > a svg, .link-downloadcss svg,
+.link-downloadhtml svg,
+.link-codepen svg, .link-guidelines svg, nav a svg, header .link-github svg {
+  display: inline-block;
+  height: 1em;
+  width: auto;
+  margin-right: 1ch;
+}
+.page-footer ul a path, #styles .container > a path, .profile .container > a path, .link-downloadcss path,
+.link-downloadhtml path,
+.link-codepen path, .link-guidelines path, nav a path, header .link-github path {
+  fill: currentColor;
+}
+
+.page-footer, #styles, #contribute, #guidelines, #about {
+  padding-bottom: clamp(3rem, 5vw, 5.6rem);
+}
+.page-footer::before, #styles::before, #contribute::before, #guidelines::before, #about::before {
+  content: "";
+  display: block;
+  height: clamp(3rem, 5vw, 5.6rem);
+  width: 100%;
+  margin-bottom: clamp(3rem, 5vw, 5.6rem);
+}
+
+.page-footer::before, #guidelines::before {
+  background-color: var(--before, var(--c9));
+  background-image: var(--divider-10);
+}
+
+#contribute, #about {
+  background: var(--c9);
+}
+#contribute::before, #about::before {
+  background-color: var(--before, var(--c10));
+  background-image: var(--divider-9);
+}
+
+#styles {
+  background: var(--c8);
+}
+#styles::before {
+  background-color: var(--before, var(--c10));
+  background-image: var(--divider-8);
+}
+
+html {
+  font-family: Literata, Georgia, serif;
+  font-size: 112.5%;
+}
+
+body {
+  background: var(--c10);
+  color: var(--c0);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Londrina Solid", cursive;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 3.15rem;
+}
+
+h3 {
+  font-size: 1.77rem;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--focus, var(--c0));
+  outline-offset: 0.25rem;
+}
+
+.skip-link {
+  --focus: var(--c10);
+  position: absolute;
+  left: 50%;
+  z-index: 2;
+  padding: 0.56rem;
+  background: var(--c10);
+  color: var(--c);
+  line-height: 1.5;
+  transition: transform 0.3s;
+  transform: translateY(-100%) translateX(-50%);
+}
+.skip-link:focus {
+  transform: translateY(0) translateX(-50%);
+}
+
+header {
+  --focus: var(--c10);
+  --decoration: currentColor;
+  background: var(--c1);
+  color: var(--c10);
+  padding-top: clamp(3rem, 5vw, 5.6rem);
+  position: relative;
+  text-align: center;
+}
+header::before {
+  --size: clamp(1.5rem, 6vw, 3.5rem);
+  content: "";
+  position: absolute;
+  bottom: 19vw;
+  left: 20vw;
+  border-radius: 100vw;
+  width: var(--size);
+  height: var(--size);
+  background: #fff;
+}
+@media (prefers-color-scheme: dark) {
+  header::before {
+    left: auto;
+    right: 20vw;
+    bottom: 16vw;
+  }
+}
+header::after {
+  content: "";
+  display: block;
+  position: relative;
+  height: 25vw;
+  background-image: url("https://as-stylestage.netlify.app/landscape.svg");
+  background-position: center;
+  background-size: cover;
+}
+@media (prefers-color-scheme: dark) {
+  header::after {
+    background-image: url("https://as-stylestage.netlify.app/landscape-dark.svg");
+  }
+}
+header .container {
+  margin: 0 auto clamp(3rem, 5vw, 5.6rem);
+  padding: 0 2rem;
+  max-width: 30rem;
+}
+header h1 {
+  font-size: 4.2rem;
+  margin-bottom: 1rem;
+}
+header h2 {
+  font-size: 1.77rem;
+  margin-bottom: 1rem;
+}
+header .link-github {
+  margin-top: 1rem;
+  background: var(--c9);
+  color: var(--c1);
+}
+
+nav {
+  background: var(--c10);
+}
+@media (min-width: 820px) {
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  nav::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 1rem;
+    width: 100%;
+    background-image: url("https://assets.codepen.io/2511086/nav-bottom.svg");
+    background-size: cover;
+  }
+}
+@media (min-width: 820px) and (prefers-color-scheme: dark) {
+  nav::after {
+    background-image: url("https://assets.codepen.io/2511086/nav-bottom-dark.svg");
+  }
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(0.25rem, 0.5vw, 0.5rem);
+  padding: 0.56rem;
+  margin: 1rem 0 0;
+  list-style: none;
+}
+nav a {
+  padding: min(0.5vw, 0.5rem) min(1vw, 1rem);
+}
+
+#main::after {
+  content: "";
+  display: block;
+  height: clamp(3rem, 5vw, 5.6rem);
+  width: 100%;
+  background: var(--c9);
+  background-image: var(--divider-10);
+}
+
+section.container,
+:is(#files, .profile, #styles, .page-footer) .container {
+  --container-offset: var(--container-width, 46rem) / 2;
+  padding: 0 max(1rem, calc(50vw - var(--container-offset)));
+}
+section.container > * + *,
+:is(#files, .profile, #styles, .page-footer) .container > * + * {
+  margin-top: var(--flow-space, 1rem);
+}
+section.container + *,
+:is(#files, .profile, #styles, .page-footer) .container + * {
+  margin-top: clamp(3rem, 5vw, 5.6rem);
+}
+
+#about ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.56rem;
+  padding: 0;
+  list-style: none;
+}
+#about li {
+  border-radius: 0.25rem;
+  padding: 0 0.56rem;
+  background-color: var(--c8);
+  transition: all 0.2s;
+}
+#about li:hover {
+  background-color: var(--c1);
+  color: var(--c9);
+}
+
+#files {
+  text-align: center;
+}
+
+.profile .container {
+  --flow-space: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.profile .container > a {
+  align-self: center;
+}
+.profile ul {
+  margin: 0;
+}
+
+#profile-title {
+  font-size: 1.77rem;
+  line-height: 1.1;
+  max-width: 10ch;
+}
+
+#styles {
+  text-align: center;
+}
+#styles h2 {
+  font-size: 3.15rem;
+}
+.features {
+  --decoration: currentColor;
+  --flow-space: 3.15rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin: 3.15rem 0;
+  padding: 0;
+  color: var(--c10);
+  font-weight: bold;
+  list-style: none;
+}
+.features li {
+  padding: 4rem 1rem;
+  position: relative;
+  border-radius: 0.25rem;
+  background: linear-gradient(var(--rotation, 75.1deg), var(--c1) 25%, var(--c2) 25%, var(--c2) 50%, var(--c3) 50%, var(--c3) 75%, var(--c4) 75%);
+}
+.features li:nth-child(2) {
+  --rotation: 16.1deg;
+}
+.features li:nth-child(3) {
+  --rotation: 170.1deg;
+}
+.features li > span {
+  display: flex;
+  flex-direction: column;
+}
+.features li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page-footer {
+  --before: var(--c8);
+}
+.page-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 30rem;
+  padding: 0;
+  list-style: none;
+}

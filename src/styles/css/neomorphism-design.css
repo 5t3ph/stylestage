@@ -1,0 +1,407 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Manoranjan D
+* 
+* Title: Neomorphism Design
+* Author: Manoranjan D
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/neomorphism-design/
+*/
+
+@charset "UTF-8";
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Baloo 2 Regular'), local('Baloo-2-Regular'),
+    url('../../fonts/baloo-2-v1-latin-regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Baloo 2';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Baloo 2 Medium'), local('Baloo-2-Medium'),
+    url('../../fonts/baloo-2-v1-latin-500.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --primary: #7b2cbf;
+  --primary-light: #8abdff;
+  --primary-dark: #3c096c;
+
+  --white: #ffffff;
+  --greyLight-1: #e4ebf5;
+  --greyLight-2: #c8d0e7;
+  --greyLight-3: #bec8e4;
+  --greyDark: #9baacf;
+
+  --font-family: 'Baloo 2', sans-serif;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+
+  --shadow: 0.3rem 0.3rem 0.6rem var(--greyLight-2),
+    -0.2rem -0.2rem 0.5rem var(--white);
+
+  --inner-shadow: inset 0.2rem 0.2rem 0.5rem var(--greyLight-2),
+    inset -0.2rem -0.2rem 0.5rem var(--white);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font-family);
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  background-color: var(--greyLight-1);
+}
+
+/* SKIP LINK */
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: -1000px;
+}
+.skip-link:focus {
+  left: 0;
+}
+
+/* HEADER */
+header {
+  display: grid;
+  place-items: center;
+  min-height: 40vh;
+  padding: 8vh 2rem;
+  text-align: center;
+}
+
+header .container {
+  box-shadow: var(--shadow);
+  padding: 5vh 0;
+}
+
+header h1 {
+  border-radius: 2rem;
+}
+
+/* LINK BUTTON */
+.link-github {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+.link-github:hover {
+  color: var(--primary-dark);
+}
+.link-github:active {
+  box-shadow: var(--inner-shadow);
+}
+
+.link-github svg {
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.5em;
+  margin-bottom: -0.3em;
+  fill: currentColor;
+}
+
+/* NAVIGATION */
+nav {
+  padding: 0rem 2rem;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+  font-size: 1.7rem;
+}
+nav ul a {
+  color: var(--primary);
+  text-decoration: none;
+}
+nav ul li {
+  padding: 2rem;
+}
+nav ul li:hover,
+nav ul li:active {
+  box-shadow: var(--inner-shadow);
+}
+
+/* ABOUT */
+#about section:nth-child(2) ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 2rem;
+  text-align: center;
+  margin: 2.5rem 0;
+}
+
+#about section:nth-child(2) ul li {
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+blockquote {
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+
+/* guidelines */
+#guidelines .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-guidelines {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s ease;
+  align-self: center;
+}
+.link-guidelines:hover {
+  color: var(--primary-dark);
+}
+.link-guidelines:active {
+  box-shadow: var(--inner-shadow);
+}
+
+/* contribute */
+#contribute section:nth-child(2) ol {
+  padding: 3rem;
+}
+
+#contribute section:nth-child(2) ol li {
+  margin-bottom: 2rem;
+}
+
+/* files */
+#files .container {
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  text-align: center;
+}
+
+#files .container > * {
+  padding: 2rem;
+}
+
+.link-downloadcss,
+.link-downloadhtml {
+  display: inline-block;
+  padding: 1.5rem 2rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s ease;
+  align-self: center;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+.link-downloadcss:active,
+.link-downloadhtml:active {
+  box-shadow: var(--inner-shadow);
+}
+
+.link-codepen {
+  display: block;
+}
+
+/* profile */
+.profile {
+  padding: 5vh 2rem;
+}
+.profile .container {
+  display: grid;
+  text-align: center;
+  grid-gap: 1rem;
+}
+
+.profile .container ul {
+  list-style: none;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin-bottom: 2rem;
+}
+
+.profile .container ul li {
+  padding: 1rem;
+  box-shadow: var(--inner-shadow);
+}
+
+/* styles */
+#styles {
+  padding: 5vh 2rem;
+}
+
+#styles .container {
+  display: grid;
+}
+
+#styles .container ul {
+  list-style: none;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin-bottom: 2rem;
+}
+
+.link-allstyles {
+  text-align: center;
+}
+
+#styles .container ul li {
+  padding: 2vh 1rem;
+  box-shadow: var(--inner-shadow);
+}
+
+/* page-footer */
+.page-footer {
+  padding: 5vh 2rem;
+}
+
+.page-footer .container {
+  text-align: center;
+}
+
+.page-footer .container ul {
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.link-twittercontact,
+.link-rss,
+.link-support {
+  display: inline-block;
+  padding: 1.5rem 1rem;
+  border-radius: 1rem;
+  font-size: 1.7rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  color: var(--primary);
+  text-decoration: none;
+  transition: 0.3s ease;
+  align-self: center;
+}
+
+.link-twittercontact:active,
+.link-rss:active,
+.link-support:active {
+  box-shadow: var(--inner-shadow);
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1;
+  margin-bottom: 0.6em;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-size: clamp(2rem, 7vw, var(--font-size-h1));
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-size: clamp(2rem, 4vw, var(--font-size-h2));
+  text-align: center;
+}
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  /* text-decoration: none; */
+  color: var(--primary);
+}
+article {
+  padding: 2rem;
+}
+article section {
+  padding: 5vh 0;
+}
+main {
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}

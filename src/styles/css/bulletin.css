@@ -1,0 +1,332 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Paulo Nunes
+* 
+* Title: Bulletin
+* Author: Paulo Nunes
+* Website: https://syndicatefx.com
+* Twitter: @syndicatefx
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/bulletin/
+*/
+
+:root {
+    --brand-hue: 240;
+    --brand: hsl(var(--brand-hue) 69% 37%);
+    --surface: hsl(var(--brand-hue) 40% 96%);
+    --surface2: hsl(var(--brand-hue) 40% 87%);
+    --text: hsl(var(--brand-hue) 20% 15%);
+    --text2: hsl(var(--brand-hue) 20% 23%);
+}
+
+::-moz-selection,::selection {
+    background: var(--text);
+    color: var(--surface);
+}
+
+:focus:not(main) {
+    outline: 2px dotted var(--brand);
+    outline-offset: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--text);
+    border-radius: 6px;
+}
+
+html {
+    -moz-osx-font-smoothing: grayscale;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+    font-family: "Georgia","Times New Roman",serif;
+    font-size: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-color: var(--text) transparent;
+    scrollbar-width: thin;
+    text-rendering: optimizeSpeed;
+}
+
+*,:before,:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    max-height: 100%;
+    pointer-events: none;
+}
+
+body {
+    background-color: var(--surface);
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 100%;
+}
+
+body > :not(aside) {
+    flex: 1 1 100%;
+}
+
+a {
+    color: var(--brand);
+}
+
+a:hover {
+    text-decoration-thickness: 4px;
+}
+
+p,ul,ol,h1,h2,h3,h4 {
+    margin-bottom: 2rem;
+}
+
+p,li {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 60ch;
+}
+
+ul {
+    list-style: none;
+}
+
+h1,h2,h3,h4 {
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, calc(1.4578rem + 2.4096vw), 3rem);
+    font-weight: 400;
+    margin: 0;
+    max-width: 17ch;
+}
+
+h2 {
+    font-size: clamp(1.75rem, calc(1.3434rem + 1.8072vw), 2.5rem);
+}
+
+h3,#contribute h2 {
+    font-size: 1.5rem;
+}
+
+h4,#styles h2 {
+    font-size: 1.25rem;
+    max-width: 30ch;
+}
+
+ol {
+    display: grid;
+    gap: 1rem;
+    grid-gap: 1rem;
+    margin-left: 2ch;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+}
+
+ol > li::marker {
+    font-weight: 700;
+}
+
+header {
+    border-bottom: 1px solid var(--surface2);
+}
+
+header > .container > h2 {
+    font-size: clamp(1.125rem, calc(1.0572rem + 0.3012vw), 1.25rem);
+}
+
+nav ul,article {
+    --x-gap: 1rem;
+    --x-min: 10rem;
+    display: grid;
+    gap: var(--x-gap);
+    grid-gap: var(--x-gap);
+    grid-template-columns: repeat(auto-fit,minmax(min(var(--x-min),100%),1fr));
+}
+
+nav {
+    border-bottom: 1px solid var(--surface2);
+    padding-bottom: 5vmin;
+    padding-top: 5vmin;
+}
+
+nav ul {
+    margin: 0;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav ul a {
+    font-size: 1rem;
+    letter-spacing: .1em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav ul a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+}
+
+article {
+    --x-gap: 1px;
+    --x-min: 35rem;
+    background-color: var(--surface2);
+    border-bottom: 1px solid var(--surface2);
+}
+
+article > * {
+    background-color: var(--surface);
+    display: grid;
+    justify-content: center;
+    padding: 10vmin 5vmin;
+}
+
+#contribute {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#contribute > * {
+    flex: 1 1 35rem;
+}
+
+aside {
+    flex: 1 1 25rem;
+}
+
+aside > * {
+    display: grid;
+    justify-content: center;
+    padding: 10vmin 5vmin;
+}
+
+aside li {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+.page-footer {
+    border-top: 1px solid var(--surface2);
+}
+
+.page-footer p, aside li[class*='profile'] > span:first-child, .features li span span {
+    font-size: 1rem;
+}
+
+.page-footer li {
+    margin-bottom: .5rem;
+}
+
+.skip-link {
+    clip: rect(1px,1px,1px,1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    word-wrap: normal;
+}
+
+.skip-link:focus {
+    clip: unset;
+    height: unset;
+    width: unset;
+}
+
+.link-github:where(li a) > svg {
+    display: none;
+}
+
+.link-github:not(li a) {
+    align-items: center;
+    display: flex;
+    font-size: 1.125rem;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.link-github:not(li a):hover {
+    background-color: var(--brand);
+    color: var(--surface);
+}
+
+.link-github:not(li a) > span {
+    height: 1rem;
+    line-height: 0;
+    margin-right: .5rem;
+    width: 1rem;
+}
+
+.link-github:not(li a) > span > svg {
+    fill: currentColor;
+}
+
+.link-guidelines,.link-downloadcss,.link-downloadhtml,.link-codepen,.link-allstyles,.profile a:not(li a) {
+    background-color: var(--brand);
+    color: var(--surface);
+    display: inline-block;
+    margin: .25rem auto;
+    padding: .75rem 1rem;
+    text-decoration: none;
+}
+
+section > p:first-of-type {
+    font-size: clamp(1.25rem, calc(1.1145rem + 0.6024vw), 1.5rem);
+    max-width: 50ch;
+}
+
+#about ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    grid-gap: 1rem;
+    max-width: 60ch;
+}
+
+#about ul > li {
+    font-family: monospace;
+    font-size: .875rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,.1);
+    padding: .5rem;
+}
+
+header > .container,.page-footer > .container {
+    background-color: var(--surface2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+    grid-gap: 1px;
+}
+
+header > .container > *,.page-footer > .container > * {
+    background-color: var(--surface);
+    flex: 1 1 20rem;
+    margin: 0;
+    max-width: 100%;
+    padding: 5vmin;
+}
+
+nav ul li,#guidelines h2,#guidelines h3,#files h3,#guidelines p:first-of-type,aside h2,aside h4 {
+    text-align: center;
+}
