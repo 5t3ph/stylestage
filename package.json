@@ -15,7 +15,7 @@
     "watch:social": "sass --no-source-map --watch src/sass/social-previews.scss functions/social-previews.css",
     "watch": "npm run watch:main & npm run watch:showcase & npm run watch:social & ELEVENTY_ENV=development npm run watch:eleventy",
     "start": "npm run scss ; npm run stylesheets ; npm run watch",
-    "build": "npm run scss ; npm run stylesheets ; npm run css ; ELEVENTY_ENV=production eleventy ; npm run screenshot ; npm run screenshot:styles ; prettier --write 'public/source-files/*.html'",
+    "build": "npm run scss ; npm run stylesheets ; npm run css ; ELEVENTY_ENV=production eleventy ; npm run screenshot ; prettier --write 'public/source-files/*.html'",
     "lint": "stylelint 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "lint:fix": "stylelint --fix 'src/sass/**/*.scss' 'src/sass/**/**/*.scss' 'src/sass/**/**/**/*.scss'",
     "screenshot": "node functions/images.js",
@@ -25,13 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/5t3ph/11ty-netlify-jumpstart.git"
+    "url": "git+https://github.com/5t3ph/stylestage.git"
   },
   "keywords": [],
   "author": "5t3ph",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/5t3ph/11ty-netlify-jumpstart/issues"
+    "url": "https://github.com/5t3ph/stylestage/issues"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
@@ -47,7 +47,7 @@
     "node-fetch": "^2.6.1",
     "postcss-cli": "^8.3.1",
     "prettier": "^2.3.2",
-    "puppeteer": "10.2.0",
+    "puppeteer": "10.1.0",
     "sass": "^1.38.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
@@ -60,7 +60,8 @@
     "last 2 versions"
   ],
   "dependencies": {
+    "@netlify/functions": "^0.7.2",
     "chrome-aws-lambda": "10.1.0",
-    "puppeteer-core": "10.2.0"
+    "puppeteer-core": "10.1.0"
   }
 }

@@ -17,3 +17,9 @@
     from = "/feed/"
     to = "/feed/feed.xml"
     status = 200
+
+  [[redirects]]
+    from = "/style-img/:style"
+    to = "/.netlify/functions/style-img"
+    status = 200
+    force = true
