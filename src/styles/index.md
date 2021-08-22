@@ -9,7 +9,7 @@ layout: page
 {%- for style in collections.allStyles -%}
 	<li style="background-image: url('/style-img/{{ style.data.style.title | slug }}');">
 		<span>
-			<a href="/styles/{{ style.data.style.title | slug }}">{{ style.data.style.title }}<span aria-hidden="true"></span></a>
+			<a href="/styles/{{ style.data.style.title | slug }}/">{{ style.data.style.title }}<span aria-hidden="true"></span></a>
 			<span>by {{ style.data.style.author}}</span>
 		</span>
 	</li>

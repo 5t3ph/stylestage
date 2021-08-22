@@ -131,3 +131,5 @@
 [Calm](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/calm.css) By Tripti Nayak
 
 [Liquid Style](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/liquid-style.css) By Toni Rome
+
+[Trafalgar](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/trafalgar.css) By Mike Andrewartha
