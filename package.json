@@ -41,7 +41,7 @@
     "emoji-regex": "^9.2.2",
     "fast-glob": "^3.2.7",
     "luxon": "^2.0.2",
-    "markdown-it": "^12.2.0",
+    "markdown-it": "^12.3.2",
     "markdown-it-anchor": "^8.1.2",
     "node-fetch": "^2.6.1",
     "postcss-cli": "^8.3.1",
