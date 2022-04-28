@@ -1,0 +1,688 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Inklingboi
+* 
+* Title: Colorful Cards
+* Author: Inklingboi
+* Website: https://arcade-archive-next.vercel.app/
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/colorful-cards/
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;700&display=swap');
+
+:root {
+  scroll-behavior: smooth;
+  --hue: 280;
+  --saturation: 75%;
+  --lighting: 50%;
+
+  --text-saturation: calc(var(--saturation) - 50%);
+  --text-lighting: calc(var(--lighting) - 30%);
+  --text-color: hsl(var(--hue), var(--text-saturation), var(--text-lighting));
+  --text-color-light:  white;
+
+  --link-color: hsl(var(--hue), 100%, var(--lighting));
+  --link-color-light: hsl(var(--hue), 100%, calc(var(--lighting) + 25%));
+
+  --background-color: white;
+  --background-color-dark: hsl(var(--hue), 30%, 10%);
+
+  --color-primary: hsl(var(--hue), var(--saturation), var(--lighting));
+  --color-primary-dark: hsl(var(--hue), var(--saturation), calc(var(--lighting) - 25%));
+  --color-60: hsl(calc(var(--hue) - 60), var(--saturation), var(--lighting));
+  --color-60-dark: hsl(calc(var(--hue) - 60), var(--saturation), calc(var(--lighting) - 15%));
+  --color-120: hsl(calc(var(--hue) - 120), var(--saturation), var(--lighting));
+  --color-180: hsl(calc(var(--hue) - 180), var(--saturation), var(--lighting));
+  --color-180-dark: hsl(calc(var(--hue) - 180), var(--saturation), calc(var(--lighting) - 20%));
+  --color-220: hsl(calc(var(--hue) - 220), var(--saturation), var(--lighting));
+  --color-280: hsl(calc(var(--hue) - 280), var(--saturation), var(--lighting));
+  --color-340: hsl(calc(var(--hue) - 340), var(--saturation), var(--lighting));
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  color: var(--text-color);
+  font-family: 'Noto Sans Mono', monospace;
+}
+
+/* Gives every top level section margin besides the first one */
+body > *:not(.skip-link) + * {
+  margin-top: 3em;
+  padding-inline: 1em;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+/* Enhance readability of text */
+p,
+blockquote {
+  max-width: 75ch;
+} 
+
+a {
+  /* Remove defaults */
+  text-decoration: none;
+  --saturation: 100%;
+  color: var(--link-color);
+}
+
+/* Give links that are not buttons an underline on focus/hover */
+/* Source: https://www.youtube.com/watch?v=_1vEGYWaaQY */
+a:not([class*=link]) {
+  background: linear-gradient(currentColor, currentColor);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-size: 0% 0%;
+  transition: background-size 0.35s cubic-bezier(0,1.5,1,1.5);
+}
+
+
+a:not([class*=link]):is(:hover, :focus) {
+  background-size: 100% 0.15em;
+}
+
+/* Button */
+[class*=link] {
+  color: white;
+  padding: 1em;
+  background-color: var(--text-color);
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  transition: outline-offset 0.3s ease-in, outline-color 0.3s ease-out;
+  text-align: center;
+}
+
+[class*=link]:is(:hover, :focus) {
+  outline-color: white;
+  outline-offset: -0.5em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make skip link invisible, source:  https://webaim.org/techniques/css/invisiblecontent/*/
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.skip-link:focus {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  animation: 3s wobble linear infinite;
+}
+
+@keyframes wobble {
+  25% {
+    border-radius: 0 30% / 0 15%;
+  }
+
+  50% {
+    border-radius: 30% 0 / 15% 0;
+  }
+
+  75% {
+    border-radius: 0 50% / 0 30%;
+  }
+  100% {
+    border-radius: none;
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  text-align: center;
+  color: var(--color-60);
+}
+
+h3 {
+  color: var(--color-120);
+}
+
+h4 {
+  color: var(--color-180-dark);
+}
+
+/* Header */
+
+header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(white, var(--color-primary-dark));
+  mix-blend-mode: color-burn;
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 0 100%);
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+header > .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Main heading */
+h1 {
+  font-size: 6rem;
+  position: relative;
+  color: var(--color-primary);
+}
+
+h1::after {
+  content: '';
+  background-color: currentColor;
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: -65%;
+  height: 30%;
+  transform: perspective(10rem) rotateX(60deg) translateY(-5rem);
+  filter: blur(1rem);
+  opacity: 0.5;
+}
+
+header  p {
+  text-align: center;
+}
+
+header h2 {
+  /* Increase contrast  */
+  color: var(--color-60-dark);
+}
+
+/* Github button */
+.link-github {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 1em;
+  border-radius: 99999999999999999px;
+}
+
+.link-github span {
+  display: grid;
+  place-items: center;
+}
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  fill: var(--color-220);
+  transition: transform 0.3s;
+}
+
+.link-github:is(:hover, :focus) svg {
+  animation: spin 1.5s;
+}
+
+@keyframes spin {
+
+  50% {
+    transform: perspective(1em) translateZ(0.5em) rotateX(181deg) rotateY(-181deg);
+  }
+
+  to {
+    transform: perspective(1em) translateZ(0) rotateX(360deg) rotateY(-360deg);
+  }
+}
+
+/* Nav */ 
+nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: var(--color-primary-dark);
+  padding: 1em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul a {
+  color: white;
+}
+
+/* Main */
+
+/* Make foregound colors light and background colors dark  */
+main {
+  padding: 10em 1em;
+  background: var(--background-color-dark);
+  color: var(--text-color-light);
+  clip-path: polygon(62.5% 0, 75% 2.5%, 87.5% 0, 100% 2.5%, 100% 97.5%, 87.5% 100%, 75% 97.5%, 62.5% 100%, 50% 97.5%, 37.5% 100%, 25% 97.5%, 12.5% 100%, 0 97.5%, 0 2.5%, 12.5% 0, 25% 2.5%, 37.5% 0, 50% 2.5%);
+  animation: clip-path-waves 3s linear infinite alternate;
+}
+
+@keyframes clip-path-waves {
+  to {
+    clip-path: polygon(62.5% 2.5%, 75% 0%, 87.5% 2.5%, 100% 0%, 100% 100%, 87.5% 97.5%, 75% 100%, 62.5% 97.5%, 50% 100%, 37.5% 97.5%, 25% 100%, 12.5% 97.5%, 0% 100%, 0% 0%, 12.5% 2.5%, 25% 0%, 37.5% 2.5%, 50% 0%);
+  }
+}
+
+main a {
+  color: var(--link-color-light);
+}
+
+main > .container > * + * {
+  margin-top: 3em;
+}
+/* About */
+
+#about > section,
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+
+/* Targets all cards */
+#about > section > *:not(h2) {
+  background-color: hsl(var(--hue), var(--saturation), calc(var(--lighting) - 25%));
+  color: white;
+  padding: 1em;
+  box-shadow: hsl(var(--hue), 25%, 75%) 0em 0em 0.5em 0.3em;
+  border-radius: 0.5em;
+}
+
+#about > section > :nth-child(2) {
+  --hue: 160;
+  transform: perspective(3em) rotateX(1deg);
+}
+
+#about > section > :nth-child(3) {
+  --hue: 190;
+  transform: perspective(1em) skewX(5deg);
+  width: 100%;
+  text-align: center;
+}
+
+#about > section > :nth-child(4) {
+  --hue: 220;
+  transform: perspective(10em) rotateY(1deg);
+}
+
+#about > section > :nth-child(5) {
+  --hue: 250;
+  transform: perspective(1em) skewY(1deg);
+}
+
+#about > section > :nth-child(6) {
+  --hue: 280;
+}
+
+#about > section a {
+  color: hsl(calc(var(--hue) - 90), var(--saturation), var(--lighting));
+}
+
+#about > section > ul {
+  width: 90%;
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  gap: 1em;
+}
+
+#about > section > ul > li {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* Guidelines */
+#guidelines > section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  }
+
+  #guidelines > section > p:nth-of-type(1) {
+    text-align: center;
+  }
+
+/* Contribute  */
+
+#contribute > section,
+#contribute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+#contribute ol {
+  counter-reset: number;
+}
+
+#contribute ol li {
+  counter-increment: number;
+  position: relative;
+  margin-block: 1em;
+}
+
+#contribute ol li::after {
+  content: counter(number);
+  color: hsl(var(--hue), var(--saturation), var(--lighting));
+  opacity: 0.35;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: scale(3) rotate(-20deg) translate(-50%, -50%);
+}
+
+#contribute ol li:nth-child(1)::after {
+  --hue: 0;
+}
+
+#contribute ol li:nth-child(2)::after {
+  --hue: 90;
+}
+
+#contribute ol li:nth-child(3)::after {
+  --hue: 180;
+}
+
+#contribute ol li:nth-child(4)::after {
+  --hue: 270;
+}
+
+#files > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em; 
+  position: relative;
+  border: solid 3px currentColor;
+  animation: wobble 20s infinite;
+}
+/* Current styles */
+.profile > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+.profile ul {
+  background: conic-gradient(var(--text-color), var(--color-primary-dark));
+  color: white;
+  padding: 3em 1.5em
+}
+
+.profile ul a {
+  color: var(--color-180);
+}
+
+.profile > .container > a {
+  position: relative;
+  padding: 1em;
+  border: solid 1px;
+  /* Remove regular underline animation  */
+  background: transparent;
+  transition: unset;
+}
+
+.profile > .container > a:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, var(--color-120), var(--background-color));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.35s linear;
+}
+
+.profile > .container > a:is(:hover, :focus):before {
+  transform-origin: left;
+  transform: unset;
+}
+
+/* Featured styles */
+
+#styles > .container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* Hide overflow caused by the rotating tetrahedron */
+  overflow: hidden;
+}
+.features {
+  padding: 0;
+  position: relative;
+  perspective: 100em;
+  transform-style: preserve-3d;
+  /* Make the text clearer  */
+  transform:  translateZ(var(--distance));
+  min-height: var(--size);
+  animation: spin-y 10s linear infinite;
+  --size: clamp(10em, calc(15vw + 5em), 20em);
+  /* Divide the halved width by the tangent of the halved 120 degrees rotated */
+  --distance: calc((var(--size)) / 1.732);
+}
+
+.features > li {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  position: absolute;
+  inset: 0;
+  height: var(--size);
+  /* Double the width so the faces can reach each other when rotated */
+  width: calc(var(--size) * 2);
+  margin-inline: auto;
+  background-color: hsla(0deg, 100%, 100%, 0.75);
+}
+
+  /* Note: order of transformations matter */
+.features > li:nth-child(1) {
+  transform: translateZ(var(--distance));
+}
+
+.features > li:nth-child(2) {
+  transform: rotateY(120deg) translateZ(var(--distance));
+}
+
+.features > li:nth-child(3) {
+  transform: rotateY(240deg) translateZ(var(--distance));
+}
+
+.link-allstyles {
+  align-self: center;
+}
+
+@keyframes spin-y {
+  23% {
+    transform: rotateY(0deg);
+  }
+
+  33%,
+  56% {
+    transform: rotateY(120deg);
+  }
+
+  66%,
+  90% {
+      transform: rotateY(240deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Footer */
+
+.page-footer > .container,
+.page-footer > .container > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+.page-footer > .container> p {
+  text-align: center;
+}
+
+.page-footer > .container > ul > li:nth-child(3) {
+  /* Balances out the spacing  */
+  margin-bottom:  1em;
+}
+
+.page-footer > .container > ul  a {
+  border-radius: 999999999999px;
+}
+
+
+/* Change layout for desktop */
+@media (min-width: 45em) {
+  /* Remove horizontal scroller  */
+  #about > section > ul {
+    display: grid;
+    place-content: center;
+    grid-template-columns: repeat(auto-fit, 15em);
+    overflow-x: unset;
+
+  }
+
+  #about > section > ul > li {
+    text-align: left;
+  }
+
+  /* Make about us section double column */
+  #guidelines > section {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.25fr 1fr 1fr 0.5fr;
+  place-items: center;
+  }
+
+  #guidelines > section > p:nth-of-type(1) {
+    grid-area: 2/1/3/2;
+  }
+
+  #guidelines > section > p:nth-of-type(4) {
+    grid-area: 4/2/5/3;
+  }
+
+  .link-guidelines {
+    grid-area: 3/1/4/2;
+  }
+
+  /* Align buttons in a row  */
+  .page-footer > .container > ul {
+    flex-direction: row;
+  }
+
+  /* Force entire button on one line  */
+  .page-footer > .container > ul > li > a:not(.link-github)  {
+    display: block;
+  }
+
+  .page-footer > .container > ul > li:nth-child(3) {
+    margin: 0;
+  }
+}
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Remove tetrahedron */
+  #styles > .container {
+    overflow: unset;
+  }
+
+  #styles .features > li {
+    position: unset;
+    transform: unset;
+    --size: auto;
+  }
+
+  .features > li > span {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+}

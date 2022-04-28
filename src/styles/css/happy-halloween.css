@@ -1,0 +1,964 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Fredorixo
+* 
+* Title: Happy Halloween
+* Author: Fredorixo
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/happy-halloween/
+*/
+
+
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+/* Typography */
+:root {
+  --clr-background: #270045;
+  --clr-headline: #f4e5ff;
+  --clr-sub-headline: #b593cf;
+
+  --ff-primary: "Creepster", cursive;
+
+  --fs-headline: 7rem;
+  --fs-sub-headline: 2.8rem;
+  --fs-highlighted-text: 2.25rem;
+  --fs-body: 1.45rem;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --fs-headline: 5.6rem;
+    --fs-sub-headline: 2.5rem;
+    --fs-highlighted-text: 2rem;
+    --fs-body: 1.225rem;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --fs-headline: 5rem;
+    --fs-sub-headline: 2.225rem;
+    --fs-highlighted-text: 1.5rem;
+    --fs-body: 1rem;
+  }
+}
+
+@media (min-width: 1700px) {
+  :root {
+    --fs-headline: 7.5rem;
+    --fs-sub-headline: 3.25rem;
+    --fs-highlighted-text: 2.45rem;
+    --fs-body: 1.55rem;
+  }
+}
+
+@media (min-width: 1900px) {
+  :root {
+    --fs-headline: 8rem;
+    --fs-sub-headline: 3.6rem;
+    --fs-highlighted-text: 2.65rem;
+    --fs-body: 1.7rem;
+  }
+}
+
+@media (min-width: 2100px) {
+  :root {
+    --fs-headline: 8.5rem;
+    --fs-sub-headline: 4rem;
+    --fs-highlighted-text: 2.85rem;
+    --fs-body: 1.9rem;
+  }
+}
+
+@media (min-width: 2300px) {
+  :root {
+    --fs-headline: 9rem;
+    --fs-sub-headline: 4.25rem;
+    --fs-highlighted-text: 3.1rem;
+    --fs-body: 2.15rem;
+  }
+}
+
+@media (min-width: 2500px) {
+  :root {
+    --fs-headline: 11.5rem;
+    --fs-sub-headline: 4.5rem;
+    --fs-highlighted-text: 3.6rem;
+    --fs-body: 2.4rem;
+  }
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: var(--color-secondary);
+  color: #fff;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--clr-background);
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: white;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+strong {
+  font-weight: 100;
+}
+
+strong {
+  color: var(--clr-sub-headline);
+}
+
+h1 {
+  color: var(--clr-headline);
+  font-size: var(--fs-headline);
+  line-height: 1em;
+}
+
+h2 {
+  color: var(--clr-sub-headline);
+  font-size: var(--fs-sub-headline);
+  line-height: 1.2em;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: var(--clr-sub-headline);
+}
+
+.link-github {
+  display: inline-flex;
+  border-radius: 7px;
+  padding: 0.8em 1em;
+
+  color: var(--clr-sub-headline);
+  background-color: #400071;
+  box-shadow: 3px 3px 0 1px #b593cf;
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-top: 0.15em;
+  margin-right: 0.5em;
+
+  fill: transparent;
+  stroke: currentColor;
+  stroke-width: 0.1em;
+}
+
+body {
+  padding-inline: 0.5em;
+}
+
+/* Removing default left padding */
+body * {
+  padding-left: 0;
+}
+
+@media (min-width: 1017px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header            nav"
+      "main             main"
+      "stage           stage"
+      "styles         styles"
+      "maintainer maintainer";
+  }
+
+  header {
+    grid-area: header;
+  }
+  nav {
+    grid-area: nav;
+  }
+  main {
+    grid-area: main;
+  }
+  .profile {
+    grid-area: stage;
+  }
+  #styles {
+    grid-area: styles;
+  }
+  .page-footer {
+    grid-area: maintainer;
+  }
+
+  header h2 {
+    max-width: 14em;
+    margin-inline: auto;
+  }
+
+  nav ul {
+    max-width: 10em;
+    margin-top: 7.4em;
+    margin-inline: auto;
+  }
+}
+
+/* Header */
+
+header {
+  margin-top: 4em;
+  margin-left: auto;
+}
+
+@media (max-width: 1215.9px) {
+  header {
+    margin-top: 2.5em;
+  }
+}
+
+header h2 {
+  margin-top: 1em;
+  position: relative;
+
+  text-align: left;
+  padding: 0.2em 0.5em 0.2em 1em;
+  line-height: 1.3em;
+  border-radius: 10px;
+  background-color: #300056;
+}
+
+header h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.3em;
+
+  border-radius: inherit;
+  background-color: #5b1692;
+}
+
+@media (max-width: 1017px) {
+  header h2 {
+    max-width: 18em;
+    margin-inline: auto;
+  }
+}
+
+header p,
+header p > * {
+  color: var(--clr-sub-headline);
+}
+
+header p {
+  margin-top: 1.5em;
+}
+
+header .link-github {
+  margin-top: 0.5em;
+}
+
+/* Nav */
+
+nav {
+  font-size: var(--fs-highlighted-text);
+  text-align: left;
+}
+
+nav ul {
+  position: relative;
+}
+
+@media (max-width: 1017px) {
+  nav ul {
+    max-width: 6em;
+    margin-block: 4em;
+    margin-inline: auto;
+  }
+
+  nav ul::before {
+    visibility: hidden;
+  }
+}
+
+nav ul::before {
+  content: "";
+  position: absolute;
+  top: -7em;
+  right: 0.8em;
+  height: calc(var(--fs-headline) * 2);
+  width: calc(var(--fs-headline) * 2.3);
+
+  background-image: url("https://blush.design/api/download?shareUri=b6clofWEmrRRg_Cg&w=800&h=800&fm=png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+nav li {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.41 26.976C12.2269 25.9554 10.7154 25.3959 9.153 25.4C8.29182 25.3974 7.43868 25.5658 6.64305 25.8954C5.84743 26.225 5.12512 26.7092 4.518 27.32L2.383 29.454C1.93228 25.5733 2.70752 21.6488 4.6 18.231L4.634 18.169L4.875 18.411C6.10564 19.6358 7.77124 20.3234 9.5075 20.3234C11.2438 20.3234 12.9094 19.6358 14.14 18.411C14.1872 18.3645 14.2246 18.3091 14.2502 18.2479C14.2757 18.1868 14.2889 18.1212 14.2889 18.055C14.2889 17.9888 14.2757 17.9232 14.2502 17.8621C14.2246 17.8009 14.1872 17.7455 14.14 17.699L11.953 15.513H11.963C12.84 15.3382 13.6456 14.9074 14.278 14.275C14.9104 13.6426 15.3412 12.837 15.516 11.96V11.949L17.7 14.135C17.7465 14.1823 17.802 14.2199 17.8632 14.2456C17.9244 14.2712 17.9901 14.2844 18.0565 14.2844C18.1229 14.2844 18.1886 14.2712 18.2498 14.2456C18.311 14.2199 18.3665 14.1823 18.413 14.135C19.6369 12.9043 20.324 11.2392 20.324 9.5035C20.324 7.76781 19.6369 6.10269 18.413 4.872L18.169 4.631L18.232 4.6C21.6491 2.70735 25.5725 1.93044 29.453 2.378L27.318 4.513C26.7075 5.12025 26.2237 5.84262 25.8944 6.63825C25.5652 7.43388 25.3971 8.28695 25.4 9.148C25.3967 10.7103 25.9562 12.2215 26.976 13.405C25.6329 14.7436 24.719 16.4519 24.3509 18.312C23.9828 20.1721 24.1771 22.0998 24.909 23.849L25.672 25.67L23.855 24.914C22.1061 24.1811 20.1786 23.9858 18.3182 24.353C16.4579 24.7203 14.7491 25.6335 13.41 26.976Z' fill='white'/%3E%3Cpath d='M2.188 30L4.688 27.5C5.86549 26.3221 7.46149 25.6584 9.127 25.654H9.159C10.6573 25.6533 12.106 26.191 13.241 27.169L13.418 27.322L13.584 27.157C14.8856 25.8462 16.5494 24.9546 18.3617 24.5967C20.174 24.2389 22.0519 24.4312 23.754 25.149L26.138 26.141L25.138 23.755C24.4203 22.052 24.2286 20.1732 24.5877 18.3604C24.9468 16.5476 25.8402 14.8837 27.153 13.583L27.319 13.417L27.166 13.24C26.1851 12.1031 25.6472 10.6506 25.651 9.149C25.6511 8.32087 25.8144 7.50087 26.1317 6.73592C26.449 5.97097 26.9139 5.27608 27.5 4.691L30 2.188L29.482 2.128C25.5496 1.66562 21.5713 2.45133 18.11 4.374L17.753 4.574L18.235 5.052C19.4081 6.23719 20.0661 7.83741 20.0661 9.505C20.0661 11.1726 19.4081 12.7728 18.235 13.958C18.1876 14.0048 18.1236 14.0311 18.057 14.031C18.0237 14.0312 17.9908 14.0247 17.96 14.012C17.9293 13.9993 17.9014 13.9806 17.878 13.957L15.26 11.34V11.933C15.0935 12.7529 14.6894 13.5056 14.0979 14.0972C13.5064 14.6889 12.7538 15.0933 11.934 15.26H11.341L13.958 17.876C14.0052 17.9234 14.0317 17.9876 14.0317 18.0545C14.0317 18.1214 14.0052 18.1856 13.958 18.233C12.7726 19.4073 11.1716 20.0661 9.503 20.0661C7.83444 20.0661 6.23336 19.4073 5.048 18.233L4.574 17.754L4.374 18.108C2.4488 21.5695 1.66228 25.5493 2.126 29.483L2.188 30ZM9.133 25.147C7.33223 25.1506 5.60626 25.8676 4.333 27.141L2.573 28.9C2.25514 25.3293 2.99006 21.7437 4.687 18.586C5.96693 19.8541 7.69578 20.5655 9.4975 20.5655C11.2992 20.5655 13.0281 19.8541 14.308 18.586C14.4497 18.4442 14.5294 18.252 14.5294 18.0515C14.5294 17.851 14.4497 17.6588 14.308 17.517L12.438 15.647C13.1972 15.4216 13.8882 15.0102 14.4482 14.4502C15.0082 13.8902 15.4196 13.1992 15.645 12.44L17.515 14.309C17.5849 14.3795 17.6681 14.4354 17.7598 14.4735C17.8514 14.5116 17.9497 14.5311 18.049 14.531C18.1483 14.5313 18.2466 14.5118 18.3383 14.4737C18.43 14.4356 18.5132 14.3796 18.583 14.309C19.854 13.0312 20.5675 11.3023 20.5675 9.5C20.5675 7.69773 19.854 5.96876 18.583 4.691L18.577 4.685C21.738 2.98837 25.3268 2.25484 28.9 2.575L27.14 4.335C26.5076 4.967 26.0061 5.7175 25.6641 6.54355C25.3222 7.36959 25.1464 8.25496 25.147 9.149C25.1433 10.6917 25.6689 12.189 26.636 13.391C25.3417 14.7387 24.4615 16.4297 24.1 18.263C23.7206 20.1725 23.9204 22.1519 24.674 23.947L25.2 25.2L23.949 24.679C22.1908 23.9443 20.2565 23.7381 18.3829 24.0857C16.5093 24.4333 14.7777 25.3195 13.4 26.636C12.2015 25.6723 10.7098 25.147 9.172 25.147H9.133Z' fill='%23D2D2D2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 0 62%;
+
+  padding-left: 1.15em;
+}
+
+@media (min-width: 1700px) {
+  nav li {
+    padding-left: 1em;
+  }
+}
+
+@media (min-width: 2100px) {
+  nav li {
+    background-size: 8.7%;
+  }
+}
+
+@media (max-width: 500.9px) {
+  nav li {
+    background-size: 16%;
+  }
+}
+
+/* Main */
+
+main {
+  margin-top: 4em;
+}
+
+@media (min-width: 1000px) {
+  main {
+    max-width: 55em;
+    margin-inline: auto;
+  }
+}
+
+#about section:first-child p {
+  text-align: left;
+}
+
+/* Margin Below Headlines */
+
+#about section:first-child h2,
+#about section:nth-child(2) h2,
+#files h3,
+#styles h2 {
+  margin-bottom: 2em;
+}
+
+@media (max-width: 800.9px) {
+  #contribute h2,
+  #guidelines h2 {
+    margin-bottom: 2em;
+  }
+}
+
+/* Margin Between different Sections */
+
+#about section:nth-child(2),
+#guidelines,
+#contribute {
+  margin-top: 6em;
+}
+
+/* Placing the Halloween Corn Candies */
+
+#about section:first-child h2::before,
+#about section:first-child h2::after {
+  content: "";
+  position: absolute;
+  height: calc(var(--fs-sub-headline) * 3);
+  width: calc(var(--fs-sub-headline) * 3);
+
+  margin-top: -0.5em;
+  margin-inline: 0.2em;
+
+  background-image: url("https://blush.design/api/download?shareUri=fB31U8qekW50TBs3&w=800&h=800&fm=png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#about section:first-child h2::before {
+  left: 0;
+}
+
+#about section:first-child h2::after {
+  right: 0;
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 590.9px) {
+  #about section:first-child h2::before,
+  #about section:first-child h2::after {
+    background-image: none;
+  }
+}
+
+/* Placing the Witch's Hat */
+
+@media (min-width: 650px) {
+  #about section:nth-child(2) h2 {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    margin-top: 5em;
+    margin-inline: auto;
+  }
+}
+
+#about section:nth-child(2) h2 {
+  position: relative;
+}
+
+#about section:nth-child(2) h2::before {
+  content: "";
+  position: absolute;
+  left: -1.6em;
+  top: -2.9em;
+  height: calc(var(--fs-sub-headline) * 4);
+  width: calc(var(--fs-sub-headline) * 4);
+
+  background-image: url("https://blush.design/api/download?shareUri=OaRUuhvthtYrTGDd&w=800&h=800&fm=png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 650px) {
+  #about section:nth-child(2) h2::before {
+    visibility: hidden;
+  }
+}
+
+#about section:nth-child(2) ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  margin-block: 2em;
+}
+
+#about section:nth-child(2) li {
+  background-color: #400071;
+  margin: 0.2em;
+  padding: 0.1em 0.4em;
+  border-radius: 7px;
+}
+
+/* Guidelines */
+
+@media (min-width: 800px) {
+  #guidelines .container {
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "para1 guidelines"
+      "h3    guidelines"
+      "para2 guidelines"
+      "para3 guidelines"
+      "para4 guidelines"
+      "a     guidelines";
+  }
+
+  #guidelines h2 {
+    grid-area: guidelines;
+  }
+  #guidelines p:first-of-type {
+    grid-area: para1;
+  }
+  #guidelines h3 {
+    grid-area: h3;
+  }
+  #guidelines p:nth-of-type(2) {
+    grid-area: para2;
+  }
+  #guidelines p:nth-of-type(3) {
+    grid-area: para3;
+  }
+  #guidelines p:nth-of-type(4) {
+    grid-area: para4;
+  }
+  #guidelines .container > a {
+    grid-area: a;
+  }
+}
+
+/* Image of Cat */
+
+#guidelines h2 {
+  text-align: center;
+  margin-top: 4em;
+
+  background-image: url("https://blush.design/api/download?shareUri=3cZW1FR-vSzXh-NB&w=800&h=800&fm=png");
+  background-size: 7.25em;
+  background-position: 55% 30%;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 1000.9px) and (min-width: 800px) {
+  #guidelines h2 {
+    margin-top: 8em;
+
+    background-size: 6em;
+  }
+}
+
+@media (max-width: 799.9px) {
+  #guidelines h2 {
+    background-image: none;
+  }
+}
+
+/* Contribute */
+
+/* Grid of First Section */
+
+@media (min-width: 800px) {
+  #contribute section:first-child {
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "contribute para1"
+      "contribute para2";
+  }
+
+  #contribute h2 {
+    grid-area: contribute;
+  }
+  #contribute p:first-of-type {
+    grid-area: para1;
+  }
+  #contribute p:nth-of-type(2) {
+    grid-area: para2;
+  }
+}
+
+/* Setting the Pumpkins */
+
+#contribute h2 {
+  position: relative;
+  text-align: center;
+
+  margin-top: 1.5em;
+  margin-inline: auto;
+}
+
+#contribute h2::after {
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: 80%;
+  height: calc(var(--fs-sub-headline) * 8);
+  width: calc(var(--fs-sub-headline) * 10);
+
+  background-image: url("https://blush.design/api/download?shareUri=fMBIy5e1EBgW0Y20&w=800&h=800&fm=png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@media (max-width: 1140.9px) and (min-width: 1000px) {
+  #contribute h2::after {
+    background-size: 97%;
+  }
+}
+
+@media (max-width: 1000px) {
+  #contribute h2::after {
+    left: -55%;
+    background-size: 85%;
+  }
+}
+
+@media (max-width: 900.9px) {
+  #contribute h2 {
+    margin-top: 5em;
+  }
+
+  #contribute h2::after {
+    top: 4em;
+  }
+}
+
+@media (max-width: 799.9px) {
+  #contribute h2::after {
+    visibility: hidden;
+  }
+}
+
+/* Grid of Second section */
+
+@media (max-width: 800.9px) {
+  #contribute section:nth-child(2) ol {
+    margin-left: 1em;
+  }
+}
+
+@media (min-width: 800px) {
+  #contribute section:nth-child(2) {
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      ". headline"
+      ".    para";
+  }
+
+  #contribute section:nth-child(2) h3 {
+    grid-area: headline;
+  }
+  #contribute section:nth-child(2) ol {
+    grid-area: para;
+  }
+}
+
+/* Download-able Files Section */
+
+/* Files Grid */
+
+#files .container {
+  display: grid;
+  -moz-column-gap: 0.2em;
+       column-gap: 0.2em;
+  row-gap: 0.2em;
+  justify-content: center;
+  grid-template-areas:
+    "sf  sf  sf"
+    "d1  d2  d3";
+}
+
+@media (max-width: 720.9px) {
+  #files .container {
+    grid-template-areas:
+      "sf  sf"
+      "d1  d2"
+      "d3  d3";
+  }
+
+  #files a:nth-of-type(3) {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 360.9px) {
+  #files .container {
+    grid-template-areas:
+      "sf"
+      "d1"
+      "d2"
+      "d3";
+  }
+
+  #files a:first-of-type,
+  #files a:nth-of-type(2) {
+    margin-inline: auto;
+  }
+}
+
+#files h3 {
+  grid-area: sf;
+}
+#files a:first-of-type {
+  grid-area: d1;
+}
+#files a:nth-of-type(2) {
+  grid-area: d2;
+}
+#files a:nth-of-type(3) {
+  grid-area: d3;
+}
+
+#files .container > a {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#contribute footer h3 {
+  font-size: var(--fs-sub-headline);
+  color: var(--clr-sub-headline);
+
+  margin-top: 3em;
+}
+
+#contribute footer a {
+  font-size: var(--fs-highlighted-text);
+  background-color: #400071;
+
+  margin: 0.15em;
+  padding: 0.3em 0.5em 0.4em;
+  border-radius: 7px;
+}
+
+/* Profile */
+
+@media (max-width: 1017.9px) {
+  .profile {
+    display: -moz-inline-stack;
+    display: inline-block;
+  }
+}
+
+.profile {
+  font-size: var(--fs-highlighted-text);
+  background-color: #a686be;
+
+  border-radius: 10px;
+  margin-block: 3em;
+  margin-inline: auto;
+  padding: 1em 2em;
+}
+
+.profile a:hover,
+.profile .container > a:hover {
+  color: #400071;
+}
+
+.profile ul {
+  margin-block: 1.6em;
+}
+
+.profile h4,
+.profile .container > a,
+.profile li > span:first-child {
+  color: black;
+}
+
+/* Styles */
+
+#styles ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  row-gap: 2em;
+
+  margin-block: 3em;
+}
+
+#styles li,
+#styles li a {
+  color: black;
+}
+
+#styles li a:hover {
+  color: #400071;
+}
+
+/* Placing the Purple Candy behind the List Items */
+/* by creating a Stacking Context */
+
+#styles li {
+  position: relative;
+  z-index: 1;
+
+  font-size: var(--fs-highlighted-text);
+  min-width: 10em;
+  padding: 3.5em 0.8em;
+  border-radius: 7px;
+}
+
+#styles li:first-of-type {
+  background-image: linear-gradient(49.24deg, #c5add8 0%, #f4e6ff 100%);
+}
+
+#styles li:nth-of-type(2) {
+  background-image: radial-gradient(#c5add8 25%, #f4e6ff 100%);
+}
+
+#styles li:last-of-type {
+  background-image: linear-gradient(130.76deg, #f4e6ff 0%, #c5add8 100%);
+}
+
+#styles li::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  opacity: 0.56;
+  background-image: url("https://blush.design/api/download?shareUri=xj0qJjAnn21V_qYZ&w=800&h=800&fm=png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Bringing Title & Author in 2 columns */
+
+#styles li > span {
+  display: flex;
+  flex-direction: column;
+}
+
+#styles .container > a {
+  background-color: #400071;
+  padding: 0.3em 0.5em 0.4em;
+  border-radius: 7px;
+}
+
+/* Footer */
+
+footer p:first-child {
+  margin-top: 3em;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  -moz-column-gap: 2em;
+       column-gap: 2em;
+  row-gap: 2em;
+
+  margin-block: 5em;
+}
+
+footer li > a:not(.link-github) {
+  position: relative;
+  display: inline-flex;
+  border-radius: 7px;
+  padding: 0.8em 1em 0.8em 2.5em;
+
+  color: var(--clr-sub-headline);
+  background-color: #400071;
+  box-shadow: 3px 3px 0 1px #b593cf;
+}
+
+footer li > a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  margin-left: 1em;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1900px) {
+  footer li > a::before {
+    margin-left: 1.15em;
+    transform: scale(120%);
+  }
+}
+
+@media (min-width: 2300px) {
+  footer li > a::before {
+    margin-left: 1.25em;
+    transform: scale(150%);
+  }
+}
+
+@media (max-width: 500.9px) {
+  footer li > a::before {
+    background-size: 60%;
+  }
+}
+
+footer li:first-child > a::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.643 4.93708C22.808 5.30708 21.911 5.55708 20.968 5.67008C21.941 5.08787 22.669 4.17154 23.016 3.09208C22.1019 3.63507 21.1014 4.01727 20.058 4.22208C19.3564 3.47294 18.4271 2.9764 17.4143 2.80955C16.4016 2.6427 15.3621 2.81487 14.4572 3.29933C13.5524 3.78379 12.8328 4.55344 12.4102 5.48878C11.9875 6.42412 11.8855 7.47283 12.12 8.47208C10.2677 8.37907 8.45564 7.89763 6.80144 7.05898C5.14723 6.22034 3.68785 5.04324 2.51801 3.60408C2.11801 4.29408 1.88801 5.09408 1.88801 5.94608C1.88757 6.71307 2.07644 7.46832 2.43789 8.14481C2.79934 8.8213 3.32217 9.39812 3.96001 9.82408C3.22029 9.80054 2.49688 9.60066 1.85001 9.24108V9.30108C1.84994 10.3768 2.22204 11.4195 2.90319 12.2521C3.58434 13.0847 4.53258 13.656 5.58701 13.8691C4.9008 14.0548 4.18135 14.0821 3.48301 13.9491C3.78051 14.8747 4.36001 15.6841 5.14038 16.264C5.92075 16.8439 6.86293 17.1653 7.83501 17.1831C6.18484 18.4785 4.1469 19.1812 2.04901 19.1781C1.67739 19.1782 1.30609 19.1565 0.937012 19.1131C3.06649 20.4823 5.54535 21.2089 8.07701 21.2061C16.647 21.2061 21.332 14.1081 21.332 7.95208C21.332 7.75208 21.327 7.55008 21.318 7.35008C22.2293 6.69105 23.0159 5.87497 23.641 4.94008L23.643 4.93708Z' fill='%23B593CF'/%3E%3C/svg%3E");
+}
+
+footer li:nth-child(3) > a::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.5 1.25C17.8315 1.25 18.1495 1.3817 18.3839 1.61612C18.6183 1.85054 18.75 2.16848 18.75 2.5V17.5C18.75 17.8315 18.6183 18.1495 18.3839 18.3839C18.1495 18.6183 17.8315 18.75 17.5 18.75H2.5C2.16848 18.75 1.85054 18.6183 1.61612 18.3839C1.3817 18.1495 1.25 17.8315 1.25 17.5V2.5C1.25 2.16848 1.3817 1.85054 1.61612 1.61612C1.85054 1.3817 2.16848 1.25 2.5 1.25H17.5ZM2.5 0C1.83696 0 1.20107 0.263392 0.732233 0.732233C0.263392 1.20107 0 1.83696 0 2.5L0 17.5C0 18.163 0.263392 18.7989 0.732233 19.2678C1.20107 19.7366 1.83696 20 2.5 20H17.5C18.163 20 18.7989 19.7366 19.2678 19.2678C19.7366 18.7989 20 18.163 20 17.5V2.5C20 1.83696 19.7366 1.20107 19.2678 0.732233C18.7989 0.263392 18.163 0 17.5 0L2.5 0Z' fill='%23B593CF'/%3E%3Cpath d='M6.875 15C6.875 15.4973 6.67746 15.9742 6.32583 16.3258C5.97419 16.6775 5.49728 16.875 5 16.875C4.50272 16.875 4.02581 16.6775 3.67417 16.3258C3.32254 15.9742 3.125 15.4973 3.125 15C3.125 14.5027 3.32254 14.0258 3.67417 13.6742C4.02581 13.3225 4.50272 13.125 5 13.125C5.49728 13.125 5.97419 13.3225 6.32583 13.6742C6.67746 14.0258 6.875 14.5027 6.875 15ZM3.125 4.375C3.125 4.04348 3.2567 3.72554 3.49112 3.49112C3.72554 3.2567 4.04348 3.125 4.375 3.125C11.2787 3.125 16.875 8.72125 16.875 15.625C16.875 15.9565 16.7433 16.2745 16.5089 16.5089C16.2745 16.7433 15.9565 16.875 15.625 16.875C15.2935 16.875 14.9755 16.7433 14.7411 16.5089C14.5067 16.2745 14.375 15.9565 14.375 15.625C14.375 12.9728 13.3214 10.4293 11.4461 8.55393C9.5707 6.67857 7.02716 5.625 4.375 5.625C4.04348 5.625 3.72554 5.4933 3.49112 5.25888C3.2567 5.02446 3.125 4.70652 3.125 4.375ZM3.125 9.375C3.125 9.04348 3.2567 8.72554 3.49112 8.49112C3.72554 8.2567 4.04348 8.125 4.375 8.125C6.36412 8.125 8.27178 8.91518 9.6783 10.3217C11.0848 11.7282 11.875 13.6359 11.875 15.625C11.875 15.9565 11.7433 16.2745 11.5089 16.5089C11.2745 16.7433 10.9565 16.875 10.625 16.875C10.2935 16.875 9.97554 16.7433 9.74112 16.5089C9.5067 16.2745 9.375 15.9565 9.375 15.625C9.375 14.2989 8.84822 13.0271 7.91053 12.0895C6.97285 11.1518 5.70108 10.625 4.375 10.625C4.04348 10.625 3.72554 10.4933 3.49112 10.2589C3.2567 10.0245 3.125 9.70652 3.125 9.375Z' fill='%23B593CF'/%3E%3C/svg%3E");
+}
+
+footer li:nth-child(4) > a::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.7482 13C16.8043 13 15.223 14.57 15.223 16.5C15.223 18.43 16.8043 20 18.7482 20C20.6921 20 22.2734 18.43 22.2734 16.5C22.2734 14.57 20.6921 13 18.7482 13ZM20.7626 17H16.7338V16H20.7626V17ZM13.7626 17C13.7424 16.83 13.7122 16.67 13.7122 16.5C13.7122 13.74 15.9683 11.5 18.7482 11.5C19.6748 11.5 20.5209 11.76 21.2662 12.19V5C21.2662 3.9 20.3597 3 19.2518 3H5.15108C4.04316 3 3.13669 3.9 3.13669 5V15C3.13669 16.1 4.04316 17 5.15108 17H13.7626ZM12.2014 10.5L5.15108 7V5L12.2014 8.5L19.2518 5V7L12.2014 10.5Z' fill='%23B593CF'/%3E%3C/svg%3E");
+}
+
+@media (min-width: 1000px) {
+  footer p:nth-child(3) {
+    max-width: 55em;
+    margin-inline: auto;
+  }
+}
+
+footer p:nth-child(4) {
+  margin-block: 4em;
+}
