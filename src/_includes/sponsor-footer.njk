@@ -1,16 +1,15 @@
 <style>
-#sponsor-footer {
+#sponsor-footer,
+#sponsor-footer *:not(svg, svg *) {
+  all: unset;
+  font-size: min(1rem, 16px);
   box-sizing: border-box;
-    background-color: #fff;
+}
+#sponsor-footer {
+  display: block;
+    background-color: #fff !important;
     margin: 0;
     padding: .5rem .5rem 1.5rem;
-		border: none;
-    border-radius: 0;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: auto;
-    text-align: left;
     grid-column-start: 1;
     grid-column-end: -1;
 }
@@ -26,11 +25,23 @@
 	display: flex;
 	align-items: center;
 	margin-bottom: 0;
-	color: rgba(0,0,0,0.87);
 	font-size: 1rem;
   font-family: sans-serif;
+  line-height: 1.5;
   -webkit-text-stroke: none;
   text-shadow: none;
+}
+#sponsor-footer p strong {
+	font-weight: bold;
+}
+#sponsor-footer p,
+#sponsor-footer strong {
+  color: rgba(0,0,0,0.87) !important;
+}
+#sponsor-footer svg {
+  flex-shrink: 0;
+  height: 80px;
+  width: auto;
 }
 #sponsor-footer p span {
 	margin: .5rem;
@@ -63,5 +74,6 @@
 }
 </style>
 <aside id="sponsor-footer" aria-label="Sponsor Style Stage">
-<p><span><strong>Support Style Stage</strong> as a monthly or weekly sponsor and qualify for a branded Style Stage page with links on every page.</span><a href="{{ '/support/' | url }}" class="sponsor-button">View Sponsor&nbsp;Options</a></p>
+{# <p><span><strong>Support Style Stage</strong> as a monthly or weekly sponsor and qualify for a branded Style Stage page with links on every page.</span><a href="{{ '/support/' | url }}" class="sponsor-button">View Sponsor&nbsp;Options</a></p> #}
+<p>{% include "wdii.svg" %} <span><strong>Sponsored by:</strong> IDMX268, a college-level, second semester web development course using Style Stage as a challenge to apply their new skills.</span></p>
 </aside>
