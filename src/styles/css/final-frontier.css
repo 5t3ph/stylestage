@@ -1,0 +1,459 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Danielle Mayabb
+* 
+* Title: Final Frontier
+* Author: Danielle Mayabb
+* Website: https://danielle-m.dev
+* Twitter: @thescifibrarian
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/final-frontier/
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&family=Yaldevi:wght@400;600&display=swap');
+
+:root {
+  --color-primary-alt: #ddbbff;
+  --color-primary-dark: #C994FF;
+  --color-secondary: #ffcc66;
+  --color-tertiary: #c66;
+  --color-background: #303033;
+  --color-text: #cdcdd0;
+  --color-light: #f5f6fa;
+  --color-dark: #1d1d1f;
+  --color-anchor: #88bbff;
+
+  --font-family: "Source Sans Pro", sans-serif;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.45rem;
+  --font-size-text: 1.2rem;
+  --font-family-headers: "Yaldevi", sans-serif;
+  --border-radius: 8px;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+  font-size: var(--font-size-text);
+  color: var(--color-text);
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them, provide fallbacks for a couple things */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  header a.link-github:hover, header a.link-github:focus, a.link-allstyles:hover, a.link-allstyles:focus {
+    background-color: var(--color-primary-dark);
+  }
+
+  nav ul a:hover, nav ul a:focus {
+    background-color: #004BAD;
+    color: var(--color-light);
+  }
+
+}
+
+
+.skip-link {
+  position: absolute;
+  top: auto;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  background-color: #ffaa90;
+  color: var(--color-dark);
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  padding: 0.5em;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-headers);
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+a {
+  color: var(--color-anchor);
+}
+
+/* main a, aside a:not(.link-allstyles), #guidelines a:not(.link-guidelines), .page-footer a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  transition: background-size .3s;
+}
+
+main a:hover, main a:focus, aside a:not(.link-allstyles):hover, aside a:not(.link-allstyles):focus, #guidelines a:not(.link-guidelines), .page-footer a:hover, .page-footer a:focus {
+  background-size: 100% 2px;
+} */
+main a:hover, main a:focus, aside a:not(.link-allstyles):hover, aside a:not(.link-allstyles):focus, #guidelines a:not(.link-guidelines):hover, #guidelines a:not(.link-guidlines):focus, .page-footer a:hover, .page-footer a:focus {
+ outline: 2px dotted var(--color-light);
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.25em;
+  fill: currentColor;
+} 
+
+header {
+  --logomark-height: 3em;
+  display: grid;
+  min-height: 40vh;
+  place-items: left;
+  padding: 10vh 2.2rem;
+  background-color: var(--color-dark);
+  text-align: left;
+}
+header h1 {
+  display: inline-grid;
+  min-height: var(--logomark-height);
+  place-content: center;
+  color: var(--color-light);
+}
+
+header h2 {
+  border-top: 2px solid var(--color-secondary);
+}
+
+header .link-github, .link-allstyles, .link-guidelines {
+  background-color: var(--color-primary-alt);
+  background: linear-gradient(to right, var(--color-primary-dark) 50%, var(--color-primary-alt) 50%);
+  background-size: 200% 100%;
+  background-position: bottom right;
+  transition: all .4s ease-out;
+  color: var(--color-dark);
+  /* border-radius: 16px; */
+  padding: 0.6rem;
+}
+
+header a.link-github, a.link-allstyles, a.link-guidelines  {
+  text-decoration: none;
+}
+
+header a.link-github:hover, header a.link-github:focus, a.link-allstyles:hover, a.link-allstyles:focus, a.link-guidelines:hover, a.link-guidelines:focus {
+  background-position: bottom left;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  list-style: none;
+  background-color: var(--color-anchor); 
+}
+
+nav ul a {
+  display: inline-grid;
+  padding: 0.6rem;
+  color: var(--color-background);
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  background: linear-gradient(to top, #004BAD 50%, var(--color-anchor) 50%);
+  background-size: 100% 200%;
+  background-position: top left;
+  transition: all .2s ease-out;
+}
+
+nav ul a:hover, nav ul a:focus {
+  background-position: bottom left;
+  color: var(--color-light);
+} 
+
+
+nav ul li {
+  margin: 0 0.3rem;
+} 
+
+main {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+main:focus {
+  outline: none;
+}
+
+
+main h2, aside h2 {
+  border-left: 3px solid var(--color-secondary);
+  padding-left: 1rem;
+}
+
+article .container, .page-footer .container, #styles .container {
+  width: 100%;
+  max-width: 80ch;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+article section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+
+#about {
+  margin-top: 1rem;
+}
+
+#about section:nth-child(2) ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
+#about section:nth-child(2) ul li {
+  margin: 0.25em;
+  padding: 0.25em 0.5em;
+  background-color: #ffaa00;
+  color: var(--color-dark)
+}
+
+#styles > .container {
+  margin-bottom: 1rem;
+}
+
+
+blockquote {
+  background-color: #f1dfcd;
+  color: var(--color-dark);
+  padding: 0.5rem;
+}
+
+blockquote a {
+  color: #1111ee;
+}
+
+blockquote a:hover, blockquote a:focus {
+  outline: 2px dotted var(--color-dark);
+}
+
+section.container, aside > .container {
+  margin-top: 1rem;
+}
+
+#files {
+  display: grid;
+  place-content: center;
+  margin: 5vh auto;
+  text-align: center;
+}
+
+#files a {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  text-decoration: none;
+  padding: 1rem;
+  display: inline-grid;
+  margin: 1.5rem;
+}
+
+#files a:hover, #files a:focus {
+  background-color: #ffaa44;
+}
+
+
+
+
+/* current style aside */
+
+.profile {
+  width: 95vw;
+  max-width: 80ch;
+  margin: 1rem auto 10vh;
+  padding: 1.25rem;
+  border-width: 0 0 0 0.7rem;
+  border-radius: 0.5rem;
+  box-shadow: -0.5rem 0 0 #c66, 0.5rem 0 0 #c66; 
+}
+.profile h4 {
+  margin: 0;
+  text-align: left;
+}
+
+.profile .container > a {
+  min-height: 2em;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.profile ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.profile ul li {
+  display: flex;
+  padding: 0.45em;
+}
+.profile ul li span:nth-child(1) {
+  width: auto;
+  margin-right: 0.25em;
+  font-weight: bold;
+}
+
+.profile ul li span:nth-child(2) a {
+  color: inherit;
+}
+
+
+.features {
+  position: relative;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(25ch, 1fr));
+  list-style: none;
+  display: grid;
+  margin-bottom: 2rem;
+}
+
+.features li {
+  margin: 0.1rem;
+  place-content: center;
+  min-height: 5rem;
+  padding: 0.7rem;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+@media(max-width: 515px){
+  .features {
+    display: block;
+    padding-left: unset;
+  }
+}
+
+.features li > span {
+  display: grid;
+  place-content: center;
+  padding: 0.5em;
+  grid-gap: 0.5rem;
+  border: 1px solid var(--color-background);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.1;
+}
+.features li > span a {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#styles .features li,
+.features.patterned li {
+  background-color: var(--color-secondary);
+}
+@media (min-width: 515px) and (max-width: 765px) {
+  #styles .features li:nth-last-child(1):nth-child(odd),
+.features.patterned li:nth-last-child(1):nth-child(odd) {
+    grid-column: span 2;
+  }
+}
+#styles .features li:nth-child(2),
+.features.patterned li:nth-child(2) {
+  background-color: var(--color-tertiary);
+}
+
+#styles .features li:nth-child(3),
+.features.patterned li:nth-child(3) {
+  background-color: var(--color-primary-alt);
+}
+
+
+/**/
+
+footer.page-footer {
+  padding: 3vh 1rem;
+  place-items: center;
+  background-color: var(--color-dark);
+  text-align: center;
+}
+
+footer.page-footer ul {
+  display: grid;
+  list-style: none;
+  grid-template-columns: repeat(auto-fit, minmax(12ch, auto));
+}
+
+
+.page-footer .container > :last-child {
+  margin-bottom: 0;
+}
