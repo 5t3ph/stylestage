@@ -494,15 +494,9 @@ header .container {
     align-self: end;
     justify-self: center;
   }
-  header .container *:not(h1) {
-    z-index: 5;
-  }
   header .container h1,
 header .container h2 {
     align-self: center;
-  }
-  header .container h2 {
-    z-index: 10;
   }
   @media (orientation: portrait) {
     header .container h2 {
@@ -1186,8 +1180,6 @@ aside .container::after {
   justify-content: center;
   list-style-type: none;
   margin-left: 0;
-  position: relative;
-  z-index: 10;
 }
 #about ul li {
   padding: 1rem;

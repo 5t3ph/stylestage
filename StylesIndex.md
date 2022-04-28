@@ -24,6 +24,8 @@
 
 [Fresh](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/fresh.css) By Thomas Champion
 
+[Geocities](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/geocities.css) By whitep4nth3r
+
 [Hackytoberfest](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/hackytoberfest.css) By Jordana Harrison
 
 [Headquarters](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/headquarters.css) By Stephanie Eckles
@@ -131,25 +133,3 @@
 [Liquid Style](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/liquid-style.css) By Toni Rome
 
 [Trafalgar](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/trafalgar.css) By Mike Andrewartha
-
-[Borlandish](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/borlandish.css) By Vishwa.R
-
-[Boysenberry](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/boysenberry.css) By Evan Thome
-
-[Colorful Cards](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/colorful-cards.css) By Inklingboi
-
-[Dark- Navy &amp; Green](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/dark-navy-and-green.css) By Vishal Sharma
-
-[DeSoto](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/desoto.css) By Joey Imlay
-
-[Final Frontier](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/final-frontier.css) By Danielle Mayabb
-
-[Geocities](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/geocities.css) By whitep4nth3r
-
-[Happy Halloween](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/happy-halloween.css) By Fredorixo
-
-[Sweet N Sp00ky](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/sweet-n-sp00ky.css) By Aiden Schrock
-
-[Vibrant](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vibrant.css) By Lakshmikant.K
-
-[Ye Olde Book](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/ye-olde-book.css) By Max Spuling
