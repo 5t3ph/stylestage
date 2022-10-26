@@ -1,11 +1,12 @@
-const chromium = require("chrome-aws-lambda");
+const puppeteer = require("puppeteer-core");
+const chromium = require("@sparticuz/chromium");
 const fs = require("fs");
 const slugify = require("slugify");
 
 (async () => {
   console.log("Starting stylesheets...");
 
-  const browser = await chromium.puppeteer.launch({
+  const browser = await puppeteer.launch({
     args: chromium.args,
     executablePath: await chromium.executablePath,
     headless: chromium.headless,

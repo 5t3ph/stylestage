@@ -1,6 +1,7 @@
 require("dotenv").config();
 const { builder } = require("@netlify/functions");
-const chromium = require("chrome-aws-lambda");
+const puppeteer = require("puppeteer-core");
+const chromium = require("@sparticuz/chromium");
 
 async function screenshot(slug, title, author) {
   const baseURL = process.env.URL;
@@ -11,7 +12,7 @@ async function screenshot(slug, title, author) {
   };
   let pageData = { slug, title: decodeURIComponent(title), author: decodeURIComponent(author) };
 
-  const browser = await chromium.puppeteer.launch({
+  const browser = await puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
     executablePath: await chromium.executablePath,
