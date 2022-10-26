@@ -1,0 +1,132 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Jessica Nagar
+* 
+* Title: I Got The Blues
+* Author: Jessica Nagar
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/i-got-the-blues/
+*/
+
+/*
+Below use @import to include one or more Google Fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;600&family=Fraunces:wght@600&family=Libre+Bodoni:wght@700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+/*
+Below use @import to include one CSS reset or normalize stylesheet of your choice
+*/
+
+/*
+Make the embedded svg small enough so it does not to overtake the page
+*/
+svg {
+  width: 0.75em;
+}
+
+
+body {
+  background: #F2F2F2;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  margin: 2rem;
+  color: #292B2F;
+}
+
+h1 {
+  font-family: "Fraunces", serif;
+  text-align: center;
+  color: #0b8c6e;
+}
+
+h2,
+h3,
+h4 {
+  font-family: "Fraunces", serif;
+  text-align: center;
+  color: #5a5a5a;
+}
+
+h2,
+h3 {
+  text-decoration: underline;
+}
+
+.skip-link {
+  display: none;
+}
+
+.container,
+nav {
+  max-width: 80ch;
+  margin: 8vh auto;
+}
+
+a:link {
+  color: #0057b9;
+}
+
+a:visited {
+  color: #0b8c6e;
+}
+
+a:hover {
+  background-color: #0057b9;
+  text-decoration: underline;
+  color: white;
+}
+
+a:hover:visited {
+  background-color: #0b8c6e;
+  text-decoration: underline;
+  color: white;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 4rem;
+  font-size: 1.8rem;
+}
+
+.profile ul {
+  columns: 1;
+  list-style: none;
+}
+
+#styles ul {
+  columns: 1;
+  list-style: none;
+}
+
+.page-footer ul {
+  columns: 1;
+  list-style: none;
+}
+
+@media only screen and (min-width: 600px) {
+  
+  nav ul {
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline;
+    line-height: 6rem;
+  }
+  
+  .container ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-coulmns: 2;
+  }
+}

@@ -39,6 +39,7 @@
   --purple-dark: #7830c0;
   --purple-darker: #642b9d;
   --purple-darkest: #512481;
+  --purple-transparent: #512481cc;
   --teal: #50f7f7;
   --blue-dark: #0068f1;
   --text-color: var(--white);
@@ -434,7 +435,7 @@ aside {
 }
 
 #sponsor-footer {
-  grid-area: sponsor;
+  grid-area: sponsor !important;
   z-index: 100;
 }
 
@@ -469,6 +470,11 @@ header:before {
   animation-direction: normal, alternate;
   animation-iteration-count: infinite;
 }
+header ::selection {
+  color: var(--teal);
+  background-color: var(--purple-transparent);
+}
+
 header .container {
   max-width: 100%;
   padding: calc(1rem + 0.5vmin) calc(1rem + 0.5vmin);
@@ -489,12 +495,12 @@ header .container {
       grid-template-rows: max-content minmax(min-content, 3fr) minmax(min-content, 1fr) max-content;
     }
   }
-  header .container * {
+  header .container > * {
     margin: 0;
     align-self: end;
     justify-self: center;
   }
-  header .container *:not(h1) {
+  header .container > *:not(h1) {
     z-index: 5;
   }
   header .container h1,
@@ -596,6 +602,8 @@ header .link-github:hover span, header .link-github:hover svg {
 header .link-github span {
   display: contents;
   animation-name: beat;
+  z-index: -1;
+  position: relative;
 }
 header .link-github svg {
   filter: drop-shadow(2px 0 0 var(--icon-color)) drop-shadow(-2px 0 0 var(--icon-color)) drop-shadow(0 2px 0 var(--icon-color)) drop-shadow(0 -2px 0 var(--icon-color));

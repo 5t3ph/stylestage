@@ -12,8 +12,6 @@
 
 [Center Stage](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/center-stage.css) By Katie Langerman
 
-[Color Stages](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/color-stages.css) By Claire Lipskey
-
 [Crawling Chaos](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/crawling-chaos.css) By Adrian Bece
 
 [CSS CLI](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/css-cli.css) By Ryan Mulligan
@@ -153,3 +151,21 @@
 [Vibrant](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/vibrant.css) By Lakshmikant.K
 
 [Ye Olde Book](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/ye-olde-book.css) By Max Spuling
+
+[Atomic Clock](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/atomic-clock.css) By Eric Brown
+
+[Color Stages](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/color-stages.css) By Claire Lipskey
+
+[Drawing Board](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/drawing-board.css) By Emma Grey
+
+[I Got The Blues](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/i-got-the-blues.css) By Jessica Nagar
+
+[Neon](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/neon.css) By Pablo Jimenez
+
+[We Love Teal](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/we-love-teal.css) By Olivia Johnson
+
+[Blue-Beast](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/blue-beast.css) By Kiran Shrinivaas S
+
+[Modern stars](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/modern-stars.css) By Alba Maldonado
+
+[Plain&#39;n&#39;simple](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/plainnsimple.css) By Silvestar Bistrović

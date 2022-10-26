@@ -1,0 +1,319 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Pablo Jimenez
+* 
+* Title: Neon
+* Author: Pablo Jimenez
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/neon/
+*/
+
+/*
+Below use @import to include one or more Google Fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..700&display=swap");
+/*
+Below use @import to include one CSS reset or normalize stylesheet of your choice
+*/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css");
+/*
+Make the embedded svg small enough so it does not to overtake the page
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+svg {
+  width: 0.75em;
+}
+
+/*
+Add more CSS here to override the default styles
+as needed from the reset or normalize stylesheet
+Refer to README.md for more information
+*/
+
+/* General */
+
+body {
+  padding-inline: 1rem;
+  padding-block: 2rem;
+  font-family: "Inter", sans-serif;
+  background: #001C46;
+  display: grid;
+}
+
+header .container {
+  margin-inline: auto;
+  max-width: 60ch;
+}
+
+/* Text */
+
+h1 {
+  font-style: italic;
+  font-size: 6rem;
+  text-align: center;
+  background: -webkit-linear-gradient(#9D4EDD, #7FFFD4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header p{
+  margin: 0 0 1rem;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+header h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+p {
+  line-height: 2rem;
+  max-width: 60ch;
+}
+
+/*
+ keep html semantic elements centered with
+ a reasonable max-width
+*/
+header,
+main,
+aside,
+footer {
+  max-width: 60ch;
+  margin-inline: auto;
+  color: white;
+}
+
+header {
+  backdrop-filter: contrast(1.5);
+  width: 100%;
+  max-width: 100%;
+}
+/*
+ Make the containers a grid for vertical spacing
+*/
+
+.container {
+  display: grid;
+  gap: 2rem;
+  padding-block: 1rem;
+  margin-inline: auto;
+}
+
+.container + .container {
+  margin-bottom: 1rem;
+}
+
+/*
+  Default list styling
+*/
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  column-gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+}
+
+ul li {
+  line-height: 2rem;
+  list-style-type: none;
+  padding-inline: 0.75rem;
+  border: 1px solid #ca8aff;
+}
+
+ul li a:link {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+ul li,
+ol li {
+  max-width: 60ch;
+}
+
+/* navbar */
+
+nav > ul > li {
+  display: inline;
+  line-height: 3rem;
+  border-radius: 10px;
+}
+
+nav ul li {
+  list-style: none;
+  /* line-height: 2.5rem;
+  font-weight: bold; */
+}
+
+/* Button */
+svg {
+  fill: #ca8aff;
+}
+
+header a.link-github {
+  max-width: 15rem;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid #7fffd4;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.25em 1em;
+}
+
+/*
+Numbered list
+*/
+
+ol {
+  display: grid;
+  gap: 1rem;
+  place-content: center;
+}
+
+ol > li {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+:where(ul, ol) {
+  list-style-position: inside;
+}
+
+.link-guidelines {
+  word-wrap: normal;
+  display: inline-block;
+}
+
+a:link, a:active, a:visited {
+  color: #7fffd4;
+}
+
+
+#files a:link,
+#files a:visited,
+#files a:active {
+  color: #e6c8ff;
+  line-height: 2.5rem;
+  text-decoration: none;
+  font-weight: 700;
+  text-align: center;
+}
+
+#files a:hover {
+  color: #7fffd4;
+  line-height: 2.5rem;
+}
+
+#files .container {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+#files .container h3 {
+  grid-column: 1/4;
+}
+
+#files .container a {
+  margin-inline: auto;
+  padding: 0 0.65rem 0 0.65rem;
+  border: 1px solid #7fffd4;
+  border-radius: 5px;
+}
+
+/* Currently Staged */
+
+.profile .container {
+  border: 2px solid #7fffd4;
+  color: #fff;
+  padding: 15px;
+  display: grid;
+  justify-items: center;
+  grid-gap: 1rem;
+  margin: 3rem;
+  border-radius: 5px;
+}
+
+/* All Styles Button */
+
+a.link-allstyles {
+  max-width: 15rem;
+  font-size: 20px;
+  text-decoration: none;
+  border: 3px solid #7fffd4;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Footer */
+
+.page-footer p:first-child {
+  margin-top: 3rem;
+  color: #fff;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.page-footer {
+  backdrop-filter: contrast(1.5);
+  width: 100%;
+  max-width: 100%;
+}
+
+.page-footer .container {
+  max-width: 60ch;
+}
+
+/* Skip Link */
+
+.skip-link {
+  position: absolute;
+  transform: translateY(-100%);
+  left: 0;
+  top: 0;
+  padding: 1rem;
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}
+
+/* Only Media Query */
+
+/* @media print {
+  *,
+  *::before,
+  *::after {
+    color: black !important;
+    background-color: white !important;
+    background-image: none;
+  }
+  a::after {
+    content: " (" attr(href) ") ";
+  }
+  .skip-link {
+    display: none;
+  }
+} */

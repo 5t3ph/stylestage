@@ -1,0 +1,257 @@
+/*!
+* LICENSE - style only: CC BY-NC-SA
+* @link https://creativecommons.org/licenses/by-nc-sa/3.0/
+* Graphics copyright of Olivia Johnson
+* 
+* Title: We Love Teal
+* Author: Olivia Johnson
+* Website: N/A
+* Twitter: @N/A
+*
+* View on Style Stage:
+* @link https://stylestage.dev/styles/we-love-teal/
+*/
+
+:root {
+  --mycolor: #333;
+  --backgroundcolor: rgb(214, 209, 209);
+  --highlightcolor: #048ba8;
+  --linkfontsize: 20px;
+  --fontsize-h2: 2.5rem;
+  --linkfontweight: bold;
+  --fontsize-h3: 1.5rem;
+}
+
+/*
+Below use @import to include one or more Google Fonts
+*/
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+/* Below use @import to include one CSS reset or normalize stylesheet of your choice */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css);
+
+/*
+Make the embedded svg small enough so it does not to overtake the page
+*/
+svg {
+  width: 0.75em;
+}
+
+html {
+  background-color: var(--backgroundcolor);
+}
+
+.container {
+  margin-block: 3em 0;
+  width: min(85%, 60rem);
+  /* outline: 1px red solid; */
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+p {
+  max-width: 65ch;
+}
+
+header p {
+  max-width: none;
+}
+
+body {
+  display: grid;
+  align-items: center;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  color: var(--mycolor);
+  padding-inline: 1rem;
+  /* max-width: 50rem; */
+  margin-inline: auto;
+}
+
+h1,
+h2 {
+  font-family: "Monserrat";
+  text-align: center;
+}
+
+h2 {
+  background-color: var(--highlightcolor);
+  font-size: var(--fontsize-h2);
+  color: white;
+  border-radius: 0.5em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+header {
+  font-family: Nunito;
+  font-weight: 700;
+
+  margin: 0rem 1rem;
+  right: 0;
+  display: flex;
+  gap: 2rem;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3em;
+  border-radius: 0.5em;
+  position: relative;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);
+}
+
+header h1,
+p {
+  color: #333;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li :first-child {
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  position: relative;
+  font-weight: var(--linkfontweight);
+}
+
+a::before {
+  content: "";
+  background-color: var(--highlightcolor);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+p {
+  font-size: 20px;
+  font-family: "Nunito";
+  font-style: normal;
+}
+
+h1 {
+  text-align: center;
+  font-size: 6rem;
+  line-height: 1.1;
+}
+
+:is(h3, h4) {
+  background-color: var(--backgroundcolor);
+  text-align: center;
+}
+
+body {
+  max-width: 100%;
+}
+
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+#main article .container {
+  box-shadow: 0px 0px 10px #909090;
+  border-radius: 5%;
+  padding: 1rem;
+  /* max-width: 50rem; */
+  background-color: #e7e2e2;
+  border: solid 10px var(--highlightcolor);
+}
+
+a {
+  text-decoration: none;
+  color: var(--mycolor);
+  margin: 0 -0.25rem;
+  padding: 0.5rem 0.5rem;
+  transition: var(--highlightcolor) 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+aside a {
+  text-align: center;
+  font-weight: (--linkfontweight);
+}
+a:hover {
+  background-color: var(--highlightcolor);
+  color: white;
+  font-weight: (--linkfontweight);
+}
+
+header .link-github {
+  font-size: var(--linkfontsize);
+}
+
+/* :is(#main, .container, p, section, article, aside, footer) a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+}
+
+:is(#main, .container p, section, article, aside, footer) a ::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  transform: scaleX(0.5);
+  transform-origin: left;
+}
+
+:is(p, section, article, aside, footer) a:hover::after {
+  transform: scaleX(1);
+} */
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+}
+
+@media screen and (min-width: 60rem) {
+  #about ul {
+    columns: 2;
+  }
+}
+
+.page_footer p,
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
