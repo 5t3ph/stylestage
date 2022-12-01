@@ -8,7 +8,7 @@ layout: page
 		max-width: 80ch;
 		margin: 5vh auto;
 	}
-	#sponsor-promo svg {
+	#sponsor-promo img {
 		flex-shrink: 0;
 		height: 80px;
 		width: auto;
@@ -18,11 +18,12 @@ layout: page
 		#sponsor-promo p {
 			display: flex;
 			align-items: center;
+			gap: 1rem;
 		}
 	}
 </style>
 <aside id="sponsor-promo" role="note" aria-label="Our Sponsor">
-<p>{% include "wdii.svg" %} <span><strong>Sponsored by:</strong> IDMX268 is a college-level, second semester web development course. The emphasis in our course reflects the skills needed for modern web development: Advanced CSS techniques, Building web sites using modern optimization techniques, and Principles of modern web design, using web design software, and developing sites from design specifications. We are very pleased that Style Stage offers us the challenge to apply our new skills.</span></p>
+<p><img src="{{ '/img/sponsor.jpeg' | url }}" alt="WDII Fall 2022"> <span><strong>Sponsored by:</strong> IDMX268 is a college-level, second semester web development course. The emphasis in our course reflects the skills needed for modern web development: Advanced CSS techniques, Building web sites using modern optimization techniques, and Principles of modern web design, using web design software, and developing sites from design specifications. We are very pleased that Style Stage offers us the challenge to apply our new skills.</span></p>
 </aside>
 
 ## All Styles
