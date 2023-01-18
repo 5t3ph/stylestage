@@ -169,3 +169,5 @@
 [Modern stars](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/modern-stars.css) By Alba Maldonado
 
 [Plain&#39;n&#39;simple](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/plainnsimple.css) By Silvestar Bistrović
+
+[Shimmering Stars](https://github.com/5t3ph/stylestage/tree/main/src/styles/css/shimmering-stars.css) By Paola Ayala Zelaya
