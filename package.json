@@ -40,7 +40,7 @@
     "dotenv": "^16.0.3",
     "emoji-regex": "^10.2.1",
     "fast-glob": "^3.2.12",
-    "luxon": "^3.1.1",
+    "luxon": "^3.2.1",
     "markdown-it": "^13.0.1",
     "markdown-it-anchor": "^8.6.5",
     "node-fetch": "^3.3.0",
