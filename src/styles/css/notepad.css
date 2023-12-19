@@ -1,0 +1,514 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/buttons.min.css";
+@import "https://unpkg.com/open-props/masks.corner-cuts.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;500&family=Rubik+Doodle+Shadow&display=swap');
+
+
+
+/** reset **/ 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/** My Styles **/
+/* home */
+:root{
+    --icon: url(https://res.cloudinary.com/dxiisosc3/image/upload/v1702882764/final%20project/misc-1_rtbti1.svg);
+    --text-color: hsl(0, 0%, 0%);
+    --h1-2-3-color: hsl(237, 86%, 51%);
+    --links-color:hsl(360, 91%, 48%);
+    --text-font-size:  clamp(1rem, 2.1vw, 1.7rem);
+    --h1-font-size: clamp(2.4rem, 7vw, 5rem);
+    --h2-font-size: clamp(1.2rem, 4vw, 3rem);
+    --h3-font-size: clamp(1rem, 2vw, 1.5rem);
+    --margin-sides: clamp(1.2rem, 2vw, 1.5rem);
+    --line-height: clamp(1.5em, 3vw, 2.5em);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+      -webkit-animation-duration: 0.01ms !important;
+              animation-duration: 0.01ms !important;
+      -webkit-animation-iteration-count: 1 !important;
+              animation-iteration-count: 1 !important;
+      -webkit-transition-duration: 0.01ms !important;
+              transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+}
+
+/** General stuff **/
+
+html{
+    background: #fff;
+    background-image: linear-gradient(#e7dfdf .08em, transparent .05em);
+    background-size: 100% 2.5em;
+}
+
+body {
+    font-size: var(--font-size-text);
+    font-family:"Playpen Sans";
+    line-height: var(--line-height);
+    margin-inline: clamp(1.5rem, 5vw, 4.5rem);
+    display: grid;
+    grid-template-rows: auto;
+    row-gap: clamp(1.5em, 3vw, 2.5em);
+}
+
+main {
+    max-width: 80ch;
+    margin-inline: auto;
+
+}
+
+main div{
+    display: grid;
+    grid-template-columns: auto;
+    gap:clamp(2em, 5vw, 5em);
+}
+
+svg {
+    width: 1.2em;
+}
+
+.skip-link {
+    width: max-content;
+    position: absolute;
+    left: -9999px;
+}
+  
+.skip-link::after,
+.skip-link:focus {
+    left: auto;
+    position: absolute;
+}  
+
+h2{
+    font-weight: bolder;
+    font-size: var(--h2-font-size);
+    font-family: "Rubik Doodle Shadow";
+    line-height: 1.1em;
+    color: var(--h1-2-3-color);
+}
+
+h1, h3 {
+    font-weight: bolder;
+    font-size: var(--h2-font-size);
+    color:var(--h1-2-3-color);
+    font-style:oblique;
+    font-family: "Rubik Doodle Shadow";
+}
+
+p{
+    font-size: var(--text-font-size);
+    max-width: 60ch;
+}
+
+a {
+    color:var(--links-color);
+    text-decoration: none;
+}
+
+/** Header section **/
+header {
+    height: 100vh;
+}
+
+
+header div{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-family: "Rubik Doodle Shadow";
+}
+
+header .link-github{
+    font-size: var(--text-font-size);
+    padding: 2em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style:solid;
+
+    &:hover{
+        animation: var(--animation-shake-y);
+    }
+}
+
+/** Nav Bar **/
+nav ul {
+    font-size: clamp(.2rem, 1vw, .7rem);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: clamp(0.7rem, 1vw, 1.5rem);
+    list-style: none;
+}
+
+nav li {
+    color: var(--h1-2-3-color);
+    width: 8ch;
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    padding: 1.1em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style:solid;
+
+    &:hover {
+        animation: var(--animation-spin);
+    }
+}
+
+/** setting stage **/
+#about {
+    display: grid;
+    grid-template-columns: auto;
+    gap:clamp(2em, 5vw, 5em);
+}
+
+article section{
+    display:grid;
+    gap: clamp(.5em, 2vw, 2em);
+}
+
+blockquote{
+    padding: 3rem;
+    border-image-slice: 169 96 162 99;
+    border-image-width: 50px 50px 50px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-1.svg");
+    border-style: solid;
+}
+
+section ul {
+    font-weight:900;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap:2em;
+
+}
+
+section ul li{
+    transition: all .5s ease-in-out;
+    padding: clamp(.8em, 2vw, 2em);
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style: solid;
+
+    &:hover {
+        transform: scale(1.3);
+    }
+}
+
+/** Guidelines **/
+#guidelines .container{
+    display: grid;
+    grid-template-columns: auto;
+    gap: clamp(1em, 2vw, 2em);
+}
+
+.link-guidelines{
+    width: max-content;
+    transition: all .5s ease-in-out;
+    padding: 2em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style: solid;
+
+    &:hover {
+        animation: var(--animation-shake-y);
+    }
+}
+
+
+
+/**Contribute section **/
+#contribute {
+    display: grid;
+    grid-template-columns: auto;
+    gap: clamp(1em, 2vw, 2em);
+}
+
+main footer a {
+    margin-inline: auto;
+    padding: 1.5em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style: solid;
+}
+
+main footer div{
+    display: grid;
+    grid-template-columns: auto;
+    gap:0;
+}
+
+main footer h3::after{
+    content: " :";
+}
+
+
+
+/**Profile section **/
+.profile .container{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1rem;
+
+    padding: 3rem;
+    border-image-slice: 169 96 162 99;
+    border-image-width: 50px 50px 50px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-1.svg");
+    border-style: solid;
+}
+
+
+
+
+/** styles**/
+#styles{
+    max-width: 80ch;
+    margin-inline: auto;
+}
+
+#styles div{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0;
+}
+
+#styles ul{
+    display: grid;
+    gap:0;
+    
+}
+
+ #styles li{
+    padding: 3.2rem;
+    border-image-slice: 169 96 162 99;
+    border-image-width: 50px 50px 50px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-1.svg");
+    border-style: solid;
+}
+
+#styles div .link-allstyles{
+    width: max-content;
+    justify-self: center;
+    transition: all .5s ease-in-out;
+    padding: 2em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style: solid;
+
+    &:hover {
+        animation: var(--animation-shake-y);
+    }
+}
+
+#styles h2::after{
+    content: " :";
+}
+
+
+
+/**Page Footer**/
+.page-footer{
+    max-width: 80ch;
+    margin-inline: auto;
+}
+
+.page-footer div{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 1em;
+    padding-block-end: 2em;
+}
+
+.page-footer ul{
+    display: grid;
+    grid-template-columns: auto;
+    gap: 0em;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.page-footer li{
+    width: max-content;
+    justify-self: center;
+    transition: all .5s ease-in-out;
+    padding: 2em;
+    border-image-slice: 351 57 232 74;
+    border-image-width: 91px 35px 115px 50px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://res.cloudinary.com/dxiisosc3/image/upload/v1702882793/final%20project/border-2.svg");
+    border-style: solid;
+
+    &:hover {
+        animation: var(--animation-shake-y);
+    }
+}
+
+
+/**   @760px   **/
+@media only screen and (min-width: 760px) {
+
+    /** Header */
+    header div{
+        grid-template-rows: repeat(12, 1fr);
+
+        & h1{
+            grid-row-start: 5;
+        }
+        
+        & h2{
+            grid-row-start: 7;
+        }
+
+        & p{
+            grid-row-start: 8;
+        }
+
+        & a{
+            grid-row-start: 11;
+        }
+
+    }
+
+    header {
+        background-image: url(https://res.cloudinary.com/dxiisosc3/image/upload/v1702882767/final%20project/sol.svg);
+        background-repeat: no-repeat;
+        background-position: top -80px right -120px;
+    }
+
+
+    /** guidelines **/
+    .link-guidelines{
+        justify-self: center;
+    }
+
+    /** Contribute **/
+    
+    #files div{
+        display: grid;
+        grid-template-rows: 1 fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr ;
+        row-gap: 1.5em;
+
+        & h3{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+
+    }
+
+    .profile {
+        justify-self: center;
+    }
+
+    /** Styles ***/
+    #styles .container ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /** page footer ***/
+    .page-footer ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+}
+
+@media only screen and (min-width: 860px) {
+
+        /** page footer ***/
+        .page-footer ul {
+            display: flex;
+            flex-wrap: wrap;
+            
+    
+        }
+    
+    
+}
