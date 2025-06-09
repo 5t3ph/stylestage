@@ -1,8 +1,5 @@
 {
   "title": "Bulletin",
   "author": "Paulo Nunes",
-  "stylesheet": "https://syndicatefx.com/bulletin/style.css",
-  "twitter": "syndicatefx",
-  "websiteTitle": "syndicatefx.com",
-  "websiteUrl": "https://syndicatefx.com"
+  "stylesheet": "https://gist.githubusercontent.com/syndicatefx/8822bc0f2cdf039c37846e3319e1e495/raw/4bb7ae5cb5803bfa250b82522e417d3c6b491314/style.css"
 }
