@@ -11,7 +11,7 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            var msg = `👋 Thanks for participating! I will review as soon as possible, usually within a few hours.
+            var msg = `👋 Thanks for participating! I will review as soon as I am able. Please know that I have other priorities, and I appreciate your patience.
 
             **Watch for notifications** as I may request some small changes to make sure this meets the guidelines.
 

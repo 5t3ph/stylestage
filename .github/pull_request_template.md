@@ -2,7 +2,7 @@
 
 <!-- 🚨 Please title your pull request with your stylesheet's name -->
 
-<!-- IMPORTANT: If you forked this project prior to July 19, the format has changed and your commit should now be a single .json file located inside of `src/_data/styles`. For best results, make sure your fork is up-to-date and then create your .json file before opening your PR -->
+<!-- IMPORTANT: Your commit should now be a single .json file located inside of `src/_data/styles`. -->
 
 <!-- ✅ To answer yes on the following, update [] to [x]. You will get faster approval if all these conditions are met! -->
 

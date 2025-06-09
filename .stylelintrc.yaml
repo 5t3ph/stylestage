@@ -1,6 +1,5 @@
 extends:
   - stylelint-config-standard
-  - stylelint-config-prettier
 plugins:
   - stylelint-selector-bem-pattern
   - stylelint-scss
