@@ -4,31 +4,3 @@
 $font-heading: 'Rye', serif;
 $font-body: 'Special Elite', serif;
 
-body {
-  font-family: $font-body;
-}
-
-h1,
-h2,
-h3 {
-  font-family: $font-heading;
-}
-
-/*@font-face {
-  font-family: "Anton Regular";
-  font-style: normal;
-  font-weight: normal;
-  src: local("Anton-Regular"), local("Anton-Regular"),
-    url(".https://fonts.googleapis.com/css2?family=Anton&family=Lora:ital,wght@0,400..700;1,400..700&display=swap") format("tff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Abel Regular";
-  font-style: normal;
-  font-weight: 500;
-  src: local("Abel-Regular-Medium"), local("Abel-Regular-Medium"),
-    url("https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Lora:ital,wght@0,400..700;1,400..700&display=swap'") format("tff");
-  font-display: swap;
-}
-*/

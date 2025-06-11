@@ -5,6 +5,10 @@ h4 {
   font-weight: var(--font-weight-strong);
   line-height: 1;
   margin-bottom: 0.65em;
+  font-family: $font-heading;
+}
+body {
+  font-family: $font-body;
 }
 
 h1 {
@@ -19,7 +23,7 @@ h2 {
 }
 
 #main h2 {
-  background-color: var(--color-secondary);
+  background-color: var(--color-background);
   align-self: center;
   color: var(--color-background);
   padding: 0.25em 0.5em;

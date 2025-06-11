@@ -1,6 +1,6 @@
-// https://coolors.co/palette/0d1821-344966-b4cded-f0f4ef - color palette
+
 $color-primary: #344966 !default;
-$color-primary-alt: #B4CDED !default;
+$color-primary-alt: #8799b0 !default;
 $color-secondary: #0D1821 !default;
 $color-background: #F0F4EF !default;
 
@@ -18,7 +18,6 @@ $colors: map-merge(
   (
     background: $color-background,
     text: $color-body,
-    light: #fff,
   )
 );
 

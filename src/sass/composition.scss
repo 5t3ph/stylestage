@@ -1,0 +1,37 @@
+body {
+  font-family: $font-body;
+  background-color: $color-background;
+  color: $color-primary;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $font-heading;
+  color: $color-secondary;
+}
+
+a {
+  color: $color-primary-alt;
+}
+
+header, footer {
+  background-color: $color-background;
+  color: $color-secondary;
+}
+
+main {
+  background-color: $color-background;
+  color: $color-primary;
+}
+
+ul {
+  background-color: $color-secondary;
+  color: $color-primary-alt;
+  padding: 1em;
+  border-radius: $border-radius;
+}
+
+li {
+  color: $color-primary-alt;
+}
