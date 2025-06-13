@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap");
+:root {
+  --color-primary: #344966;
+  --color-primary-alt: #8799b0;
+  --color-secondary: #0D1821;
+  --color-background: #F0F4EF;
+  --color-text: #2d353f;
+  --color-anchor: #344966;
+  --font-family: "Baloo 2", sans-serif;
+  --font-weight-strong: 500;
+  --font-size-h1: 6rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+  --font-size-h4: 1.35rem;
+  --font-size-text: 1.15rem;
+  --border-radius: 8px;
+}
+
+/*
+ * [Modified] Modern CSS Reset
+ * @link https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  overflow-x: hidden;
+}
+
+/* Make images easier to work with */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: var(--font-weight-strong);
+  line-height: 1;
+  margin-bottom: 0.65em;
+  font-family: "Rye", serif;
+}
+
+body {
+  font-family: "Special Elite", serif;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-size: clamp(2rem, 7vw, var(--font-size-h1));
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-size: clamp(2rem, 4vw, var(--font-size-h2));
+  text-align: center;
+}
+
+#main h2 {
+  background-color: var(--color-background);
+  align-self: center;
+  color: var(--color-background);
+  padding: 0.25em 0.5em;
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-size: var(--font-size-h4);
+}
+
+p,
+li {
+  font-size: var(--font-size-text);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+article .container > ul:not(.features) > li + li,
+article .container > ol > li + li {
+  margin-top: 1rem;
+}
+article .container * + h2 {
+  margin-top: 4rem;
+}
+article .container * + h3 {
+  margin-top: 2rem;
+}
+
+strong {
+  font-weight: var(--font-weight-strong);
+}
+
+a {
+  color: var(--color-anchor);
+}
+
+blockquote {
+  position: relative;
+  display: grid;
+  grid-template-areas: "blockquote";
+  place-items: center;
+  padding: 0;
+  margin: 3rem 0;
+  color: var(--color-primary);
+}
+blockquote > * {
+  grid-area: blockquote;
+}
+blockquote p {
+  position: relative;
+  font-size: var(--font-size-h4);
+  margin-bottom: 0;
+  padding: 0.5em;
+}
+blockquote p strong {
+  font-size: 1.15em;
+}
+blockquote::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 4px solid var(--color-primary);
+  box-shadow: 0.25em 0.25em var(--color-secondary);
+  transform: scale(1.1);
+  content: "";
+}
+blockquote::after {
+  grid-area: blockquote;
+  color: #6f6ffd;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 199.1 111.3'%3E%3Cpath fill='%238799b0' d='M118 77a77 77 0 00-2-18c-2-4-3-9-3-13a29 29 0 011-12 19 19 0 017-9c4-3 8-4 13-3a14 14 0 018 7 31 31 0 012 5 75 75 0 005 10 47 47 0 002 5 17 17 0 003 3c4 4 8 4 13 0a15 15 0 005-8 37 37 0 001-7l1-11a18 18 0 014-11 2 2 0 000-3l-3-3-2-3a2 2 0 011-2 11 11 0 012-1l19-3c4 0 5 1 3 5l-7 16c-1 3-2 3-5 1l-4-5a1 1 0 00-1 0 9 9 0 00-3 5 23 23 0 00-1 6l-1 11a26 26 0 01-1 7 18 18 0 01-8 10c-5 3-9 3-13 0a20 20 0 01-6-6 68 68 0 01-6-13l-2-4a18 18 0 00-2-4 10 10 0 00-14-2 15 15 0 00-4 4 19 19 0 00-3 9 32 32 0 000 11l2 6a78 78 0 012 27 32 32 0 01-4 15 24 24 0 01-11 9 33 33 0 01-19 3 16 16 0 01-13-9 29 29 0 01-3-11 70 70 0 012-18l2-14a33 33 0 000-14c-1-4-4-7-8-7-7-1-14 1-19 6a34 34 0 00-6 9 59 59 0 00-4 10l-3 12-2 6a26 26 0 01-5 8 17 17 0 01-16 6 26 26 0 01-10-4 7 7 0 01-2-1 2 2 0 010-2 2 2 0 012 0l3 1a22 22 0 0010 3 13 13 0 009-4 22 22 0 005-6 41 41 0 003-8l3-12a59 59 0 015-13 31 31 0 017-9c6-5 14-7 22-5a12 12 0 019 7 21 21 0 011 7 57 57 0 01-2 17 132 132 0 00-2 16 37 37 0 000 13 27 27 0 002 5 13 13 0 0011 8 30 30 0 0016-3 22 22 0 0010-10c3-4 3-9 4-13v-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  place-self: end;
+  content: "Ooh, scale()!";
+  background-size: 90%;
+  width: 10ch;
+  padding-top: 3.25em;
+  transform: translate(25%, 50%) rotate(-5deg);
+  transform-origin: bottom right;
+}
+@media (max-width: 60rem) {
+  blockquote::after {
+    transform: translate(25%, 55%) rotate(-5deg);
+  }
+}
+
+#guidelines p:nth-of-type(1),
+#contribute p:nth-of-type(1) {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-strong);
+}
+
+body {
+  font-family: "Special Elite", serif;
+  background-color: #F0F4EF;
+  color: #344966;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Rye", serif;
+  color: #0D1821;
+}
+
+a {
+  color: #8799b0;
+}
+
+header, footer {
+  background-color: #F0F4EF;
+  color: #0D1821;
+}
+
+main {
+  background-color: #F0F4EF;
+  color: #344966;
+}
+
+ul {
+  background-color: #0D1821;
+  color: #8799b0;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+li {
+  color: #8799b0;
+}
+
+.skip-link {
+  display: none;
+}/*# sourceMappingURL=main-stage.css.map */
