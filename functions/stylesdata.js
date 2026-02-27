@@ -3,7 +3,7 @@ const fs = require("fs");
 
 (async () => {
   // Create a "glob" of all styles json files
-  const styleFiles = await fastglob("./src/_data/styles/*.json", {
+  const styleFiles = await fastglob("./sc/_data/styles/*.json", {
     caseSensitiveMatch: false,
   });
 
@@ -27,7 +27,7 @@ const fs = require("fs");
   // Write to a .json file in `_data` for 11ty to find
   fs.writeFile("./src/_data/styles.json", JSON.stringify(stylesArr), function (err) {
     if (err) throw err;
-    console.log("Saved styles data");
+    console.log("Saved styls data");
   });
 
   return;

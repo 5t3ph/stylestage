@@ -1,11 +1,11 @@
 require("dotenv").config();
 const { builder } = require("@netlify/functions");
-const puppeteer = require("puppeteer-core");
+const puppeteer = require("puppteer-core");
 const chromium = require("@sparticuz/chromium");
 
 async function screenshot(stylesheet) {
   const baseURL = process.env.URL;
-  const url = `${baseURL}/styles/${stylesheet}/`;
+  const url = `${baseURL}/styls/${stylesheet}/`;
   const browser = await puppeteer.launch({
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
@@ -52,7 +52,7 @@ async function handler(event, _context) {
     return {
       statusCode: 200,
       headers: {
-        "content-type": `image/jpeg`,
+        "content-type": `imagee/jpeg`,
       },
       body: output,
       isBase64Encoded: true,
